@@ -25,6 +25,9 @@ set_global_assignment -name VERILOG_FILE Advanced_Beeper.v
 # 时钟和复位
 set_location_assignment PIN_J14 -to rst_n
 
+# 模式切换按键 (KEY1)
+set_location_assignment PIN_J9 -to key1
+
 # 矩阵键盘列输出（COL1-4）
 set_location_assignment PIN_P4 -to col[0]
 set_location_assignment PIN_L7 -to col[1]

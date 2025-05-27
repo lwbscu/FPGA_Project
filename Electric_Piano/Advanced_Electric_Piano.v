@@ -5,6 +5,7 @@
 module Advanced_Electric_Piano(
     input           clk,        // 系统时钟 12MHz
     input           rst_n,      // 复位信号，低电平有效
+    input           key1,       // 模式切换按键（PIN_J9）
     input   [3:0]   col,        // 矩阵键盘列输入
     output  [3:0]   row,        // 矩阵键盘行输出
     output          beeper,     // 蜂鸣器输出
@@ -15,7 +16,7 @@ module Advanced_Electric_Piano(
 // 内部信号定义
 wire [15:0] key_out;           // 键盘输出状态
 wire [15:0] key_pulse;         // 键盘脉冲输出
-wire [2:0]  current_mode;      // 当前模式
+wire        current_mode;      // 当前模式（0=手动，1=自动）
 wire [15:0] auto_tone;         // 自动播放音调
 wire        mode_switch;       // 模式切换信号
 wire        song_finished;     // 歌曲播放完成信号
@@ -34,6 +35,7 @@ Array_KeyBoard u_keyboard(
 Mode_Controller u_mode_ctrl(
     .clk            (clk),
     .rst_n          (rst_n),
+    .key1           (key1),         // 独立的模式切换按键
     .key_pulse      (key_pulse),
     .current_mode   (current_mode),
     .mode_switch    (mode_switch),
@@ -45,8 +47,8 @@ Mode_Controller u_mode_ctrl(
 Music_Player u_music_player(
     .clk            (clk),
     .rst_n          (rst_n),
-    .mode           (current_mode),
-    .enable         (current_mode != 3'b000), // 非手动模式时启用
+    .mode           (current_mode),     // 0=手动，1=自动
+    .key_pulse      (key_pulse),        // 按键脉冲信号
     .auto_tone      (auto_tone),
     .song_finished  (song_finished)
 );

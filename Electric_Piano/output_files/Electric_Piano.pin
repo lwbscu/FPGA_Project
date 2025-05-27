@@ -155,7 +155,7 @@ RESERVED_INPUT               : J4        :        :                   :         
 clk                          : J5        : input  : 3.3-V LVCMOS      :         : 2         : Y              
 GND                          : J7        : gnd    :                   :         :           :                
 VCC_ONE                      : J8        : power  :                   : 3.0V/3.3V :           :                
-RESERVED_INPUT               : J9        :        :                   :         : 5         :                
+key1                         : J9        : input  : 3.3-V LVCMOS      :         : 5         : Y              
 RESERVED_INPUT               : J11       :        :                   :         : 5         :                
 mode_indicator[0]            : J12       : output : 3.3-V LVCMOS      :         : 6         : Y              
 rst_n                        : J14       : input  : 3.3-V LVCMOS      :         : 5         : Y              

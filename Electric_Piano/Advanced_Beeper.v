@@ -6,7 +6,7 @@ module Advanced_Beeper(
     input           rst_n_in,
     input   [15:0]  manual_key,     // 手动按键输入
     input   [15:0]  auto_tone,      // 自动播放音调（直接为PWM周期值）
-    input   [2:0]   mode,           // 当前模式
+    input           mode,           // 当前模式（0=手动，1=自动）
     output          beeper
 );
 
@@ -20,9 +20,9 @@ tone u_tone(
 );
 
 // 根据模式选择音调源
-// 手动模式(000): 使用转换后的按键音调
-// 自动模式(001-100): 直接使用Music_Player输出的PWM周期值
-assign final_tone_cycle = (mode == 3'b000) ? manual_tone_cycle : auto_tone;
+// 手动模式(0): 使用转换后的按键音调
+// 自动模式(1): 直接使用Music_Player输出的PWM周期值
+assign final_tone_cycle = (mode == 1'b0) ? manual_tone_cycle : auto_tone;
 
 // 实例化PWM模块
 PWM #(

@@ -1,0 +1,19 @@
+
+State Machine - |Advanced_Electric_Piano|Music_Player:u_music_player|selected_song
+Name selected_song.1111 selected_song.1110 selected_song.1101 selected_song.1100 selected_song.1011 selected_song.1010 selected_song.1001 selected_song.1000 selected_song.0111 selected_song.0110 selected_song.0101 selected_song.0100 selected_song.0011 selected_song.0010 selected_song.0001 selected_song.0000 
+selected_song.0000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+selected_song.0001 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+selected_song.0010 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+selected_song.0011 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+selected_song.0100 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+selected_song.0101 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+selected_song.0110 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+selected_song.0111 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+selected_song.1000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+selected_song.1001 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+selected_song.1010 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+selected_song.1011 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+selected_song.1100 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+selected_song.1101 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+selected_song.1110 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+selected_song.1111 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
