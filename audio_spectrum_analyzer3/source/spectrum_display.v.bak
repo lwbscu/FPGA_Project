@@ -1,0 +1,63 @@
+// --------------------------------------------------------------------
+// Module: spectrum_display
+// Description: 将FFT结果转换为8段LED频谱显示
+// --------------------------------------------------------------------
+module spectrum_display(
+    input           clk,
+    input           rst_n,
+    input   [511:0] fft_real,
+    input   [511:0] fft_imag,
+    input           fft_done,
+    output  [7:0]   spectrum_data [7:0],
+    output  [7:0]   led_out
+);
+
+// 频段划分：将512个频点分为8段
+// 每段64个频点
+reg [15:0] band_energy [0:7];  // 每个频段的能量
+reg [7:0]  band_level [0:7];   // 每个频段的显示级别
+reg [7:0]  led_reg;
+reg        update_flag;
+
+// 计算每个频段的能量
+integer i, j;
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        for (i = 0; i < 8; i = i + 1) begin
+            band_energy[i] <= 16'd0;
+            band_level[i] <= 8'd0;
+        end
+        update_flag <= 1'b0;
+    end else if (fft_done) begin
+        update_flag <= 1'b1;
+        // 计算8个频段的能量
+        for (i = 0; i < 8; i = i + 1) begin
+            band_energy[i] <= 16'd0;
+            // 简化：只取每段的第一个频点
+            band_energy[i] <= fft_real[i*64] + fft_imag[i*64];
+        end
+    end else if (update_flag) begin
+        update_flag <= 1'b0;
+        // 将能量映射到0-255的显示级别
+        for (i = 0; i < 8; i = i + 1) begin
+            if (band_energy[i] > 16'd32768) 
+                band_level[i] <= 8'd255;
+            else 
+                band_level[i] <= band_energy[i][15:8];
+            
+            // 更新LED显示（简单阈值判断）
+            led_reg[i] <= (band_level[i] > 8'd128) ? 1'b0 : 1'b1; // 低电平点亮
+        end
+    end
+end
+
+// 输出
+assign led_out = led_reg;
+genvar k;
+generate
+    for (k = 0; k < 8; k = k + 1) begin : spec_out
+        assign spectrum_data[k] = band_level[k];
+    end
+endgenerate
+
+endmodule

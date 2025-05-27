@@ -1,0 +1,162 @@
+// --------------------------------------------------------------------
+// Module: light_effects
+// Description: 音乐同步灯光效果控制
+// --------------------------------------------------------------------
+module light_effects(
+    input           clk,
+    input           rst_n,
+    input   [7:0]   spectrum_data [7:0],  // 8段频谱数据
+    input   [3:0]   current_mode,         // 当前模式
+    output  [7:0]   light_pattern         // LED灯光模式
+);
+
+// 效果模式定义
+parameter EFFECT_SPECTRUM   = 3'd0;  // 频谱柱状图
+parameter EFFECT_PULSE      = 3'd1;  // 脉冲呼吸灯
+parameter EFFECT_WAVE       = 3'd2;  // 波浪效果
+parameter EFFECT_STAR       = 3'd3;  // 星空闪烁
+parameter EFFECT_CHASE      = 3'd4;  // 追逐效果
+parameter EFFECT_FADE       = 3'd5;  // 渐变效果
+parameter EFFECT_RANDOM     = 3'd6;  // 随机闪烁
+parameter EFFECT_VU_METER   = 3'd7;  // VU表效果
+
+// 内部信号
+reg [7:0]  led_reg;
+reg [23:0] effect_counter;      // 效果计数器
+reg [7:0]  brightness [0:7];    // 每个LED的亮度
+reg [2:0]  auto_effect;         // 自动效果选择
+reg [7:0]  chase_position;      // 追逐效果位置
+reg [7:0]  fade_level;          // 渐变级别
+reg [15:0] random_seed;         // 随机数种子
+
+// 自动效果选择（根据音频特征）
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        auto_effect <= EFFECT_SPECTRUM;
+    end else begin
+        // 根据频谱特征自动选择效果
+        if (spectrum_data[0] > 200 && spectrum_data[1] > 200) begin
+            // 低频强烈 - 脉冲效果
+            auto_effect <= EFFECT_PULSE;
+        end else if (spectrum_data[6] > 180 && spectrum_data[7] > 180) begin
+            // 高频丰富 - 星空效果
+            auto_effect <= EFFECT_STAR;
+        end else if (spectrum_data[3] > 150 && spectrum_data[4] > 150) begin
+            // 中频突出 - 波浪效果
+            auto_effect <= EFFECT_WAVE;
+        end else begin
+            // 默认频谱显示
+            auto_effect <= EFFECT_SPECTRUM;
+        end
+    end
+end
+
+// 效果计数器
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        effect_counter <= 24'd0;
+    end else begin
+        effect_counter <= effect_counter + 1'b1;
+    end
+end
+
+// 主效果生成器
+integer i;
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        led_reg <= 8'hFF;  // 全灭（低电平点亮）
+        chase_position <= 8'b00000001;
+        fade_level <= 8'd0;
+        random_seed <= 16'hA5A5;
+        for (i = 0; i < 8; i = i + 1) begin
+            brightness[i] <= 8'd0;
+        end
+    end else begin
+        case (current_mode[3] ? auto_effect : current_mode[2:0])
+            EFFECT_SPECTRUM: begin
+                // 频谱柱状图效果
+                for (i = 0; i < 8; i = i + 1) begin
+                    led_reg[i] <= (spectrum_data[i] > 128) ? 1'b0 : 1'b1;
+                end
+            end
+            
+            EFFECT_PULSE: begin
+                // 脉冲呼吸灯效果
+                if (effect_counter[19:12] < 128) begin
+                    fade_level <= effect_counter[19:12];
+                end else begin
+                    fade_level <= 255 - effect_counter[19:12];
+                end
+                // 根据低频能量调节呼吸速度
+                for (i = 0; i < 8; i = i + 1) begin
+                    led_reg[i] <= (fade_level > (spectrum_data[0] >> 1)) ? 1'b1 : 1'b0;
+                end
+            end
+            
+            EFFECT_WAVE: begin
+                // 波浪效果
+                for (i = 0; i < 8; i = i + 1) begin
+                    brightness[i] <= (effect_counter[18:11] + i * 32) & 8'hFF;
+                    led_reg[i] <= (brightness[i] > 128) ? 1'b0 : 1'b1;
+                end
+            end
+            
+            EFFECT_STAR: begin
+                // 星空闪烁效果
+                // 简单线性反馈移位寄存器(LFSR)产生伪随机数
+                random_seed <= {random_seed[14:0], random_seed[15] ^ random_seed[13]};
+                for (i = 0; i < 8; i = i + 1) begin
+                    led_reg[i] <= random_seed[i] & (spectrum_data[i] > 100);
+                end
+            end
+            
+            EFFECT_CHASE: begin
+                // 追逐效果
+                if (effect_counter[17:0] == 18'd0) begin
+                    chase_position <= {chase_position[6:0], chase_position[7]};
+                end
+                led_reg <= ~chase_position;  // 低电平点亮
+            end
+            
+            EFFECT_FADE: begin
+                // 渐变效果
+                fade_level <= effect_counter[19:12];
+                for (i = 0; i < 8; i = i + 1) begin
+                    led_reg[i] <= (fade_level > (i * 32)) ? 1'b0 : 1'b1;
+                end
+            end
+            
+            EFFECT_RANDOM: begin
+                // 随机闪烁
+                if (effect_counter[15:0] == 16'd0) begin
+                    random_seed <= {random_seed[14:0], random_seed[15] ^ random_seed[13]};
+                    led_reg <= random_seed[7:0];
+                end
+            end
+            
+            EFFECT_VU_METER: begin
+                // VU表效果（音量指示）
+                // 计算平均能量
+                reg [10:0] avg_energy;
+                avg_energy = spectrum_data[0] + spectrum_data[1] + 
+                            spectrum_data[2] + spectrum_data[3];
+                // 点亮对应数量的LED
+                case (avg_energy[10:7])
+                    4'd0: led_reg <= 8'b11111111;
+                    4'd1: led_reg <= 8'b11111110;
+                    4'd2: led_reg <= 8'b11111100;
+                    4'd3: led_reg <= 8'b11111000;
+                    4'd4: led_reg <= 8'b11110000;
+                    4'd5: led_reg <= 8'b11100000;
+                    4'd6: led_reg <= 8'b11000000;
+                    4'd7: led_reg <= 8'b10000000;
+                    default: led_reg <= 8'b00000000;
+                endcase
+            end
+        endcase
+    end
+end
+
+assign light_pattern = led_reg;
+
+endmodule

@@ -1,0 +1,474 @@
+// Song_Player.v - 歌曲播放器模块
+// 根据选择的歌曲编号，自动播放相应的歌曲序列
+
+module Song_Player(
+    input           clk,            // 系统时钟
+    input           rst_n,          // 复位信号
+    input   [3:0]   song_select,    // 歌曲选择
+    output reg [7:0] note,          // 当前音符
+    output reg [23:0] duration,     // 音符持续时间
+    output reg      play_enable     // 播放使能
+);
+
+// 音符定义
+localparam REST = 8'd0;    // 休止符
+localparam L1 = 8'd1;      // 低音1
+localparam L2 = 8'd2;      // 低音2
+localparam L3 = 8'd3;      // 低音3
+localparam L4 = 8'd4;      // 低音4
+localparam L5 = 8'd5;      // 低音5
+localparam L6 = 8'd6;      // 低音6
+localparam L7 = 8'd7;      // 低音7
+localparam M1 = 8'd8;      // 中音1
+localparam M2 = 8'd9;      // 中音2
+localparam M3 = 8'd10;     // 中音3
+localparam M4 = 8'd11;     // 中音4
+localparam M5 = 8'd12;     // 中音5
+localparam M6 = 8'd13;     // 中音6
+localparam M7 = 8'd14;     // 中音7
+localparam H1 = 8'd15;     // 高音1
+localparam H2 = 8'd16;     // 高音2
+localparam H3 = 8'd17;     // 高音3
+localparam H4 = 8'd18;     // 高音4
+localparam H5 = 8'd19;     // 高音5
+
+// 节拍定义（基于12MHz时钟）
+localparam BEAT_1   = 24'd6000000;   // 全音符 (500ms)
+localparam BEAT_1_2 = 24'd3000000;   // 二分音符 (250ms)
+localparam BEAT_1_4 = 24'd1500000;   // 四分音符 (125ms)
+localparam BEAT_1_8 = 24'd750000;    // 八分音符 (62.5ms)
+
+// 状态机定义
+reg [1:0] state;
+localparam IDLE = 2'b00;
+localparam PLAY = 2'b01;
+localparam WAIT = 2'b10;
+
+// 歌曲播放控制
+reg [7:0] note_index;          // 当前音符索引
+reg [23:0] duration_counter;   // 持续时间计数器
+reg [3:0] current_song;        // 当前播放的歌曲
+reg [7:0] song_length;         // 当前歌曲长度
+
+// 播放控制状态机
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        state <= IDLE;
+        note_index <= 8'd0;
+        duration_counter <= 24'd0;
+        play_enable <= 1'b0;
+        current_song <= 4'd0;
+    end
+    else begin
+        case(state)
+            IDLE: begin
+                if (song_select != current_song) begin
+                    current_song <= song_select;
+                    note_index <= 8'd0;
+                    state <= PLAY;
+                end
+            end
+            
+            PLAY: begin
+                // 获取当前音符和持续时间
+                get_note_and_duration(current_song, note_index, note, duration);
+                
+                // 检查是否到达歌曲结尾
+                if (note == REST && duration == 24'd0) begin
+                    note_index <= 8'd0;  // 循环播放
+                end
+                else begin
+                    play_enable <= 1'b1;
+                    duration_counter <= duration;
+                    state <= WAIT;
+                end
+            end
+            
+            WAIT: begin
+                if (duration_counter > 0) begin
+                    duration_counter <= duration_counter - 1'b1;
+                end
+                else begin
+                    play_enable <= 1'b0;
+                    note_index <= note_index + 1'b1;
+                    state <= PLAY;
+                end
+                
+                // 检查是否切换歌曲
+                if (song_select != current_song) begin
+                    state <= IDLE;
+                    play_enable <= 1'b0;
+                end
+            end
+            
+            default: state <= IDLE;
+        endcase
+    end
+end
+
+// 获取音符和持续时间的任务
+task get_note_and_duration;
+    input [3:0] song;
+    input [7:0] index;
+    output [7:0] note_out;
+    output [23:0] duration_out;
+    
+    begin
+        case(song)
+            4'd0: begin // 稻香（简化版）
+                case(index)
+                    8'd0:  begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd1:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd2:  begin note_out = M7; duration_out = BEAT_1_4; end
+                    8'd3:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd4:  begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd5:  begin note_out = REST; duration_out = BEAT_1_4; end
+                    8'd6:  begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd7:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd8:  begin note_out = M7; duration_out = BEAT_1_4; end
+                    8'd9:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd10: begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd11: begin note_out = REST; duration_out = BEAT_1_4; end
+                    8'd12: begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd13: begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd14: begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd15: begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd16: begin note_out = M1; duration_out = BEAT_1_2; end
+                    default: begin note_out = REST; duration_out = 24'd0; end // 结束标记
+                endcase
+            end
+            
+            4'd1: begin // 小星星
+                case(index)
+                    8'd0:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd1:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd2:  begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd3:  begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd4:  begin note_out = M6; duration_out = BEAT_1_4; end
+                    8'd5:  begin note_out = M6; duration_out = BEAT_1_4; end
+                    8'd6:  begin note_out = M5; duration_out = BEAT_1_2; end
+                    8'd7:  begin note_out = M4; duration_out = BEAT_1_4; end
+                    8'd8:  begin note_out = M4; duration_out = BEAT_1_4; end
+                    8'd9:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd10: begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd11: begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd12: begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd13: begin note_out = M1; duration_out = BEAT_1_2; end
+                    8'd14: begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd15: begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd16: begin note_out = M4; duration_out = BEAT_1_4; end
+                    8'd17: begin note_out = M4; duration_out = BEAT_1_4; end
+                    8'd18: begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd19: begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd20: begin note_out = M2; duration_out = BEAT_1_2; end
+                    8'd21: begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd22: begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd23: begin note_out = M4; duration_out = BEAT_1_4; end
+                    8'd24: begin note_out = M4; duration_out = BEAT_1_4; end
+                    8'd25: begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd26: begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd27: begin note_out = M2; duration_out = BEAT_1_2; end
+                    default: begin note_out = REST; duration_out = 24'd0; end
+                endcase
+            end
+            
+            4'd2: begin // 生日快乐
+                case(index)
+                    8'd0:  begin note_out = M5; duration_out = BEAT_1_8; end
+                    8'd1:  begin note_out = M5; duration_out = BEAT_1_8; end
+                    8'd2:  begin note_out = M6; duration_out = BEAT_1_4; end
+                    8'd3:  begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd4:  begin note_out = H1; duration_out = BEAT_1_4; end
+                    8'd5:  begin note_out = M7; duration_out = BEAT_1_2; end
+                    8'd6:  begin note_out = M5; duration_out = BEAT_1_8; end
+                    8'd7:  begin note_out = M5; duration_out = BEAT_1_8; end
+                    8'd8:  begin note_out = M6; duration_out = BEAT_1_4; end
+                    8'd9:  begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd10: begin note_out = H2; duration_out = BEAT_1_4; end
+                    8'd11: begin note_out = H1; duration_out = BEAT_1_2; end
+                    8'd12: begin note_out = M5; duration_out = BEAT_1_8; end
+                    8'd13: begin note_out = M5; duration_out = BEAT_1_8; end
+                    8'd14: begin note_out = H5; duration_out = BEAT_1_4; end
+                    8'd15: begin note_out = H3; duration_out = BEAT_1_4; end
+                    8'd16: begin note_out = H1; duration_out = BEAT_1_4; end
+                    8'd17: begin note_out = M7; duration_out = BEAT_1_4; end
+                    8'd18: begin note_out = M6; duration_out = BEAT_1_4; end
+                    8'd19: begin note_out = M4; duration_out = BEAT_1_8; end
+                    8'd20: begin note_out = M4; duration_out = BEAT_1_8; end
+                    8'd21: begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd22: begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd23: begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd24: begin note_out = M1; duration_out = BEAT_1_2; end
+                    default: begin note_out = REST; duration_out = 24'd0; end
+                endcase
+            end
+            
+            4'd3: begin // 两只老虎
+                case(index)
+                    8'd0:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd1:  begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd2:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd3:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd4:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd5:  begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd6:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd7:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd8:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd9:  begin note_out = M4; duration_out = BEAT_1_4; end
+                    8'd10: begin note_out = M5; duration_out = BEAT_1_2; end
+                    8'd11: begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd12: begin note_out = M4; duration_out = BEAT_1_4; end
+                    8'd13: begin note_out = M5; duration_out = BEAT_1_2; end
+                    8'd14: begin note_out = M5; duration_out = BEAT_1_8; end
+                    8'd15: begin note_out = M6; duration_out = BEAT_1_8; end
+                    8'd16: begin note_out = M5; duration_out = BEAT_1_8; end
+                    8'd17: begin note_out = M4; duration_out = BEAT_1_8; end
+                    8'd18: begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd19: begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd20: begin note_out = M5; duration_out = BEAT_1_8; end
+                    8'd21: begin note_out = M6; duration_out = BEAT_1_8; end
+                    8'd22: begin note_out = M5; duration_out = BEAT_1_8; end
+                    8'd23: begin note_out = M4; duration_out = BEAT_1_8; end
+                    8'd24: begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd25: begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd26: begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd27: begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd28: begin note_out = M1; duration_out = BEAT_1_2; end
+                    8'd29: begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd30: begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd31: begin note_out = M1; duration_out = BEAT_1_2; end
+                    default: begin note_out = REST; duration_out = 24'd0; end
+                endcase
+            end
+            
+            4'd4: begin // 新年好
+                case(index)
+                    8'd0:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd1:  begin note_out = M1; duration_out = BEAT_1_8; end
+                    8'd2:  begin note_out = M1; duration_out = BEAT_1_8; end
+                    8'd3:  begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd4:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd5:  begin note_out = M3; duration_out = BEAT_1_8; end
+                    8'd6:  begin note_out = M3; duration_out = BEAT_1_8; end
+                    8'd7:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd8:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd9:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd10: begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd11: begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd12: begin note_out = M4; duration_out = BEAT_1_4; end
+                    8'd13: begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd14: begin note_out = M2; duration_out = BEAT_1_2; end
+                    8'd15: begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd16: begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd17: begin note_out = M4; duration_out = BEAT_1_4; end
+                    8'd18: begin note_out = M4; duration_out = BEAT_1_4; end
+                    8'd19: begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd20: begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd21: begin note_out = M5; duration_out = BEAT_1_2; end
+                    8'd22: begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd23: begin note_out = M1; duration_out = BEAT_1_8; end
+                    8'd24: begin note_out = M1; duration_out = BEAT_1_8; end
+                    8'd25: begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd26: begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd27: begin note_out = M3; duration_out = BEAT_1_8; end
+                    8'd28: begin note_out = M3; duration_out = BEAT_1_8; end
+                    8'd29: begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd30: begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd31: begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd32: begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd33: begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd34: begin note_out = M4; duration_out = BEAT_1_4; end
+                    8'd35: begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd36: begin note_out = M2; duration_out = BEAT_1_2; end
+                    default: begin note_out = REST; duration_out = 24'd0; end
+                endcase
+            end
+            
+            // 简化其他歌曲，每首包含8-16个音符的旋律片段
+            4'd5: begin // 童话（副歌部分）
+                case(index)
+                    8'd0:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd1:  begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd2:  begin note_out = H1; duration_out = BEAT_1_2; end
+                    8'd3:  begin note_out = H1; duration_out = BEAT_1_4; end
+                    8'd4:  begin note_out = M7; duration_out = BEAT_1_4; end
+                    8'd5:  begin note_out = M6; duration_out = BEAT_1_2; end
+                    8'd6:  begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd7:  begin note_out = M6; duration_out = BEAT_1_4; end
+                    8'd8:  begin note_out = M5; duration_out = BEAT_1_2; end
+                    8'd9:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd10: begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd11: begin note_out = M3; duration_out = BEAT_1_2; end
+                    default: begin note_out = REST; duration_out = 24'd0; end
+                endcase
+            end
+            
+            4'd6: begin // 菊花台（主旋律）
+                case(index)
+                    8'd0:  begin note_out = L6; duration_out = BEAT_1_4; end
+                    8'd1:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd2:  begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd3:  begin note_out = M3; duration_out = BEAT_1_2; end
+                    8'd4:  begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd5:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd6:  begin note_out = L6; duration_out = BEAT_1_2; end
+                    8'd7:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd8:  begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd9:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd10: begin note_out = M5; duration_out = BEAT_1_2; end
+                    8'd11: begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd12: begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd13: begin note_out = M1; duration_out = BEAT_1_2; end
+                    default: begin note_out = REST; duration_out = 24'd0; end
+                endcase
+            end
+            
+            4'd7: begin // 东风破（主旋律片段）
+                case(index)
+                    8'd0:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd1:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd2:  begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd3:  begin note_out = M6; duration_out = BEAT_1_4; end
+                    8'd4:  begin note_out = M5; duration_out = BEAT_1_2; end
+                    8'd5:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd6:  begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd7:  begin note_out = M1; duration_out = BEAT_1_2; end
+                    8'd8:  begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd9:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd10: begin note_out = M5; duration_out = BEAT_1_2; end
+                    default: begin note_out = REST; duration_out = 24'd0; end
+                endcase
+            end
+            
+            4'd8: begin // 简单爱（副歌旋律）
+                case(index)
+                    8'd0:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd1:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd2:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd3:  begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd4:  begin note_out = M5; duration_out = BEAT_1_2; end
+                    8'd5:  begin note_out = M6; duration_out = BEAT_1_4; end
+                    8'd6:  begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd7:  begin note_out = M3; duration_out = BEAT_1_2; end
+                    8'd8:  begin note_out = M1; duration_out = BEAT_1_2; end
+                    default: begin note_out = REST; duration_out = 24'd0; end
+                endcase
+            end
+            
+            4'd9: begin // 晴天（主旋律）
+                case(index)
+                    8'd0:  begin note_out = M3; duration_out = BEAT_1_8; end
+                    8'd1:  begin note_out = M3; duration_out = BEAT_1_8; end
+                    8'd2:  begin note_out = M3; duration_out = BEAT_1_8; end
+                    8'd3:  begin note_out = M3; duration_out = BEAT_1_8; end
+                    8'd4:  begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd5:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd6:  begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd7:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd8:  begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd9:  begin note_out = M3; duration_out = BEAT_1_2; end
+                    default: begin note_out = REST; duration_out = 24'd0; end
+                endcase
+            end
+            
+            4'd10: begin // 七里香（旋律片段）
+                case(index)
+                    8'd0:  begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd1:  begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd2:  begin note_out = M6; duration_out = BEAT_1_4; end
+                    8'd3:  begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd4:  begin note_out = M3; duration_out = BEAT_1_2; end
+                    8'd5:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd6:  begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd7:  begin note_out = M3; duration_out = BEAT_1_2; end
+                    default: begin note_out = REST; duration_out = 24'd0; end
+                endcase
+            end
+            
+            4'd11: begin // 青花瓷（主旋律）
+                case(index)
+                    8'd0:  begin note_out = L5; duration_out = BEAT_1_4; end
+                    8'd1:  begin note_out = L6; duration_out = BEAT_1_4; end
+                    8'd2:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd3:  begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd4:  begin note_out = M3; duration_out = BEAT_1_2; end
+                    8'd5:  begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd6:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd7:  begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd8:  begin note_out = L6; duration_out = BEAT_1_2; end
+                    8'd9:  begin note_out = L5; duration_out = BEAT_1_4; end
+                    8'd10: begin note_out = L6; duration_out = BEAT_1_4; end
+                    8'd11: begin note_out = M1; duration_out = BEAT_1_2; end
+                    default: begin note_out = REST; duration_out = 24'd0; end
+                endcase
+            end
+            
+            4'd12: begin // 听妈妈的话（旋律）
+                case(index)
+                    8'd0:  begin note_out = M3; duration_out = BEAT_1_8; end
+                    8'd1:  begin note_out = M3; duration_out = BEAT_1_8; end
+                    8'd2:  begin note_out = M3; duration_out = BEAT_1_8; end
+                    8'd3:  begin note_out = M5; duration_out = BEAT_1_8; end
+                    8'd4:  begin note_out = M6; duration_out = BEAT_1_4; end
+                    8'd5:  begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd6:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd7:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd8:  begin note_out = M2; duration_out = BEAT_1_2; end
+                    default: begin note_out = REST; duration_out = 24'd0; end
+                endcase
+            end
+            
+            4'd13: begin // 彩虹（副歌）
+                case(index)
+                    8'd0:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd1:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd2:  begin note_out = M5; duration_out = BEAT_1_2; end
+                    8'd3:  begin note_out = M6; duration_out = BEAT_1_4; end
+                    8'd4:  begin note_out = M5; duration_out = BEAT_1_4; end
+                    8'd5:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd6:  begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd7:  begin note_out = M1; duration_out = BEAT_1_2; end
+                    default: begin note_out = REST; duration_out = 24'd0; end
+                endcase
+            end
+            
+            4'd14: begin // 夜曲（旋律片段）
+                case(index)
+                    8'd0:  begin note_out = L6; duration_out = BEAT_1_4; end
+                    8'd1:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd2:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd3:  begin note_out = M1; duration_out = BEAT_1_4; end
+                    8'd4:  begin note_out = L6; duration_out = BEAT_1_2; end
+                    8'd5:  begin note_out = L5; duration_out = BEAT_1_4; end
+                    8'd6:  begin note_out = L6; duration_out = BEAT_1_4; end
+                    8'd7:  begin note_out = M1; duration_out = BEAT_1_2; end
+                    8'd8:  begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd9:  begin note_out = M3; duration_out = BEAT_1_2; end
+                    default: begin note_out = REST; duration_out = 24'd0; end
+                endcase
+            end
+            
+            4'd15: begin // 安静（主旋律）
+                case(index)
+                    8'd0:  begin note_out = M1; duration_out = BEAT_1_2; end
+                    8'd1:  begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd2:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd3:  begin note_out = M5; duration_out = BEAT_1_2; end
+                    8'd4:  begin note_out = M3; duration_out = BEAT_1_4; end
+                    8'd5:  begin note_out = M2; duration_out = BEAT_1_4; end
+                    8'd6:  begin note_out = M1; duration_out = BEAT_1_2; end
+                    8'd7:  begin note_out = L6; duration_out = BEAT_1_4; end
+                    8'd8:  begin note_out = M1; duration_out = BEAT_1_2; end
+                    default: begin note_out = REST; duration_out = 24'd0; end
+                endcase
+            end
+            
+            default: begin
+                note_out = REST;
+                duration_out = 24'd0;
+            end
+        endcase
+    end
+endtask
+
+endmodule

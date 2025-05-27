@@ -1,0 +1,16 @@
+|g_to_a
+A[0] => seg.RADDR
+A[1] => seg.RADDR1
+A[2] => seg.RADDR2
+A[3] => seg.RADDR3
+g_to_a[0] <= seg.DATAOUT
+g_to_a[1] <= seg.DATAOUT1
+g_to_a[2] <= seg.DATAOUT2
+g_to_a[3] <= seg.DATAOUT3
+g_to_a[4] <= seg.DATAOUT4
+g_to_a[5] <= seg.DATAOUT5
+g_to_a[6] <= seg.DATAOUT6
+g_to_a[7] <= seg.DATAOUT7
+g_to_a[8] <= seg.DATAOUT8
+
+

@@ -1,0 +1,26 @@
+|two_mul_two
+A1 => carry_C1.IN0
+A1 => res_C3.IN0
+A1 => res_C3.IN1
+A0 => seg_patterns.raddr_a[0].IN0
+A0 => res_C3.IN0
+B1 => res_C3.IN1
+B1 => res_C3.IN1
+B0 => seg_patterns.raddr_a[0].IN1
+B0 => carry_C1.IN1
+B0 => res_C3.IN1
+C3 << seg_patterns.raddr_a[3].DB_MAX_OUTPUT_PORT_TYPE
+C2 << seg_patterns.raddr_a[2].DB_MAX_OUTPUT_PORT_TYPE
+C1 << seg_patterns.raddr_a[1].DB_MAX_OUTPUT_PORT_TYPE
+C0 << seg_patterns.raddr_a[0].DB_MAX_OUTPUT_PORT_TYPE
+seg[0] << seg_patterns.DATAOUT
+seg[1] << seg_patterns.DATAOUT1
+seg[2] << seg_patterns.DATAOUT2
+seg[3] << seg_patterns.DATAOUT3
+seg[4] << seg_patterns.DATAOUT4
+seg[5] << seg_patterns.DATAOUT5
+seg[6] << seg_patterns.DATAOUT6
+seg[7] << seg_patterns.DATAOUT7
+seg[8] << seg_patterns.DATAOUT8
+
+

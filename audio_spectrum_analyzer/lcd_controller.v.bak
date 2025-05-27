@@ -1,0 +1,104 @@
+module lcd_controller(
+    input           clk,        // 50MHz时钟
+    input           rst_n,
+    input  [11:0]   spectrum_data [0:7],
+    input  [2:0]    mode,
+    output          lcd_sel,
+    output reg      lcd_rst,
+    output reg      lcd_dc,
+    output reg      lcd_sda,
+    output reg      lcd_sck
+);
+
+// LCD参数
+parameter LCD_WIDTH = 240;
+parameter LCD_HEIGHT = 320;
+
+// 状态定义
+localparam INIT = 3'd0;
+localparam CLEAR = 3'd1;
+localparam DRAW = 3'd2;
+localparam UPDATE = 3'd3;
+localparam IDLE = 3'd4;
+
+reg [2:0] state;
+reg [8:0] init_cnt;
+reg [18:0] pixel_cnt;
+reg [7:0] cmd_data;
+reg [4:0] bit_cnt;
+reg cmd_flag;
+
+assign lcd_sel = 1'b1;  // LCD始终选中
+
+// LCD初始化命令序列
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        state <= INIT;
+        lcd_rst <= 1'b0;
+        lcd_dc <= 1'b0;
+        lcd_sda <= 1'b0;
+        lcd_sck <= 1'b0;
+        init_cnt <= 9'd0;
+        pixel_cnt <= 19'd0;
+        bit_cnt <= 5'd0;
+        cmd_flag <= 1'b0;
+    end else begin
+        case (state)
+            INIT: begin
+                // LCD复位序列
+                if (init_cnt < 9'd100) begin
+                    lcd_rst <= 1'b0;
+                    init_cnt <= init_cnt + 1'b1;
+                end else if (init_cnt < 9'd200) begin
+                    lcd_rst <= 1'b1;
+                    init_cnt <= init_cnt + 1'b1;
+                end else begin
+                    // 发送初始化命令
+                    state <= CLEAR;
+                    init_cnt <= 9'd0;
+                end
+            end
+            
+            CLEAR: begin
+                // 清屏
+                state <= DRAW;
+            end
+            
+            DRAW: begin
+                // 绘制频谱图
+                if (pixel_cnt < LCD_WIDTH * LCD_HEIGHT) begin
+                    // 根据spectrum_data绘制频谱
+                    // 简化的绘制逻辑
+                    pixel_cnt <= pixel_cnt + 1'b1;
+                end else begin
+                    pixel_cnt <= 19'd0;
+                    state <= UPDATE;
+                end
+            end
+            
+            UPDATE: begin
+                // 等待新数据
+                state <= DRAW;
+            end
+            
+            default: state <= IDLE;
+        endcase
+    end
+end
+
+// SPI发送逻辑
+always @(posedge clk) begin
+    if (state == DRAW) begin
+        // SPI时序控制
+        if (bit_cnt < 5'd16) begin
+            lcd_sck <= ~lcd_sck;
+            if (lcd_sck) begin
+                bit_cnt <= bit_cnt + 1'b1;
+            end
+        end else begin
+            bit_cnt <= 5'd0;
+        end
+    end
+end
+
+endmodule

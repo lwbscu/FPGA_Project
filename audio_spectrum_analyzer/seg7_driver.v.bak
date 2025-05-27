@@ -1,0 +1,129 @@
+module seg7_driver(
+    input           clk,
+    input           rst_n,
+    input [7:0]     spectrum_data [0:7],  // 8段频谱数据
+    input           spectrum_valid,       // 频谱数据有效
+    
+    // 74HC595接口
+    output reg      seg_rck,    // 锁存时钟 - PIN_A14
+    output reg      seg_sck,    // 移位时钟 - PIN_B13
+    output reg      seg_din     // 串行数据 - PIN_B15
+);
+
+// 7段数码管编码（共阴极）
+// 显示0-9和部分字母，用于显示频谱强度
+reg [7:0] seg_code [0:15];
+initial begin
+    seg_code[0]  = 8'h3F; // 0
+    seg_code[1]  = 8'h06; // 1
+    seg_code[2]  = 8'h5B; // 2
+    seg_code[3]  = 8'h4F; // 3
+    seg_code[4]  = 8'h66; // 4
+    seg_code[5]  = 8'h6D; // 5
+    seg_code[6]  = 8'h7D; // 6
+    seg_code[7]  = 8'h07; // 7
+    seg_code[8]  = 8'h7F; // 8
+    seg_code[9]  = 8'h6F; // 9
+    seg_code[10] = 8'h77; // A
+    seg_code[11] = 8'h7C; // b
+    seg_code[12] = 8'h39; // C
+    seg_code[13] = 8'h5E; // d
+    seg_code[14] = 8'h79; // E
+    seg_code[15] = 8'h71; // F
+end
+
+// 状态机
+localparam IDLE = 2'd0;
+localparam SHIFT = 2'd1;
+localparam LATCH = 2'd2;
+
+reg [1:0] state;
+reg [4:0] bit_cnt;      // 16位计数（8位段选+8位位选）
+reg [2:0] digit_cnt;    // 当前显示的数码管位
+reg [15:0] shift_data;  // 要发送的16位数据
+reg [15:0] refresh_cnt; // 刷新计数器
+
+// 频谱数据缓存
+reg [7:0] spectrum_buf [0:7];
+
+// 更新频谱缓存
+integer i;
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        for (i = 0; i < 8; i = i + 1) begin
+            spectrum_buf[i] <= 8'd0;
+        end
+    end else if (spectrum_valid) begin
+        for (i = 0; i < 8; i = i + 1) begin
+            spectrum_buf[i] <= spectrum_data[i];
+        end
+    end
+end
+
+// 数码管扫描控制
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        state <= IDLE;
+        bit_cnt <= 5'd0;
+        digit_cnt <= 3'd0;
+        seg_rck <= 1'b0;
+        seg_sck <= 1'b0;
+        seg_din <= 1'b0;
+        shift_data <= 16'd0;
+        refresh_cnt <= 16'd0;
+    end else begin
+        case (state)
+            IDLE: begin
+                refresh_cnt <= refresh_cnt + 1'b1;
+                if (refresh_cnt >= 16'd1200) begin  // 约10kHz扫描频率
+                    refresh_cnt <= 16'd0;
+                    
+                    // 准备要显示的数据
+                    // 将频谱数据映射到0-9显示
+                    reg [3:0] display_val;
+                    display_val = spectrum_buf[digit_cnt] >> 4;  // 取高4位
+                    if (display_val > 4'd9) display_val = 4'd9;
+                    
+                    // 段选数据（低8位）
+                    shift_data[7:0] = seg_code[display_val];
+                    
+                    // 位选数据（高8位）- 一次只点亮一位
+                    shift_data[15:8] = 8'd1 << digit_cnt;
+                    
+                    state <= SHIFT;
+                    bit_cnt <= 5'd0;
+                end
+            end
+            
+            SHIFT: begin
+                if (seg_sck == 1'b0) begin
+                    seg_sck <= 1'b1;
+                    seg_din <= shift_data[15-bit_cnt];  // MSB first
+                end else begin
+                    seg_sck <= 1'b0;
+                    if (bit_cnt >= 5'd15) begin
+                        state <= LATCH;
+                    end else begin
+                        bit_cnt <= bit_cnt + 1'b1;
+                    end
+                end
+            end
+            
+            LATCH: begin
+                seg_rck <= 1'b1;
+                if (seg_rck == 1'b1) begin
+                    seg_rck <= 1'b0;
+                    state <= IDLE;
+                    
+                    // 移到下一位数码管
+                    if (digit_cnt >= 3'd7)
+                        digit_cnt <= 3'd0;
+                    else
+                        digit_cnt <= digit_cnt + 1'b1;
+                end
+            end
+        endcase
+    end
+end
+
+endmodule

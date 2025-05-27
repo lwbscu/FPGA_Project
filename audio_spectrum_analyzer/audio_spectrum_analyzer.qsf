@@ -1,0 +1,83 @@
+# 基本设置
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M08SAM153C8G
+set_global_assignment -name TOP_LEVEL_ENTITY audio_spectrum_analyzer
+set_global_assignment -name VERILOG_FILE audio_spectrum_analyzer.v
+
+# 引脚分配
+set_location_assignment PIN_J5 -to clk
+set_location_assignment PIN_J9 -to rst_n
+set_location_assignment PIN_D2 -to test_led
+
+# I/O标准
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rst_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to test_led
+set_global_assignment -name FAMILY "MAX 10"
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[*]
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
+set_location_assignment PIN_L11 -to led[0]
+set_location_assignment PIN_K12 -to led[1]
+set_location_assignment PIN_L15 -to led[2]
+set_location_assignment PIN_M12 -to led[3]
+set_location_assignment PIN_M14 -to led[4]
+set_location_assignment PIN_N14 -to led[5]
+set_location_assignment PIN_N15 -to led[6]
+set_location_assignment PIN_K11 -to led[7]
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED WITH WEAK PULL-UP"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE output_files/adc_driver.v
+set_global_assignment -name VERILOG_FILE output_files/audio_level_detector.v
+set_location_assignment PIN_B7 -to adc_cs
+set_location_assignment PIN_B8 -to adc_clk
+set_location_assignment PIN_C8 -to adc_dat
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_cs
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_dat
+set_global_assignment -name VERILOG_FILE output_files/dac_test_gen.v
+set_location_assignment PIN_D10 -to dac_sync
+set_location_assignment PIN_A9 -to dac_sclk
+set_location_assignment PIN_A11 -to dac_sdi
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to dac_sync
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to dac_sclk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to dac_sdi
+set_global_assignment -name VERILOG_FILE fft_64point.v
+set_global_assignment -name VERILOG_FILE spectrum_display.v
+set_global_assignment -name VERILOG_FILE seg7_driver.v
+set_global_assignment -name VERILOG_FILE matrix_keypad.v
+set_global_assignment -name VERILOG_FILE mode_control.v
+set_location_assignment PIN_P9 -to key_row[0]
+set_location_assignment PIN_P8 -to key_row[1]
+set_location_assignment PIN_P7 -to key_row[2]
+set_location_assignment PIN_R7 -to key_row[3]
+set_location_assignment PIN_P4 -to key_col[0]
+set_location_assignment PIN_L7 -to key_col[1]
+set_location_assignment PIN_R5 -to key_col[2]
+set_location_assignment PIN_P6 -to key_col[3]
+set_location_assignment PIN_A14 -to seg_rck
+set_location_assignment PIN_B13 -to seg_sck
+set_location_assignment PIN_B15 -to seg_din
+set_location_assignment PIN_B14 -to beep
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to key_row[*]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to key_col[*]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_rck
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_sck
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_din
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to beep
+set_global_assignment -name VERILOG_FILE lcd_controller.v
+set_location_assignment PIN_D7 -to lcd_sel
+set_location_assignment PIN_P15 -to lcd_rst
+set_location_assignment PIN_P14 -to lcd_dc
+set_location_assignment PIN_R14 -to lcd_sda
+set_location_assignment PIN_P12 -to lcd_sck
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_*
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to key_*
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_*
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lcd_*
+set_global_assignment -name VERILOG_FILE simple_fft.v
+set_global_assignment -name VERILOG_FILE beeper_ctrl.v
+set_global_assignment -name VERILOG_FILE led_bar_display.v
+set_global_assignment -name VERILOG_FILE pll.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

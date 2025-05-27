@@ -1,0 +1,132 @@
+Flow report for Electric_Piano
+Tue May 27 11:32:21 2025
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Tue May 27 11:32:18 2025       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; Electric_Piano                              ;
+; Top-level Entity Name              ; Advanced_Electric_Piano                     ;
+; Family                             ; MAX 10                                      ;
+; Device                             ; 10M08SAM153C8G                              ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 523 / 8,064 ( 6 % )                         ;
+;     Total combinational functions  ; 500 / 8,064 ( 6 % )                         ;
+;     Dedicated logic registers      ; 173 / 8,064 ( 2 % )                         ;
+; Total registers                    ; 173                                         ;
+; Total pins                         ; 23 / 112 ( 21 % )                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 387,072 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 48 ( 0 % )                              ;
+; Total PLLs                         ; 0 / 1 ( 0 % )                               ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 1 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 05/27/2025 11:31:58 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; Electric_Piano      ;
++-------------------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                     ;
++-------------------------------------+----------------------------------------+----------------+-------------------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name             ; Section Id ;
++-------------------------------------+----------------------------------------+----------------+-------------------------+------------+
+; COMPILER_SIGNATURE_ID               ; 5415294603552.174831671716852          ; --             ; --                      ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --                      ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --                      ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --             ; --                      ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --             ; --                      ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --             ; --                      ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --             ; --                      ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; Advanced_Electric_Piano ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; Advanced_Electric_Piano ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; Advanced_Electric_Piano ; Top        ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --                      ; --         ;
+; TOP_LEVEL_ENTITY                    ; Advanced_Electric_Piano                ; Electric_Piano ; --                      ; --         ;
++-------------------------------------+----------------------------------------+----------------+-------------------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4835 MB             ; 00:00:15                           ;
+; Fitter               ; 00:00:05     ; 1.3                     ; 6333 MB             ; 00:00:09                           ;
+; Assembler            ; 00:00:00     ; 1.0                     ; 4679 MB             ; 00:00:01                           ;
+; Power Analyzer       ; 00:00:02     ; 1.4                     ; 4962 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.5                     ; 4908 MB             ; 00:00:02                           ;
+; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:29                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; scientist        ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; scientist        ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; scientist        ; Windows 10 ; 10.0       ; x86_64         ;
+; Power Analyzer       ; scientist        ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; scientist        ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off Electric_Piano -c Electric_Piano
+quartus_fit --read_settings_files=off --write_settings_files=off Electric_Piano -c Electric_Piano
+quartus_asm --read_settings_files=off --write_settings_files=off Electric_Piano -c Electric_Piano
+quartus_pow --read_settings_files=off --write_settings_files=off Electric_Piano -c Electric_Piano
+quartus_sta Electric_Piano -c Electric_Piano
+
+
+

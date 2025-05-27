@@ -1,0 +1,7 @@
+
+State Machine - |Music_Box|Song_Player_V2:u_player|state
+Name state.WAIT state.PLAY state.LOAD state.IDLE 
+state.IDLE 0 0 0 0 
+state.LOAD 0 0 1 1 
+state.PLAY 0 1 0 1 
+state.WAIT 1 0 0 1 

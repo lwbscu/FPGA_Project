@@ -1,0 +1,5 @@
+Info (10281): Verilog HDL Declaration information at at24_driver.v(41): object "ACK" differs only in case from object "ack" in the same scope File: D:/Quartus_Project/audio_spectrum_analyzer3/source/at24_driver.v Line: 41
+Info (10281): Verilog HDL Declaration information at adxl345_driver.v(43): object "ACK" differs only in case from object "ack" in the same scope File: D:/Quartus_Project/audio_spectrum_analyzer3/source/adxl345_driver.v Line: 43
+Info (10281): Verilog HDL Declaration information at audio_simulator.v(14): object "CNT_48KHZ" differs only in case from object "cnt_48khz" in the same scope File: D:/Quartus_Project/audio_spectrum_analyzer3/source/audio_simulator.v Line: 14
+Warning (10268): Verilog HDL information at light_effects.v(69): always construct contains both blocking and non-blocking assignments File: D:/Quartus_Project/audio_spectrum_analyzer3/source/light_effects.v Line: 69
+Warning (10268): Verilog HDL information at lcd_spectrum_display.v(74): always construct contains both blocking and non-blocking assignments File: D:/Quartus_Project/audio_spectrum_analyzer3/source/lcd_spectrum_display.v Line: 74

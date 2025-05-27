@@ -1,0 +1,6 @@
+Warning (10268): Verilog HDL information at fft_64point.v(102): always construct contains both blocking and non-blocking assignments File: D:/Quartus_Project/audio_spectrum_analyzer/fft_64point.v Line: 102
+Warning (10268): Verilog HDL information at seg7_driver.v(103): always construct contains both blocking and non-blocking assignments File: D:/Quartus_Project/audio_spectrum_analyzer/seg7_driver.v Line: 103
+Info (10281): Verilog HDL Declaration information at matrix_keypad.v(20): object "SCAN_ROW" differs only in case from object "scan_row" in the same scope File: D:/Quartus_Project/audio_spectrum_analyzer/matrix_keypad.v Line: 20
+Warning (10268): Verilog HDL information at lcd_controller.v(45): always construct contains both blocking and non-blocking assignments File: D:/Quartus_Project/audio_spectrum_analyzer/lcd_controller.v Line: 45
+Warning (10268): Verilog HDL information at simple_fft.v(27): always construct contains both blocking and non-blocking assignments File: D:/Quartus_Project/audio_spectrum_analyzer/simple_fft.v Line: 27
+Warning (10268): Verilog HDL information at led_bar_display.v(28): always construct contains both blocking and non-blocking assignments File: D:/Quartus_Project/audio_spectrum_analyzer/led_bar_display.v Line: 28

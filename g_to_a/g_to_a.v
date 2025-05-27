@@ -1,0 +1,25 @@
+module g_to_a(
+   input wire [3:0] A,
+   output wire [8:0] g_to_a
+    );
+    reg [8:0]seg[15:0];
+    initial begin
+       seg[4'b0000]=9'h3f;
+      seg[4'b0001]=9'h06;
+      seg[4'b0010]=9'h5b;
+      seg[4'b0011]=9'h4f;
+      seg[4'b0100]=9'h66;
+      seg[4'b0101]=9'h6d;
+      seg[4'b0110]=9'h7d;
+      seg[4'b0111]=9'h07;
+      seg[4'b1000]=9'h7f;
+      seg[4'b1001]=9'h6f;
+      seg[4'b1010]=9'h77;
+      seg[4'b1011]=9'h7C;
+      seg[4'b1100]=9'h39;
+      seg[4'b1101]=9'h5e;
+      seg[4'b1110]=9'h79;
+        seg[4'b1111]=9'h71;
+end
+assign g_to_a=seg [A];
+endmodule

@@ -1,0 +1,103 @@
+// --------------------------------------------------------------------
+// Module: fft_512
+// Description: 512点FFT处理模块，使用Radix-2算法
+// --------------------------------------------------------------------
+module fft_512(
+    input           clk,
+    input           rst_n,
+    input   [7:0]   audio_in,
+    input           audio_valid,
+    output  [511:0] fft_real,
+    output  [511:0] fft_imag,
+    output          fft_done
+);
+
+// 参数定义
+parameter FFT_SIZE = 512;
+parameter DATA_WIDTH = 16;
+
+// 内部信号
+reg [15:0] sample_buffer [0:511];  // 采样缓冲区
+reg [9:0]  sample_cnt;             // 采样计数器
+reg        fft_start;              // FFT开始信号
+reg [3:0]  fft_stage;              // FFT计算阶段
+reg        calculating;            // 计算中标志
+
+// 蝶形运算单元的信号
+reg [15:0] real_mem [0:511];      // 实部存储
+reg [15:0] imag_mem [0:511];      // 虚部存储
+reg [8:0]  butterfly_idx;          // 蝶形运算索引
+
+// 旋转因子ROM
+reg [15:0] cos_rom [0:255];        // 余弦值
+reg [15:0] sin_rom [0:255];        // 正弦值
+
+// 初始化旋转因子
+integer i;
+initial begin
+    for (i = 0; i < 256; i = i + 1) begin
+        cos_rom[i] = $rtoi(32767 * $cos(2 * 3.14159 * i / 512));
+        sin_rom[i] = $rtoi(32767 * $sin(2 * 3.14159 * i / 512));
+    end
+end
+
+// 采样缓冲控制
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        sample_cnt <= 10'd0;
+        fft_start <= 1'b0;
+    end else if (audio_valid && !calculating) begin
+        sample_buffer[sample_cnt] <= {audio_in, 8'b0}; // 左移8位扩展精度
+        if (sample_cnt == 511) begin
+            sample_cnt <= 10'd0;
+            fft_start <= 1'b1;
+        end else begin
+            sample_cnt <= sample_cnt + 1'b1;
+            fft_start <= 1'b0;
+        end
+    end else begin
+        fft_start <= 1'b0;
+    end
+end
+
+// FFT计算状态机
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        calculating <= 1'b0;
+        fft_stage <= 4'd0;
+        butterfly_idx <= 9'd0;
+    end else if (fft_start && !calculating) begin
+        calculating <= 1'b1;
+        fft_stage <= 4'd0;
+        // 初始化：复制采样数据到实部，虚部清零
+        for (i = 0; i < 512; i = i + 1) begin
+            real_mem[i] <= sample_buffer[i];
+            imag_mem[i] <= 16'd0;
+        end
+    end else if (calculating) begin
+        // 简化的FFT计算（实际应用中需要完整的蝶形运算）
+        if (fft_stage < 9) begin
+            // 执行第stage阶段的蝶形运算
+            butterfly_idx <= butterfly_idx + 1'b1;
+            if (butterfly_idx == 255) begin
+                fft_stage <= fft_stage + 1'b1;
+                butterfly_idx <= 9'd0;
+            end
+        end else begin
+            calculating <= 1'b0;
+        end
+    end
+end
+
+// 输出映射
+genvar j;
+generate
+    for (j = 0; j < 512; j = j + 1) begin : output_map
+        assign fft_real[j] = real_mem[j][15];  // 取符号位简化
+        assign fft_imag[j] = imag_mem[j][15];
+    end
+endgenerate
+
+assign fft_done = !calculating && (fft_stage == 4'd9);
+
+endmodule

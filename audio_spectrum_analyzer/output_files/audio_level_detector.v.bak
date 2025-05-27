@@ -1,0 +1,34 @@
+module audio_level_detector(
+    input           clk,
+    input           rst_n,
+    input [7:0]     audio_data,   // ADC数据输入
+    input           data_valid,   // 数据有效信号
+    output reg [7:0] level_led    // LED电平指示
+);
+
+// 简单的电平检测 - 将8位音频数据映射到8个LED
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        level_led <= 8'b00000000;
+    end else if (data_valid) begin
+        // 简单的阈值比较
+        if (audio_data < 8'd32)
+            level_led <= 8'b00000001;
+        else if (audio_data < 8'd64)
+            level_led <= 8'b00000011;
+        else if (audio_data < 8'd96)
+            level_led <= 8'b00000111;
+        else if (audio_data < 8'd128)
+            level_led <= 8'b00001111;
+        else if (audio_data < 8'd160)
+            level_led <= 8'b00011111;
+        else if (audio_data < 8'd192)
+            level_led <= 8'b00111111;
+        else if (audio_data < 8'd224)
+            level_led <= 8'b01111111;
+        else
+            level_led <= 8'b11111111;
+    end
+end
+
+endmodule

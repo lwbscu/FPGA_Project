@@ -1,0 +1,97 @@
+module adc_driver(
+    input           clk,        // 系统时钟 12MHz
+    input           rst_n,      // 复位信号
+    
+    // ADC SPI接口
+    output reg      adc_cs,     // ADC片选信号
+    output reg      adc_clk,    // ADC时钟信号  
+    input           adc_dat,    // ADC数据输入
+    
+    // 数据输出
+    output reg      adc_done,   // ADC转换完成标志
+    output reg [7:0] adc_data   // ADC采样数据
+);
+
+// 参数定义
+parameter CLK_DIV = 2;  // 时钟分频系数，12MHz/2 = 6MHz
+
+// 状态机定义
+localparam IDLE  = 2'b00;
+localparam CONV  = 2'b01;
+localparam READ  = 2'b10;
+localparam DONE  = 2'b11;
+
+reg [1:0] state;
+reg [4:0] bit_cnt;
+reg [1:0] clk_cnt;
+reg [7:0] shift_reg;
+
+// 时钟分频
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        clk_cnt <= 2'd0;
+    end else begin
+        if (clk_cnt >= (CLK_DIV-1))
+            clk_cnt <= 2'd0;
+        else
+            clk_cnt <= clk_cnt + 1'b1;
+    end
+end
+
+wire spi_clk_en = (clk_cnt == 2'd0);
+
+// ADC状态机
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        state <= IDLE;
+        bit_cnt <= 5'd0;
+        adc_cs <= 1'b1;
+        adc_clk <= 1'b1;
+        adc_done <= 1'b0;
+        shift_reg <= 8'd0;
+        adc_data <= 8'd0;
+    end else if (spi_clk_en) begin
+        case (state)
+            IDLE: begin
+                adc_cs <= 1'b0;  // 开始转换
+                adc_clk <= 1'b1;
+                bit_cnt <= 5'd0;
+                adc_done <= 1'b0;
+                state <= CONV;
+            end
+            
+            CONV: begin
+                if (bit_cnt < 5'd3) begin  // 前3个时钟周期
+                    adc_clk <= ~adc_clk;
+                    if (adc_clk == 1'b1)
+                        bit_cnt <= bit_cnt + 1'b1;
+                end else begin
+                    bit_cnt <= 5'd0;
+                    state <= READ;
+                end
+            end
+            
+            READ: begin
+                adc_clk <= ~adc_clk;
+                if (adc_clk == 1'b0) begin  // 下降沿
+                    if (bit_cnt < 5'd8) begin
+                        shift_reg <= {shift_reg[6:0], adc_dat};
+                        bit_cnt <= bit_cnt + 1'b1;
+                    end else begin
+                        state <= DONE;
+                    end
+                end
+            end
+            
+            DONE: begin
+                adc_cs <= 1'b1;
+                adc_clk <= 1'b1;
+                adc_data <= shift_reg;
+                adc_done <= 1'b1;
+                state <= IDLE;
+            end
+        endcase
+    end
+end
+
+endmodule

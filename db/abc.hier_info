@@ -1,0 +1,7 @@
+|abc
+A => Result.IN0
+B => Result.IN1
+C => Result.IN1
+Result << Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
