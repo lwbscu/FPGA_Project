@@ -1,34 +1,30 @@
 
-State Machine - |ballplayer_top|lcd:lcd_inst|draw_line:lcd_draw_line_inst|state
-Name state.IDLE state.DRAW state.CLEAR 
-state.IDLE 0 0 0 
-state.DRAW 1 1 0 
-state.CLEAR 1 0 1 
+State Machine - |ballplayer_top|lcd_full_init_test:lcd_test_inst|init_step
+Name init_step.00001011 init_step.00001010 init_step.00001001 init_step.00001000 init_step.00000111 init_step.00000110 init_step.00000101 init_step.00000100 init_step.00000011 init_step.00000010 init_step.00000001 init_step.00000000 
+init_step.00000000 0 0 0 0 0 0 0 0 0 0 0 0 
+init_step.00000001 0 0 0 0 0 0 0 0 0 0 1 1 
+init_step.00000010 0 0 0 0 0 0 0 0 0 1 0 1 
+init_step.00000011 0 0 0 0 0 0 0 0 1 0 0 1 
+init_step.00000100 0 0 0 0 0 0 0 1 0 0 0 1 
+init_step.00000101 0 0 0 0 0 0 1 0 0 0 0 1 
+init_step.00000110 0 0 0 0 0 1 0 0 0 0 0 1 
+init_step.00000111 0 0 0 0 1 0 0 0 0 0 0 1 
+init_step.00001000 0 0 0 1 0 0 0 0 0 0 0 1 
+init_step.00001001 0 0 1 0 0 0 0 0 0 0 0 1 
+init_step.00001010 0 1 0 0 0 0 0 0 0 0 0 1 
+init_step.00001011 1 0 0 0 0 0 0 0 0 0 0 1 
 
-State Machine - |ballplayer_top|lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|state
-Name state.DONE state.STATE2 state.STATE1 state.STATE0 
-state.STATE0 0 0 0 0 
-state.STATE1 0 0 1 1 
-state.STATE2 0 1 0 1 
-state.DONE 1 0 0 1 
+State Machine - |ballplayer_top|lcd_full_init_test:lcd_test_inst|state
+Name state.DONE state.FILL_WHITE state.SET_WINDOW state.INIT_WAIT state.INIT_CMD state.DELAY1 state.RESET 
+state.RESET 0 0 0 0 0 0 0 
+state.DELAY1 0 0 0 0 0 1 1 
+state.INIT_CMD 0 0 0 0 1 0 1 
+state.INIT_WAIT 0 0 0 1 0 0 1 
+state.SET_WINDOW 0 0 1 0 0 0 1 
+state.FILL_WHITE 0 1 0 0 0 0 1 
+state.DONE 1 0 0 0 0 0 1 
 
-State Machine - |ballplayer_top|lcd:lcd_inst|lcd_init:lcd_init_inst|state
-Name state.DONE state.S4_WR_DIRECTION_CLEAR state.S3_DELAY120MS state.S2_WR_90 state.S1_DELAY50MS state.S0_DELAY100MS 
-state.S0_DELAY100MS 0 0 0 0 0 0 
-state.S1_DELAY50MS 0 0 0 0 1 1 
-state.S2_WR_90 0 0 0 1 0 1 
-state.S3_DELAY120MS 0 0 1 0 0 1 
-state.S4_WR_DIRECTION_CLEAR 0 1 0 0 0 1 
-state.DONE 1 0 0 0 0 1 
-
-State Machine - |ballplayer_top|lcd:lcd_inst|control:control_inst|state
-Name state.IDLE state.DRAW_LINE state.SHOW_PIC state.INIT 
-state.INIT 0 0 0 0 
-state.IDLE 1 0 0 1 
-state.SHOW_PIC 0 0 1 1 
-state.DRAW_LINE 0 1 0 1 
-
-State Machine - |ballplayer_top|lcd:lcd_inst|lcd_write:lcd_write_inst|state
+State Machine - |ballplayer_top|lcd_full_init_test:lcd_test_inst|lcd_write:lcd_write_inst|state
 Name state.DONE state.STATE2 state.STATE1 state.STATE0 
 state.STATE0 0 0 0 0 
 state.STATE1 0 0 1 1 

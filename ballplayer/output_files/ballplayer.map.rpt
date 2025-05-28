@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ballplayer
-Wed May 28 13:26:33 2025
+Wed May 28 13:52:08 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,54 +14,47 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis DSP Block Usage Summary
-  9. State Machine - |ballplayer_top|lcd:lcd_inst|draw_line:lcd_draw_line_inst|state
- 10. State Machine - |ballplayer_top|lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|state
- 11. State Machine - |ballplayer_top|lcd:lcd_inst|lcd_init:lcd_init_inst|state
- 12. State Machine - |ballplayer_top|lcd:lcd_inst|control:control_inst|state
- 13. State Machine - |ballplayer_top|lcd:lcd_inst|lcd_write:lcd_write_inst|state
- 14. State Machine - |ballplayer_top|jumping:jump_inst|current_state
- 15. State Machine - |ballplayer_top|rpr0521rs_driver:sensor_inst|state
- 16. State Machine - |ballplayer_top|rpr0521rs_driver:sensor_inst|i2c_master:i2c_master_inst|i2c_state
- 17. State Machine - |ballplayer_top|adc081s101_driver:adc_driver_inst|state
- 18. Registers Removed During Synthesis
- 19. Removed Registers Triggering Further Register Optimizations
- 20. General Register Statistics
- 21. Inverted Register Statistics
- 22. Multiplexer Restructuring Statistics (Restructuring Performed)
- 23. Parameter Settings for User Entity Instance: ballplayer_pll:pll_inst|altpll:altpll_component
- 24. Parameter Settings for User Entity Instance: adc081s101_driver:adc_driver_inst
- 25. Parameter Settings for User Entity Instance: rpr0521rs_driver:sensor_inst
- 26. Parameter Settings for User Entity Instance: hand_control:hand_ctrl_inst
- 27. Parameter Settings for User Entity Instance: adjuster:adj_inst|debounce:deb_up_inst
- 28. Parameter Settings for User Entity Instance: adjuster:adj_inst|debounce:deb_down_inst
- 29. Parameter Settings for User Entity Instance: adjuster:adj_inst|segment_display:seg_inst
- 30. Parameter Settings for User Entity Instance: jumping:jump_inst
- 31. Parameter Settings for User Entity Instance: jumping:jump_inst|frequency_divider:fre_500us
- 32. Parameter Settings for User Entity Instance: lcd:lcd_inst|lcd_write:lcd_write_inst
- 33. Parameter Settings for User Entity Instance: lcd:lcd_inst|control:control_inst
- 34. Parameter Settings for User Entity Instance: lcd:lcd_inst|lcd_init:lcd_init_inst
- 35. Parameter Settings for User Entity Instance: lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst
- 36. Parameter Settings for User Entity Instance: lcd:lcd_inst|draw_line:lcd_draw_line_inst
- 37. Parameter Settings for Inferred Entity Instance: adjuster:adj_inst|segment_display:seg_inst|lpm_divide:Mod0
- 38. Parameter Settings for Inferred Entity Instance: jumping:jump_inst|lpm_mult:Mult4
- 39. Parameter Settings for Inferred Entity Instance: jumping:jump_inst|lpm_mult:Mult5
- 40. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 41. Parameter Settings for Inferred Entity Instance: jumping:jump_inst|lpm_mult:Mult0
- 42. Parameter Settings for Inferred Entity Instance: jumping:jump_inst|lpm_mult:Mult1
- 43. Parameter Settings for Inferred Entity Instance: jumping:jump_inst|lpm_mult:Mult2
- 44. Parameter Settings for Inferred Entity Instance: jumping:jump_inst|lpm_mult:Mult3
- 45. altpll Parameter Settings by Entity Instance
- 46. lpm_mult Parameter Settings by Entity Instance
- 47. Port Connectivity Checks: "lcd:lcd_inst"
- 48. Port Connectivity Checks: "jumping:jump_inst"
- 49. Port Connectivity Checks: "adjuster:adj_inst|segment_display:seg_inst"
- 50. Port Connectivity Checks: "rpr0521rs_driver:sensor_inst|i2c_master:i2c_master_inst"
- 51. Port Connectivity Checks: "rpr0521rs_driver:sensor_inst"
- 52. Port Connectivity Checks: "adc081s101_driver:adc_driver_inst"
- 53. Port Connectivity Checks: "ballplayer_pll:pll_inst"
- 54. Post-Synthesis Netlist Statistics for Top Partition
- 55. Elapsed Time Per Partition
- 56. Analysis & Synthesis Messages
+  9. State Machine - |ballplayer_top|lcd_full_init_test:lcd_test_inst|init_step
+ 10. State Machine - |ballplayer_top|lcd_full_init_test:lcd_test_inst|state
+ 11. State Machine - |ballplayer_top|lcd_full_init_test:lcd_test_inst|lcd_write:lcd_write_inst|state
+ 12. State Machine - |ballplayer_top|jumping:jump_inst|current_state
+ 13. State Machine - |ballplayer_top|rpr0521rs_driver:sensor_inst|state
+ 14. State Machine - |ballplayer_top|rpr0521rs_driver:sensor_inst|i2c_master:i2c_master_inst|i2c_state
+ 15. State Machine - |ballplayer_top|adc081s101_driver:adc_driver_inst|state
+ 16. Registers Removed During Synthesis
+ 17. Removed Registers Triggering Further Register Optimizations
+ 18. General Register Statistics
+ 19. Inverted Register Statistics
+ 20. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 21. Parameter Settings for User Entity Instance: ballplayer_pll:pll_inst|altpll:altpll_component
+ 22. Parameter Settings for User Entity Instance: adc081s101_driver:adc_driver_inst
+ 23. Parameter Settings for User Entity Instance: rpr0521rs_driver:sensor_inst
+ 24. Parameter Settings for User Entity Instance: hand_control:hand_ctrl_inst
+ 25. Parameter Settings for User Entity Instance: adjuster:adj_inst|debounce:deb_up_inst
+ 26. Parameter Settings for User Entity Instance: adjuster:adj_inst|debounce:deb_down_inst
+ 27. Parameter Settings for User Entity Instance: adjuster:adj_inst|segment_display:seg_inst
+ 28. Parameter Settings for User Entity Instance: jumping:jump_inst
+ 29. Parameter Settings for User Entity Instance: jumping:jump_inst|frequency_divider:fre_500us
+ 30. Parameter Settings for User Entity Instance: lcd_full_init_test:lcd_test_inst
+ 31. Parameter Settings for User Entity Instance: lcd_full_init_test:lcd_test_inst|lcd_write:lcd_write_inst
+ 32. Parameter Settings for Inferred Entity Instance: adjuster:adj_inst|segment_display:seg_inst|lpm_divide:Mod0
+ 33. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
+ 34. Parameter Settings for Inferred Entity Instance: jumping:jump_inst|lpm_mult:Mult0
+ 35. Parameter Settings for Inferred Entity Instance: jumping:jump_inst|lpm_mult:Mult1
+ 36. Parameter Settings for Inferred Entity Instance: jumping:jump_inst|lpm_mult:Mult4
+ 37. Parameter Settings for Inferred Entity Instance: jumping:jump_inst|lpm_mult:Mult5
+ 38. Parameter Settings for Inferred Entity Instance: jumping:jump_inst|lpm_mult:Mult2
+ 39. Parameter Settings for Inferred Entity Instance: jumping:jump_inst|lpm_mult:Mult3
+ 40. altpll Parameter Settings by Entity Instance
+ 41. lpm_mult Parameter Settings by Entity Instance
+ 42. Port Connectivity Checks: "jumping:jump_inst"
+ 43. Port Connectivity Checks: "adjuster:adj_inst|segment_display:seg_inst"
+ 44. Port Connectivity Checks: "rpr0521rs_driver:sensor_inst|i2c_master:i2c_master_inst"
+ 45. Port Connectivity Checks: "rpr0521rs_driver:sensor_inst"
+ 46. Port Connectivity Checks: "ballplayer_pll:pll_inst"
+ 47. Post-Synthesis Netlist Statistics for Top Partition
+ 48. Elapsed Time Per Partition
+ 49. Analysis & Synthesis Messages
 
 
 
@@ -87,16 +80,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 28 13:26:33 2025       ;
+; Analysis & Synthesis Status        ; Successful - Wed May 28 13:52:08 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ballplayer                                  ;
 ; Top-level Entity Name              ; ballplayer_top                              ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 900                                         ;
-;     Total combinational functions  ; 873                                         ;
-;     Dedicated logic registers      ; 401                                         ;
-; Total registers                    ; 401                                         ;
-; Total pins                         ; 35                                          ;
+; Total logic elements               ; 680                                         ;
+;     Total combinational functions  ; 662                                         ;
+;     Dedicated logic registers      ; 315                                         ;
+; Total registers                    ; 315                                         ;
+; Total pins                         ; 42                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 7                                           ;
@@ -207,8 +200,7 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -224,16 +216,11 @@ refer to the applicable agreement for further details.
 ; source/hand_control.v            ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/hand_control.v                ;         ;
 ; source/adjuster.v                ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/adjuster.v                    ;         ;
 ; source/jumping.v                 ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/jumping.v                     ;         ;
-; source/lcd.v                     ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/lcd.v                         ;         ;
-; source/control.v                 ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/control.v                     ;         ;
-; source/lcd_show_pic.v            ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/lcd_show_pic.v                ;         ;
-; source/draw_line.v               ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/draw_line.v                   ;         ;
-; source/pic_ram.v                 ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/pic_ram.v                     ;         ;
-; source/lcd_init.v                ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/lcd_init.v                    ;         ;
 ; source/lcd_write.v               ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/lcd_write.v                   ;         ;
 ; source/segment_display.v         ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/segment_display.v             ;         ;
 ; source/frequency_divider.v       ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/frequency_divider.v           ;         ;
 ; source/debounce.v                ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/debounce.v                    ;         ;
+; source/lcd_full_init_test.v      ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/lcd_full_init_test.v          ;         ;
 ; altpll.tdf                       ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/altpll.tdf              ;         ;
 ; aglobal181.inc                   ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/aglobal181.inc          ;         ;
 ; stratix_pll.inc                  ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/stratix_pll.inc         ;         ;
@@ -253,8 +240,6 @@ refer to the applicable agreement for further details.
 ; multcore.inc                     ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/multcore.inc            ;         ;
 ; bypassff.inc                     ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/bypassff.inc            ;         ;
 ; altshift.inc                     ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/altshift.inc            ;         ;
-; db/mult_lns.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/mult_lns.tdf                      ;         ;
-; db/mult_ins.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/mult_ins.tdf                      ;         ;
 ; multcore.tdf                     ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/multcore.tdf            ;         ;
 ; csa_add.inc                      ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/csa_add.inc             ;         ;
 ; mpar_add.inc                     ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/mpar_add.inc            ;         ;
@@ -271,7 +256,9 @@ refer to the applicable agreement for further details.
 ; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
 ; db/add_sub_crg.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/add_sub_crg.tdf                   ;         ;
 ; altshift.tdf                     ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/altshift.tdf            ;         ;
+; db/mult_lns.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/mult_lns.tdf                      ;         ;
 ; db/mult_4ls.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/mult_4ls.tdf                      ;         ;
+; db/mult_ins.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/mult_ins.tdf                      ;         ;
 ; db/add_sub_rng.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/add_sub_rng.tdf                   ;         ;
 ; db/add_sub_sng.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/add_sub_sng.tdf                   ;         ;
 ; db/add_sub_qng.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/add_sub_qng.tdf                   ;         ;
@@ -283,23 +270,23 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 900         ;
+; Estimated Total logic elements              ; 680         ;
 ;                                             ;             ;
-; Total combinational functions               ; 873         ;
+; Total combinational functions               ; 662         ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 357         ;
-;     -- 3 input functions                    ; 213         ;
-;     -- <=2 input functions                  ; 303         ;
+;     -- 4 input functions                    ; 234         ;
+;     -- 3 input functions                    ; 188         ;
+;     -- <=2 input functions                  ; 240         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 527         ;
-;     -- arithmetic mode                      ; 346         ;
+;     -- normal mode                          ; 362         ;
+;     -- arithmetic mode                      ; 300         ;
 ;                                             ;             ;
-; Total registers                             ; 401         ;
-;     -- Dedicated logic registers            ; 401         ;
+; Total registers                             ; 315         ;
+;     -- Dedicated logic registers            ; 315         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 35          ;
+; I/O pins                                    ; 42          ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 7           ;
 ;                                             ;             ;
@@ -307,9 +294,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; rst_n~input ;
-; Maximum fan-out                             ; 322         ;
-; Total fan-out                               ; 4376        ;
-; Average fan-out                             ; 3.23        ;
+; Maximum fan-out                             ; 234         ;
+; Total fan-out                               ; 3385        ;
+; Average fan-out                             ; 3.16        ;
 +---------------------------------------------+-------------+
 
 
@@ -318,14 +305,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                      ; Entity Name           ; Library Name ;
 +---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |ballplayer_top                                   ; 873 (9)             ; 401 (0)                   ; 0           ; 0          ; 7            ; 1       ; 3         ; 35   ; 0            ; 0          ; |ballplayer_top                                                                                                                                          ; ballplayer_top        ; work         ;
-;    |adc081s101_driver:adc_driver_inst|            ; 64 (64)             ; 52 (52)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|adc081s101_driver:adc_driver_inst                                                                                                        ; adc081s101_driver     ; work         ;
+; |ballplayer_top                                   ; 662 (9)             ; 315 (0)                   ; 0           ; 0          ; 7            ; 1       ; 3         ; 42   ; 0            ; 0          ; |ballplayer_top                                                                                                                                          ; ballplayer_top        ; work         ;
+;    |adc081s101_driver:adc_driver_inst|            ; 65 (65)             ; 53 (53)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|adc081s101_driver:adc_driver_inst                                                                                                        ; adc081s101_driver     ; work         ;
 ;    |adjuster:adj_inst|                            ; 21 (0)              ; 17 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|adjuster:adj_inst                                                                                                                        ; adjuster              ; work         ;
 ;       |segment_display:seg_inst|                  ; 21 (21)             ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|adjuster:adj_inst|segment_display:seg_inst                                                                                               ; segment_display       ; work         ;
 ;    |ballplayer_pll:pll_inst|                      ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|ballplayer_pll:pll_inst                                                                                                                  ; ballplayer_pll        ; work         ;
 ;       |altpll:altpll_component|                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|ballplayer_pll:pll_inst|altpll:altpll_component                                                                                          ; altpll                ; work         ;
 ;          |ballplayer_pll_altpll:auto_generated|   ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|ballplayer_pll:pll_inst|altpll:altpll_component|ballplayer_pll_altpll:auto_generated                                                     ; ballplayer_pll_altpll ; work         ;
-;    |jumping:jump_inst|                            ; 281 (207)           ; 105 (80)                  ; 0           ; 0          ; 7            ; 1       ; 3         ; 0    ; 0            ; 0          ; |ballplayer_top|jumping:jump_inst                                                                                                                        ; jumping               ; work         ;
+;    |jumping:jump_inst|                            ; 282 (208)           ; 107 (82)                  ; 0           ; 0          ; 7            ; 1       ; 3         ; 0    ; 0            ; 0          ; |ballplayer_top|jumping:jump_inst                                                                                                                        ; jumping               ; work         ;
 ;       |frequency_divider:fre_500us|               ; 33 (33)             ; 25 (25)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|jumping:jump_inst|frequency_divider:fre_500us                                                                                            ; frequency_divider     ; work         ;
 ;       |lpm_mult:Mult0|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |ballplayer_top|jumping:jump_inst|lpm_mult:Mult0                                                                                                         ; lpm_mult              ; work         ;
 ;          |mult_lns:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |ballplayer_top|jumping:jump_inst|lpm_mult:Mult0|mult_lns:auto_generated                                                                                 ; mult_lns              ; work         ;
@@ -348,19 +335,14 @@ refer to the applicable agreement for further details.
 ;          |mult_lns:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |ballplayer_top|jumping:jump_inst|lpm_mult:Mult4|mult_lns:auto_generated                                                                                 ; mult_lns              ; work         ;
 ;       |lpm_mult:Mult5|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |ballplayer_top|jumping:jump_inst|lpm_mult:Mult5                                                                                                         ; lpm_mult              ; work         ;
 ;          |mult_ins:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |ballplayer_top|jumping:jump_inst|lpm_mult:Mult5|mult_ins:auto_generated                                                                                 ; mult_ins              ; work         ;
-;    |lcd:lcd_inst|                                 ; 387 (0)             ; 181 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|lcd:lcd_inst                                                                                                                             ; lcd                   ; work         ;
-;       |control:control_inst|                      ; 26 (26)             ; 12 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|lcd:lcd_inst|control:control_inst                                                                                                        ; control               ; work         ;
-;       |draw_line:lcd_draw_line_inst|              ; 29 (29)             ; 22 (22)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|lcd:lcd_inst|draw_line:lcd_draw_line_inst                                                                                                ; draw_line             ; work         ;
-;       |lcd_init:lcd_init_inst|                    ; 178 (178)           ; 67 (67)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|lcd:lcd_inst|lcd_init:lcd_init_inst                                                                                                      ; lcd_init              ; work         ;
-;       |lcd_show_pic:lcd_show_pic_inst|            ; 96 (96)             ; 59 (59)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst                                                                                              ; lcd_show_pic          ; work         ;
-;       |lcd_write:lcd_write_inst|                  ; 45 (45)             ; 21 (21)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|lcd:lcd_inst|lcd_write:lcd_write_inst                                                                                                    ; lcd_write             ; work         ;
-;       |pic_ram:pic_ram_inst|                      ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|lcd:lcd_inst|pic_ram:pic_ram_inst                                                                                                        ; pic_ram               ; work         ;
+;    |lcd_full_init_test:lcd_test_inst|             ; 173 (139)           ; 91 (70)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|lcd_full_init_test:lcd_test_inst                                                                                                         ; lcd_full_init_test    ; work         ;
+;       |lcd_write:lcd_write_inst|                  ; 34 (34)             ; 21 (21)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|lcd_full_init_test:lcd_test_inst|lcd_write:lcd_write_inst                                                                                ; lcd_write             ; work         ;
 ;    |lpm_mult:Mult0|                               ; 32 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|lpm_mult:Mult0                                                                                                                           ; lpm_mult              ; work         ;
 ;       |multcore:mult_core|                        ; 32 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|lpm_mult:Mult0|multcore:mult_core                                                                                                        ; multcore              ; work         ;
 ;          |mpar_add:padder|                        ; 12 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                                        ; mpar_add              ; work         ;
 ;             |lpm_add_sub:adder[0]|                ; 12 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                                   ; lpm_add_sub           ; work         ;
 ;                |add_sub_crg:auto_generated|       ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_crg:auto_generated                                        ; add_sub_crg           ; work         ;
-;    |rpr0521rs_driver:sensor_inst|                 ; 79 (63)             ; 46 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|rpr0521rs_driver:sensor_inst                                                                                                             ; rpr0521rs_driver      ; work         ;
+;    |rpr0521rs_driver:sensor_inst|                 ; 80 (64)             ; 47 (34)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|rpr0521rs_driver:sensor_inst                                                                                                             ; rpr0521rs_driver      ; work         ;
 ;       |i2c_master:i2c_master_inst|                ; 16 (16)             ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top|rpr0521rs_driver:sensor_inst|i2c_master:i2c_master_inst                                                                                  ; i2c_master            ; work         ;
 +---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -385,69 +367,53 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------+
-; State Machine - |ballplayer_top|lcd:lcd_inst|draw_line:lcd_draw_line_inst|state ;
-+-------------+------------+------------+-----------------------------------------+
-; Name        ; state.IDLE ; state.DRAW ; state.CLEAR                             ;
-+-------------+------------+------------+-----------------------------------------+
-; state.IDLE  ; 0          ; 0          ; 0                                       ;
-; state.DRAW  ; 1          ; 1          ; 0                                       ;
-; state.CLEAR ; 1          ; 0          ; 1                                       ;
-+-------------+------------+------------+-----------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |ballplayer_top|lcd_full_init_test:lcd_test_inst|init_step                                                                                                                                                                                                     ;
++--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+
+; Name               ; init_step.00001011 ; init_step.00001010 ; init_step.00001001 ; init_step.00001000 ; init_step.00000111 ; init_step.00000110 ; init_step.00000101 ; init_step.00000100 ; init_step.00000011 ; init_step.00000010 ; init_step.00000001 ; init_step.00000000 ;
++--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+
+; init_step.00000000 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ;
+; init_step.00000001 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 1                  ;
+; init_step.00000010 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 1                  ;
+; init_step.00000011 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 1                  ;
+; init_step.00000100 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; init_step.00000101 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; init_step.00000110 ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; init_step.00000111 ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; init_step.00001000 ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; init_step.00001001 ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; init_step.00001010 ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
+; init_step.00001011 ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ;
++--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------+
-; State Machine - |ballplayer_top|lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|state ;
-+--------------+------------+--------------+--------------+-------------------------+
-; Name         ; state.DONE ; state.STATE2 ; state.STATE1 ; state.STATE0            ;
-+--------------+------------+--------------+--------------+-------------------------+
-; state.STATE0 ; 0          ; 0            ; 0            ; 0                       ;
-; state.STATE1 ; 0          ; 0            ; 1            ; 1                       ;
-; state.STATE2 ; 0          ; 1            ; 0            ; 1                       ;
-; state.DONE   ; 1          ; 0            ; 0            ; 1                       ;
-+--------------+------------+--------------+--------------+-------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |ballplayer_top|lcd_full_init_test:lcd_test_inst|state                                                              ;
++------------------+------------+------------------+------------------+-----------------+----------------+--------------+-------------+
+; Name             ; state.DONE ; state.FILL_WHITE ; state.SET_WINDOW ; state.INIT_WAIT ; state.INIT_CMD ; state.DELAY1 ; state.RESET ;
++------------------+------------+------------------+------------------+-----------------+----------------+--------------+-------------+
+; state.RESET      ; 0          ; 0                ; 0                ; 0               ; 0              ; 0            ; 0           ;
+; state.DELAY1     ; 0          ; 0                ; 0                ; 0               ; 0              ; 1            ; 1           ;
+; state.INIT_CMD   ; 0          ; 0                ; 0                ; 0               ; 1              ; 0            ; 1           ;
+; state.INIT_WAIT  ; 0          ; 0                ; 0                ; 1               ; 0              ; 0            ; 1           ;
+; state.SET_WINDOW ; 0          ; 0                ; 1                ; 0               ; 0              ; 0            ; 1           ;
+; state.FILL_WHITE ; 0          ; 1                ; 0                ; 0               ; 0              ; 0            ; 1           ;
+; state.DONE       ; 1          ; 0                ; 0                ; 0               ; 0              ; 0            ; 1           ;
++------------------+------------+------------------+------------------+-----------------+----------------+--------------+-------------+
 
 
 Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |ballplayer_top|lcd:lcd_inst|lcd_init:lcd_init_inst|state                                                                                ;
-+-----------------------------+------------+-----------------------------+---------------------+----------------+--------------------+---------------------+
-; Name                        ; state.DONE ; state.S4_WR_DIRECTION_CLEAR ; state.S3_DELAY120MS ; state.S2_WR_90 ; state.S1_DELAY50MS ; state.S0_DELAY100MS ;
-+-----------------------------+------------+-----------------------------+---------------------+----------------+--------------------+---------------------+
-; state.S0_DELAY100MS         ; 0          ; 0                           ; 0                   ; 0              ; 0                  ; 0                   ;
-; state.S1_DELAY50MS          ; 0          ; 0                           ; 0                   ; 0              ; 1                  ; 1                   ;
-; state.S2_WR_90              ; 0          ; 0                           ; 0                   ; 1              ; 0                  ; 1                   ;
-; state.S3_DELAY120MS         ; 0          ; 0                           ; 1                   ; 0              ; 0                  ; 1                   ;
-; state.S4_WR_DIRECTION_CLEAR ; 0          ; 1                           ; 0                   ; 0              ; 0                  ; 1                   ;
-; state.DONE                  ; 1          ; 0                           ; 0                   ; 0              ; 0                  ; 1                   ;
-+-----------------------------+------------+-----------------------------+---------------------+----------------+--------------------+---------------------+
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------+
-; State Machine - |ballplayer_top|lcd:lcd_inst|control:control_inst|state      ;
-+-----------------+------------+-----------------+----------------+------------+
-; Name            ; state.IDLE ; state.DRAW_LINE ; state.SHOW_PIC ; state.INIT ;
-+-----------------+------------+-----------------+----------------+------------+
-; state.INIT      ; 0          ; 0               ; 0              ; 0          ;
-; state.IDLE      ; 1          ; 0               ; 0              ; 1          ;
-; state.SHOW_PIC  ; 0          ; 0               ; 1              ; 1          ;
-; state.DRAW_LINE ; 0          ; 1               ; 0              ; 1          ;
-+-----------------+------------+-----------------+----------------+------------+
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------+
-; State Machine - |ballplayer_top|lcd:lcd_inst|lcd_write:lcd_write_inst|state ;
-+--------------+------------+--------------+--------------+-------------------+
-; Name         ; state.DONE ; state.STATE2 ; state.STATE1 ; state.STATE0      ;
-+--------------+------------+--------------+--------------+-------------------+
-; state.STATE0 ; 0          ; 0            ; 0            ; 0                 ;
-; state.STATE1 ; 0          ; 0            ; 1            ; 1                 ;
-; state.STATE2 ; 0          ; 1            ; 0            ; 1                 ;
-; state.DONE   ; 1          ; 0            ; 0            ; 1                 ;
-+--------------+------------+--------------+--------------+-------------------+
++-------------------------------------------------------------------------------------------------+
+; State Machine - |ballplayer_top|lcd_full_init_test:lcd_test_inst|lcd_write:lcd_write_inst|state ;
++--------------+------------+--------------+--------------+---------------------------------------+
+; Name         ; state.DONE ; state.STATE2 ; state.STATE1 ; state.STATE0                          ;
++--------------+------------+--------------+--------------+---------------------------------------+
+; state.STATE0 ; 0          ; 0            ; 0            ; 0                                     ;
+; state.STATE1 ; 0          ; 0            ; 1            ; 1                                     ;
+; state.STATE2 ; 0          ; 1            ; 0            ; 1                                     ;
+; state.DONE   ; 1          ; 0            ; 0            ; 1                                     ;
++--------------+------------+--------------+--------------+---------------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -506,68 +472,71 @@ Encoding Type:  One-Hot
 +--------------+-------------+------------+------------+------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                             ;
-+----------------------------------------------------------------------+-------------------------------------------------------------------------+
-; Register name                                                        ; Reason for Removal                                                      ;
-+----------------------------------------------------------------------+-------------------------------------------------------------------------+
-; rpr0521rs_driver:sensor_inst|i2c_master:i2c_master_inst|error        ; Stuck at GND due to stuck port data_in                                  ;
-; jumping:jump_inst|time_count_r[13,14]                                ; Stuck at GND due to stuck port data_in                                  ;
-; rpr0521rs_driver:sensor_inst|proximity_data[8..15]                   ; Stuck at GND due to stuck port data_in                                  ;
-; rpr0521rs_driver:sensor_inst|ps_data_lsb[0..7]                       ; Stuck at GND due to stuck port data_in                                  ;
-; hand_control:hand_ctrl_inst|prox_dat0[8..15]                         ; Stuck at GND due to stuck port data_in                                  ;
-; rpr0521rs_driver:sensor_inst|proximity_data[0..7]                    ; Stuck at GND due to stuck port data_in                                  ;
-; hand_control:hand_ctrl_inst|prox_dat2[8..11]                         ; Stuck at GND due to stuck port data_in                                  ;
-; hand_control:hand_ctrl_inst|prox_dat1[8..15]                         ; Stuck at GND due to stuck port data_in                                  ;
-; hand_control:hand_ctrl_inst|prox_dat0[0..7]                          ; Stuck at GND due to stuck port data_in                                  ;
-; hand_control:hand_ctrl_inst|prox_dat2[6,7]                           ; Stuck at GND due to stuck port data_in                                  ;
-; hand_control:hand_ctrl_inst|prox_dat1[0..7]                          ; Lost fanout                                                             ;
-; hand_control:hand_ctrl_inst|temp_mult[0,1]                           ; Stuck at GND due to stuck port data_in                                  ;
-; hand_control:hand_ctrl_inst|handline[0,1]                            ; Stuck at GND due to stuck port data_in                                  ;
-; hand_control:hand_ctrl_inst|handline_pre[0,1]                        ; Stuck at GND due to stuck port data_in                                  ;
-; hand_control:hand_ctrl_inst|temp_mult[2..8]                          ; Stuck at GND due to stuck port data_in                                  ;
-; hand_control:hand_ctrl_inst|handline[2..8]                           ; Stuck at GND due to stuck port data_in                                  ;
-; hand_control:hand_ctrl_inst|handline_pre[2..8]                       ; Stuck at GND due to stuck port data_in                                  ;
-; hand_control:hand_ctrl_inst|velocity_temp[0..8]                      ; Stuck at GND due to stuck port data_in                                  ;
-; lcd:lcd_inst|draw_line:lcd_draw_line_inst|data[8]                    ; Merged with lcd:lcd_inst|draw_line:lcd_draw_line_inst|en                ;
-; lcd:lcd_inst|draw_line:lcd_draw_line_inst|data[3..6]                 ; Merged with lcd:lcd_inst|draw_line:lcd_draw_line_inst|data[7]           ;
-; lcd:lcd_inst|draw_line:lcd_draw_line_inst|data[0,1]                  ; Merged with lcd:lcd_inst|draw_line:lcd_draw_line_inst|data[2]           ;
-; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|data[6]                  ; Merged with lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|data[7]         ;
-; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|data[3]                  ; Merged with lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|data[5]         ;
-; hand_control:hand_ctrl_inst|hand_velocity[1..6]                      ; Merged with hand_control:hand_ctrl_inst|hand_velocity[7]                ;
-; adjuster:adj_inst|debounce:deb_down_inst|button_state                ; Merged with adjuster:adj_inst|debounce:deb_down_inst|button_out         ;
-; adjuster:adj_inst|debounce:deb_up_inst|button_state                  ; Merged with adjuster:adj_inst|debounce:deb_up_inst|button_out           ;
-; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[39..239]            ; Stuck at GND due to stuck port data_in                                  ;
-; led_reg                                                              ; Stuck at GND due to stuck port data_in                                  ;
-; hand_control:hand_ctrl_inst|hand_velocity[7]                         ; Stuck at GND due to stuck port data_in                                  ;
-; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[11..38]             ; Stuck at GND due to stuck port data_in                                  ;
-; rpr0521rs_driver:sensor_inst|i2c_master:i2c_master_inst|sda_out      ; Merged with rpr0521rs_driver:sensor_inst|i2c_master:i2c_master_inst|scl ;
-; hand_control:hand_ctrl_inst|count                                    ; Lost fanout                                                             ;
-; rpr0521rs_driver:sensor_inst|data_ready                              ; Lost fanout                                                             ;
-; jumping:jump_inst|current_state~7                                    ; Lost fanout                                                             ;
-; rpr0521rs_driver:sensor_inst|state~4                                 ; Lost fanout                                                             ;
-; rpr0521rs_driver:sensor_inst|state~5                                 ; Lost fanout                                                             ;
-; rpr0521rs_driver:sensor_inst|state~6                                 ; Lost fanout                                                             ;
-; rpr0521rs_driver:sensor_inst|i2c_master:i2c_master_inst|i2c_state~10 ; Lost fanout                                                             ;
-; rpr0521rs_driver:sensor_inst|i2c_master:i2c_master_inst|i2c_state~11 ; Lost fanout                                                             ;
-; rpr0521rs_driver:sensor_inst|i2c_master:i2c_master_inst|i2c_state~12 ; Lost fanout                                                             ;
-; adc081s101_driver:adc_driver_inst|state~8                            ; Lost fanout                                                             ;
-; rpr0521rs_driver:sensor_inst|state.ERROR                             ; Stuck at GND due to stuck port data_in                                  ;
-; adjuster:adj_inst|debounce:deb_up_inst|button_sync2                  ; Lost fanout                                                             ;
-; adjuster:adj_inst|debounce:deb_up_inst|counter[5..19]                ; Lost fanout                                                             ;
-; adjuster:adj_inst|debounce:deb_down_inst|button_sync2                ; Lost fanout                                                             ;
-; adjuster:adj_inst|debounce:deb_down_inst|counter[5..19]              ; Lost fanout                                                             ;
-; adjuster:adj_inst|debounce:deb_up_inst|button_sync1                  ; Lost fanout                                                             ;
-; adjuster:adj_inst|debounce:deb_up_inst|counter[0..4]                 ; Lost fanout                                                             ;
-; adjuster:adj_inst|debounce:deb_down_inst|button_sync1                ; Lost fanout                                                             ;
-; adjuster:adj_inst|debounce:deb_down_inst|counter[0..4]               ; Lost fanout                                                             ;
-; adjuster:adj_inst|debounce:deb_up_inst|button_out                    ; Stuck at GND due to stuck port data_in                                  ;
-; adjuster:adj_inst|debounce:deb_down_inst|button_out                  ; Stuck at GND due to stuck port data_in                                  ;
-; lcd:lcd_inst|lcd_write:lcd_write_inst|cnt_sclk[3]                    ; Stuck at GND due to stuck port data_in                                  ;
-; adjuster:adj_inst|k[0,1]                                             ; Stuck at GND due to stuck port data_in                                  ;
-; jumping:jump_inst|time_count_down[13,14]                             ; Lost fanout                                                             ;
-; Total Number of Removed Registers = 412                              ;                                                                         ;
-+----------------------------------------------------------------------+-------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                              ;
++-----------------------------------------------------------------------+-------------------------------------------------------------------------+
+; Register name                                                         ; Reason for Removal                                                      ;
++-----------------------------------------------------------------------+-------------------------------------------------------------------------+
+; rpr0521rs_driver:sensor_inst|i2c_master:i2c_master_inst|error         ; Stuck at GND due to stuck port data_in                                  ;
+; jumping:jump_inst|time_count_r[13,14]                                 ; Stuck at GND due to stuck port data_in                                  ;
+; rpr0521rs_driver:sensor_inst|proximity_data[8..15]                    ; Stuck at GND due to stuck port data_in                                  ;
+; rpr0521rs_driver:sensor_inst|ps_data_lsb[0..7]                        ; Stuck at GND due to stuck port data_in                                  ;
+; hand_control:hand_ctrl_inst|prox_dat0[8..15]                          ; Stuck at GND due to stuck port data_in                                  ;
+; rpr0521rs_driver:sensor_inst|proximity_data[0..7]                     ; Stuck at GND due to stuck port data_in                                  ;
+; hand_control:hand_ctrl_inst|prox_dat2[8..11]                          ; Stuck at GND due to stuck port data_in                                  ;
+; hand_control:hand_ctrl_inst|prox_dat1[8..15]                          ; Stuck at GND due to stuck port data_in                                  ;
+; hand_control:hand_ctrl_inst|prox_dat0[0..7]                           ; Stuck at GND due to stuck port data_in                                  ;
+; hand_control:hand_ctrl_inst|prox_dat2[6,7]                            ; Stuck at GND due to stuck port data_in                                  ;
+; hand_control:hand_ctrl_inst|prox_dat1[0..7]                           ; Lost fanout                                                             ;
+; hand_control:hand_ctrl_inst|temp_mult[0,1]                            ; Stuck at GND due to stuck port data_in                                  ;
+; hand_control:hand_ctrl_inst|handline[0,1]                             ; Stuck at GND due to stuck port data_in                                  ;
+; hand_control:hand_ctrl_inst|handline_pre[0,1]                         ; Stuck at GND due to stuck port data_in                                  ;
+; hand_control:hand_ctrl_inst|temp_mult[2..8]                           ; Stuck at GND due to stuck port data_in                                  ;
+; hand_control:hand_ctrl_inst|handline[2..8]                            ; Stuck at GND due to stuck port data_in                                  ;
+; hand_control:hand_ctrl_inst|handline_pre[2..8]                        ; Stuck at GND due to stuck port data_in                                  ;
+; hand_control:hand_ctrl_inst|velocity_temp[0..8]                       ; Stuck at GND due to stuck port data_in                                  ;
+; hand_control:hand_ctrl_inst|hand_velocity[1..6]                       ; Merged with hand_control:hand_ctrl_inst|hand_velocity[7]                ;
+; adjuster:adj_inst|debounce:deb_down_inst|button_state                 ; Merged with adjuster:adj_inst|debounce:deb_down_inst|button_out         ;
+; adjuster:adj_inst|debounce:deb_up_inst|button_state                   ; Merged with adjuster:adj_inst|debounce:deb_up_inst|button_out           ;
+; hand_control:hand_ctrl_inst|hand_velocity[7]                          ; Stuck at GND due to stuck port data_in                                  ;
+; rpr0521rs_driver:sensor_inst|i2c_master:i2c_master_inst|sda_out       ; Merged with rpr0521rs_driver:sensor_inst|i2c_master:i2c_master_inst|scl ;
+; hand_control:hand_ctrl_inst|count                                     ; Lost fanout                                                             ;
+; lcd_full_init_test:lcd_test_inst|init_step~16                         ; Lost fanout                                                             ;
+; lcd_full_init_test:lcd_test_inst|init_step~17                         ; Lost fanout                                                             ;
+; lcd_full_init_test:lcd_test_inst|init_step~18                         ; Lost fanout                                                             ;
+; lcd_full_init_test:lcd_test_inst|init_step~19                         ; Lost fanout                                                             ;
+; lcd_full_init_test:lcd_test_inst|init_step~20                         ; Lost fanout                                                             ;
+; lcd_full_init_test:lcd_test_inst|init_step~21                         ; Lost fanout                                                             ;
+; lcd_full_init_test:lcd_test_inst|init_step~22                         ; Lost fanout                                                             ;
+; lcd_full_init_test:lcd_test_inst|init_step~23                         ; Lost fanout                                                             ;
+; lcd_full_init_test:lcd_test_inst|state~10                             ; Lost fanout                                                             ;
+; lcd_full_init_test:lcd_test_inst|state~11                             ; Lost fanout                                                             ;
+; lcd_full_init_test:lcd_test_inst|state~12                             ; Lost fanout                                                             ;
+; lcd_full_init_test:lcd_test_inst|state~13                             ; Lost fanout                                                             ;
+; jumping:jump_inst|current_state~7                                     ; Lost fanout                                                             ;
+; rpr0521rs_driver:sensor_inst|state~4                                  ; Lost fanout                                                             ;
+; rpr0521rs_driver:sensor_inst|state~5                                  ; Lost fanout                                                             ;
+; rpr0521rs_driver:sensor_inst|state~6                                  ; Lost fanout                                                             ;
+; rpr0521rs_driver:sensor_inst|i2c_master:i2c_master_inst|i2c_state~10  ; Lost fanout                                                             ;
+; rpr0521rs_driver:sensor_inst|i2c_master:i2c_master_inst|i2c_state~11  ; Lost fanout                                                             ;
+; rpr0521rs_driver:sensor_inst|i2c_master:i2c_master_inst|i2c_state~12  ; Lost fanout                                                             ;
+; adc081s101_driver:adc_driver_inst|state~8                             ; Lost fanout                                                             ;
+; rpr0521rs_driver:sensor_inst|state.ERROR                              ; Stuck at GND due to stuck port data_in                                  ;
+; adjuster:adj_inst|debounce:deb_up_inst|button_sync2                   ; Lost fanout                                                             ;
+; adjuster:adj_inst|debounce:deb_up_inst|counter[5..19]                 ; Lost fanout                                                             ;
+; adjuster:adj_inst|debounce:deb_down_inst|button_sync2                 ; Lost fanout                                                             ;
+; adjuster:adj_inst|debounce:deb_down_inst|counter[5..19]               ; Lost fanout                                                             ;
+; adjuster:adj_inst|debounce:deb_up_inst|button_sync1                   ; Lost fanout                                                             ;
+; adjuster:adj_inst|debounce:deb_up_inst|counter[0..4]                  ; Lost fanout                                                             ;
+; adjuster:adj_inst|debounce:deb_down_inst|button_sync1                 ; Lost fanout                                                             ;
+; adjuster:adj_inst|debounce:deb_down_inst|counter[0..4]                ; Lost fanout                                                             ;
+; adjuster:adj_inst|debounce:deb_up_inst|button_out                     ; Stuck at GND due to stuck port data_in                                  ;
+; adjuster:adj_inst|debounce:deb_down_inst|button_out                   ; Stuck at GND due to stuck port data_in                                  ;
+; lcd_full_init_test:lcd_test_inst|lcd_write:lcd_write_inst|cnt_sclk[3] ; Stuck at GND due to stuck port data_in                                  ;
+; adjuster:adj_inst|k[0,1]                                              ; Stuck at GND due to stuck port data_in                                  ;
+; jumping:jump_inst|time_count_down[13,14]                              ; Lost fanout                                                             ;
+; Total Number of Removed Registers = 184                               ;                                                                         ;
++-----------------------------------------------------------------------+-------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -575,234 +544,6 @@ Encoding Type:  One-Hot
 +-------------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
 ; Register name                                         ; Reason for Removal        ; Registers Removed due to This Register                                              ;
 +-------------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
-; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[239] ; Stuck at GND              ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[238],                              ;
-;                                                       ; due to stuck port data_in ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[237],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[236],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[235],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[234],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[233],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[232],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[231],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[230],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[229],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[228],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[227],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[226],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[225],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[224],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[223],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[222],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[221],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[220],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[219],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[218],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[217],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[216],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[215],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[214],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[213],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[212],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[211],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[210],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[209],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[208],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[207],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[206],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[205],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[204],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[203],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[202],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[201],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[200],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[199],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[198],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[197],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[196],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[195],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[194],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[193],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[192],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[191],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[190],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[189],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[188],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[187],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[186],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[185],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[184],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[183],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[182],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[181],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[180],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[179],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[178],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[177],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[176],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[175],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[174],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[173],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[172],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[171],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[170],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[169],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[168],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[167],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[166],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[165],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[164],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[163],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[162],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[161],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[160],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[159],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[158],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[157],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[156],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[155],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[154],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[153],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[152],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[151],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[150],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[149],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[148],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[147],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[146],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[145],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[144],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[143],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[142],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[141],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[140],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[139],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[138],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[137],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[136],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[135],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[134],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[133],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[132],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[131],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[130],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[129],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[128],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[127],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[126],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[125],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[124],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[123],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[122],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[121],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[120],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[119],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[118],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[117],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[116],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[115],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[114],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[113],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[112],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[111],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[110],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[109],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[108],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[107],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[106],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[105],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[104],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[103],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[102],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[101],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[100],                              ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[99],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[98],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[97],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[96],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[95],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[94],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[93],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[92],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[91],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[90],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[89],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[88],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[87],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[86],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[85],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[84],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[83],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[82],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[81],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[80],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[79],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[78],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[77],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[76],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[75],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[74],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[73],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[72],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[71],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[70],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[69],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[68],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[67],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[66],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[65],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[64],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[63],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[62],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[61],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[60],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[59],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[58],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[57],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[56],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[55],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[54],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[53],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[52],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[51],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[50],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[49],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[48],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[47],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[46],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[45],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[44],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[43],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[42],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[41],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[40],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[39],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[38],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[37],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[36],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[35],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[34],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[33],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[32],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[31],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[30],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[29],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[28],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[27],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[26],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[25],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[24],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[23],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[22],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[21],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[20],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[19],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[18],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[17],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[16],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[15],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[14],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[13],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[12],                               ;
-;                                                       ;                           ; lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[11]                                ;
 ; rpr0521rs_driver:sensor_inst|proximity_data[8]        ; Stuck at GND              ; hand_control:hand_ctrl_inst|prox_dat0[8], hand_control:hand_ctrl_inst|prox_dat2[8], ;
 ;                                                       ; due to stuck port data_in ; hand_control:hand_ctrl_inst|prox_dat2[9],                                           ;
 ;                                                       ;                           ; hand_control:hand_ctrl_inst|prox_dat2[10],                                          ;
@@ -830,9 +571,8 @@ Encoding Type:  One-Hot
 ;                                                       ;                           ; hand_control:hand_ctrl_inst|velocity_temp[5],                                       ;
 ;                                                       ;                           ; hand_control:hand_ctrl_inst|velocity_temp[6],                                       ;
 ;                                                       ;                           ; hand_control:hand_ctrl_inst|velocity_temp[7],                                       ;
-;                                                       ;                           ; hand_control:hand_ctrl_inst|velocity_temp[8], led_reg,                              ;
-;                                                       ;                           ; hand_control:hand_ctrl_inst|hand_velocity[7], hand_control:hand_ctrl_inst|count,    ;
-;                                                       ;                           ; rpr0521rs_driver:sensor_inst|data_ready                                             ;
+;                                                       ;                           ; hand_control:hand_ctrl_inst|velocity_temp[8],                                       ;
+;                                                       ;                           ; hand_control:hand_ctrl_inst|hand_velocity[7], hand_control:hand_ctrl_inst|count     ;
 ; adjuster:adj_inst|debounce:deb_up_inst|counter[5]     ; Lost Fanouts              ; adjuster:adj_inst|debounce:deb_up_inst|counter[14],                                 ;
 ;                                                       ;                           ; adjuster:adj_inst|debounce:deb_up_inst|counter[15],                                 ;
 ;                                                       ;                           ; adjuster:adj_inst|debounce:deb_up_inst|counter[16],                                 ;
@@ -899,12 +639,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 401   ;
-; Number of registers using Synchronous Clear  ; 212   ;
+; Total registers                              ; 315   ;
+; Number of registers using Synchronous Clear  ; 178   ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 397   ;
+; Number of registers using Asynchronous Clear ; 311   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 222   ;
+; Number of registers using Clock Enable       ; 201   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -920,37 +660,32 @@ Encoding Type:  One-Hot
 +-------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |ballplayer_top|lcd:lcd_inst|lcd_init:lcd_init_inst|init_data[4]                 ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |ballplayer_top|lcd:lcd_inst|lcd_write:lcd_write_inst|cnt_delay[4]               ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |ballplayer_top|lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|cnt_wr_color_data[6] ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |ballplayer_top|lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|temp[9]              ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ballplayer_top|lcd:lcd_inst|lcd_write:lcd_write_inst|cnt1[0]                    ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ballplayer_top|lcd:lcd_inst|lcd_write:lcd_write_inst|cnt_sclk[0]                ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |ballplayer_top|lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|cnt_rom_prepare[2]   ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ballplayer_top|lcd:lcd_inst|control:control_inst|draw_line_counter[3]           ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ballplayer_top|lcd:lcd_inst|control:control_inst|show_pic_counter[0]            ;
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |ballplayer_top|adjuster:adj_inst|debounce:deb_up_inst|counter[13]               ;
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |ballplayer_top|adjuster:adj_inst|debounce:deb_down_inst|counter[0]              ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |ballplayer_top|jumping:jump_inst|time_count_up[14]                              ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |ballplayer_top|lcd:lcd_inst|draw_line:lcd_draw_line_inst|counter[13]            ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ballplayer_top|lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|cnt_set_windows[3]   ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |ballplayer_top|jumping:jump_inst|init_velocity[10]                              ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |ballplayer_top|lcd:lcd_inst|lcd_init:lcd_init_inst|cnt_s2_num[2]                ;
-; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |ballplayer_top|lcd:lcd_inst|lcd_init:lcd_init_inst|cnt_s4_num[12]               ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |ballplayer_top|jumping:jump_inst|time_count_up[8]                               ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |ballplayer_top|jumping:jump_inst|init_position[5]                               ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |ballplayer_top|jumping:jump_inst|init_velocity[7]                               ;
-; 5:1                ; 9 bits    ; 27 LEs        ; 18 LEs               ; 9 LEs                  ; Yes        ; |ballplayer_top|jumping:jump_inst|pic_y[3]                                       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |ballplayer_top|lcd:lcd_inst|control:control_inst|Selector12                     ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |ballplayer_top|jumping:jump_inst|current_state                                  ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |ballplayer_top|adc081s101_driver:adc_driver_inst|Selector2                      ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ballplayer_top|rpr0521rs_driver:sensor_inst|Selector8                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |ballplayer_top|lcd_full_init_test:lcd_test_inst|lcd_write:lcd_write_inst|cnt_delay[4] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ballplayer_top|lcd_full_init_test:lcd_test_inst|lcd_write:lcd_write_inst|cnt1[0]      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ballplayer_top|lcd_full_init_test:lcd_test_inst|lcd_write:lcd_write_inst|cnt_sclk[1]  ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |ballplayer_top|adjuster:adj_inst|debounce:deb_up_inst|counter[12]                     ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |ballplayer_top|adjuster:adj_inst|debounce:deb_down_inst|counter[19]                   ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |ballplayer_top|jumping:jump_inst|time_count_up[14]                                    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |ballplayer_top|jumping:jump_inst|init_velocity[10]                                    ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |ballplayer_top|lcd_full_init_test:lcd_test_inst|pixel_counter[6]                      ;
+; 7:1                ; 24 bits   ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; Yes        ; |ballplayer_top|lcd_full_init_test:lcd_test_inst|delay_counter[9]                      ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |ballplayer_top|lcd_full_init_test:lcd_test_inst|write_data[8]                         ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |ballplayer_top|jumping:jump_inst|time_count_up[7]                                     ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |ballplayer_top|jumping:jump_inst|init_position[7]                                     ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |ballplayer_top|jumping:jump_inst|init_velocity[8]                                     ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 18 LEs               ; 9 LEs                  ; Yes        ; |ballplayer_top|jumping:jump_inst|pic_y[4]                                             ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |ballplayer_top|jumping:jump_inst|current_state                                        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |ballplayer_top|adc081s101_driver:adc_driver_inst|Selector2                            ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |ballplayer_top|lcd_full_init_test:lcd_test_inst|Selector78                            ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; No         ; |ballplayer_top|lcd_full_init_test:lcd_test_inst|Selector76                            ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ballplayer_top|rpr0521rs_driver:sensor_inst|Selector1                                 ;
+; 13:1               ; 7 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; No         ; |ballplayer_top|lcd_full_init_test:lcd_test_inst|Selector68                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------+
@@ -1428,88 +1163,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lcd:lcd_inst|lcd_write:lcd_write_inst ;
-+----------------+-------+-----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                      ;
-+----------------+-------+-----------------------------------------------------------+
-; CPOL           ; 0     ; Unsigned Binary                                           ;
-; CPHA           ; 0     ; Unsigned Binary                                           ;
-; DELAY_TIME     ; 100   ; Unsigned Binary                                           ;
-; CNT_SCLK_MAX   ; 0100  ; Unsigned Binary                                           ;
-; STATE0         ; 0001  ; Unsigned Binary                                           ;
-; STATE1         ; 0010  ; Unsigned Binary                                           ;
-; STATE2         ; 0100  ; Unsigned Binary                                           ;
-; DONE           ; 1000  ; Unsigned Binary                                           ;
-+----------------+-------+-----------------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lcd_full_init_test:lcd_test_inst ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; RESET          ; 0000  ; Unsigned Binary                                      ;
+; DELAY1         ; 0001  ; Unsigned Binary                                      ;
+; INIT_CMD       ; 0010  ; Unsigned Binary                                      ;
+; INIT_WAIT      ; 0011  ; Unsigned Binary                                      ;
+; SET_WINDOW     ; 0100  ; Unsigned Binary                                      ;
+; FILL_WHITE     ; 0101  ; Unsigned Binary                                      ;
+; DONE           ; 0110  ; Unsigned Binary                                      ;
++----------------+-------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lcd:lcd_inst|control:control_inst ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; IDLE           ; 000   ; Unsigned Binary                                       ;
-; INIT           ; 001   ; Unsigned Binary                                       ;
-; SHOW_PIC       ; 010   ; Unsigned Binary                                       ;
-; DRAW_LINE      ; 100   ; Unsigned Binary                                       ;
-+----------------+-------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lcd:lcd_inst|lcd_init:lcd_init_inst ;
-+----------------+-------------------------+---------------------------------------+
-; Parameter Name ; Value                   ; Type                                  ;
-+----------------+-------------------------+---------------------------------------+
-; TIME100MS      ; 10011000100101101000000 ; Unsigned Binary                       ;
-; TIME150MS      ; 11100100111000011100000 ; Unsigned Binary                       ;
-; TIME120MS      ; 10110111000110110000000 ; Unsigned Binary                       ;
-; TIMES4MAX      ; 100101100000001101      ; Unsigned Binary                       ;
-; DATA_IDLE      ; 000000000               ; Unsigned Binary                       ;
-+----------------+-------------------------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst ;
-+-----------------+------------------+-----------------------------------------------------+
-; Parameter Name  ; Value            ; Type                                                ;
-+-----------------+------------------+-----------------------------------------------------+
-; WHITE           ; 1111111111111111 ; Unsigned Binary                                     ;
-; BLACK           ; 0000000000000000 ; Unsigned Binary                                     ;
-; BLUE            ; 0000000000011111 ; Unsigned Binary                                     ;
-; RED             ; 1111100000000000 ; Unsigned Binary                                     ;
-; GREEN           ; 0000011111100000 ; Unsigned Binary                                     ;
-; CYAN            ; 0111111111111111 ; Unsigned Binary                                     ;
-; YELLOW          ; 1111111111100000 ; Unsigned Binary                                     ;
-; SIZE_WIDTH_MAX  ; 11101111         ; Unsigned Binary                                     ;
-; SIZE_LENGTH_MAX ; 100111111        ; Unsigned Binary                                     ;
-; STATE0          ; 0001             ; Unsigned Binary                                     ;
-; STATE1          ; 0010             ; Unsigned Binary                                     ;
-; STATE2          ; 0100             ; Unsigned Binary                                     ;
-; DONE            ; 1000             ; Unsigned Binary                                     ;
-+-----------------+------------------+-----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lcd:lcd_inst|draw_line:lcd_draw_line_inst ;
-+----------------+------------------+----------------------------------------------------+
-; Parameter Name ; Value            ; Type                                               ;
-+----------------+------------------+----------------------------------------------------+
-; WHITE          ; 1111111111111111 ; Unsigned Binary                                    ;
-; BLACK          ; 0000000000000000 ; Unsigned Binary                                    ;
-; BLUE           ; 0000000000011111 ; Unsigned Binary                                    ;
-; RED            ; 1111100000000000 ; Unsigned Binary                                    ;
-; GREEN          ; 0000011111100000 ; Unsigned Binary                                    ;
-; CYAN           ; 0111111111111111 ; Unsigned Binary                                    ;
-; YELLOW         ; 1111111111100000 ; Unsigned Binary                                    ;
-; CLEAR          ; 001              ; Unsigned Binary                                    ;
-; DRAW           ; 010              ; Unsigned Binary                                    ;
-; IDLE           ; 100              ; Unsigned Binary                                    ;
-+----------------+------------------+----------------------------------------------------+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lcd_full_init_test:lcd_test_inst|lcd_write:lcd_write_inst ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; CPOL           ; 0     ; Unsigned Binary                                                               ;
+; CPHA           ; 0     ; Unsigned Binary                                                               ;
+; DELAY_TIME     ; 100   ; Unsigned Binary                                                               ;
+; CNT_SCLK_MAX   ; 0100  ; Unsigned Binary                                                               ;
+; STATE0         ; 0001  ; Unsigned Binary                                                               ;
+; STATE1         ; 0010  ; Unsigned Binary                                                               ;
+; STATE2         ; 0100  ; Unsigned Binary                                                               ;
+; DONE           ; 1000  ; Unsigned Binary                                                               ;
++----------------+-------+-------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1533,76 +1216,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                      ;
 ; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                    ;
 +------------------------+----------------+-------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: jumping:jump_inst|lpm_mult:Mult4 ;
-+------------------------------------------------+----------+-----------------------+
-; Parameter Name                                 ; Value    ; Type                  ;
-+------------------------------------------------+----------+-----------------------+
-; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY            ;
-; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY          ;
-; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE          ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE        ;
-; LPM_WIDTHA                                     ; 12       ; Untyped               ;
-; LPM_WIDTHB                                     ; 12       ; Untyped               ;
-; LPM_WIDTHP                                     ; 24       ; Untyped               ;
-; LPM_WIDTHR                                     ; 24       ; Untyped               ;
-; LPM_WIDTHS                                     ; 1        ; Untyped               ;
-; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped               ;
-; LPM_PIPELINE                                   ; 0        ; Untyped               ;
-; LATENCY                                        ; 0        ; Untyped               ;
-; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped               ;
-; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped               ;
-; USE_EAB                                        ; OFF      ; Untyped               ;
-; MAXIMIZE_SPEED                                 ; 5        ; Untyped               ;
-; DEVICE_FAMILY                                  ; MAX 10   ; Untyped               ;
-; CARRY_CHAIN                                    ; MANUAL   ; Untyped               ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K   ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped               ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped               ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped               ;
-; CBXI_PARAMETER                                 ; mult_lns ; Untyped               ;
-; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped               ;
-; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped               ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped               ;
-+------------------------------------------------+----------+-----------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: jumping:jump_inst|lpm_mult:Mult5 ;
-+------------------------------------------------+----------+-----------------------+
-; Parameter Name                                 ; Value    ; Type                  ;
-+------------------------------------------------+----------+-----------------------+
-; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY            ;
-; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY          ;
-; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE          ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE        ;
-; LPM_WIDTHA                                     ; 11       ; Untyped               ;
-; LPM_WIDTHB                                     ; 11       ; Untyped               ;
-; LPM_WIDTHP                                     ; 22       ; Untyped               ;
-; LPM_WIDTHR                                     ; 22       ; Untyped               ;
-; LPM_WIDTHS                                     ; 1        ; Untyped               ;
-; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped               ;
-; LPM_PIPELINE                                   ; 0        ; Untyped               ;
-; LATENCY                                        ; 0        ; Untyped               ;
-; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped               ;
-; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped               ;
-; USE_EAB                                        ; OFF      ; Untyped               ;
-; MAXIMIZE_SPEED                                 ; 6        ; Untyped               ;
-; DEVICE_FAMILY                                  ; MAX 10   ; Untyped               ;
-; CARRY_CHAIN                                    ; MANUAL   ; Untyped               ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K   ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped               ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped               ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped               ;
-; CBXI_PARAMETER                                 ; mult_ins ; Untyped               ;
-; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped               ;
-; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped               ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped               ;
-+------------------------------------------------+----------+-----------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1712,6 +1325,76 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: jumping:jump_inst|lpm_mult:Mult4 ;
++------------------------------------------------+----------+-----------------------+
+; Parameter Name                                 ; Value    ; Type                  ;
++------------------------------------------------+----------+-----------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY            ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY          ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE          ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE        ;
+; LPM_WIDTHA                                     ; 12       ; Untyped               ;
+; LPM_WIDTHB                                     ; 12       ; Untyped               ;
+; LPM_WIDTHP                                     ; 24       ; Untyped               ;
+; LPM_WIDTHR                                     ; 24       ; Untyped               ;
+; LPM_WIDTHS                                     ; 1        ; Untyped               ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped               ;
+; LPM_PIPELINE                                   ; 0        ; Untyped               ;
+; LATENCY                                        ; 0        ; Untyped               ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped               ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped               ;
+; USE_EAB                                        ; OFF      ; Untyped               ;
+; MAXIMIZE_SPEED                                 ; 5        ; Untyped               ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped               ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped               ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K   ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped               ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped               ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped               ;
+; CBXI_PARAMETER                                 ; mult_lns ; Untyped               ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped               ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped               ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped               ;
++------------------------------------------------+----------+-----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: jumping:jump_inst|lpm_mult:Mult5 ;
++------------------------------------------------+----------+-----------------------+
+; Parameter Name                                 ; Value    ; Type                  ;
++------------------------------------------------+----------+-----------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY            ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY          ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE          ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE        ;
+; LPM_WIDTHA                                     ; 11       ; Untyped               ;
+; LPM_WIDTHB                                     ; 11       ; Untyped               ;
+; LPM_WIDTHP                                     ; 22       ; Untyped               ;
+; LPM_WIDTHR                                     ; 22       ; Untyped               ;
+; LPM_WIDTHS                                     ; 1        ; Untyped               ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped               ;
+; LPM_PIPELINE                                   ; 0        ; Untyped               ;
+; LATENCY                                        ; 0        ; Untyped               ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped               ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped               ;
+; USE_EAB                                        ; OFF      ; Untyped               ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped               ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped               ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped               ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K   ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped               ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped               ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped               ;
+; CBXI_PARAMETER                                 ; mult_ins ; Untyped               ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped               ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped               ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped               ;
++------------------------------------------------+----------+-----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: jumping:jump_inst|lpm_mult:Mult2 ;
 +------------------------------------------------+----------+-----------------------+
 ; Parameter Name                                 ; Value    ; Type                  ;
@@ -1804,28 +1487,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                                  ; Value                            ;
 +---------------------------------------+----------------------------------+
 ; Number of entity instances            ; 7                                ;
-; Entity Instance                       ; jumping:jump_inst|lpm_mult:Mult4 ;
-;     -- LPM_WIDTHA                     ; 12                               ;
-;     -- LPM_WIDTHB                     ; 12                               ;
-;     -- LPM_WIDTHP                     ; 24                               ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                         ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                               ;
-;     -- INPUT_B_IS_CONSTANT            ; NO                               ;
-;     -- USE_EAB                        ; OFF                              ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                             ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                               ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                               ;
-; Entity Instance                       ; jumping:jump_inst|lpm_mult:Mult5 ;
-;     -- LPM_WIDTHA                     ; 11                               ;
-;     -- LPM_WIDTHB                     ; 11                               ;
-;     -- LPM_WIDTHP                     ; 22                               ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                         ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                               ;
-;     -- INPUT_B_IS_CONSTANT            ; NO                               ;
-;     -- USE_EAB                        ; OFF                              ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                             ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                               ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                               ;
 ; Entity Instance                       ; lpm_mult:Mult0                   ;
 ;     -- LPM_WIDTHA                     ; 9                                ;
 ;     -- LPM_WIDTHB                     ; 8                                ;
@@ -1859,6 +1520,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                             ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                               ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                               ;
+; Entity Instance                       ; jumping:jump_inst|lpm_mult:Mult4 ;
+;     -- LPM_WIDTHA                     ; 12                               ;
+;     -- LPM_WIDTHB                     ; 12                               ;
+;     -- LPM_WIDTHP                     ; 24                               ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                         ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                               ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                               ;
+;     -- USE_EAB                        ; OFF                              ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                             ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                               ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                               ;
+; Entity Instance                       ; jumping:jump_inst|lpm_mult:Mult5 ;
+;     -- LPM_WIDTHA                     ; 11                               ;
+;     -- LPM_WIDTHB                     ; 11                               ;
+;     -- LPM_WIDTHP                     ; 22                               ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                         ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                               ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                               ;
+;     -- USE_EAB                        ; OFF                              ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                             ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                               ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                               ;
 ; Entity Instance                       ; jumping:jump_inst|lpm_mult:Mult2 ;
 ;     -- LPM_WIDTHA                     ; 15                               ;
 ;     -- LPM_WIDTHB                     ; 3                                ;
@@ -1884,24 +1567,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+----------------------------------+
 
 
-+---------------------------------------------------+
-; Port Connectivity Checks: "lcd:lcd_inst"          ;
-+------+--------+----------+------------------------+
-; Port ; Type   ; Severity ; Details                ;
-+------+--------+----------+------------------------+
-; led1 ; Output ; Info     ; Explicitly unconnected ;
-; led2 ; Output ; Info     ; Explicitly unconnected ;
-+------+--------+----------+------------------------+
-
-
 +---------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "jumping:jump_inst"                                                                       ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port      ; Type   ; Severity ; Details                                                                             ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
+; pic_y     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; beep_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; stop_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; over_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -1940,15 +1612,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------+---------+------------------+----------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "adc081s101_driver:adc_driver_inst"                                                      ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; adc_done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +---------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "ballplayer_pll:pll_inst"                                                                                   ;
 +--------+--------+----------+----------------------------------------------------------------------------------------------------------+
@@ -1963,30 +1626,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 35                          ;
-; cycloneiii_ff         ; 401                         ;
-;     CLR               ; 106                         ;
-;     CLR SCLR          ; 73                          ;
+; boundary_port         ; 42                          ;
+; cycloneiii_ff         ; 315                         ;
+;     CLR               ; 64                          ;
+;     CLR SCLR          ; 50                          ;
 ;     ENA               ; 4                           ;
-;     ENA CLR           ; 79                          ;
-;     ENA CLR SCLR      ; 139                         ;
+;     ENA CLR           ; 69                          ;
+;     ENA CLR SCLR      ; 128                         ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 879                         ;
-;     arith             ; 346                         ;
-;         2 data inputs ; 222                         ;
-;         3 data inputs ; 124                         ;
-;     normal            ; 533                         ;
+; cycloneiii_lcell_comb ; 668                         ;
+;     arith             ; 300                         ;
+;         2 data inputs ; 185                         ;
+;         3 data inputs ; 115                         ;
+;     normal            ; 368                         ;
 ;         0 data inputs ; 4                           ;
-;         1 data inputs ; 23                          ;
-;         2 data inputs ; 60                          ;
-;         3 data inputs ; 89                          ;
-;         4 data inputs ; 357                         ;
+;         1 data inputs ; 19                          ;
+;         2 data inputs ; 38                          ;
+;         3 data inputs ; 73                          ;
+;         4 data inputs ; 234                         ;
 ; cycloneiii_mac_mult   ; 4                           ;
 ; cycloneiii_mac_out    ; 4                           ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 10.00                       ;
-; Average LUT depth     ; 3.83                        ;
+; Max LUT depth         ; 9.70                        ;
+; Average LUT depth     ; 3.76                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1995,7 +1658,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -2005,7 +1668,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed May 28 13:26:23 2025
+    Info: Processing started: Wed May 28 13:52:00 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ballplayer -c ballplayer
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 1 design units, including 1 entities, in source file source/ballplayer_top.v
@@ -2043,11 +1706,18 @@ Info (12021): Found 1 design units, including 1 entities, in source file source/
     Info (12023): Found entity 1: frequency_divider File: D:/Quartus_Project/ballplayer/source/frequency_divider.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file source/debounce.v
     Info (12023): Found entity 1: debounce File: D:/Quartus_Project/ballplayer/source/debounce.v Line: 8
-Warning (10236): Verilog HDL Implicit Net warning at lcd_show_pic.v(183): created implicit net for "state2_finish_flag" File: D:/Quartus_Project/ballplayer/source/lcd_show_pic.v Line: 183
+Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_simple_test.v
+    Info (12023): Found entity 1: lcd_simple_test File: D:/Quartus_Project/ballplayer/source/lcd_simple_test.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_simple_fill.v
+    Info (12023): Found entity 1: lcd_simple_fill File: D:/Quartus_Project/ballplayer/source/lcd_simple_fill.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_debug_test.v
+    Info (12023): Found entity 1: lcd_debug_test File: D:/Quartus_Project/ballplayer/source/lcd_debug_test.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_full_init_test.v
+    Info (12023): Found entity 1: lcd_full_init_test File: D:/Quartus_Project/ballplayer/source/lcd_full_init_test.v Line: 8
 Warning (10222): Verilog HDL Parameter Declaration warning at lcd_init.v(42): Parameter Declaration in module "lcd_init" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Quartus_Project/ballplayer/source/lcd_init.v Line: 42
 Warning (10222): Verilog HDL Parameter Declaration warning at lcd_init.v(51): Parameter Declaration in module "lcd_init" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Quartus_Project/ballplayer/source/lcd_init.v Line: 51
 Info (12127): Elaborating entity "ballplayer_top" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at ballplayer_top.v(147): truncated value with size 32 to match size of target (18) File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 147
+Warning (10230): Verilog HDL assignment warning at ballplayer_top.v(145): truncated value with size 32 to match size of target (18) File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 145
 Info (12128): Elaborating entity "ballplayer_pll" for hierarchy "ballplayer_pll:pll_inst" File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 68
 Info (12128): Elaborating entity "altpll" for hierarchy "ballplayer_pll:pll_inst|altpll:altpll_component" File: D:/Quartus_Project/ballplayer/source/ballplayer_pll.v Line: 69
 Info (12130): Elaborated megafunction instantiation "ballplayer_pll:pll_inst|altpll:altpll_component" File: D:/Quartus_Project/ballplayer/source/ballplayer_pll.v Line: 69
@@ -2135,27 +1805,20 @@ Warning (10230): Verilog HDL assignment warning at jumping.v(115): truncated val
 Warning (10230): Verilog HDL assignment warning at jumping.v(132): truncated value with size 15 to match size of target (9) File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 132
 Warning (10230): Verilog HDL assignment warning at jumping.v(133): truncated value with size 32 to match size of target (15) File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 133
 Info (12128): Elaborating entity "frequency_divider" for hierarchy "jumping:jump_inst|frequency_divider:fre_500us" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 36
-Info (12128): Elaborating entity "lcd" for hierarchy "lcd:lcd_inst" File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 142
-Info (12128): Elaborating entity "lcd_write" for hierarchy "lcd:lcd_inst|lcd_write:lcd_write_inst" File: D:/Quartus_Project/ballplayer/source/lcd.v Line: 60
-Info (12128): Elaborating entity "control" for hierarchy "lcd:lcd_inst|control:control_inst" File: D:/Quartus_Project/ballplayer/source/lcd.v Line: 80
-Warning (10230): Verilog HDL assignment warning at control.v(88): truncated value with size 32 to match size of target (4) File: D:/Quartus_Project/ballplayer/source/control.v Line: 88
-Warning (10230): Verilog HDL assignment warning at control.v(95): truncated value with size 32 to match size of target (4) File: D:/Quartus_Project/ballplayer/source/control.v Line: 95
-Info (10264): Verilog HDL Case Statement information at control.v(84): all case item expressions in this case statement are onehot File: D:/Quartus_Project/ballplayer/source/control.v Line: 84
-Info (10264): Verilog HDL Case Statement information at control.v(108): all case item expressions in this case statement are onehot File: D:/Quartus_Project/ballplayer/source/control.v Line: 108
-Info (12128): Elaborating entity "lcd_init" for hierarchy "lcd:lcd_inst|lcd_init:lcd_init_inst" File: D:/Quartus_Project/ballplayer/source/lcd.v Line: 91
-Info (12128): Elaborating entity "lcd_show_pic" for hierarchy "lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst" File: D:/Quartus_Project/ballplayer/source/lcd.v Line: 104
-Info (12128): Elaborating entity "draw_line" for hierarchy "lcd:lcd_inst|draw_line:lcd_draw_line_inst" File: D:/Quartus_Project/ballplayer/source/lcd.v Line: 116
-Warning (10036): Verilog HDL or VHDL warning at draw_line.v(35): object "delta" assigned a value but never read File: D:/Quartus_Project/ballplayer/source/draw_line.v Line: 35
-Warning (10240): Verilog HDL Always Construct warning at draw_line.v(42): inferring latch(es) for variable "past_y", which holds its previous value in one or more paths through the always construct File: D:/Quartus_Project/ballplayer/source/draw_line.v Line: 42
-Info (10264): Verilog HDL Case Statement information at draw_line.v(95): all case item expressions in this case statement are onehot File: D:/Quartus_Project/ballplayer/source/draw_line.v Line: 95
-Info (12128): Elaborating entity "pic_ram" for hierarchy "lcd:lcd_inst|pic_ram:pic_ram_inst" File: D:/Quartus_Project/ballplayer/source/lcd.v Line: 123
+Info (12128): Elaborating entity "lcd_full_init_test" for hierarchy "lcd_full_init_test:lcd_test_inst" File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 140
+Warning (10230): Verilog HDL assignment warning at lcd_full_init_test.v(66): truncated value with size 32 to match size of target (24) File: D:/Quartus_Project/ballplayer/source/lcd_full_init_test.v Line: 66
+Warning (10230): Verilog HDL assignment warning at lcd_full_init_test.v(75): truncated value with size 32 to match size of target (24) File: D:/Quartus_Project/ballplayer/source/lcd_full_init_test.v Line: 75
+Info (10264): Verilog HDL Case Statement information at lcd_full_init_test.v(85): all case item expressions in this case statement are onehot File: D:/Quartus_Project/ballplayer/source/lcd_full_init_test.v Line: 85
+Warning (10230): Verilog HDL assignment warning at lcd_full_init_test.v(138): truncated value with size 32 to match size of target (24) File: D:/Quartus_Project/ballplayer/source/lcd_full_init_test.v Line: 138
+Warning (10230): Verilog HDL assignment warning at lcd_full_init_test.v(220): truncated value with size 32 to match size of target (16) File: D:/Quartus_Project/ballplayer/source/lcd_full_init_test.v Line: 220
+Info (12128): Elaborating entity "lcd_write" for hierarchy "lcd_full_init_test:lcd_test_inst|lcd_write:lcd_write_inst" File: D:/Quartus_Project/ballplayer/source/lcd_full_init_test.v Line: 255
 Info (278001): Inferred 8 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "adjuster:adj_inst|segment_display:seg_inst|Mod0" File: D:/Quartus_Project/ballplayer/source/segment_display.v Line: 29
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "jumping:jump_inst|Mult4" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 132
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "jumping:jump_inst|Mult5" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 132
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 147
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 145
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "jumping:jump_inst|Mult0" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 69
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "jumping:jump_inst|Mult1" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 69
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "jumping:jump_inst|Mult4" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 132
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "jumping:jump_inst|Mult5" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 132
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "jumping:jump_inst|Mult2" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 81
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "jumping:jump_inst|Mult3" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 115
 Info (12130): Elaborated megafunction instantiation "adjuster:adj_inst|segment_display:seg_inst|lpm_divide:Mod0" File: D:/Quartus_Project/ballplayer/source/segment_display.v Line: 29
@@ -2174,34 +1837,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
     Info (12023): Found entity 1: add_sub_t3c File: D:/Quartus_Project/ballplayer/db/add_sub_t3c.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
     Info (12023): Found entity 1: add_sub_u3c File: D:/Quartus_Project/ballplayer/db/add_sub_u3c.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "jumping:jump_inst|lpm_mult:Mult4" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 132
-Info (12133): Instantiated megafunction "jumping:jump_inst|lpm_mult:Mult4" with the following parameter: File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 132
-    Info (12134): Parameter "LPM_WIDTHA" = "12"
-    Info (12134): Parameter "LPM_WIDTHB" = "12"
-    Info (12134): Parameter "LPM_WIDTHP" = "24"
-    Info (12134): Parameter "LPM_WIDTHR" = "24"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_lns.tdf
-    Info (12023): Found entity 1: mult_lns File: D:/Quartus_Project/ballplayer/db/mult_lns.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "jumping:jump_inst|lpm_mult:Mult5" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 132
-Info (12133): Instantiated megafunction "jumping:jump_inst|lpm_mult:Mult5" with the following parameter: File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 132
-    Info (12134): Parameter "LPM_WIDTHA" = "11"
-    Info (12134): Parameter "LPM_WIDTHB" = "11"
-    Info (12134): Parameter "LPM_WIDTHP" = "22"
-    Info (12134): Parameter "LPM_WIDTHR" = "22"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_ins.tdf
-    Info (12023): Found entity 1: mult_ins File: D:/Quartus_Project/ballplayer/db/mult_ins.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 147
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 147
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 145
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 145
     Info (12134): Parameter "LPM_WIDTHA" = "9"
     Info (12134): Parameter "LPM_WIDTHB" = "8"
     Info (12134): Parameter "LPM_WIDTHP" = "17"
@@ -2217,6 +1854,19 @@ Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mul
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_crg.tdf
     Info (12023): Found entity 1: add_sub_crg File: D:/Quartus_Project/ballplayer/db/add_sub_crg.tdf Line: 22
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult0" File: d:/quartus/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
+Info (12130): Elaborated megafunction instantiation "jumping:jump_inst|lpm_mult:Mult0" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 69
+Info (12133): Instantiated megafunction "jumping:jump_inst|lpm_mult:Mult0" with the following parameter: File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 69
+    Info (12134): Parameter "LPM_WIDTHA" = "12"
+    Info (12134): Parameter "LPM_WIDTHB" = "12"
+    Info (12134): Parameter "LPM_WIDTHP" = "24"
+    Info (12134): Parameter "LPM_WIDTHR" = "24"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_lns.tdf
+    Info (12023): Found entity 1: mult_lns File: D:/Quartus_Project/ballplayer/db/mult_lns.tdf Line: 28
 Info (12130): Elaborated megafunction instantiation "jumping:jump_inst|lpm_mult:Mult1" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 69
 Info (12133): Instantiated megafunction "jumping:jump_inst|lpm_mult:Mult1" with the following parameter: File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 69
     Info (12134): Parameter "LPM_WIDTHA" = "9"
@@ -2230,6 +1880,19 @@ Info (12133): Instantiated megafunction "jumping:jump_inst|lpm_mult:Mult1" with 
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_4ls.tdf
     Info (12023): Found entity 1: mult_4ls File: D:/Quartus_Project/ballplayer/db/mult_4ls.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "jumping:jump_inst|lpm_mult:Mult5" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 132
+Info (12133): Instantiated megafunction "jumping:jump_inst|lpm_mult:Mult5" with the following parameter: File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 132
+    Info (12134): Parameter "LPM_WIDTHA" = "11"
+    Info (12134): Parameter "LPM_WIDTHB" = "11"
+    Info (12134): Parameter "LPM_WIDTHP" = "22"
+    Info (12134): Parameter "LPM_WIDTHR" = "22"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_ins.tdf
+    Info (12023): Found entity 1: mult_ins File: D:/Quartus_Project/ballplayer/db/mult_ins.tdf Line: 28
 Info (12130): Elaborated megafunction instantiation "jumping:jump_inst|lpm_mult:Mult2" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 81
 Info (12133): Instantiated megafunction "jumping:jump_inst|lpm_mult:Mult2" with the following parameter: File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 81
     Info (12134): Parameter "LPM_WIDTHA" = "15"
@@ -2281,24 +1944,24 @@ Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity
 Info (13000): Registers with preset signals will power-up high File: D:/Quartus_Project/ballplayer/source/adc081s101_driver.v Line: 11
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "jumping:jump_inst|pic_y[0]" is converted into an equivalent circuit using register "jumping:jump_inst|pic_y[0]~_emulated" and latch "jumping:jump_inst|pic_y[0]~1" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
-    Warning (13310): Register "jumping:jump_inst|pic_y[1]" is converted into an equivalent circuit using register "jumping:jump_inst|pic_y[1]~_emulated" and latch "jumping:jump_inst|pic_y[1]~5" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
-    Warning (13310): Register "jumping:jump_inst|pic_y[2]" is converted into an equivalent circuit using register "jumping:jump_inst|pic_y[2]~_emulated" and latch "jumping:jump_inst|pic_y[2]~9" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
-    Warning (13310): Register "jumping:jump_inst|pic_y[3]" is converted into an equivalent circuit using register "jumping:jump_inst|pic_y[3]~_emulated" and latch "jumping:jump_inst|pic_y[3]~13" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
+    Warning (13310): Register "jumping:jump_inst|pic_y[8]" is converted into an equivalent circuit using register "jumping:jump_inst|pic_y[8]~_emulated" and latch "jumping:jump_inst|pic_y[8]~1" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
+    Warning (13310): Register "jumping:jump_inst|pic_y[7]" is converted into an equivalent circuit using register "jumping:jump_inst|pic_y[7]~_emulated" and latch "jumping:jump_inst|pic_y[7]~5" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
+    Warning (13310): Register "jumping:jump_inst|pic_y[6]" is converted into an equivalent circuit using register "jumping:jump_inst|pic_y[6]~_emulated" and latch "jumping:jump_inst|pic_y[6]~9" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
+    Warning (13310): Register "jumping:jump_inst|pic_y[5]" is converted into an equivalent circuit using register "jumping:jump_inst|pic_y[5]~_emulated" and latch "jumping:jump_inst|pic_y[5]~13" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
     Warning (13310): Register "jumping:jump_inst|pic_y[4]" is converted into an equivalent circuit using register "jumping:jump_inst|pic_y[4]~_emulated" and latch "jumping:jump_inst|pic_y[4]~17" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
-    Warning (13310): Register "jumping:jump_inst|pic_y[5]" is converted into an equivalent circuit using register "jumping:jump_inst|pic_y[5]~_emulated" and latch "jumping:jump_inst|pic_y[5]~21" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
-    Warning (13310): Register "jumping:jump_inst|pic_y[6]" is converted into an equivalent circuit using register "jumping:jump_inst|pic_y[6]~_emulated" and latch "jumping:jump_inst|pic_y[6]~25" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
-    Warning (13310): Register "jumping:jump_inst|pic_y[7]" is converted into an equivalent circuit using register "jumping:jump_inst|pic_y[7]~_emulated" and latch "jumping:jump_inst|pic_y[7]~29" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
-    Warning (13310): Register "jumping:jump_inst|pic_y[8]" is converted into an equivalent circuit using register "jumping:jump_inst|pic_y[8]~_emulated" and latch "jumping:jump_inst|pic_y[8]~33" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
-    Warning (13310): Register "jumping:jump_inst|init_position[1]" is converted into an equivalent circuit using register "jumping:jump_inst|init_position[1]~_emulated" and latch "jumping:jump_inst|pic_y[1]~5" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
-    Warning (13310): Register "jumping:jump_inst|init_position[0]" is converted into an equivalent circuit using register "jumping:jump_inst|init_position[0]~_emulated" and latch "jumping:jump_inst|pic_y[0]~1" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
-    Warning (13310): Register "jumping:jump_inst|init_position[2]" is converted into an equivalent circuit using register "jumping:jump_inst|init_position[2]~_emulated" and latch "jumping:jump_inst|pic_y[2]~9" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
-    Warning (13310): Register "jumping:jump_inst|init_position[3]" is converted into an equivalent circuit using register "jumping:jump_inst|init_position[3]~_emulated" and latch "jumping:jump_inst|pic_y[3]~13" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
+    Warning (13310): Register "jumping:jump_inst|pic_y[3]" is converted into an equivalent circuit using register "jumping:jump_inst|pic_y[3]~_emulated" and latch "jumping:jump_inst|pic_y[3]~21" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
+    Warning (13310): Register "jumping:jump_inst|pic_y[2]" is converted into an equivalent circuit using register "jumping:jump_inst|pic_y[2]~_emulated" and latch "jumping:jump_inst|pic_y[2]~25" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
+    Warning (13310): Register "jumping:jump_inst|pic_y[1]" is converted into an equivalent circuit using register "jumping:jump_inst|pic_y[1]~_emulated" and latch "jumping:jump_inst|pic_y[1]~29" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
+    Warning (13310): Register "jumping:jump_inst|init_position[8]" is converted into an equivalent circuit using register "jumping:jump_inst|init_position[8]~_emulated" and latch "jumping:jump_inst|pic_y[8]~1" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
+    Warning (13310): Register "jumping:jump_inst|init_position[7]" is converted into an equivalent circuit using register "jumping:jump_inst|init_position[7]~_emulated" and latch "jumping:jump_inst|pic_y[7]~5" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
+    Warning (13310): Register "jumping:jump_inst|init_position[6]" is converted into an equivalent circuit using register "jumping:jump_inst|init_position[6]~_emulated" and latch "jumping:jump_inst|pic_y[6]~9" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
+    Warning (13310): Register "jumping:jump_inst|init_position[5]" is converted into an equivalent circuit using register "jumping:jump_inst|init_position[5]~_emulated" and latch "jumping:jump_inst|pic_y[5]~13" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
     Warning (13310): Register "jumping:jump_inst|init_position[4]" is converted into an equivalent circuit using register "jumping:jump_inst|init_position[4]~_emulated" and latch "jumping:jump_inst|pic_y[4]~17" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
-    Warning (13310): Register "jumping:jump_inst|init_position[5]" is converted into an equivalent circuit using register "jumping:jump_inst|init_position[5]~_emulated" and latch "jumping:jump_inst|pic_y[5]~21" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
-    Warning (13310): Register "jumping:jump_inst|init_position[6]" is converted into an equivalent circuit using register "jumping:jump_inst|init_position[6]~_emulated" and latch "jumping:jump_inst|pic_y[6]~25" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
-    Warning (13310): Register "jumping:jump_inst|init_position[7]" is converted into an equivalent circuit using register "jumping:jump_inst|init_position[7]~_emulated" and latch "jumping:jump_inst|pic_y[7]~29" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
-    Warning (13310): Register "jumping:jump_inst|init_position[8]" is converted into an equivalent circuit using register "jumping:jump_inst|init_position[8]~_emulated" and latch "jumping:jump_inst|pic_y[8]~33" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
+    Warning (13310): Register "jumping:jump_inst|init_position[3]" is converted into an equivalent circuit using register "jumping:jump_inst|init_position[3]~_emulated" and latch "jumping:jump_inst|pic_y[3]~21" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
+    Warning (13310): Register "jumping:jump_inst|init_position[2]" is converted into an equivalent circuit using register "jumping:jump_inst|init_position[2]~_emulated" and latch "jumping:jump_inst|pic_y[2]~25" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
+    Warning (13310): Register "jumping:jump_inst|init_position[1]" is converted into an equivalent circuit using register "jumping:jump_inst|init_position[1]~_emulated" and latch "jumping:jump_inst|pic_y[1]~29" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
+    Warning (13310): Register "jumping:jump_inst|init_position[0]" is converted into an equivalent circuit using register "jumping:jump_inst|init_position[0]~_emulated" and latch "jumping:jump_inst|init_position[0]~17" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
+    Warning (13310): Register "jumping:jump_inst|pic_y[0]" is converted into an equivalent circuit using register "jumping:jump_inst|pic_y[0]~_emulated" and latch "jumping:jump_inst|init_position[0]~17" File: D:/Quartus_Project/ballplayer/source/jumping.v Line: 66
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "lcd_blk" is stuck at VCC File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 29
     Warning (13410): Pin "seg_led_1[0]" is stuck at GND File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 36
@@ -2314,25 +1977,26 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "seg_led_2[6]" is stuck at GND File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 37
     Warning (13410): Pin "seg_led_2[7]" is stuck at GND File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 37
     Warning (13410): Pin "seg_led_2[8]" is stuck at GND File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 37
-    Warning (13410): Pin "led" is stuck at GND File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 41
+    Warning (13410): Pin "led[3]" is stuck at GND File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 40
+    Warning (13410): Pin "led[7]" is stuck at GND File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 40
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 64 registers lost all their fanouts during netlist optimizations.
+Info (17049): 75 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "key_up" File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 19
     Warning (15610): No output dependent on input pin "key_down" File: D:/Quartus_Project/ballplayer/source/ballplayer_top.v Line: 20
-Info (21057): Implemented 946 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 733 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 28 output pins
+    Info (21059): Implemented 35 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 903 logic cells
+    Info (21061): Implemented 683 logic cells
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 7 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 67 warnings
     Info: Peak virtual memory: 4860 megabytes
-    Info: Processing ended: Wed May 28 13:26:33 2025
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Processing ended: Wed May 28 13:52:08 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:15
 
 

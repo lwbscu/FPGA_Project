@@ -41,6 +41,7 @@ parameter   DONE   = 4'b1000;     // 完成
 reg     [3:0]   state;
 reg     [3:0]   cnt_set_windows;
 reg             state1_finish_flag;
+wire            state2_finish_flag;     // 声明state2_finish_flag信号
 reg     [2:0]   cnt_rom_prepare;
 reg     [239:0] temp;
 reg             length_num_flag;

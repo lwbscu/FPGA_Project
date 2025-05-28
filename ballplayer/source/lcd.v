@@ -16,15 +16,14 @@ module lcd (
     output          lcd_dc,
     output          lcd_sclk,
     output          lcd_mosi,
-    output          lcd_cs,
-    output          led1,      
+    output          lcd_cs,    output          led1,      
     output          led2
 );
 
 // 内部信号
 wire    [8:0]   data;   
 wire            en_write;
-wire            wr_done; 
+wire            wr_done;
 
 wire    [8:0]   init_data;
 wire            en_write_init;
@@ -122,7 +121,8 @@ pic_ram pic_ram_inst(
     .offset(y)                      // 使用球的Y坐标作为偏移
 );
 
-// 状态指示
-assign led2 = init_done;
+// LED状态指示 - 用于调试
+assign led1 = show_pic_flag | draw_line_flag;  // 显示或绘图状态
+assign led2 = init_done;                       // 初始化完成状态
 
 endmodule

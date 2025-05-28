@@ -34,19 +34,108 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 # == == == == == == == == == == == == == == == == == == == == == == == == == ==
 
 # 时钟和复位
+set_location_assignment PIN_J5 -to clk
+set_location_assignment PIN_J14 -to rst_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rst_n
 
 # ADC接口 - 模拟信号输入
+set_location_assignment PIN_B7 -to adc_cs
+set_location_assignment PIN_B8 -to adc_clk
+set_location_assignment PIN_C8 -to adc_dat
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_cs
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_dat
 
-# 按键输入
+# 按键输入 - 根据引脚文档配置
+set_location_assignment PIN_J9 -to key_up
+set_location_assignment PIN_K14 -to key_down
+set_location_assignment PIN_J11 -to ball_release_button
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to key_up
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to key_down
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ball_release_button
 
 # I2C接口 - 手势传感器
+set_location_assignment PIN_M4 -to i2c_scl
+set_location_assignment PIN_P3 -to i2c_sda
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to i2c_scl
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to i2c_sda
 
 # LCD显示接口 - SPI接口
+set_location_assignment PIN_P15 -to lcd_rst
+set_location_assignment PIN_D7 -to lcd_blk
+set_location_assignment PIN_R14 -to lcd_dc
+set_location_assignment PIN_R11 -to lcd_sclk
+set_location_assignment PIN_P12 -to lcd_mosi
+set_location_assignment PIN_R9 -to lcd_cs
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lcd_rst
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lcd_blk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lcd_dc
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lcd_sclk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lcd_mosi
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lcd_cs
 
 # 双七段数码管显示
+# 第一个数码管 seg_led_1[8:0]
+set_location_assignment PIN_E1 -to seg_led_1[0]
+set_location_assignment PIN_D2 -to seg_led_1[1]
+set_location_assignment PIN_K2 -to seg_led_1[2]
+set_location_assignment PIN_J2 -to seg_led_1[3]
+set_location_assignment PIN_G2 -to seg_led_1[4]
+set_location_assignment PIN_F5 -to seg_led_1[5]
+set_location_assignment PIN_G5 -to seg_led_1[6]
+set_location_assignment PIN_L1 -to seg_led_1[7]
+set_location_assignment PIN_E2 -to seg_led_1[8]
+
+# 第二个数码管 seg_led_2[8:0]
+set_location_assignment PIN_A3 -to seg_led_2[0]
+set_location_assignment PIN_A2 -to seg_led_2[1]
+set_location_assignment PIN_P2 -to seg_led_2[2]
+set_location_assignment PIN_P1 -to seg_led_2[3]
+set_location_assignment PIN_N1 -to seg_led_2[4]
+set_location_assignment PIN_C1 -to seg_led_2[5]
+set_location_assignment PIN_C2 -to seg_led_2[6]
+set_location_assignment PIN_R2 -to seg_led_2[7]
+set_location_assignment PIN_B1 -to seg_led_2[8]
+
+# 数码管IO标准设置
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_1[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_1[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_1[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_1[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_1[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_1[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_1[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_1[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_1[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_2[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_2[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_2[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_2[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_2[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_2[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_2[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_2[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_2[8]
 
 
-# LED指示灯
+# LED指示灯 - 根据引脚文档配置
+set_location_assignment PIN_N15 -to led[0]
+set_location_assignment PIN_N14 -to led[1]
+set_location_assignment PIN_M14 -to led[2]
+set_location_assignment PIN_M12 -to led[3]
+set_location_assignment PIN_L15 -to led[4]
+set_location_assignment PIN_K12 -to led[5]
+set_location_assignment PIN_L11 -to led[6]
+set_location_assignment PIN_K11 -to led[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[7]
 
 # == == == == == == == == == == == == == == == == == == == == == == == == == ==
 # 源文件添加
@@ -69,6 +158,10 @@ set_global_assignment -name VERILOG_FILE source/lcd_write.v
 set_global_assignment -name VERILOG_FILE source/segment_display.v
 set_global_assignment -name VERILOG_FILE source/frequency_divider.v
 set_global_assignment -name VERILOG_FILE source/debounce.v
+set_global_assignment -name VERILOG_FILE source/lcd_simple_test.v
+set_global_assignment -name VERILOG_FILE source/lcd_simple_fill.v
+set_global_assignment -name VERILOG_FILE source/lcd_debug_test.v
+set_global_assignment -name VERILOG_FILE source/lcd_full_init_test.v
 
 
 set_global_assignment -name DEVICE_FILTER_PACKAGE MBGA

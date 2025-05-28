@@ -40,15 +40,15 @@ always@(posedge sys_clk_50MHz or negedge sys_rst_n) begin
     if(!sys_rst_n)
         state <= INIT; // 复位后直接进入 INIT
     else
-        case(state)
-            IDLE : 
-                // 初始状态或转到 INIT
+        case(state)            IDLE : 
+                // 如果初始化未完成，进入初始化状态
+                // 如果初始化完成，则开始显示循环
                 if (!init_done)
                     state <= INIT;
                 else 
-                    state <= SHOW_PIC;
+                    state <= SHOW_PIC; // 持续循环显示
 
-            INIT : 
+            INIT :
                 // 初始化完成后转到 SHOW_PIC
                 if (init_done)
                     state <= SHOW_PIC;
@@ -60,12 +60,10 @@ always@(posedge sys_clk_50MHz or negedge sys_rst_n) begin
                 if (show_pic_done)
                     state <= DRAW_LINE;
                 else
-                    state <= SHOW_PIC;
-
-            DRAW_LINE : 
-                // 画线完成后返回 IDLE
+                    state <= SHOW_PIC;            DRAW_LINE : 
+                // 画线完成后返回 SHOW_PIC，形成持续刷新循环
                 if (draw_line_done)
-                    state <= IDLE;
+                    state <= SHOW_PIC; // 循环刷新，而不是回到IDLE
                 else
                     state <= DRAW_LINE;
 

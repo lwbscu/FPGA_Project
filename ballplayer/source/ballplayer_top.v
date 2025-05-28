@@ -35,9 +35,8 @@ module ballplayer_top(
     // 双七段数码管显示
     output  [8:0]   seg_led_1,      // 第一个数码管 PIN_E1,D2,K2,J2,G2,F5,G5,L1,E2
     output  [8:0]   seg_led_2,      // 第二个数码管 PIN_A3,A2,P2,P1,N1,C1,C2,R2,B1
-    
-    // LED指示灯
-    output          led             // 状态指示LED PIN_N15
+      // LED指示灯
+    output  [7:0]   led             // 状态指示LED [7:0]
 );
 
 // 内部信号定义
@@ -49,6 +48,7 @@ wire    [8:0]   handline;           // 手的位置坐标
 wire    [7:0]   hand_velocity;      // 手的速度
 wire    [1:0]   k;                  // 弹性系数
 wire    [8:0]   pic_y;              // 球的Y坐标
+wire    [1:0]   led_status;         // LCD状态指示LED信号
 wire    [8:0]   home_pos;           // 球的初始位置
 wire    [17:0]  temp_calc;          // 临时计算变量
 wire    [1:0]   beep_flag;          // 蜂鸣器标志
@@ -125,20 +125,20 @@ jumping jump_inst(
     .over_flag(over_flag)
 );
 
-// LCD显示控制模块 - 使用正确的TFT LCD架构
+// LCD显示控制模块 - 恢复完整游戏显示
 lcd lcd_inst(
-    .clk_50mhz(clk_50mhz),    // 使用50MHz时钟
+    .clk_50MHz(clk_50mhz),    // 使用50MHz时钟
     .rst_n(rst_n),
-    .y(pic_y),          // 球的Y坐标
-    .x(handline),       // 手的X坐标
+    .pic_y(pic_y),           // 球的Y坐标
+    .handline(handline),     // 手的位置线
     .lcd_rst(lcd_rst),
     .lcd_blk(lcd_blk),
     .lcd_dc(lcd_dc),
     .lcd_sclk(lcd_sclk),
     .lcd_mosi(lcd_mosi),
     .lcd_cs(lcd_cs),
-    .led1(),            // 未连接
-    .led2()             // 未连接
+    .led1(led_status[0]),       // LCD工作状态指示
+    .led2(led_status[1])        // LCD初始化完成指示
 );
 
 // 球的初始位置计算 - 基于ADC输入
@@ -148,19 +148,13 @@ assign temp_calc = 310 * adc_extended;
 assign home_pos = temp_calc[16:8] + 9'd7;
 
 // LED状态指示
-reg led_reg;
-always @(posedge clk or negedge rst_n) begin
-    if (!rst_n) begin
-        led_reg <= 1'b0;
-    end else if (dat_valid) begin
-        if (handline > 16'd10) begin
-            led_reg <= 1'b1; 
-        end else begin
-            led_reg <= 1'b0;
-        end
-    end
-end
-
-assign led = led_reg;
+assign led[0] = led_status[0];  // LCD工作状态
+assign led[1] = led_status[1];  // LCD初始化状态
+assign led[2] = dat_valid;      // 传感器数据有效
+assign led[3] = (handline > 16'd10) ? 1'b1 : 1'b0;  // 手势检测
+assign led[4] = adc_done;       // ADC采样完成
+assign led[5] = over_flag;      // 游戏结束标志
+assign led[6] = stop_flag;      // 游戏停止标志
+assign led[7] = 1'b0;           // 预留
 
 endmodule
