@@ -1,0 +1,81 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "adc_cs",
+					"strict" : false
+				},
+				{
+					"name" : "adc_clk",
+					"strict" : false
+				},
+				{
+					"name" : "i2c_scl",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_rst",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_dc",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_sclk",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_mosi",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_cs",
+					"strict" : false
+				},
+				{
+					"name" : "seg_led_1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_led_1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_led_1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_led_2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_led_2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "i2c_sda",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "ball_release_button",
+					"strict" : false
+				},
+				{
+					"name" : "adc_dat",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,68 @@
+
+State Machine - |ballplayer_top|lcd:lcd_inst|draw_line:lcd_draw_line_inst|state
+Name state.IDLE state.DRAW state.CLEAR 
+state.IDLE 0 0 0 
+state.DRAW 1 1 0 
+state.CLEAR 1 0 1 
+
+State Machine - |ballplayer_top|lcd:lcd_inst|lcd_show_pic:lcd_show_pic_inst|state
+Name state.DONE state.STATE2 state.STATE1 state.STATE0 
+state.STATE0 0 0 0 0 
+state.STATE1 0 0 1 1 
+state.STATE2 0 1 0 1 
+state.DONE 1 0 0 1 
+
+State Machine - |ballplayer_top|lcd:lcd_inst|lcd_init:lcd_init_inst|state
+Name state.DONE state.S4_WR_DIRECTION_CLEAR state.S3_DELAY120MS state.S2_WR_90 state.S1_DELAY50MS state.S0_DELAY100MS 
+state.S0_DELAY100MS 0 0 0 0 0 0 
+state.S1_DELAY50MS 0 0 0 0 1 1 
+state.S2_WR_90 0 0 0 1 0 1 
+state.S3_DELAY120MS 0 0 1 0 0 1 
+state.S4_WR_DIRECTION_CLEAR 0 1 0 0 0 1 
+state.DONE 1 0 0 0 0 1 
+
+State Machine - |ballplayer_top|lcd:lcd_inst|control:control_inst|state
+Name state.IDLE state.DRAW_LINE state.SHOW_PIC state.INIT 
+state.INIT 0 0 0 0 
+state.IDLE 1 0 0 1 
+state.SHOW_PIC 0 0 1 1 
+state.DRAW_LINE 0 1 0 1 
+
+State Machine - |ballplayer_top|lcd:lcd_inst|lcd_write:lcd_write_inst|state
+Name state.DONE state.STATE2 state.STATE1 state.STATE0 
+state.STATE0 0 0 0 0 
+state.STATE1 0 0 1 1 
+state.STATE2 0 1 0 1 
+state.DONE 1 0 0 1 
+
+State Machine - |ballplayer_top|jumping:jump_inst|current_state
+Name current_state.UP 
+current_state.DOWN 0 
+current_state.UP 1 
+
+State Machine - |ballplayer_top|rpr0521rs_driver:sensor_inst|state
+Name state.WAIT_CONVERSION state.READ_ALS_MSB state.READ_ALS_LSB state.READ_PS_MSB state.READ_PS_LSB state.WRITE_CONFIG state.INIT state.IDLE state.ERROR 
+state.IDLE 0 0 0 0 0 0 0 0 0 
+state.INIT 0 0 0 0 0 0 1 1 0 
+state.WRITE_CONFIG 0 0 0 0 0 1 0 1 0 
+state.READ_PS_LSB 0 0 0 0 1 0 0 1 0 
+state.READ_PS_MSB 0 0 0 1 0 0 0 1 0 
+state.READ_ALS_LSB 0 0 1 0 0 0 0 1 0 
+state.READ_ALS_MSB 0 1 0 0 0 0 0 1 0 
+state.WAIT_CONVERSION 1 0 0 0 0 0 0 1 0 
+state.ERROR 0 0 0 0 0 0 0 1 1 
+
+State Machine - |ballplayer_top|rpr0521rs_driver:sensor_inst|i2c_master:i2c_master_inst|i2c_state
+Name i2c_state.I2C_STOP i2c_state.I2C_DATA i2c_state.I2C_ADDR i2c_state.I2C_IDLE i2c_state.I2C_START 
+i2c_state.I2C_IDLE 0 0 0 0 0 
+i2c_state.I2C_START 0 0 0 1 1 
+i2c_state.I2C_ADDR 0 0 1 1 0 
+i2c_state.I2C_DATA 0 1 0 1 0 
+i2c_state.I2C_STOP 1 0 0 1 0 
+
+State Machine - |ballplayer_top|adc081s101_driver:adc_driver_inst|state
+Name state.START state.IDLE state.DONE state.SAMPLE 
+state.IDLE 0 0 0 0 
+state.START 1 1 0 0 
+state.SAMPLE 0 1 0 1 
+state.DONE 0 1 1 0 
