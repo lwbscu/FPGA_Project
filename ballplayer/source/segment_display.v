@@ -25,8 +25,8 @@ reg [3:0] ones_digit;
 
 // BCD conversion
 always @(*) begin
-    tens_digit = display_value / 8'd10;
-    ones_digit = display_value % 8'd10;
+    tens_digit = display_value / 4'd10;
+    ones_digit = display_value % 4'd10;
 end
     
     // Refresh counter for digit multiplexing

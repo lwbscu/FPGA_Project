@@ -77,7 +77,7 @@ RESERVED_INPUT               : A11       :        :                   :         
 RESERVED_INPUT               : A13       :        :                   :         : 8         :                
 RESERVED_INPUT               : A14       :        :                   :         : 8         :                
 GND                          : A15       : gnd    :                   :         :           :                
-seg_led_2[8]                 : B1        : output : 3.3-V LVTTL       :         : 1A        : Y              
+RESERVED_INPUT               : B1        :        :                   :         : 1A        :                
 GND                          : B2        : gnd    :                   :         :           :                
 VCCA3                        : B3        : power  :                   : 3.0V/3.3V :           :                
 RESERVED_INPUT               : B4        :        :                   :         : 8         :                
@@ -92,8 +92,8 @@ RESERVED_INPUT               : B12       :        :                   :         
 RESERVED_INPUT               : B13       :        :                   :         : 8         :                
 RESERVED_INPUT               : B14       :        :                   :         : 8         :                
 RESERVED_INPUT               : B15       :        :                   :         : 8         :                
-seg_led_2[5]                 : C1        : output : 3.3-V LVTTL       :         : 1A        : Y              
-seg_led_2[6]                 : C2        : output : 3.3-V LVTTL       :         : 1A        : Y              
+RESERVED_INPUT               : C1        :        :                   :         : 1A        :                
+RESERVED_INPUT               : C2        :        :                   :         : 1A        :                
 adc_dat                      : C8        : input  : 3.3-V LVTTL       :         : 8         : Y              
 RESERVED_INPUT               : C14       :        :                   :         : 6         :                
 RESERVED_INPUT               : C15       :        :                   :         : 6         :                
@@ -109,7 +109,7 @@ RESERVED_INPUT               : D11       :        :                   :         
 RESERVED_INPUT               : D12       :        :                   :         : 6         :                
 VCCA2                        : D14       : power  :                   : 3.0V/3.3V :           :                
 seg_led_1[0]                 : E1        : output : 3.3-V LVTTL       :         : 1A        : Y              
-seg_led_1[8]                 : E2        : output : 3.3-V LVTTL       :         : 1A        : Y              
+RESERVED_INPUT               : E2        :        :                   :         : 1A        :                
 REFGND                       : E4        :        :                   :         :           :                
 GND                          : E5        : gnd    :                   :         :           :                
 ~ALTERA_CONF_DONE~ / RESERVED_INPUT : E6        : input  : 3.3 V Schmitt Trigger :         : 8         : N              
@@ -123,14 +123,14 @@ RESERVED_INPUT               : E14       :        :                   :         
 RESERVED_INPUT               : E15       :        :                   :         : 6         :                
 VCCIO1A                      : F2        : power  :                   : 3.3V    : 1A        :                
 ADC_VREF                     : F4        :        :                   :         :           :                
-seg_led_1[5]                 : F5        : output : 3.3-V LVTTL       :         : 1A        : Y              
+RESERVED_INPUT               : F5        :        :                   :         : 1A        :                
 RESERVED_INPUT               : F11       :        :                   :         : 6         :                
 RESERVED_INPUT               : F12       :        :                   :         : 6         :                
 VCCIO6                       : F14       : power  :                   : 3.3V    : 6         :                
 ~ALTERA_TMS~ / RESERVED_INPUT_WITH_WEAK_PULLUP : G1        : input  : 3.3 V Schmitt Trigger :         : 1B        : N              
-seg_led_1[4]                 : G2        : output : 3.3-V LVTTL       :         : 1B        : Y              
+RESERVED_INPUT               : G2        :        :                   :         : 1B        :                
 GND                          : G4        : gnd    :                   :         :           :                
-seg_led_1[6]                 : G5        : output : 3.3-V LVTTL       :         : 1A        : Y              
+RESERVED_INPUT               : G5        :        :                   :         : 1A        :                
 RESERVED_INPUT               : G7        :        :                   :         : 1B        :                
 VCC_ONE                      : G8        : power  :                   : 3.0V/3.3V :           :                
 GND                          : G9        : gnd    :                   :         :           :                
@@ -150,7 +150,7 @@ RESERVED_INPUT               : H12       :        :                   :         
 RESERVED_INPUT               : H13       :        :                   :         : 6         :                
 GND                          : H14       : gnd    :                   :         :           :                
 ~ALTERA_TCK~ / RESERVED_INPUT : J1        : input  : 3.3 V Schmitt Trigger :         : 1B        : N              
-seg_led_1[3]                 : J2        : output : 3.3-V LVTTL       :         : 1B        : Y              
+RESERVED_INPUT               : J2        :        :                   :         : 1B        :                
 RESERVED_INPUT               : J4        :        :                   :         : 2         :                
 clk                          : J5        : input  : 3.3-V LVTTL       :         : 2         : Y              
 GND                          : J7        : gnd    :                   :         :           :                
@@ -160,13 +160,13 @@ ball_release_button          : J11       : input  : 3.3-V LVTTL       :         
 RESERVED_INPUT               : J12       :        :                   :         : 6         :                
 rst_n                        : J14       : input  : 3.3-V LVTTL       :         : 5         : Y              
 RESERVED_INPUT               : J15       :        :                   :         : 6         :                
-seg_led_1[2]                 : K2        : output : 3.3-V LVTTL       :         : 1B        : Y              
+RESERVED_INPUT               : K2        :        :                   :         : 1B        :                
 RESERVED_INPUT               : K4        :        :                   :         : 2         :                
 RESERVED_INPUT               : K5        :        :                   :         : 2         :                
 led[7]                       : K11       : output : 3.3-V LVTTL       :         : 5         : Y              
 led[5]                       : K12       : output : 3.3-V LVTTL       :         : 5         : Y              
 key_down                     : K14       : input  : 3.3-V LVTTL       :         : 5         : Y              
-seg_led_1[7]                 : L1        : output : 3.3-V LVTTL       :         : 1B        : Y              
+RESERVED_INPUT               : L1        :        :                   :         : 1B        :                
 VCCIO2                       : L2        : power  :                   : 3.3V    : 2         :                
 RESERVED_INPUT               : L4        :        :                   :         : 2         :                
 RESERVED_INPUT               : L5        :        :                   :         : 2         :                
@@ -183,20 +183,20 @@ GND                          : M2        : gnd    :                   :         
 i2c_scl                      : M4        : output : 3.3-V LVTTL       :         : 3         : Y              
 RESERVED_INPUT               : M5        :        :                   :         : 3         :                
 GND                          : M6        : gnd    :                   :         :           :                
-RESERVED_INPUT               : M7        :        :                   :         : 3         :                
+beeper                       : M7        : output : 3.3-V LVTTL       :         : 3         : N              
 RESERVED_INPUT               : M8        :        :                   :         : 3         :                
 RESERVED_INPUT               : M9        :        :                   :         : 3         :                
 GND                          : M10       : gnd    :                   :         :           :                
 RESERVED_INPUT               : M11       :        :                   :         : 3         :                
 led[3]                       : M12       : output : 3.3-V LVTTL       :         : 5         : Y              
 led[2]                       : M14       : output : 3.3-V LVTTL       :         : 5         : Y              
-seg_led_2[4]                 : N1        : output : 3.3-V LVTTL       :         : 2         : Y              
+RESERVED_INPUT               : N1        :        :                   :         : 2         :                
 VCCA1                        : N2        : power  :                   : 3.0V/3.3V :           :                
 RESERVED_INPUT               : N8        :        :                   :         : 3         :                
 led[1]                       : N14       : output : 3.3-V LVTTL       :         : 5         : Y              
 led[0]                       : N15       : output : 3.3-V LVTTL       :         : 5         : Y              
-seg_led_2[3]                 : P1        : output : 3.3-V LVTTL       :         : 2         : Y              
-seg_led_2[2]                 : P2        : output : 3.3-V LVTTL       :         : 2         : Y              
+RESERVED_INPUT               : P1        :        :                   :         : 2         :                
+RESERVED_INPUT               : P2        :        :                   :         : 2         :                
 i2c_sda                      : P3        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
 RESERVED_INPUT               : P4        :        :                   :         : 3         :                
 VCCIO3                       : P5        : power  :                   : 3.3V    : 3         :                
@@ -211,7 +211,7 @@ VCCA4                        : P13       : power  :                   : 3.0V/3.3
 RESERVED_INPUT               : P14       :        :                   :         : 3         :                
 lcd_rst                      : P15       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND                          : R1        : gnd    :                   :         :           :                
-seg_led_2[7]                 : R2        : output : 3.3-V LVTTL       :         : 2         : Y              
+RESERVED_INPUT               : R2        :        :                   :         : 2         :                
 RESERVED_INPUT               : R3        :        :                   :         : 3         :                
 RESERVED_INPUT               : R5        :        :                   :         : 3         :                
 RESERVED_INPUT               : R7        :        :                   :         : 3         :                

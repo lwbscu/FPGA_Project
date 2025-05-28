@@ -1,5 +1,5 @@
 Timing Analyzer report for ballplayer
-Wed May 28 13:52:21 2025
+Thu May 29 00:02:28 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -38,17 +38,15 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  30. Signal Integrity Metrics (Fast 1200mv 0c Model)
  31. Setup Transfers
  32. Hold Transfers
- 33. Recovery Transfers
- 34. Removal Transfers
- 35. Report TCCS
- 36. Report RSKM
- 37. Unconstrained Paths Summary
- 38. Clock Status Summary
+ 33. Report TCCS
+ 34. Report RSKM
+ 35. Unconstrained Paths Summary
+ 36. Clock Status Summary
+ 37. Unconstrained Input Ports
+ 38. Unconstrained Output Ports
  39. Unconstrained Input Ports
  40. Unconstrained Output Ports
- 41. Unconstrained Input Ports
- 42. Unconstrained Output Ports
- 43. Timing Analyzer Messages
+ 41. Timing Analyzer Messages
 
 
 
@@ -93,98 +91,76 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.26        ;
+; Average used               ; 1.08        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   8.9%      ;
-;     Processor 3            ;   8.6%      ;
-;     Processor 4            ;   8.6%      ;
+;     Processors 2-4         ;   2.8%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                                                                                                                                                             ;
-+-------------------------------------------------------+-----------+--------+------------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------+-----------------------------------------------------------+
-; Clock Name                                            ; Type      ; Period ; Frequency  ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source                                                 ; Targets                                                   ;
-+-------------------------------------------------------+-----------+--------+------------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------+-----------------------------------------------------------+
-; ball_release_button                                   ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { ball_release_button }                                   ;
-; clk                                                   ; Base      ; 83.333 ; 12.0 MHz   ; 0.000 ; 41.666 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { clk }                                                   ;
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { jumping:jump_inst|frequency_divider:fre_500us|clk_out } ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; Generated ; 41.666 ; 24.0 MHz   ; 0.000 ; 20.833 ; 50.00      ; 1         ; 2           ;       ;        ;           ;            ; false    ; clk    ; pll_inst|altpll_component|auto_generated|pll1|inclk[0] ; { pll_inst|altpll_component|auto_generated|pll1|clk[0] }  ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]  ; Generated ; 19.999 ; 50.0 MHz   ; 0.000 ; 9.999  ; 50.00      ; 6         ; 25          ;       ;        ;           ;            ; false    ; clk    ; pll_inst|altpll_component|auto_generated|pll1|inclk[0] ; { pll_inst|altpll_component|auto_generated|pll1|clk[1] }  ;
-+-------------------------------------------------------+-----------+--------+------------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------+-----------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                                                                          ;
++------------------------------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------+----------------------------------------------------------+
+; Clock Name                                           ; Type      ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source                                                 ; Targets                                                  ;
++------------------------------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------+----------------------------------------------------------+
+; clk                                                  ; Base      ; 83.333 ; 12.0 MHz  ; 0.000 ; 41.666 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { clk }                                                  ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; Generated ; 19.999 ; 50.0 MHz  ; 0.000 ; 9.999  ; 50.00      ; 6         ; 25          ;       ;        ;           ;            ; false    ; clk    ; pll_inst|altpll_component|auto_generated|pll1|inclk[0] ; { pll_inst|altpll_component|auto_generated|pll1|clk[1] } ;
++------------------------------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------+----------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                          ;
-+------------+-----------------+-------------------------------------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                                            ; Note ;
-+------------+-----------------+-------------------------------------------------------+------+
-; 98.14 MHz  ; 98.14 MHz       ; jumping:jump_inst|frequency_divider:fre_500us|clk_out ;      ;
-; 127.99 MHz ; 127.99 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[1]  ;      ;
-; 132.89 MHz ; 132.89 MHz      ; clk                                                   ;      ;
-; 180.28 MHz ; 180.28 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ;      ;
-+------------+-----------------+-------------------------------------------------------+------+
++--------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                         ;
++------------+-----------------+------------------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                           ; Note ;
++------------+-----------------+------------------------------------------------------+------+
+; 120.44 MHz ; 120.44 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[1] ;      ;
+; 132.86 MHz ; 132.86 MHz      ; clk                                                  ;      ;
++------------+-----------------+------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+---------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Setup Summary                                             ;
-+-------------------------------------------------------+---------+---------------+
-; Clock                                                 ; Slack   ; End Point TNS ;
-+-------------------------------------------------------+---------+---------------+
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; -14.251 ; -2006.205     ;
-; ball_release_button                                   ; -9.601  ; -84.095       ;
-; clk                                                   ; -1.845  ; -1.845        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]  ; 12.186  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; 36.119  ; 0.000         ;
-+-------------------------------------------------------+---------+---------------+
++-------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary                                           ;
++------------------------------------------------------+--------+---------------+
+; Clock                                                ; Slack  ; End Point TNS ;
++------------------------------------------------------+--------+---------------+
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 11.696 ; 0.000         ;
+; clk                                                  ; 75.806 ; 0.000         ;
++------------------------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                                           ;
++------------------------------------------------------+-------+---------------+
+; Clock                                                ; Slack ; End Point TNS ;
++------------------------------------------------------+-------+---------------+
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 0.360 ; 0.000         ;
+; clk                                                  ; 0.362 ; 0.000         ;
++------------------------------------------------------+-------+---------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
 
 
 +-------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Hold Summary                                            ;
-+-------------------------------------------------------+-------+---------------+
-; Clock                                                 ; Slack ; End Point TNS ;
-+-------------------------------------------------------+-------+---------------+
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; 0.340 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; 0.360 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]  ; 0.361 ; 0.000         ;
-; clk                                                   ; 0.362 ; 0.000         ;
-; ball_release_button                                   ; 3.369 ; 0.000         ;
-+-------------------------------------------------------+-------+---------------+
-
-
-+--------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Recovery Summary                                         ;
-+-------------------------------------------------------+--------+---------------+
-; Clock                                                 ; Slack  ; End Point TNS ;
-+-------------------------------------------------------+--------+---------------+
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; -2.657 ; -358.365      ;
-+-------------------------------------------------------+--------+---------------+
-
-
-+-------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Removal Summary                                         ;
-+-------------------------------------------------------+-------+---------------+
-; Clock                                                 ; Slack ; End Point TNS ;
-+-------------------------------------------------------+-------+---------------+
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; 1.779 ; 0.000         ;
-+-------------------------------------------------------+-------+---------------+
-
-
-+--------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Minimum Pulse Width Summary                              ;
-+-------------------------------------------------------+--------+---------------+
-; Clock                                                 ; Slack  ; End Point TNS ;
-+-------------------------------------------------------+--------+---------------+
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; -5.250 ; -478.934      ;
-; ball_release_button                                   ; -3.000 ; -3.000        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]  ; 9.729  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; 20.562 ; 0.000         ;
-; clk                                                   ; 41.368 ; 0.000         ;
-+-------------------------------------------------------+--------+---------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary                             ;
++------------------------------------------------------+--------+---------------+
+; Clock                                                ; Slack  ; End Point TNS ;
++------------------------------------------------------+--------+---------------+
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 9.727  ; 0.000         ;
+; clk                                                  ; 41.369 ; 0.000         ;
++------------------------------------------------------+--------+---------------+
 
 
 -----------------------------------------------
@@ -193,74 +169,57 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 No synchronizer chains to report.
 
 
-+---------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                                                           ;
-+------------+-----------------+-------------------------------------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                                            ; Note ;
-+------------+-----------------+-------------------------------------------------------+------+
-; 105.9 MHz  ; 105.9 MHz       ; jumping:jump_inst|frequency_divider:fre_500us|clk_out ;      ;
-; 133.35 MHz ; 133.35 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[1]  ;      ;
-; 138.87 MHz ; 138.87 MHz      ; clk                                                   ;      ;
-; 189.0 MHz  ; 189.0 MHz       ; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ;      ;
-+------------+-----------------+-------------------------------------------------------+------+
++-------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                         ;
++-----------+-----------------+------------------------------------------------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name                                           ; Note ;
++-----------+-----------------+------------------------------------------------------+------+
+; 127.7 MHz ; 127.7 MHz       ; pll_inst|altpll_component|auto_generated|pll1|clk[1] ;      ;
+; 138.6 MHz ; 138.6 MHz       ; clk                                                  ;      ;
++-----------+-----------------+------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+---------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Setup Summary                                              ;
-+-------------------------------------------------------+---------+---------------+
-; Clock                                                 ; Slack   ; End Point TNS ;
-+-------------------------------------------------------+---------+---------------+
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; -13.662 ; -1928.691     ;
-; ball_release_button                                   ; -9.296  ; -81.239       ;
-; clk                                                   ; -1.904  ; -1.904        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]  ; 12.500  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; 36.375  ; 0.000         ;
-+-------------------------------------------------------+---------+---------------+
++-------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                                            ;
++------------------------------------------------------+--------+---------------+
+; Clock                                                ; Slack  ; End Point TNS ;
++------------------------------------------------------+--------+---------------+
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 12.168 ; 0.000         ;
+; clk                                                  ; 76.118 ; 0.000         ;
++------------------------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                                            ;
++------------------------------------------------------+-------+---------------+
+; Clock                                                ; Slack ; End Point TNS ;
++------------------------------------------------------+-------+---------------+
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 0.322 ; 0.000         ;
+; clk                                                  ; 0.324 ; 0.000         ;
++------------------------------------------------------+-------+---------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
 
 
 +-------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Hold Summary                                             ;
-+-------------------------------------------------------+-------+---------------+
-; Clock                                                 ; Slack ; End Point TNS ;
-+-------------------------------------------------------+-------+---------------+
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; 0.303 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; 0.323 ; 0.000         ;
-; clk                                                   ; 0.324 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]  ; 0.324 ; 0.000         ;
-; ball_release_button                                   ; 2.928 ; 0.000         ;
-+-------------------------------------------------------+-------+---------------+
-
-
-+--------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Recovery Summary                                          ;
-+-------------------------------------------------------+--------+---------------+
-; Clock                                                 ; Slack  ; End Point TNS ;
-+-------------------------------------------------------+--------+---------------+
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; -2.477 ; -333.375      ;
-+-------------------------------------------------------+--------+---------------+
-
-
-+-------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Removal Summary                                          ;
-+-------------------------------------------------------+-------+---------------+
-; Clock                                                 ; Slack ; End Point TNS ;
-+-------------------------------------------------------+-------+---------------+
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; 1.703 ; 0.000         ;
-+-------------------------------------------------------+-------+---------------+
-
-
-+--------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Minimum Pulse Width Summary                               ;
-+-------------------------------------------------------+--------+---------------+
-; Clock                                                 ; Slack  ; End Point TNS ;
-+-------------------------------------------------------+--------+---------------+
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; -5.250 ; -478.934      ;
-; ball_release_button                                   ; -3.000 ; -3.000        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]  ; 9.739  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; 20.570 ; 0.000         ;
-; clk                                                   ; 41.379 ; 0.000         ;
-+-------------------------------------------------------+--------+---------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary                              ;
++------------------------------------------------------+--------+---------------+
+; Clock                                                ; Slack  ; End Point TNS ;
++------------------------------------------------------+--------+---------------+
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 9.734  ; 0.000         ;
+; clk                                                  ; 41.379 ; 0.000         ;
++------------------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
@@ -269,61 +228,46 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 No synchronizer chains to report.
 
 
-+--------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Setup Summary                                             ;
-+-------------------------------------------------------+--------+---------------+
-; Clock                                                 ; Slack  ; End Point TNS ;
-+-------------------------------------------------------+--------+---------------+
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; -5.579 ; -786.682      ;
-; ball_release_button                                   ; -4.040 ; -35.242       ;
-; clk                                                   ; -0.907 ; -0.907        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]  ; 16.952 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; 39.465 ; 0.000         ;
-+-------------------------------------------------------+--------+---------------+
++-------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary                                            ;
++------------------------------------------------------+--------+---------------+
+; Clock                                                ; Slack  ; End Point TNS ;
++------------------------------------------------------+--------+---------------+
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 16.867 ; 0.000         ;
+; clk                                                  ; 80.436 ; 0.000         ;
++------------------------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                                            ;
++------------------------------------------------------+-------+---------------+
+; Clock                                                ; Slack ; End Point TNS ;
++------------------------------------------------------+-------+---------------+
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 0.150 ; 0.000         ;
+; clk                                                  ; 0.151 ; 0.000         ;
++------------------------------------------------------+-------+---------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
 
 
 +-------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Hold Summary                                             ;
-+-------------------------------------------------------+-------+---------------+
-; Clock                                                 ; Slack ; End Point TNS ;
-+-------------------------------------------------------+-------+---------------+
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; 0.143 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; 0.150 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]  ; 0.151 ; 0.000         ;
-; clk                                                   ; 0.152 ; 0.000         ;
-; ball_release_button                                   ; 1.298 ; 0.000         ;
-+-------------------------------------------------------+-------+---------------+
-
-
-+--------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Recovery Summary                                          ;
-+-------------------------------------------------------+--------+---------------+
-; Clock                                                 ; Slack  ; End Point TNS ;
-+-------------------------------------------------------+--------+---------------+
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; -1.034 ; -139.498      ;
-+-------------------------------------------------------+--------+---------------+
-
-
-+-------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Removal Summary                                          ;
-+-------------------------------------------------------+-------+---------------+
-; Clock                                                 ; Slack ; End Point TNS ;
-+-------------------------------------------------------+-------+---------------+
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; 0.506 ; 0.000         ;
-+-------------------------------------------------------+-------+---------------+
-
-
-+--------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Minimum Pulse Width Summary                               ;
-+-------------------------------------------------------+--------+---------------+
-; Clock                                                 ; Slack  ; End Point TNS ;
-+-------------------------------------------------------+--------+---------------+
-; ball_release_button                                   ; -3.000 ; -3.000        ;
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; -1.000 ; -150.000      ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]  ; 9.782  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; 20.615 ; 0.000         ;
-; clk                                                   ; 40.996 ; 0.000         ;
-+-------------------------------------------------------+--------+---------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary                              ;
++------------------------------------------------------+--------+---------------+
+; Clock                                                ; Slack  ; End Point TNS ;
++------------------------------------------------------+--------+---------------+
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 9.783  ; 0.000         ;
+; clk                                                  ; 40.996 ; 0.000         ;
++------------------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
@@ -332,24 +276,18 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                                   ;
-+--------------------------------------------------------+-----------+-------+----------+---------+---------------------+
-; Clock                                                  ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+--------------------------------------------------------+-----------+-------+----------+---------+---------------------+
-; Worst-case Slack                                       ; -14.251   ; 0.143 ; -2.657   ; 0.506   ; -5.250              ;
-;  ball_release_button                                   ; -9.601    ; 1.298 ; N/A      ; N/A     ; -3.000              ;
-;  clk                                                   ; -1.904    ; 0.152 ; N/A      ; N/A     ; 40.996              ;
-;  jumping:jump_inst|frequency_divider:fre_500us|clk_out ; -14.251   ; 0.143 ; -2.657   ; 0.506   ; -5.250              ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; 36.119    ; 0.150 ; N/A      ; N/A     ; 20.562              ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[1]  ; 12.186    ; 0.151 ; N/A      ; N/A     ; 9.729               ;
-; Design-wide TNS                                        ; -2092.145 ; 0.0   ; -358.365 ; 0.0     ; -481.934            ;
-;  ball_release_button                                   ; -84.095   ; 0.000 ; N/A      ; N/A     ; -3.000              ;
-;  clk                                                   ; -1.904    ; 0.000 ; N/A      ; N/A     ; 0.000               ;
-;  jumping:jump_inst|frequency_divider:fre_500us|clk_out ; -2006.205 ; 0.000 ; -358.365 ; 0.000   ; -478.934            ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; 0.000     ; 0.000 ; N/A      ; N/A     ; 0.000               ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[1]  ; 0.000     ; 0.000 ; N/A      ; N/A     ; 0.000               ;
-+--------------------------------------------------------+-----------+-------+----------+---------+---------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                               ;
++-------------------------------------------------------+--------+-------+----------+---------+---------------------+
+; Clock                                                 ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------------------------------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack                                      ; 11.696 ; 0.150 ; N/A      ; N/A     ; 9.727               ;
+;  clk                                                  ; 75.806 ; 0.151 ; N/A      ; N/A     ; 40.996              ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 11.696 ; 0.150 ; N/A      ; N/A     ; 9.727               ;
+; Design-wide TNS                                       ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  clk                                                  ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++-------------------------------------------------------+--------+-------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -357,33 +295,12 @@ No synchronizer chains to report.
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 ; Pin          ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
-; adc_cs       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; adc_clk      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; i2c_scl      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; lcd_rst      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; lcd_blk      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; lcd_dc       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; lcd_sclk     ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; lcd_mosi     ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; lcd_cs       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; seg_led_1[0] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; seg_led_1[1] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; seg_led_1[2] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; seg_led_1[3] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; seg_led_1[4] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; seg_led_1[5] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; seg_led_1[6] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; seg_led_1[7] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; seg_led_1[8] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; seg_led_2[0] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; seg_led_2[1] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; seg_led_2[2] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; seg_led_2[3] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; seg_led_2[4] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; seg_led_2[5] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; seg_led_2[6] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; seg_led_2[7] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; seg_led_2[8] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; led[0]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; led[1]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; led[2]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -392,6 +309,14 @@ No synchronizer chains to report.
 ; led[5]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; led[6]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; led[7]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; beeper       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; seg_led_1[0] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; seg_led_1[1] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; seg_led_2[0] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; seg_led_2[1] ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; adc_cs       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; adc_clk      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; i2c_scl      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; i2c_sda      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_TDO~ ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
@@ -402,13 +327,13 @@ No synchronizer chains to report.
 +---------------------+-----------------------+-----------------+-----------------+
 ; Pin                 ; I/O Standard          ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------------+-----------------------+-----------------+-----------------+
-; key_up              ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; key_down            ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
-; i2c_sda             ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
-; rst_n               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
-; clk                 ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ball_release_button ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; adc_dat             ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; i2c_sda             ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; key_up              ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; rst_n               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; clk                 ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_TMS~        ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_TCK~        ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_TDI~        ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
@@ -424,33 +349,12 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; adc_cs       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.127 V            ; 0.217 V                              ; 0.38 V                               ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.127 V           ; 0.217 V                             ; 0.38 V                              ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
-; adc_clk      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.217 V                              ; 0.382 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.217 V                             ; 0.382 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
-; i2c_scl      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.07e-08 V                   ; 3.18 V              ; -0.116 V            ; 0.266 V                              ; 0.227 V                              ; 4.7e-10 s                   ; 6.38e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.07e-08 V                  ; 3.18 V             ; -0.116 V           ; 0.266 V                             ; 0.227 V                             ; 4.7e-10 s                  ; 6.38e-10 s                 ; No                        ; No                        ;
 ; lcd_rst      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.18 V              ; -0.116 V            ; 0.265 V                              ; 0.229 V                              ; 4.69e-10 s                  ; 6.38e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.18 V             ; -0.116 V           ; 0.265 V                             ; 0.229 V                             ; 4.69e-10 s                 ; 6.38e-10 s                 ; No                        ; No                        ;
 ; lcd_blk      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.127 V            ; 0.217 V                              ; 0.38 V                               ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.127 V           ; 0.217 V                             ; 0.38 V                              ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
 ; lcd_dc       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.07e-08 V                   ; 3.18 V              ; -0.116 V            ; 0.266 V                              ; 0.227 V                              ; 4.7e-10 s                   ; 6.38e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.07e-08 V                  ; 3.18 V             ; -0.116 V           ; 0.266 V                             ; 0.227 V                             ; 4.7e-10 s                  ; 6.38e-10 s                 ; No                        ; No                        ;
 ; lcd_sclk     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.09 V              ; -0.0046 V           ; 0.291 V                              ; 0.287 V                              ; 4.58e-09 s                  ; 4.9e-09 s                   ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.09 V             ; -0.0046 V          ; 0.291 V                             ; 0.287 V                             ; 4.58e-09 s                 ; 4.9e-09 s                  ; No                        ; No                        ;
 ; lcd_mosi     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.127 V            ; 0.217 V                              ; 0.38 V                               ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.127 V           ; 0.217 V                             ; 0.38 V                              ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
 ; lcd_cs       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.127 V            ; 0.217 V                              ; 0.38 V                               ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.127 V           ; 0.217 V                             ; 0.38 V                              ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
-; seg_led_1[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.217 V                              ; 0.382 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.217 V                             ; 0.382 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
-; seg_led_1[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.217 V                              ; 0.382 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.217 V                             ; 0.382 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
-; seg_led_1[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.127 V            ; 0.217 V                              ; 0.38 V                               ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.127 V           ; 0.217 V                             ; 0.38 V                              ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
-; seg_led_1[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.127 V            ; 0.217 V                              ; 0.38 V                               ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.127 V           ; 0.217 V                             ; 0.38 V                              ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
-; seg_led_1[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.09 V              ; -0.0046 V           ; 0.291 V                              ; 0.287 V                              ; 4.58e-09 s                  ; 4.9e-09 s                   ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.09 V             ; -0.0046 V          ; 0.291 V                             ; 0.287 V                             ; 4.58e-09 s                 ; 4.9e-09 s                  ; No                        ; No                        ;
-; seg_led_1[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.217 V                              ; 0.382 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.217 V                             ; 0.382 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
-; seg_led_1[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.127 V            ; 0.217 V                              ; 0.38 V                               ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.127 V           ; 0.217 V                             ; 0.38 V                              ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
-; seg_led_1[7] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.217 V                              ; 0.382 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.217 V                             ; 0.382 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
-; seg_led_1[8] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.127 V            ; 0.217 V                              ; 0.38 V                               ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.127 V           ; 0.217 V                             ; 0.38 V                              ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
-; seg_led_2[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.217 V                              ; 0.382 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.217 V                             ; 0.382 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
-; seg_led_2[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.127 V            ; 0.217 V                              ; 0.38 V                               ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.127 V           ; 0.217 V                             ; 0.38 V                              ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
-; seg_led_2[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.127 V            ; 0.217 V                              ; 0.38 V                               ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.127 V           ; 0.217 V                             ; 0.38 V                              ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
-; seg_led_2[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.09 V              ; -0.0046 V           ; 0.291 V                              ; 0.287 V                              ; 4.58e-09 s                  ; 4.9e-09 s                   ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.09 V             ; -0.0046 V          ; 0.291 V                             ; 0.287 V                             ; 4.58e-09 s                 ; 4.9e-09 s                  ; No                        ; No                        ;
-; seg_led_2[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.217 V                              ; 0.382 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.217 V                             ; 0.382 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
-; seg_led_2[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.217 V                              ; 0.382 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.217 V                             ; 0.382 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
-; seg_led_2[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.127 V            ; 0.217 V                              ; 0.38 V                               ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.127 V           ; 0.217 V                             ; 0.38 V                              ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
-; seg_led_2[7] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.127 V            ; 0.217 V                              ; 0.38 V                               ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.127 V           ; 0.217 V                             ; 0.38 V                              ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
-; seg_led_2[8] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.127 V            ; 0.217 V                              ; 0.38 V                               ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.127 V           ; 0.217 V                             ; 0.38 V                              ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
 ; led[0]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.127 V            ; 0.217 V                              ; 0.38 V                               ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.127 V           ; 0.217 V                             ; 0.38 V                              ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
 ; led[1]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.217 V                              ; 0.382 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.217 V                             ; 0.382 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
 ; led[2]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.127 V            ; 0.217 V                              ; 0.38 V                               ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.127 V           ; 0.217 V                             ; 0.38 V                              ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
@@ -459,6 +363,14 @@ No synchronizer chains to report.
 ; led[5]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.217 V                              ; 0.382 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.217 V                             ; 0.382 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
 ; led[6]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.217 V                              ; 0.382 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.217 V                             ; 0.382 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
 ; led[7]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.127 V            ; 0.217 V                              ; 0.38 V                               ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.127 V           ; 0.217 V                             ; 0.38 V                              ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
+; beeper       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.18 V              ; -0.116 V            ; 0.265 V                              ; 0.229 V                              ; 4.69e-10 s                  ; 6.38e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.18 V             ; -0.116 V           ; 0.265 V                             ; 0.229 V                             ; 4.69e-10 s                 ; 6.38e-10 s                 ; No                        ; No                        ;
+; seg_led_1[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.217 V                              ; 0.382 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.217 V                             ; 0.382 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
+; seg_led_1[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.217 V                              ; 0.382 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.217 V                             ; 0.382 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
+; seg_led_2[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.217 V                              ; 0.382 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.217 V                             ; 0.382 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
+; seg_led_2[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.127 V            ; 0.217 V                              ; 0.38 V                               ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.127 V           ; 0.217 V                             ; 0.38 V                              ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
+; adc_cs       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.127 V            ; 0.217 V                              ; 0.38 V                               ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.127 V           ; 0.217 V                             ; 0.38 V                              ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
+; adc_clk      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.217 V                              ; 0.382 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.217 V                             ; 0.382 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
+; i2c_scl      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.07e-08 V                   ; 3.18 V              ; -0.116 V            ; 0.266 V                              ; 0.227 V                              ; 4.7e-10 s                   ; 6.38e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.07e-08 V                  ; 3.18 V             ; -0.116 V           ; 0.266 V                             ; 0.227 V                             ; 4.7e-10 s                  ; 6.38e-10 s                 ; No                        ; No                        ;
 ; i2c_sda      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.217 V                              ; 0.382 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.217 V                             ; 0.382 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
 ; ~ALTERA_TDO~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.127 V            ; 0.217 V                              ; 0.38 V                               ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.127 V           ; 0.217 V                             ; 0.38 V                              ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -469,33 +381,12 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; adc_cs       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.41e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.41e-10 s                 ; Yes                       ; No                        ;
-; adc_clk      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.82e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.82e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
-; i2c_scl      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0637 V           ; 0.176 V                              ; 0.31 V                               ; 6.43e-10 s                  ; 6.7e-10 s                   ; No                         ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0637 V          ; 0.176 V                             ; 0.31 V                              ; 6.43e-10 s                 ; 6.7e-10 s                  ; No                        ; No                        ;
 ; lcd_rst      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0633 V           ; 0.176 V                              ; 0.311 V                              ; 6.41e-10 s                  ; 6.7e-10 s                   ; No                         ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0633 V          ; 0.176 V                             ; 0.311 V                             ; 6.41e-10 s                 ; 6.7e-10 s                  ; No                        ; No                        ;
 ; lcd_blk      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.41e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.41e-10 s                 ; Yes                       ; No                        ;
 ; lcd_dc       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0637 V           ; 0.176 V                              ; 0.31 V                               ; 6.43e-10 s                  ; 6.7e-10 s                   ; No                         ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0637 V          ; 0.176 V                             ; 0.31 V                              ; 6.43e-10 s                 ; 6.7e-10 s                  ; No                        ; No                        ;
 ; lcd_sclk     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.09 V              ; -0.0026 V           ; 0.276 V                              ; 0.251 V                              ; 5.46e-09 s                  ; 6.08e-09 s                  ; No                         ; Yes                        ; 3.08 V                      ; 1.3e-06 V                   ; 3.09 V             ; -0.0026 V          ; 0.276 V                             ; 0.251 V                             ; 5.46e-09 s                 ; 6.08e-09 s                 ; No                        ; Yes                       ;
 ; lcd_mosi     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.41e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.41e-10 s                 ; Yes                       ; No                        ;
 ; lcd_cs       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.41e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.41e-10 s                 ; Yes                       ; No                        ;
-; seg_led_1[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.82e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.82e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
-; seg_led_1[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.82e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.82e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
-; seg_led_1[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.41e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.41e-10 s                 ; Yes                       ; No                        ;
-; seg_led_1[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.41e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.41e-10 s                 ; Yes                       ; No                        ;
-; seg_led_1[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.09 V              ; -0.0026 V           ; 0.276 V                              ; 0.251 V                              ; 5.46e-09 s                  ; 6.08e-09 s                  ; No                         ; Yes                        ; 3.08 V                      ; 1.3e-06 V                   ; 3.09 V             ; -0.0026 V          ; 0.276 V                             ; 0.251 V                             ; 5.46e-09 s                 ; 6.08e-09 s                 ; No                        ; Yes                       ;
-; seg_led_1[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.82e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.82e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
-; seg_led_1[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.41e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.41e-10 s                 ; Yes                       ; No                        ;
-; seg_led_1[7] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.82e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.82e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
-; seg_led_1[8] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.41e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.41e-10 s                 ; Yes                       ; No                        ;
-; seg_led_2[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.82e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.82e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
-; seg_led_2[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.41e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.41e-10 s                 ; Yes                       ; No                        ;
-; seg_led_2[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.41e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.41e-10 s                 ; Yes                       ; No                        ;
-; seg_led_2[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.09 V              ; -0.0026 V           ; 0.276 V                              ; 0.251 V                              ; 5.46e-09 s                  ; 6.08e-09 s                  ; No                         ; Yes                        ; 3.08 V                      ; 1.3e-06 V                   ; 3.09 V             ; -0.0026 V          ; 0.276 V                             ; 0.251 V                             ; 5.46e-09 s                 ; 6.08e-09 s                 ; No                        ; Yes                       ;
-; seg_led_2[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.82e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.82e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
-; seg_led_2[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.82e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.82e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
-; seg_led_2[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.41e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.41e-10 s                 ; Yes                       ; No                        ;
-; seg_led_2[7] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.41e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.41e-10 s                 ; Yes                       ; No                        ;
-; seg_led_2[8] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.41e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.41e-10 s                 ; Yes                       ; No                        ;
 ; led[0]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.41e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.41e-10 s                 ; Yes                       ; No                        ;
 ; led[1]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.82e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.82e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
 ; led[2]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.41e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.41e-10 s                 ; Yes                       ; No                        ;
@@ -504,6 +395,14 @@ No synchronizer chains to report.
 ; led[5]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.82e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.82e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
 ; led[6]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.82e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.82e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
 ; led[7]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.41e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.41e-10 s                 ; Yes                       ; No                        ;
+; beeper       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0633 V           ; 0.176 V                              ; 0.311 V                              ; 6.41e-10 s                  ; 6.7e-10 s                   ; No                         ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0633 V          ; 0.176 V                             ; 0.311 V                             ; 6.41e-10 s                 ; 6.7e-10 s                  ; No                        ; No                        ;
+; seg_led_1[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.82e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.82e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
+; seg_led_1[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.82e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.82e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
+; seg_led_2[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.82e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.82e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
+; seg_led_2[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.41e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.41e-10 s                 ; Yes                       ; No                        ;
+; adc_cs       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.41e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.41e-10 s                 ; Yes                       ; No                        ;
+; adc_clk      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.82e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.82e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
+; i2c_scl      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0637 V           ; 0.176 V                              ; 0.31 V                               ; 6.43e-10 s                  ; 6.7e-10 s                   ; No                         ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0637 V          ; 0.176 V                             ; 0.31 V                              ; 6.43e-10 s                 ; 6.7e-10 s                  ; No                        ; No                        ;
 ; i2c_sda      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.82e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.82e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
 ; ~ALTERA_TDO~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0683 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.41e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0683 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.41e-10 s                 ; Yes                       ; No                        ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -514,33 +413,12 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; adc_cs       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0209 V           ; 0.388 V                              ; 0.087 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0209 V          ; 0.388 V                             ; 0.087 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; adc_clk      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0217 V           ; 0.39 V                               ; 0.089 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0217 V          ; 0.39 V                              ; 0.089 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; i2c_scl      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.62 V              ; -0.0254 V           ; 0.47 V                               ; 0.142 V                              ; 3.02e-10 s                  ; 4.43e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.62 V             ; -0.0254 V          ; 0.47 V                              ; 0.142 V                             ; 3.02e-10 s                 ; 4.43e-10 s                 ; No                        ; Yes                       ;
 ; lcd_rst      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.63 V              ; -0.0262 V           ; 0.47 V                               ; 0.143 V                              ; 3.02e-10 s                  ; 4.42e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.63 V             ; -0.0262 V          ; 0.47 V                              ; 0.143 V                             ; 3.02e-10 s                 ; 4.42e-10 s                 ; No                        ; Yes                       ;
 ; lcd_blk      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0209 V           ; 0.388 V                              ; 0.087 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0209 V          ; 0.388 V                             ; 0.087 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; lcd_dc       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.62 V              ; -0.0254 V           ; 0.47 V                               ; 0.142 V                              ; 3.02e-10 s                  ; 4.43e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.62 V             ; -0.0254 V          ; 0.47 V                              ; 0.142 V                             ; 3.02e-10 s                 ; 4.43e-10 s                 ; No                        ; Yes                       ;
 ; lcd_sclk     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.48 V              ; -0.00721 V          ; 0.333 V                              ; 0.329 V                              ; 3.62e-09 s                  ; 4.03e-09 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.48 V             ; -0.00721 V         ; 0.333 V                             ; 0.329 V                             ; 3.62e-09 s                 ; 4.03e-09 s                 ; No                        ; Yes                       ;
 ; lcd_mosi     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0209 V           ; 0.388 V                              ; 0.087 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0209 V          ; 0.388 V                             ; 0.087 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; lcd_cs       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0209 V           ; 0.388 V                              ; 0.087 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0209 V          ; 0.388 V                             ; 0.087 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; seg_led_1[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0217 V           ; 0.39 V                               ; 0.089 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0217 V          ; 0.39 V                              ; 0.089 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; seg_led_1[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0217 V           ; 0.39 V                               ; 0.089 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0217 V          ; 0.39 V                              ; 0.089 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; seg_led_1[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0209 V           ; 0.388 V                              ; 0.087 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0209 V          ; 0.388 V                             ; 0.087 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; seg_led_1[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0209 V           ; 0.388 V                              ; 0.087 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0209 V          ; 0.388 V                             ; 0.087 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; seg_led_1[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.48 V              ; -0.00721 V          ; 0.333 V                              ; 0.329 V                              ; 3.62e-09 s                  ; 4.03e-09 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.48 V             ; -0.00721 V         ; 0.333 V                             ; 0.329 V                             ; 3.62e-09 s                 ; 4.03e-09 s                 ; No                        ; Yes                       ;
-; seg_led_1[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0217 V           ; 0.39 V                               ; 0.089 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0217 V          ; 0.39 V                              ; 0.089 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; seg_led_1[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0209 V           ; 0.388 V                              ; 0.087 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0209 V          ; 0.388 V                             ; 0.087 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; seg_led_1[7] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0217 V           ; 0.39 V                               ; 0.089 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0217 V          ; 0.39 V                              ; 0.089 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; seg_led_1[8] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0209 V           ; 0.388 V                              ; 0.087 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0209 V          ; 0.388 V                             ; 0.087 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; seg_led_2[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0217 V           ; 0.39 V                               ; 0.089 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0217 V          ; 0.39 V                              ; 0.089 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; seg_led_2[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0209 V           ; 0.388 V                              ; 0.087 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0209 V          ; 0.388 V                             ; 0.087 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; seg_led_2[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0209 V           ; 0.388 V                              ; 0.087 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0209 V          ; 0.388 V                             ; 0.087 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; seg_led_2[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.48 V              ; -0.00721 V          ; 0.333 V                              ; 0.329 V                              ; 3.62e-09 s                  ; 4.03e-09 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.48 V             ; -0.00721 V         ; 0.333 V                             ; 0.329 V                             ; 3.62e-09 s                 ; 4.03e-09 s                 ; No                        ; Yes                       ;
-; seg_led_2[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0217 V           ; 0.39 V                               ; 0.089 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0217 V          ; 0.39 V                              ; 0.089 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; seg_led_2[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0217 V           ; 0.39 V                               ; 0.089 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0217 V          ; 0.39 V                              ; 0.089 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; seg_led_2[6] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0209 V           ; 0.388 V                              ; 0.087 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0209 V          ; 0.388 V                             ; 0.087 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; seg_led_2[7] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0209 V           ; 0.388 V                              ; 0.087 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0209 V          ; 0.388 V                             ; 0.087 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; seg_led_2[8] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0209 V           ; 0.388 V                              ; 0.087 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0209 V          ; 0.388 V                             ; 0.087 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; led[0]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0209 V           ; 0.388 V                              ; 0.087 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0209 V          ; 0.388 V                             ; 0.087 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; led[1]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0217 V           ; 0.39 V                               ; 0.089 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0217 V          ; 0.39 V                              ; 0.089 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; led[2]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0209 V           ; 0.388 V                              ; 0.087 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0209 V          ; 0.388 V                             ; 0.087 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
@@ -549,62 +427,38 @@ No synchronizer chains to report.
 ; led[5]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0217 V           ; 0.39 V                               ; 0.089 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0217 V          ; 0.39 V                              ; 0.089 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; led[6]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0217 V           ; 0.39 V                               ; 0.089 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0217 V          ; 0.39 V                              ; 0.089 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; led[7]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0209 V           ; 0.388 V                              ; 0.087 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0209 V          ; 0.388 V                             ; 0.087 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
+; beeper       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.63 V              ; -0.0262 V           ; 0.47 V                               ; 0.143 V                              ; 3.02e-10 s                  ; 4.42e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.63 V             ; -0.0262 V          ; 0.47 V                              ; 0.143 V                             ; 3.02e-10 s                 ; 4.42e-10 s                 ; No                        ; Yes                       ;
+; seg_led_1[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0217 V           ; 0.39 V                               ; 0.089 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0217 V          ; 0.39 V                              ; 0.089 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
+; seg_led_1[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0217 V           ; 0.39 V                               ; 0.089 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0217 V          ; 0.39 V                              ; 0.089 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
+; seg_led_2[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0217 V           ; 0.39 V                               ; 0.089 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0217 V          ; 0.39 V                              ; 0.089 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
+; seg_led_2[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0209 V           ; 0.388 V                              ; 0.087 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0209 V          ; 0.388 V                             ; 0.087 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
+; adc_cs       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0209 V           ; 0.388 V                              ; 0.087 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0209 V          ; 0.388 V                             ; 0.087 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
+; adc_clk      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0217 V           ; 0.39 V                               ; 0.089 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0217 V          ; 0.39 V                              ; 0.089 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
+; i2c_scl      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.62 V              ; -0.0254 V           ; 0.47 V                               ; 0.142 V                              ; 3.02e-10 s                  ; 4.43e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.62 V             ; -0.0254 V          ; 0.47 V                              ; 0.142 V                             ; 3.02e-10 s                 ; 4.43e-10 s                 ; No                        ; Yes                       ;
 ; i2c_sda      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0217 V           ; 0.39 V                               ; 0.089 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0217 V          ; 0.39 V                              ; 0.089 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0209 V           ; 0.388 V                              ; 0.087 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0209 V          ; 0.388 V                             ; 0.087 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup Transfers                                                                                                                                           ;
-+-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
-; From Clock                                            ; To Clock                                              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; ball_release_button                                   ; 2039     ; 0        ; 0        ; 0        ;
-; clk                                                   ; clk                                                   ; 2105     ; 0        ; 0        ; 0        ;
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; clk                                                   ; 1        ; 1        ; 0        ; 0        ;
-; ball_release_button                                   ; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; 9438     ; 4710     ; 0        ; 0        ;
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; 25950    ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; 809861   ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; 684      ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]  ; pll_inst|altpll_component|auto_generated|pll1|clk[1]  ; 4282     ; 0        ; 0        ; 0        ;
-+-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                                         ;
++------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                           ; To Clock                                             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
+; clk                                                  ; clk                                                  ; 2699     ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 3450     ; 0        ; 0        ; 0        ;
++------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold Transfers                                                                                                                                            ;
-+-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
-; From Clock                                            ; To Clock                                              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; ball_release_button                                   ; 2039     ; 0        ; 0        ; 0        ;
-; clk                                                   ; clk                                                   ; 2105     ; 0        ; 0        ; 0        ;
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; clk                                                   ; 1        ; 1        ; 0        ; 0        ;
-; ball_release_button                                   ; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; 9438     ; 4710     ; 0        ; 0        ;
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; 25950    ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; 809861   ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; 684      ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]  ; pll_inst|altpll_component|auto_generated|pll1|clk[1]  ; 4282     ; 0        ; 0        ; 0        ;
-+-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
-
-
-+-------------------------------------------------------------------------------------------------------------------------+
-; Recovery Transfers                                                                                                      ;
-+---------------------+-------------------------------------------------------+----------+----------+----------+----------+
-; From Clock          ; To Clock                                              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+---------------------+-------------------------------------------------------+----------+----------+----------+----------+
-; ball_release_button ; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; 150      ; 150      ; 0        ; 0        ;
-+---------------------+-------------------------------------------------------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
-
-
-+-------------------------------------------------------------------------------------------------------------------------+
-; Removal Transfers                                                                                                       ;
-+---------------------+-------------------------------------------------------+----------+----------+----------+----------+
-; From Clock          ; To Clock                                              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+---------------------+-------------------------------------------------------+----------+----------+----------+----------+
-; ball_release_button ; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; 150      ; 150      ; 0        ; 0        ;
-+---------------------+-------------------------------------------------------+----------+----------+----------+----------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                                          ;
++------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                           ; To Clock                                             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
+; clk                                                  ; clk                                                  ; 2699     ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 3450     ; 0        ; 0        ; 0        ;
++------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -628,23 +482,20 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 2     ; 2    ;
-; Unconstrained Input Port Paths  ; 384   ; 384  ;
-; Unconstrained Output Ports      ; 20    ; 20   ;
-; Unconstrained Output Port Paths ; 22    ; 22   ;
+; Unconstrained Input Port Paths  ; 164   ; 164  ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 28    ; 28   ;
 +---------------------------------+-------+------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Status Summary                                                                                                                    ;
-+-------------------------------------------------------+-------------------------------------------------------+-----------+-------------+
-; Target                                                ; Clock                                                 ; Type      ; Status      ;
-+-------------------------------------------------------+-------------------------------------------------------+-----------+-------------+
-; ball_release_button                                   ; ball_release_button                                   ; Base      ; Constrained ;
-; clk                                                   ; clk                                                   ; Base      ; Constrained ;
-; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; jumping:jump_inst|frequency_divider:fre_500us|clk_out ; Base      ; Constrained ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; pll_inst|altpll_component|auto_generated|pll1|clk[0]  ; Generated ; Constrained ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]  ; pll_inst|altpll_component|auto_generated|pll1|clk[1]  ; Generated ; Constrained ;
-+-------------------------------------------------------+-------------------------------------------------------+-----------+-------------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                                                  ;
++------------------------------------------------------+------------------------------------------------------+-----------+-------------+
+; Target                                               ; Clock                                                ; Type      ; Status      ;
++------------------------------------------------------+------------------------------------------------------+-----------+-------------+
+; clk                                                  ; clk                                                  ; Base      ; Constrained ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; Generated ; Constrained ;
++------------------------------------------------------+------------------------------------------------------+-----------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------+
@@ -652,37 +503,27 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
-; adc_dat    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; key_up     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                           ;
-+--------------+---------------------------------------------------------------------------------------+
-; Output Port  ; Comment                                                                               ;
-+--------------+---------------------------------------------------------------------------------------+
-; adc_clk      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; adc_cs       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; i2c_scl      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; i2c_sda      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; lcd_cs       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; lcd_dc       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; lcd_mosi     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; lcd_rst      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; lcd_sclk     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; led[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; led[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; led[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; led[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; led[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; led[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg_led_1[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg_led_1[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg_led_1[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg_led_2[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg_led_2[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+--------------+---------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; lcd_cs      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd_dc      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd_mosi    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd_rst     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd_sclk    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------+
@@ -690,37 +531,27 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
-; adc_dat    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; key_up     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                           ;
-+--------------+---------------------------------------------------------------------------------------+
-; Output Port  ; Comment                                                                               ;
-+--------------+---------------------------------------------------------------------------------------+
-; adc_clk      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; adc_cs       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; i2c_scl      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; i2c_sda      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; lcd_cs       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; lcd_dc       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; lcd_mosi     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; lcd_rst      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; lcd_sclk     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; led[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; led[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; led[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; led[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; led[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; led[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg_led_1[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg_led_1[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg_led_1[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg_led_2[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg_led_2[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+--------------+---------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; lcd_cs      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd_dc      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd_mosi    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd_rst     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd_sclk    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
 
 
 +--------------------------+
@@ -729,139 +560,87 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed May 28 13:52:20 2025
+    Info: Processing started: Thu May 29 00:02:26 2025
 Info: Command: quartus_sta ballplayer -c ballplayer
 Info: qsta_default_script.tcl version: #1
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): The Timing Analyzer is analyzing 9 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'ballplayer.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained generated clocks found in the design. Calling "derive_pll_clocks -create_base_clocks"
 Info (332110): Deriving PLL clocks
     Info (332110): create_clock -period 83.333 -waveform {0.000 41.666} -name clk clk
-    Info (332110): create_generated_clock -source {pll_inst|altpll_component|auto_generated|pll1|inclk[0]} -multiply_by 2 -duty_cycle 50.00 -name {pll_inst|altpll_component|auto_generated|pll1|clk[0]} {pll_inst|altpll_component|auto_generated|pll1|clk[0]}
     Info (332110): create_generated_clock -source {pll_inst|altpll_component|auto_generated|pll1|inclk[0]} -divide_by 6 -multiply_by 25 -duty_cycle 50.00 -name {pll_inst|altpll_component|auto_generated|pll1|clk[1]} {pll_inst|altpll_component|auto_generated|pll1|clk[1]}
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name jumping:jump_inst|frequency_divider:fre_500us|clk_out jumping:jump_inst|frequency_divider:fre_500us|clk_out
-    Info (332105): create_clock -period 1.000 -name ball_release_button ball_release_button
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
-Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -14.251
+Info (332146): Worst-case setup slack is 11.696
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -14.251           -2006.205 jumping:jump_inst|frequency_divider:fre_500us|clk_out 
-    Info (332119):    -9.601             -84.095 ball_release_button 
-    Info (332119):    -1.845              -1.845 clk 
-    Info (332119):    12.186               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-    Info (332119):    36.119               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-Info (332146): Worst-case hold slack is 0.340
+    Info (332119):    11.696               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+    Info (332119):    75.806               0.000 clk 
+Info (332146): Worst-case hold slack is 0.360
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.340               0.000 jumping:jump_inst|frequency_divider:fre_500us|clk_out 
-    Info (332119):     0.360               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     0.361               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+    Info (332119):     0.360               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
     Info (332119):     0.362               0.000 clk 
-    Info (332119):     3.369               0.000 ball_release_button 
-Info (332146): Worst-case recovery slack is -2.657
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.727
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.657            -358.365 jumping:jump_inst|frequency_divider:fre_500us|clk_out 
-Info (332146): Worst-case removal slack is 1.779
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     1.779               0.000 jumping:jump_inst|frequency_divider:fre_500us|clk_out 
-Info (332146): Worst-case minimum pulse width slack is -5.250
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -5.250            -478.934 jumping:jump_inst|frequency_divider:fre_500us|clk_out 
-    Info (332119):    -3.000              -3.000 ball_release_button 
-    Info (332119):     9.729               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-    Info (332119):    20.562               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):    41.368               0.000 clk 
+    Info (332119):     9.727               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+    Info (332119):    41.369               0.000 clk 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -13.662
+Info (332146): Worst-case setup slack is 12.168
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -13.662           -1928.691 jumping:jump_inst|frequency_divider:fre_500us|clk_out 
-    Info (332119):    -9.296             -81.239 ball_release_button 
-    Info (332119):    -1.904              -1.904 clk 
-    Info (332119):    12.500               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-    Info (332119):    36.375               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-Info (332146): Worst-case hold slack is 0.303
+    Info (332119):    12.168               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+    Info (332119):    76.118               0.000 clk 
+Info (332146): Worst-case hold slack is 0.322
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.303               0.000 jumping:jump_inst|frequency_divider:fre_500us|clk_out 
-    Info (332119):     0.323               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.322               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
     Info (332119):     0.324               0.000 clk 
-    Info (332119):     0.324               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-    Info (332119):     2.928               0.000 ball_release_button 
-Info (332146): Worst-case recovery slack is -2.477
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.734
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.477            -333.375 jumping:jump_inst|frequency_divider:fre_500us|clk_out 
-Info (332146): Worst-case removal slack is 1.703
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     1.703               0.000 jumping:jump_inst|frequency_divider:fre_500us|clk_out 
-Info (332146): Worst-case minimum pulse width slack is -5.250
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -5.250            -478.934 jumping:jump_inst|frequency_divider:fre_500us|clk_out 
-    Info (332119):    -3.000              -3.000 ball_release_button 
-    Info (332119):     9.739               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-    Info (332119):    20.570               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     9.734               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
     Info (332119):    41.379               0.000 clk 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -5.579
+Info (332146): Worst-case setup slack is 16.867
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.579            -786.682 jumping:jump_inst|frequency_divider:fre_500us|clk_out 
-    Info (332119):    -4.040             -35.242 ball_release_button 
-    Info (332119):    -0.907              -0.907 clk 
-    Info (332119):    16.952               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-    Info (332119):    39.465               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-Info (332146): Worst-case hold slack is 0.143
+    Info (332119):    16.867               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+    Info (332119):    80.436               0.000 clk 
+Info (332146): Worst-case hold slack is 0.150
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.143               0.000 jumping:jump_inst|frequency_divider:fre_500us|clk_out 
-    Info (332119):     0.150               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     0.151               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-    Info (332119):     0.152               0.000 clk 
-    Info (332119):     1.298               0.000 ball_release_button 
-Info (332146): Worst-case recovery slack is -1.034
+    Info (332119):     0.150               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+    Info (332119):     0.151               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.783
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.034            -139.498 jumping:jump_inst|frequency_divider:fre_500us|clk_out 
-Info (332146): Worst-case removal slack is 0.506
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     0.506               0.000 jumping:jump_inst|frequency_divider:fre_500us|clk_out 
-Info (332146): Worst-case minimum pulse width slack is -3.000
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -3.000              -3.000 ball_release_button 
-    Info (332119):    -1.000            -150.000 jumping:jump_inst|frequency_divider:fre_500us|clk_out 
-    Info (332119):     9.782               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-    Info (332119):    20.615               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     9.783               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
     Info (332119):    40.996               0.000 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4790 megabytes
-    Info: Processing ended: Wed May 28 13:52:21 2025
-    Info: Elapsed time: 00:00:01
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4793 megabytes
+    Info: Processing ended: Thu May 29 00:02:28 2025
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

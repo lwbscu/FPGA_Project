@@ -78,7 +78,7 @@ always @(posedge clk_out or negedge reset) begin
                     pic_y <= MAX_Y;                     // 到底
                     position <= 15'd0;                      // 位置寄存器清零
 
-                    time_count_r <= (((time_count_down - 6'd1) * (k + 6'd4)) >> 3) + init_velocity; // 反弹后速度变为原来的0.7倍
+                    time_count_r <= (((time_count_down - 15'd1) * ({9'd0, k} + 15'd4)) >> 3) + {4'd0, init_velocity}; // 反弹后速度变为原来的0.7倍
 
                     current_state <= UP;                    // 状态转换
                     
@@ -112,7 +112,7 @@ always @(posedge clk_out or negedge reset) begin
                     beep_flag[1] <= 0;
                 end                else if ((pic_y < 9'd5) || (pic_y > MAX_Y)) begin
                     pic_y <= 9'd0;
-                    init_velocity <= ((time_count_r - time_count_up) * (k + 6'd4)) >> 3;
+                    init_velocity <= (({4'd0, time_count_r} - {4'd0, time_count_up}) * ({13'd0, k} + 15'd4)) >> 3;
                     init_position <= 9'd0;
                     current_state <= DOWN;                  // 状态转换
 
@@ -129,7 +129,7 @@ always @(posedge clk_out or negedge reset) begin
                         time_count_up <= 0;
                     end
                     else begin
-                        pic_y <= MAX_Y + ((time_count_up * time_count_up) >> 3) - ((time_count_r * time_count_up) >> 2);
+                        pic_y <= MAX_Y + (({6'd0, time_count_up} * {6'd0, time_count_up}) >> 3) - (({6'd0, time_count_r} * {6'd0, time_count_up}) >> 2);
                         time_count_up <= time_count_up + 1; // 上升时间计数
                     end
                 end

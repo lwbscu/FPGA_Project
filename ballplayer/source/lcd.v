@@ -6,17 +6,18 @@
 // ============================================================================
 
 module lcd (
-    input           clk_50mhz,     // 直接接收50MHz时钟
+    input           clk_50MHz,     // 直接接收50MHz时钟
     input           rst_n,
-    input wire [8:0] y,        // 球的Y坐标
-    input wire [8:0] x,        // 手的X坐标
+    input wire [8:0] pic_y,        // 球的Y坐标
+    input wire [8:0] handline,     // 手的位置线
     
     output          lcd_rst,
     output          lcd_blk,
     output          lcd_dc,
     output          lcd_sclk,
     output          lcd_mosi,
-    output          lcd_cs,    output          led1,      
+    output          lcd_cs,
+    output          led1,      
     output          led2
 );
 
@@ -47,7 +48,7 @@ assign lcd_blk = 1'b1;
 
 // LCD SPI写入模块
 lcd_write lcd_write_inst(
-    .sys_clk_50MHz(clk_50mhz),  // 直接使用输入时钟
+    .sys_clk_50MHz(clk_50MHz),  // 直接使用输入时钟
     .sys_rst_n(rst_n),
     .data(data),
     .en_write(en_write),
@@ -60,14 +61,13 @@ lcd_write lcd_write_inst(
 
 // LCD控制协调模块
 control control_inst(
-    .sys_clk_50MHz(clk_50mhz),
+    .sys_clk_50MHz(clk_50MHz),
     .sys_rst_n(rst_n),
     .init_data(init_data),
     .en_write_init(en_write_init),
     .init_done(init_done),
     .show_pic_data(show_pic_data),
-    .en_write_show_pic(en_write_show_pic),
-    .show_pic_done(show_pic_done),
+    .en_write_show_pic(en_write_show_pic),    .show_pic_done(show_pic_done),
     .draw_line_data(draw_line_data),
     .en_write_draw_line(en_write_draw_line),
     .draw_line_done(draw_line_done),
@@ -75,12 +75,12 @@ control control_inst(
     .draw_line_flag(draw_line_flag),
     .data(data),
     .en_write(en_write),
-    .led(led1)
+    .led()
 );
 
 // LCD初始化模块
 lcd_init lcd_init_inst(
-    .sys_clk_50MHz(clk_50mhz),
+    .sys_clk_50MHz(clk_50MHz),
     .sys_rst_n(rst_n),
     .wr_done(wr_done),
     .lcd_rst(lcd_rst),
@@ -91,7 +91,7 @@ lcd_init lcd_init_inst(
 
 // LCD背景图片显示模块
 lcd_show_pic lcd_show_pic_inst(
-    .sys_clk(clk_50mhz),
+    .sys_clk(clk_50MHz),
     .sys_rst_n(rst_n),
     .wr_done(wr_done),
     .show_pic_flag(show_pic_flag),
@@ -104,11 +104,11 @@ lcd_show_pic lcd_show_pic_inst(
 
 // 画线模块 - 用于绘制球和手的位置
 draw_line lcd_draw_line_inst(
-    .sys_clk(clk_50mhz),
+    .sys_clk(clk_50MHz),
     .sys_rst_n(rst_n),
     .wr_done(wr_done),
     .draw_line_flag(draw_line_flag),
-    .y_coord(x),                    // 使用手的X坐标
+    .y_coord(handline),             // 使用手的位置坐标
     .draw_line_data(draw_line_data),
     .draw_line_done(draw_line_done),
     .en_write_draw_line(en_write_draw_line)
@@ -118,7 +118,7 @@ draw_line lcd_draw_line_inst(
 pic_ram pic_ram_inst(
     .address(rom_addr),
     .q(rom_q),
-    .offset(y)                      // 使用球的Y坐标作为偏移
+    .offset(pic_y)                  // 使用球的Y坐标作为偏移
 );
 
 // LED状态指示 - 用于调试

@@ -78,7 +78,7 @@ adc081s101_driver adc_driver_inst(
     .adc_data(adc_data)
 );
 
-// RPR0521RS手势传感器驱动
+// RPR0521RS手势传感器驱动 - 使用简化版本
 rpr0521rs_driver sensor_inst(
     .clk(clk),
     .rst_n(rst_n),
@@ -147,14 +147,14 @@ assign adc_extended = {10'b0, adc_data};
 assign temp_calc = 310 * adc_extended;
 assign home_pos = temp_calc[16:8] + 9'd7;
 
-// LED状态指示
-assign led[0] = led_status[0];  // LCD工作状态
-assign led[1] = led_status[1];  // LCD初始化状态
-assign led[2] = dat_valid;      // 传感器数据有效
-assign led[3] = (handline > 16'd10) ? 1'b1 : 1'b0;  // 手势检测
-assign led[4] = adc_done;       // ADC采样完成
-assign led[5] = over_flag;      // 游戏结束标志
-assign led[6] = stop_flag;      // 游戏停止标志
-assign led[7] = 1'b0;           // 预留
+// LED状态指示 - 优化后的状态显示
+assign led[0] = led_status[0];      // LCD工作状态
+assign led[1] = led_status[1];      // LCD初始化完成状态  
+assign led[2] = dat_valid;          // 传感器数据有效指示
+assign led[3] = (prox_dat > 16'd50) ? 1'b1 : 1'b0;  // 手势检测 - 接近传感器触发
+assign led[4] = adc_done;           // ADC采样完成指示
+assign led[5] = over_flag;          // 游戏结束标志
+assign led[6] = stop_flag;          // 游戏停止标志  
+assign led[7] = rst_n;              // 系统复位状态指示（正常时应该亮）
 
 endmodule

@@ -7,7 +7,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M08SAM153C8G
-set_global_assignment -name TOP_LEVEL_ENTITY ballplayer_top
+set_global_assignment -name TOP_LEVEL_ENTITY ballplayer_top_test
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:00:00  DECEMBER 01, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -142,9 +142,11 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[7]
 # == == == == == == == == == == == == == == == == == == == == == == == == == ==
 
 set_global_assignment -name VERILOG_FILE source/ballplayer_top.v
+set_global_assignment -name VERILOG_FILE source/ballplayer_top_test.v
+set_global_assignment -name VERILOG_FILE source/lcd_contrast_test.v
 set_global_assignment -name VERILOG_FILE source/ballplayer_pll.v
 set_global_assignment -name VERILOG_FILE source/adc081s101_driver.v
-set_global_assignment -name VERILOG_FILE source/rpr0521rs_driver.v
+set_global_assignment -name VERILOG_FILE source/rpr0521rs_driver_simple.v
 set_global_assignment -name VERILOG_FILE source/hand_control.v
 set_global_assignment -name VERILOG_FILE source/adjuster.v
 set_global_assignment -name VERILOG_FILE source/jumping.v
