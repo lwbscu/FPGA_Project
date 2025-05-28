@@ -1,12 +1,12 @@
-Power Analyzer Status : Successful - Tue May 27 13:28:41 2025
+Power Analyzer Status : Successful - Wed May 28 10:51:14 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Electric_Piano
 Top-level Entity Name : Advanced_Electric_Piano
 Family : MAX 10
 Device : 10M08SAM153C8G
 Power Models : Final
-Total Thermal Power Dissipation : 149.27 mW
-Core Dynamic Thermal Power Dissipation : 0.00 mW
-Core Static Thermal Power Dissipation : 110.87 mW
-I/O Thermal Power Dissipation : 38.40 mW
+Total Thermal Power Dissipation : 164.75 mW
+Core Dynamic Thermal Power Dissipation : 12.73 mW
+Core Static Thermal Power Dissipation : 110.94 mW
+I/O Thermal Power Dissipation : 41.09 mW
 Power Estimation Confidence : Low: user provided insufficient toggle rate data

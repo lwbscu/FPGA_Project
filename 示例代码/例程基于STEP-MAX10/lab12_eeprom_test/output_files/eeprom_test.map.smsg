@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at at24_driver.v(41): object "ACK" differs only in case from object "ack" in the same scope File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab12_eeprom_test/source/at24_driver.v Line: 41

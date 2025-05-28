@@ -1,0 +1,306 @@
+<HTML>
+<HEAD><TITLE>Lattice Synthesis Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sun Feb 16 17:39:42 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Design:     picture_display
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_50MHz]
+            830 items scored, 830 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 13.553ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \lcd_init_inst/cnt_s2_num__i2  (from clk_50MHz +)
+   Destination:    FD1S3AX    D              \lcd_init_inst/init_data_i5  (to clk_50MHz +)
+
+   Delay:                  18.393ns  (30.5% logic, 69.5% route), 12 logic levels.
+
+ Constraint Details:
+
+     18.393ns data_path \lcd_init_inst/cnt_s2_num__i2 to \lcd_init_inst/init_data_i5 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 13.553ns
+
+ Path Details: \lcd_init_inst/cnt_s2_num__i2 to \lcd_init_inst/init_data_i5
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \lcd_init_inst/cnt_s2_num__i2 (from clk_50MHz)
+Route        30   e 2.093                                  \lcd_init_inst/cnt_s2_num[2]
+LUT4        ---     0.493              C to Z              \lcd_init_inst/i1_2_lut_rep_76_3_lut
+Route        10   e 1.604                                  \lcd_init_inst/n6585
+LUT4        ---     0.493              B to Z              \lcd_init_inst/i1_4_lut_adj_18
+Route         1   e 0.941                                  \lcd_init_inst/n4_adj_900
+LUT4        ---     0.493              C to Z              \lcd_init_inst/i2_3_lut_4_lut_adj_57
+Route         2   e 1.141                                  \lcd_init_inst/n6027
+LUT4        ---     0.493              C to Z              \lcd_init_inst/i1_3_lut_4_lut
+Route         1   e 0.941                                  \lcd_init_inst/n4_adj_899
+LUT4        ---     0.493              B to Z              \lcd_init_inst/i2_4_lut_adj_17
+Route         2   e 1.141                                  \lcd_init_inst/n4553
+LUT4        ---     0.493              C to Z              \lcd_init_inst/i3_4_lut_4_lut
+Route         1   e 0.941                                  \lcd_init_inst/n8_adj_897
+LUT4        ---     0.493              B to Z              \lcd_init_inst/i4_4_lut_adj_15
+Route         2   e 1.141                                  \lcd_init_inst/n6024
+LUT4        ---     0.493              D to Z              \lcd_init_inst/i2_3_lut_4_lut_adj_42
+Route         1   e 0.941                                  \lcd_init_inst/n5945
+LUT4        ---     0.493              C to Z              \lcd_init_inst/i3_4_lut_adj_14
+Route         1   e 0.941                                  \lcd_init_inst/n10
+LUT4        ---     0.493              D to Z              \lcd_init_inst/i3577_4_lut
+Route         1   e 0.020                                  \lcd_init_inst/init_data_8__N_245[5]
+MUXL5       ---     0.233           ALUT to Z              \lcd_init_inst/init_data_8__I_0_i6
+Route         1   e 0.941                                  \lcd_init_inst/init_data_8__N_102[5]
+                  --------
+                   18.393  (30.5% logic, 69.5% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 13.451ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \lcd_init_inst/cnt_s2_num__i2  (from clk_50MHz +)
+   Destination:    FD1S3AX    D              \lcd_init_inst/init_data_i5  (to clk_50MHz +)
+
+   Delay:                  18.291ns  (30.7% logic, 69.3% route), 12 logic levels.
+
+ Constraint Details:
+
+     18.291ns data_path \lcd_init_inst/cnt_s2_num__i2 to \lcd_init_inst/init_data_i5 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 13.451ns
+
+ Path Details: \lcd_init_inst/cnt_s2_num__i2 to \lcd_init_inst/init_data_i5
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \lcd_init_inst/cnt_s2_num__i2 (from clk_50MHz)
+Route        30   e 2.093                                  \lcd_init_inst/cnt_s2_num[2]
+LUT4        ---     0.493              B to Z              \lcd_init_inst/i1_2_lut_rep_90_3_lut
+Route         7   e 1.502                                  \lcd_init_inst/n6599
+LUT4        ---     0.493              A to Z              \lcd_init_inst/i1_4_lut_adj_18
+Route         1   e 0.941                                  \lcd_init_inst/n4_adj_900
+LUT4        ---     0.493              C to Z              \lcd_init_inst/i2_3_lut_4_lut_adj_57
+Route         2   e 1.141                                  \lcd_init_inst/n6027
+LUT4        ---     0.493              C to Z              \lcd_init_inst/i1_3_lut_4_lut
+Route         1   e 0.941                                  \lcd_init_inst/n4_adj_899
+LUT4        ---     0.493              B to Z              \lcd_init_inst/i2_4_lut_adj_17
+Route         2   e 1.141                                  \lcd_init_inst/n4553
+LUT4        ---     0.493              C to Z              \lcd_init_inst/i3_4_lut_4_lut
+Route         1   e 0.941                                  \lcd_init_inst/n8_adj_897
+LUT4        ---     0.493              B to Z              \lcd_init_inst/i4_4_lut_adj_15
+Route         2   e 1.141                                  \lcd_init_inst/n6024
+LUT4        ---     0.493              D to Z              \lcd_init_inst/i2_3_lut_4_lut_adj_42
+Route         1   e 0.941                                  \lcd_init_inst/n5945
+LUT4        ---     0.493              C to Z              \lcd_init_inst/i3_4_lut_adj_14
+Route         1   e 0.941                                  \lcd_init_inst/n10
+LUT4        ---     0.493              D to Z              \lcd_init_inst/i3577_4_lut
+Route         1   e 0.020                                  \lcd_init_inst/init_data_8__N_245[5]
+MUXL5       ---     0.233           ALUT to Z              \lcd_init_inst/init_data_8__I_0_i6
+Route         1   e 0.941                                  \lcd_init_inst/init_data_8__N_102[5]
+                  --------
+                   18.291  (30.7% logic, 69.3% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 13.358ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \lcd_init_inst/cnt_s2_num__i0  (from clk_50MHz +)
+   Destination:    FD1S3AX    D              \lcd_init_inst/init_data_i5  (to clk_50MHz +)
+
+   Delay:                  18.198ns  (30.8% logic, 69.2% route), 12 logic levels.
+
+ Constraint Details:
+
+     18.198ns data_path \lcd_init_inst/cnt_s2_num__i0 to \lcd_init_inst/init_data_i5 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 13.358ns
+
+ Path Details: \lcd_init_inst/cnt_s2_num__i0 to \lcd_init_inst/init_data_i5
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \lcd_init_inst/cnt_s2_num__i0 (from clk_50MHz)
+Route        25   e 1.898                                  cnt_s2_num[0]
+LUT4        ---     0.493              B to Z              \lcd_init_inst/i1_2_lut_rep_76_3_lut
+Route        10   e 1.604                                  \lcd_init_inst/n6585
+LUT4        ---     0.493              B to Z              \lcd_init_inst/i1_4_lut_adj_18
+Route         1   e 0.941                                  \lcd_init_inst/n4_adj_900
+LUT4        ---     0.493              C to Z              \lcd_init_inst/i2_3_lut_4_lut_adj_57
+Route         2   e 1.141                                  \lcd_init_inst/n6027
+LUT4        ---     0.493              C to Z              \lcd_init_inst/i1_3_lut_4_lut
+Route         1   e 0.941                                  \lcd_init_inst/n4_adj_899
+LUT4        ---     0.493              B to Z              \lcd_init_inst/i2_4_lut_adj_17
+Route         2   e 1.141                                  \lcd_init_inst/n4553
+LUT4        ---     0.493              C to Z              \lcd_init_inst/i3_4_lut_4_lut
+Route         1   e 0.941                                  \lcd_init_inst/n8_adj_897
+LUT4        ---     0.493              B to Z              \lcd_init_inst/i4_4_lut_adj_15
+Route         2   e 1.141                                  \lcd_init_inst/n6024
+LUT4        ---     0.493              D to Z              \lcd_init_inst/i2_3_lut_4_lut_adj_42
+Route         1   e 0.941                                  \lcd_init_inst/n5945
+LUT4        ---     0.493              C to Z              \lcd_init_inst/i3_4_lut_adj_14
+Route         1   e 0.941                                  \lcd_init_inst/n10
+LUT4        ---     0.493              D to Z              \lcd_init_inst/i3577_4_lut
+Route         1   e 0.020                                  \lcd_init_inst/init_data_8__N_245[5]
+MUXL5       ---     0.233           ALUT to Z              \lcd_init_inst/init_data_8__I_0_i6
+Route         1   e 0.941                                  \lcd_init_inst/init_data_8__N_102[5]
+                  --------
+                   18.198  (30.8% logic, 69.2% route), 12 logic levels.
+
+Warning: 18.553 ns is the maximum delay for this constraint.
+
+
+<A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_50MHz]               |     5.000 ns|    18.553 ns|    12 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\lcd_init_inst/n4603                    |       2|     140|     16.87%
+                                        |        |        |
+\lcd_init_inst/init_data_8__N_102[4]    |       1|     138|     16.63%
+                                        |        |        |
+\lcd_init_inst/init_data_8__N_245[4]    |       1|     136|     16.39%
+                                        |        |        |
+\lcd_init_inst/n6024                    |       2|     124|     14.94%
+                                        |        |        |
+\lcd_init_inst/init_data_8__N_102[0]    |       1|     121|     14.58%
+                                        |        |        |
+\lcd_init_inst/init_data_8__N_245[0]    |       1|     121|     14.58%
+                                        |        |        |
+\lcd_init_inst/n4553                    |       2|     118|     14.22%
+                                        |        |        |
+\lcd_init_inst/n8_adj_897               |       1|     110|     13.25%
+                                        |        |        |
+\lcd_init_inst/cnt_s2_num[2]            |      30|     104|     12.53%
+                                        |        |        |
+\lcd_init_inst/init_data_8__N_102[2]    |       1|      99|     11.93%
+                                        |        |        |
+\lcd_init_inst/init_data_8__N_245[2]    |       1|      99|     11.93%
+                                        |        |        |
+\lcd_init_inst/n4_adj_899               |       1|      98|     11.81%
+                                        |        |        |
+\lcd_init_inst/n6_adj_916               |       1|      98|     11.81%
+                                        |        |        |
+\lcd_init_inst/cnt_s2_num[1]            |      24|      97|     11.69%
+                                        |        |        |
+cnt_s2_num[0]                           |      25|      95|     11.45%
+                                        |        |        |
+\lcd_init_inst/cnt_s2_num[5]            |      14|      94|     11.33%
+                                        |        |        |
+\lcd_init_inst/cnt_s2_num[6]            |      14|      94|     11.33%
+                                        |        |        |
+\lcd_init_inst/init_data_8__N_102[5]    |       1|      89|     10.72%
+                                        |        |        |
+\lcd_init_inst/n6016                    |       2|      88|     10.60%
+                                        |        |        |
+\lcd_init_inst/init_data_8__N_245[5]    |       1|      87|     10.48%
+                                        |        |        |
+\lcd_init_inst/n10                      |       1|      87|     10.48%
+                                        |        |        |
+\lcd_init_inst/cnt_s2_num[3]            |      21|      86|     10.36%
+                                        |        |        |
+\lcd_init_inst/cnt_s2_num[4]            |      18|      84|     10.12%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
+---------------
+
+Timing errors: 830  Score: 4974772
+
+Constraints cover  3532 paths, 634 nets, and 1671 connections (88.9% coverage)
+
+
+Peak memory: 80658432 bytes, TRCE: 1302528 bytes, DLYMAN: 8192 bytes
+CPU_TIME_REPORT: 0 secs 
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

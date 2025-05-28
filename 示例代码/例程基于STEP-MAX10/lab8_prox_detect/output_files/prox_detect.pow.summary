@@ -1,0 +1,12 @@
+Power Analyzer Status : Successful - Thu Dec 21 14:34:23 2023
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Revision Name : prox_detect
+Top-level Entity Name : prox_detect
+Family : MAX 10
+Device : 10M08SAM153C8G
+Power Models : Final
+Total Thermal Power Dissipation : 123.59 mW
+Core Dynamic Thermal Power Dissipation : 8.20 mW
+Core Static Thermal Power Dissipation : 110.77 mW
+I/O Thermal Power Dissipation : 4.62 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

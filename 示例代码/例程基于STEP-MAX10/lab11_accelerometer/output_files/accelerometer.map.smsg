@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at adxl345_driver.v(43): object "ACK" differs only in case from object "ack" in the same scope File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab11_accelerometer/source/adxl345_driver.v Line: 43

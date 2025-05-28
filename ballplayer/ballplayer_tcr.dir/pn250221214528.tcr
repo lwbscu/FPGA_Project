@@ -1,0 +1,10 @@
+#Start recording tcl command: 2/21/2025 19:52:51
+#Project Location: E:/code/FPGA/ballplayer; Project name: ballplayer
+prj_project open "E:/code/FPGA/ballplayer/ballplayer.ldf"
+prj_run Export -impl ballplayer_impl
+prj_src add "E:/code/FPGA/ballplayer/ballplayer_impl/source/LCD/lcd_draw_line.v"
+prj_run Export -impl ballplayer_impl
+prj_run Export -impl ballplayer_impl
+prj_run Export -impl ballplayer_impl
+prj_run Export -impl ballplayer_impl
+#Stop recording: 2/21/2025 21:45:28

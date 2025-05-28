@@ -1,0 +1,1461 @@
+Analysis & Synthesis report for prox_detect
+Wed Dec 27 10:24:40 2023
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |prox_detect|segment_scan:u4|state
+  9. State Machine - |prox_detect|rpr0521rs_driver:u1|state_back
+ 10. State Machine - |prox_detect|rpr0521rs_driver:u1|state
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: rpr0521rs_driver:u1
+ 17. Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult3
+ 18. Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult0
+ 19. Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult8
+ 20. Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult5
+ 21. Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult9
+ 22. Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult10
+ 23. Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult7
+ 24. Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult6
+ 25. Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult4
+ 26. Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult2
+ 27. Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult1
+ 28. lpm_mult Parameter Settings by Entity Instance
+ 29. Port Connectivity Checks: "segment_scan:u4"
+ 30. Post-Synthesis Netlist Statistics for Top Partition
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
+ 33. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Dec 27 10:24:40 2023           ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
+; Revision Name                      ; prox_detect                                     ;
+; Top-level Entity Name              ; prox_detect                                     ;
+; Family                             ; MAX 10                                          ;
+; Total logic elements               ; 2,181                                           ;
+;     Total combinational functions  ; 2,080                                           ;
+;     Dedicated logic registers      ; 243                                             ;
+; Total registers                    ; 243                                             ;
+; Total pins                         ; 15                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
+; UFM blocks                         ; 0                                               ;
+; ADC blocks                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M08SAM153C8G     ;                    ;
+; Top-level entity name                                            ; prox_detect        ; prox_detect        ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                               ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+; source/bin_to_bcd.v              ; yes             ; User Verilog HDL File        ; E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/bin_to_bcd.v       ;         ;
+; source/segment_scan.v            ; yes             ; User Verilog HDL File        ; E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/segment_scan.v     ;         ;
+; source/rpr0521rs_driver.v        ; yes             ; User Verilog HDL File        ; E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/rpr0521rs_driver.v ;         ;
+; source/prox_detect.v             ; yes             ; User Verilog HDL File        ; E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/prox_detect.v      ;         ;
+; source/decoder.v                 ; yes             ; User Verilog HDL File        ; E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v          ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/lpm_mult.tdf                             ;         ;
+; aglobal180.inc                   ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/aglobal180.inc                           ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/lpm_add_sub.inc                          ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/multcore.inc                             ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/bypassff.inc                             ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/altshift.inc                             ;         ;
+; multcore.tdf                     ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/multcore.tdf                             ;         ;
+; csa_add.inc                      ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/csa_add.inc                              ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/mpar_add.inc                             ;         ;
+; muleabz.inc                      ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/muleabz.inc                              ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/mul_lfrg.inc                             ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/mul_boothc.inc                           ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/alt_ded_mult.inc                         ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/alt_ded_mult_y.inc                       ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/dffpipe.inc                              ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/mpar_add.tdf                             ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/lpm_add_sub.tdf                          ;         ;
+; addcore.inc                      ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/addcore.inc                              ;         ;
+; look_add.inc                     ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/look_add.inc                             ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                  ;         ;
+; db/add_sub_drg.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/db/add_sub_drg.tdf        ;         ;
+; db/add_sub_hrg.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/db/add_sub_hrg.tdf        ;         ;
+; altshift.tdf                     ; yes             ; Megafunction                 ; d:/intelfpga/18.0/quartus/libraries/megafunctions/altshift.tdf                             ;         ;
+; db/add_sub_frg.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/db/add_sub_frg.tdf        ;         ;
+; db/add_sub_arg.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/db/add_sub_arg.tdf        ;         ;
+; db/add_sub_erg.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/db/add_sub_erg.tdf        ;         ;
+; db/add_sub_irg.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/db/add_sub_irg.tdf        ;         ;
+; db/add_sub_1qg.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/db/add_sub_1qg.tdf        ;         ;
+; db/add_sub_crg.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/db/add_sub_crg.tdf        ;         ;
+; db/add_sub_brg.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/db/add_sub_brg.tdf        ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                  ;
++---------------------------------------------+--------------------------------+
+; Resource                                    ; Usage                          ;
++---------------------------------------------+--------------------------------+
+; Estimated Total logic elements              ; 2,181                          ;
+;                                             ;                                ;
+; Total combinational functions               ; 2080                           ;
+; Logic element usage by number of LUT inputs ;                                ;
+;     -- 4 input functions                    ; 1128                           ;
+;     -- 3 input functions                    ; 588                            ;
+;     -- <=2 input functions                  ; 364                            ;
+;                                             ;                                ;
+; Logic elements by mode                      ;                                ;
+;     -- normal mode                          ; 1402                           ;
+;     -- arithmetic mode                      ; 678                            ;
+;                                             ;                                ;
+; Total registers                             ; 243                            ;
+;     -- Dedicated logic registers            ; 243                            ;
+;     -- I/O registers                        ; 0                              ;
+;                                             ;                                ;
+; I/O pins                                    ; 15                             ;
+;                                             ;                                ;
+; Embedded Multiplier 9-bit elements          ; 0                              ;
+;                                             ;                                ;
+; Maximum fan-out node                        ; rpr0521rs_driver:u1|clk_400khz ;
+; Maximum fan-out                             ; 156                            ;
+; Total fan-out                               ; 7739                           ;
+; Average fan-out                             ; 3.29                           ;
++---------------------------------------------+--------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                        ;
++---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                             ; Entity Name      ; Library Name ;
++---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
+; |prox_detect                                      ; 2080 (0)            ; 243 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 15   ; 0            ; 0          ; |prox_detect                                                                                                                                    ; prox_detect      ; work         ;
+;    |decoder:u2|                                   ; 1639 (284)          ; 35 (35)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2                                                                                                                         ; decoder          ; work         ;
+;       |bin_to_bcd:u1|                             ; 562 (562)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|bin_to_bcd:u1                                                                                                           ; bin_to_bcd       ; work         ;
+;       |lpm_mult:Mult0|                            ; 83 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult0                                                                                                          ; lpm_mult         ; work         ;
+;          |multcore:mult_core|                     ; 83 (37)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult0|multcore:mult_core                                                                                       ; multcore         ; work         ;
+;             |mpar_add:padder|                     ; 46 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                       ; mpar_add         ; work         ;
+;                |lpm_add_sub:adder[0]|             ; 14 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_drg:auto_generated|    ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_drg:auto_generated                       ; add_sub_drg      ; work         ;
+;                |lpm_add_sub:adder[1]|             ; 14 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_drg:auto_generated|    ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_drg:auto_generated                       ; add_sub_drg      ; work         ;
+;                |mpar_add:sub_par_add|             ; 18 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                  ; mpar_add         ; work         ;
+;                   |lpm_add_sub:adder[0]|          ; 18 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                             ; lpm_add_sub      ; work         ;
+;                      |add_sub_hrg:auto_generated| ; 18 (18)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_hrg:auto_generated  ; add_sub_hrg      ; work         ;
+;       |lpm_mult:Mult10|                           ; 58 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult10                                                                                                         ; lpm_mult         ; work         ;
+;          |multcore:mult_core|                     ; 58 (27)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult10|multcore:mult_core                                                                                      ; multcore         ; work         ;
+;             |mpar_add:padder|                     ; 31 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add         ; work         ;
+;                |lpm_add_sub:adder[0]|             ; 9 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub      ; work         ;
+;                   |add_sub_1qg:auto_generated|    ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_1qg:auto_generated                      ; add_sub_1qg      ; work         ;
+;                |lpm_add_sub:adder[1]|             ; 9 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                 ; lpm_add_sub      ; work         ;
+;                   |add_sub_1qg:auto_generated|    ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_1qg:auto_generated                      ; add_sub_1qg      ; work         ;
+;                |mpar_add:sub_par_add|             ; 13 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add         ; work         ;
+;                   |lpm_add_sub:adder[0]|          ; 13 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub      ; work         ;
+;                      |add_sub_crg:auto_generated| ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_crg:auto_generated ; add_sub_crg      ; work         ;
+;       |lpm_mult:Mult1|                            ; 74 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult1                                                                                                          ; lpm_mult         ; work         ;
+;          |multcore:mult_core|                     ; 74 (28)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult1|multcore:mult_core                                                                                       ; multcore         ; work         ;
+;             |mpar_add:padder|                     ; 46 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder                                                                       ; mpar_add         ; work         ;
+;                |lpm_add_sub:adder[0]|             ; 14 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_erg:auto_generated|    ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_erg:auto_generated                       ; add_sub_erg      ; work         ;
+;                |lpm_add_sub:adder[1]|             ; 14 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_erg:auto_generated|    ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_erg:auto_generated                       ; add_sub_erg      ; work         ;
+;                |mpar_add:sub_par_add|             ; 18 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                  ; mpar_add         ; work         ;
+;                   |lpm_add_sub:adder[0]|          ; 18 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                             ; lpm_add_sub      ; work         ;
+;                      |add_sub_irg:auto_generated| ; 18 (18)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_irg:auto_generated  ; add_sub_irg      ; work         ;
+;       |lpm_mult:Mult2|                            ; 85 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult2                                                                                                          ; lpm_mult         ; work         ;
+;          |multcore:mult_core|                     ; 85 (36)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult2|multcore:mult_core                                                                                       ; multcore         ; work         ;
+;             |mpar_add:padder|                     ; 49 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder                                                                       ; mpar_add         ; work         ;
+;                |lpm_add_sub:adder[0]|             ; 15 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_erg:auto_generated|    ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_erg:auto_generated                       ; add_sub_erg      ; work         ;
+;                |lpm_add_sub:adder[1]|             ; 15 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_erg:auto_generated|    ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_erg:auto_generated                       ; add_sub_erg      ; work         ;
+;                |mpar_add:sub_par_add|             ; 19 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                  ; mpar_add         ; work         ;
+;                   |lpm_add_sub:adder[0]|          ; 19 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                             ; lpm_add_sub      ; work         ;
+;                      |add_sub_irg:auto_generated| ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_irg:auto_generated  ; add_sub_irg      ; work         ;
+;       |lpm_mult:Mult3|                            ; 79 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult3                                                                                                          ; lpm_mult         ; work         ;
+;          |multcore:mult_core|                     ; 79 (33)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult3|multcore:mult_core                                                                                       ; multcore         ; work         ;
+;             |mpar_add:padder|                     ; 46 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder                                                                       ; mpar_add         ; work         ;
+;                |lpm_add_sub:adder[0]|             ; 14 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_drg:auto_generated|    ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_drg:auto_generated                       ; add_sub_drg      ; work         ;
+;                |lpm_add_sub:adder[1]|             ; 14 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_drg:auto_generated|    ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_drg:auto_generated                       ; add_sub_drg      ; work         ;
+;                |mpar_add:sub_par_add|             ; 18 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                  ; mpar_add         ; work         ;
+;                   |lpm_add_sub:adder[0]|          ; 18 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                             ; lpm_add_sub      ; work         ;
+;                      |add_sub_hrg:auto_generated| ; 18 (18)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_hrg:auto_generated  ; add_sub_hrg      ; work         ;
+;       |lpm_mult:Mult4|                            ; 43 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult4                                                                                                          ; lpm_mult         ; work         ;
+;          |multcore:mult_core|                     ; 43 (5)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult4|multcore:mult_core                                                                                       ; multcore         ; work         ;
+;             |mpar_add:padder|                     ; 38 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder                                                                       ; mpar_add         ; work         ;
+;                |lpm_add_sub:adder[0]|             ; 11 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_drg:auto_generated|    ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_drg:auto_generated                       ; add_sub_drg      ; work         ;
+;                |lpm_add_sub:adder[1]|             ; 11 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_drg:auto_generated|    ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_drg:auto_generated                       ; add_sub_drg      ; work         ;
+;                |mpar_add:sub_par_add|             ; 16 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                  ; mpar_add         ; work         ;
+;                   |lpm_add_sub:adder[0]|          ; 16 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                             ; lpm_add_sub      ; work         ;
+;                      |add_sub_hrg:auto_generated| ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_hrg:auto_generated  ; add_sub_hrg      ; work         ;
+;       |lpm_mult:Mult5|                            ; 74 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult5                                                                                                          ; lpm_mult         ; work         ;
+;          |multcore:mult_core|                     ; 74 (34)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult5|multcore:mult_core                                                                                       ; multcore         ; work         ;
+;             |mpar_add:padder|                     ; 40 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder                                                                       ; mpar_add         ; work         ;
+;                |lpm_add_sub:adder[0]|             ; 12 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_erg:auto_generated|    ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_erg:auto_generated                       ; add_sub_erg      ; work         ;
+;                |lpm_add_sub:adder[1]|             ; 12 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_erg:auto_generated|    ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_erg:auto_generated                       ; add_sub_erg      ; work         ;
+;                |mpar_add:sub_par_add|             ; 16 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                  ; mpar_add         ; work         ;
+;                   |lpm_add_sub:adder[0]|          ; 16 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                             ; lpm_add_sub      ; work         ;
+;                      |add_sub_irg:auto_generated| ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_irg:auto_generated  ; add_sub_irg      ; work         ;
+;       |lpm_mult:Mult6|                            ; 58 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult6                                                                                                          ; lpm_mult         ; work         ;
+;          |multcore:mult_core|                     ; 58 (18)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult6|multcore:mult_core                                                                                       ; multcore         ; work         ;
+;             |mpar_add:padder|                     ; 40 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult6|multcore:mult_core|mpar_add:padder                                                                       ; mpar_add         ; work         ;
+;                |lpm_add_sub:adder[0]|             ; 12 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult6|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_drg:auto_generated|    ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult6|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_drg:auto_generated                       ; add_sub_drg      ; work         ;
+;                |lpm_add_sub:adder[1]|             ; 12 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult6|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_drg:auto_generated|    ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult6|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_drg:auto_generated                       ; add_sub_drg      ; work         ;
+;                |mpar_add:sub_par_add|             ; 16 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult6|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                  ; mpar_add         ; work         ;
+;                   |lpm_add_sub:adder[0]|          ; 16 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult6|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                             ; lpm_add_sub      ; work         ;
+;                      |add_sub_hrg:auto_generated| ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult6|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_hrg:auto_generated  ; add_sub_hrg      ; work         ;
+;       |lpm_mult:Mult7|                            ; 81 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult7                                                                                                          ; lpm_mult         ; work         ;
+;          |multcore:mult_core|                     ; 81 (41)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult7|multcore:mult_core                                                                                       ; multcore         ; work         ;
+;             |mpar_add:padder|                     ; 40 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder                                                                       ; mpar_add         ; work         ;
+;                |lpm_add_sub:adder[0]|             ; 12 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_brg:auto_generated|    ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_brg:auto_generated                       ; add_sub_brg      ; work         ;
+;                |lpm_add_sub:adder[1]|             ; 12 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_brg:auto_generated|    ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_brg:auto_generated                       ; add_sub_brg      ; work         ;
+;                |mpar_add:sub_par_add|             ; 16 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                  ; mpar_add         ; work         ;
+;                   |lpm_add_sub:adder[0]|          ; 16 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                             ; lpm_add_sub      ; work         ;
+;                      |add_sub_frg:auto_generated| ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_frg:auto_generated  ; add_sub_frg      ; work         ;
+;       |lpm_mult:Mult8|                            ; 82 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult8                                                                                                          ; lpm_mult         ; work         ;
+;          |multcore:mult_core|                     ; 82 (30)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult8|multcore:mult_core                                                                                       ; multcore         ; work         ;
+;             |mpar_add:padder|                     ; 52 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder                                                                       ; mpar_add         ; work         ;
+;                |lpm_add_sub:adder[0]|             ; 16 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_frg:auto_generated|    ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_frg:auto_generated                       ; add_sub_frg      ; work         ;
+;                |lpm_add_sub:adder[1]|             ; 16 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_frg:auto_generated|    ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_frg:auto_generated                       ; add_sub_frg      ; work         ;
+;                |mpar_add:sub_par_add|             ; 20 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                  ; mpar_add         ; work         ;
+;                   |lpm_add_sub:adder[0]|          ; 20 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                             ; lpm_add_sub      ; work         ;
+;                      |add_sub_arg:auto_generated| ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_arg:auto_generated  ; add_sub_arg      ; work         ;
+;       |lpm_mult:Mult9|                            ; 76 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult9                                                                                                          ; lpm_mult         ; work         ;
+;          |multcore:mult_core|                     ; 76 (33)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult9|multcore:mult_core                                                                                       ; multcore         ; work         ;
+;             |mpar_add:padder|                     ; 43 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder                                                                       ; mpar_add         ; work         ;
+;                |lpm_add_sub:adder[0]|             ; 13 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_drg:auto_generated|    ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_drg:auto_generated                       ; add_sub_drg      ; work         ;
+;                |lpm_add_sub:adder[1]|             ; 13 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                  ; lpm_add_sub      ; work         ;
+;                   |add_sub_drg:auto_generated|    ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_drg:auto_generated                       ; add_sub_drg      ; work         ;
+;                |mpar_add:sub_par_add|             ; 17 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                  ; mpar_add         ; work         ;
+;                   |lpm_add_sub:adder[0]|          ; 17 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                             ; lpm_add_sub      ; work         ;
+;                      |add_sub_hrg:auto_generated| ; 17 (17)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|decoder:u2|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_hrg:auto_generated  ; add_sub_hrg      ; work         ;
+;    |rpr0521rs_driver:u1|                          ; 285 (285)           ; 166 (166)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|rpr0521rs_driver:u1                                                                                                                ; rpr0521rs_driver ; work         ;
+;    |segment_scan:u4|                              ; 156 (156)           ; 42 (42)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prox_detect|segment_scan:u4                                                                                                                    ; segment_scan     ; work         ;
++---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------+
+; State Machine - |prox_detect|segment_scan:u4|state  ;
++-------------+------------+-------------+------------+
+; Name        ; state.IDLE ; state.WRITE ; state.MAIN ;
++-------------+------------+-------------+------------+
+; state.IDLE  ; 0          ; 0           ; 0          ;
+; state.MAIN  ; 1          ; 0           ; 1          ;
+; state.WRITE ; 1          ; 1           ; 0          ;
++-------------+------------+-------------+------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------+
+; State Machine - |prox_detect|rpr0521rs_driver:u1|state_back              ;
++------------------+------------------+-----------------+------------------+
+; Name             ; state_back.MODE1 ; state_back.IDLE ; state_back.MODE2 ;
++------------------+------------------+-----------------+------------------+
+; state_back.IDLE  ; 0                ; 0               ; 0                ;
+; state_back.MODE1 ; 1                ; 1               ; 0                ;
+; state_back.MODE2 ; 0                ; 1               ; 1                ;
++------------------+------------------+-----------------+------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |prox_detect|rpr0521rs_driver:u1|state                                                                                ;
++-------------+------------+------------+-------------+-------------+-------------+-------------+------------+------------+-------------+
+; Name        ; state.STOP ; state.READ ; state.WRITE ; state.START ; state.MODE2 ; state.MODE1 ; state.MAIN ; state.IDLE ; state.DELAY ;
++-------------+------------+------------+-------------+-------------+-------------+-------------+------------+------------+-------------+
+; state.IDLE  ; 0          ; 0          ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0           ;
+; state.MAIN  ; 0          ; 0          ; 0           ; 0           ; 0           ; 0           ; 1          ; 1          ; 0           ;
+; state.MODE1 ; 0          ; 0          ; 0           ; 0           ; 0           ; 1           ; 0          ; 1          ; 0           ;
+; state.MODE2 ; 0          ; 0          ; 0           ; 0           ; 1           ; 0           ; 0          ; 1          ; 0           ;
+; state.START ; 0          ; 0          ; 0           ; 1           ; 0           ; 0           ; 0          ; 1          ; 0           ;
+; state.WRITE ; 0          ; 0          ; 1           ; 0           ; 0           ; 0           ; 0          ; 1          ; 0           ;
+; state.READ  ; 0          ; 1          ; 0           ; 0           ; 0           ; 0           ; 0          ; 1          ; 0           ;
+; state.STOP  ; 1          ; 0          ; 0           ; 0           ; 0           ; 0           ; 0          ; 1          ; 0           ;
+; state.DELAY ; 0          ; 0          ; 0           ; 0           ; 0           ; 0           ; 0          ; 1          ; 1           ;
++-------------+------------+------------+-------------+-------------+-------------+-------------+------------+------------+-------------+
+
+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++-----------------------------------------+---------------------------------------------+
+; Register name                           ; Reason for Removal                          ;
++-----------------------------------------+---------------------------------------------+
+; segment_scan:u4|seg[0][0]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[0][1]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[0][2]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[0][3]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[0][4]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[0][5]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[0][6]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[1][0]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[1][1]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[1][2]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[1][3]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[1][4]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[1][5]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[1][6]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[2][0]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[2][1]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[2][2]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[2][3]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[2][4]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[2][5]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[2][6]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[3][0]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[3][1]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[3][2]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[3][3]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[3][4]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[3][5]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[3][6]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[4][0]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[4][1]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[4][2]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[4][3]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[4][4]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[4][5]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[4][6]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[5][0]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[5][1]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[5][2]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[5][3]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[5][4]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[5][5]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[5][6]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[6][0]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[6][1]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[6][2]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[6][3]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[6][4]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[6][5]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[6][6]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[7][0]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[7][1]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[7][2]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[7][3]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[7][4]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[7][5]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[7][6]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[8][0]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[8][1]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[8][2]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[8][3]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[8][4]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[8][5]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[8][6]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[9][0]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[9][1]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[9][2]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[9][3]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[9][4]               ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[9][5]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[9][6]               ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[10][0]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[10][1]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[10][2]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[10][3]              ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[10][4]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[10][5]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[10][6]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[11][0]              ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[11][1]              ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[11][2]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[11][3]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[11][4]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[11][5]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[11][6]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[12][0]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[12][1]              ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[12][2]              ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[12][3]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[12][4]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[12][5]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[12][6]              ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[13][0]              ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[13][1]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[13][2]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[13][3]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[13][4]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[13][5]              ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[13][6]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[14][0]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[14][1]              ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[14][2]              ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[14][3]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[14][4]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[14][5]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[14][6]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[15][0]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[15][1]              ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[15][2]              ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[15][3]              ; Stuck at GND due to stuck port data_in      ;
+; segment_scan:u4|seg[15][4]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[15][5]              ; Stuck at VCC due to stuck port data_in      ;
+; segment_scan:u4|seg[15][6]              ; Stuck at VCC due to stuck port data_in      ;
+; rpr0521rs_driver:u1|num_delay[13..23]   ; Stuck at GND due to stuck port data_in      ;
+; rpr0521rs_driver:u1|num_delay[12]       ; Stuck at VCC due to stuck port data_in      ;
+; rpr0521rs_driver:u1|num_delay[10,11]    ; Stuck at GND due to stuck port data_in      ;
+; rpr0521rs_driver:u1|num_delay[9]        ; Stuck at VCC due to stuck port data_in      ;
+; rpr0521rs_driver:u1|num_delay[8]        ; Stuck at GND due to stuck port data_in      ;
+; rpr0521rs_driver:u1|num_delay[6,7]      ; Stuck at VCC due to stuck port data_in      ;
+; rpr0521rs_driver:u1|num_delay[0..5]     ; Stuck at GND due to stuck port data_in      ;
+; rpr0521rs_driver:u1|dev_addr[6]         ; Stuck at GND due to stuck port data_in      ;
+; rpr0521rs_driver:u1|dev_addr[3..5]      ; Stuck at VCC due to stuck port data_in      ;
+; rpr0521rs_driver:u1|dev_addr[0..2]      ; Stuck at GND due to stuck port data_in      ;
+; rpr0521rs_driver:u1|reg_addr[7]         ; Stuck at GND due to stuck port data_in      ;
+; rpr0521rs_driver:u1|reg_addr[6]         ; Stuck at VCC due to stuck port data_in      ;
+; rpr0521rs_driver:u1|reg_addr[4,5]       ; Stuck at GND due to stuck port data_in      ;
+; rpr0521rs_driver:u1|reg_data[4,5]       ; Stuck at GND due to stuck port data_in      ;
+; rpr0521rs_driver:u1|data_wr[5]          ; Merged with rpr0521rs_driver:u1|data_wr[4]  ;
+; rpr0521rs_driver:u1|reg_data[6,7]       ; Merged with rpr0521rs_driver:u1|reg_data[2] ;
+; segment_scan:u4|state~9                 ; Lost fanout                                 ;
+; rpr0521rs_driver:u1|state_back~6        ; Lost fanout                                 ;
+; rpr0521rs_driver:u1|state_back~7        ; Lost fanout                                 ;
+; rpr0521rs_driver:u1|state~9             ; Lost fanout                                 ;
+; rpr0521rs_driver:u1|state~10            ; Lost fanout                                 ;
+; rpr0521rs_driver:u1|state~11            ; Lost fanout                                 ;
+; rpr0521rs_driver:u1|cnt[3]              ; Stuck at GND due to stuck port data_in      ;
+; rpr0521rs_driver:u1|cnt_stop[3]         ; Stuck at GND due to stuck port data_in      ;
+; rpr0521rs_driver:u1|cnt_read[3]         ; Stuck at GND due to stuck port data_in      ;
+; rpr0521rs_driver:u1|cnt_write[3]        ; Stuck at GND due to stuck port data_in      ;
+; rpr0521rs_driver:u1|cnt_start[3]        ; Stuck at GND due to stuck port data_in      ;
+; rpr0521rs_driver:u1|cnt_mode1[3]        ; Stuck at GND due to stuck port data_in      ;
+; Total Number of Removed Registers = 164 ;                                             ;
++-----------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                       ;
++-----------------------------------+---------------------------+-------------------------------------------------------------------+
+; Register name                     ; Reason for Removal        ; Registers Removed due to This Register                            ;
++-----------------------------------+---------------------------+-------------------------------------------------------------------+
+; rpr0521rs_driver:u1|num_delay[23] ; Stuck at GND              ; rpr0521rs_driver:u1|cnt[3], rpr0521rs_driver:u1|cnt_stop[3],      ;
+;                                   ; due to stuck port data_in ; rpr0521rs_driver:u1|cnt_read[3], rpr0521rs_driver:u1|cnt_start[3] ;
++-----------------------------------+---------------------------+-------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 243   ;
+; Number of registers using Synchronous Clear  ; 35    ;
+; Number of registers using Synchronous Load   ; 4     ;
+; Number of registers using Asynchronous Clear ; 104   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 125   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; rpr0521rs_driver:u1|scl                ; 6       ;
+; rpr0521rs_driver:u1|sda                ; 1       ;
+; rpr0521rs_driver:u1|sda~en             ; 1       ;
+; Total number of inverted registers = 3 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 8:1                ; 7 bits    ; 35 LEs        ; 35 LEs               ; 0 LEs                  ; Yes        ; |prox_detect|segment_scan:u4|data[8]               ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |prox_detect|rpr0521rs_driver:u1|reg_addr[0]       ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |prox_detect|rpr0521rs_driver:u1|reg_data[1]       ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |prox_detect|rpr0521rs_driver:u1|cnt[0]            ;
+; 33:1               ; 3 bits    ; 66 LEs        ; 9 LEs                ; 57 LEs                 ; Yes        ; |prox_detect|rpr0521rs_driver:u1|data_wr[1]        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |prox_detect|decoder:u2|bin_to_bcd:u1|bcd_code[31] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |prox_detect|decoder:u2|bin_to_bcd:u1|bcd_code[25] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |prox_detect|decoder:u2|bin_to_bcd:u1|bcd_code[24] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |prox_detect|decoder:u2|bin_to_bcd:u1|bcd_code[20] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |prox_detect|decoder:u2|bin_to_bcd:u1|bcd_code[16] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |prox_detect|decoder:u2|bin_to_bcd:u1|bcd_code[11] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |prox_detect|decoder:u2|bin_to_bcd:u1|bcd_code[7]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |prox_detect|decoder:u2|bin_to_bcd:u1|bcd_code[4]  ;
+; 5:1                ; 25 bits   ; 75 LEs        ; 50 LEs               ; 25 LEs                 ; No         ; |prox_detect|decoder:u2|lux[9]                     ;
+; 30:1               ; 3 bits    ; 60 LEs        ; 24 LEs               ; 36 LEs                 ; No         ; |prox_detect|rpr0521rs_driver:u1|Selector81        ;
+; 86:1               ; 2 bits    ; 114 LEs       ; 16 LEs               ; 98 LEs                 ; No         ; |prox_detect|rpr0521rs_driver:u1|Selector80        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rpr0521rs_driver:u1 ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; CNT_NUM        ; 15    ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult3      ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 16       ; Untyped             ;
+; LPM_WIDTHB                                     ; 10       ; Untyped             ;
+; LPM_WIDTHP                                     ; 26       ; Untyped             ;
+; LPM_WIDTHR                                     ; 26       ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES      ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING  ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult0      ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 16       ; Untyped             ;
+; LPM_WIDTHB                                     ; 10       ; Untyped             ;
+; LPM_WIDTHP                                     ; 26       ; Untyped             ;
+; LPM_WIDTHR                                     ; 26       ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES      ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING  ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult8      ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 16       ; Untyped             ;
+; LPM_WIDTHB                                     ; 12       ; Untyped             ;
+; LPM_WIDTHP                                     ; 28       ; Untyped             ;
+; LPM_WIDTHR                                     ; 28       ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES      ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING  ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult5      ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 16       ; Untyped             ;
+; LPM_WIDTHB                                     ; 11       ; Untyped             ;
+; LPM_WIDTHP                                     ; 27       ; Untyped             ;
+; LPM_WIDTHR                                     ; 27       ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES      ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING  ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult9      ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 16       ; Untyped             ;
+; LPM_WIDTHB                                     ; 10       ; Untyped             ;
+; LPM_WIDTHP                                     ; 26       ; Untyped             ;
+; LPM_WIDTHR                                     ; 26       ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES      ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING  ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult10     ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 16       ; Untyped             ;
+; LPM_WIDTHB                                     ; 5        ; Untyped             ;
+; LPM_WIDTHP                                     ; 21       ; Untyped             ;
+; LPM_WIDTHR                                     ; 21       ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES      ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING  ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult7      ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 16       ; Untyped             ;
+; LPM_WIDTHB                                     ; 8        ; Untyped             ;
+; LPM_WIDTHP                                     ; 24       ; Untyped             ;
+; LPM_WIDTHR                                     ; 24       ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES      ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING  ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult6      ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 16       ; Untyped             ;
+; LPM_WIDTHB                                     ; 10       ; Untyped             ;
+; LPM_WIDTHP                                     ; 26       ; Untyped             ;
+; LPM_WIDTHR                                     ; 26       ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES      ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING  ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult4      ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 16       ; Untyped             ;
+; LPM_WIDTHB                                     ; 10       ; Untyped             ;
+; LPM_WIDTHP                                     ; 26       ; Untyped             ;
+; LPM_WIDTHR                                     ; 26       ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES      ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING  ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult2      ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 16       ; Untyped             ;
+; LPM_WIDTHB                                     ; 11       ; Untyped             ;
+; LPM_WIDTHP                                     ; 27       ; Untyped             ;
+; LPM_WIDTHR                                     ; 27       ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES      ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING  ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decoder:u2|lpm_mult:Mult1      ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 16       ; Untyped             ;
+; LPM_WIDTHB                                     ; 11       ; Untyped             ;
+; LPM_WIDTHP                                     ; 27       ; Untyped             ;
+; LPM_WIDTHR                                     ; 27       ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES      ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING  ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                     ;
++---------------------------------------+----------------------------+
+; Name                                  ; Value                      ;
++---------------------------------------+----------------------------+
+; Number of entity instances            ; 11                         ;
+; Entity Instance                       ; decoder:u2|lpm_mult:Mult3  ;
+;     -- LPM_WIDTHA                     ; 16                         ;
+;     -- LPM_WIDTHB                     ; 10                         ;
+;     -- LPM_WIDTHP                     ; 26                         ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                   ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                         ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                        ;
+;     -- USE_EAB                        ; OFF                        ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                       ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                         ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                         ;
+; Entity Instance                       ; decoder:u2|lpm_mult:Mult0  ;
+;     -- LPM_WIDTHA                     ; 16                         ;
+;     -- LPM_WIDTHB                     ; 10                         ;
+;     -- LPM_WIDTHP                     ; 26                         ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                   ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                         ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                        ;
+;     -- USE_EAB                        ; OFF                        ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                       ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                         ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                         ;
+; Entity Instance                       ; decoder:u2|lpm_mult:Mult8  ;
+;     -- LPM_WIDTHA                     ; 16                         ;
+;     -- LPM_WIDTHB                     ; 12                         ;
+;     -- LPM_WIDTHP                     ; 28                         ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                   ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                         ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                        ;
+;     -- USE_EAB                        ; OFF                        ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                       ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                         ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                         ;
+; Entity Instance                       ; decoder:u2|lpm_mult:Mult5  ;
+;     -- LPM_WIDTHA                     ; 16                         ;
+;     -- LPM_WIDTHB                     ; 11                         ;
+;     -- LPM_WIDTHP                     ; 27                         ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                   ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                         ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                        ;
+;     -- USE_EAB                        ; OFF                        ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                       ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                         ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                         ;
+; Entity Instance                       ; decoder:u2|lpm_mult:Mult9  ;
+;     -- LPM_WIDTHA                     ; 16                         ;
+;     -- LPM_WIDTHB                     ; 10                         ;
+;     -- LPM_WIDTHP                     ; 26                         ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                   ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                         ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                        ;
+;     -- USE_EAB                        ; OFF                        ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                       ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                         ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                         ;
+; Entity Instance                       ; decoder:u2|lpm_mult:Mult10 ;
+;     -- LPM_WIDTHA                     ; 16                         ;
+;     -- LPM_WIDTHB                     ; 5                          ;
+;     -- LPM_WIDTHP                     ; 21                         ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                   ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                         ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                        ;
+;     -- USE_EAB                        ; OFF                        ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                       ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                         ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                         ;
+; Entity Instance                       ; decoder:u2|lpm_mult:Mult7  ;
+;     -- LPM_WIDTHA                     ; 16                         ;
+;     -- LPM_WIDTHB                     ; 8                          ;
+;     -- LPM_WIDTHP                     ; 24                         ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                   ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                         ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                        ;
+;     -- USE_EAB                        ; OFF                        ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                       ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                         ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                         ;
+; Entity Instance                       ; decoder:u2|lpm_mult:Mult6  ;
+;     -- LPM_WIDTHA                     ; 16                         ;
+;     -- LPM_WIDTHB                     ; 10                         ;
+;     -- LPM_WIDTHP                     ; 26                         ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                   ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                         ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                        ;
+;     -- USE_EAB                        ; OFF                        ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                       ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                         ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                         ;
+; Entity Instance                       ; decoder:u2|lpm_mult:Mult4  ;
+;     -- LPM_WIDTHA                     ; 16                         ;
+;     -- LPM_WIDTHB                     ; 10                         ;
+;     -- LPM_WIDTHP                     ; 26                         ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                   ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                         ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                        ;
+;     -- USE_EAB                        ; OFF                        ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                       ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                         ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                         ;
+; Entity Instance                       ; decoder:u2|lpm_mult:Mult2  ;
+;     -- LPM_WIDTHA                     ; 16                         ;
+;     -- LPM_WIDTHB                     ; 11                         ;
+;     -- LPM_WIDTHP                     ; 27                         ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                   ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                         ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                        ;
+;     -- USE_EAB                        ; OFF                        ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                       ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                         ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                         ;
+; Entity Instance                       ; decoder:u2|lpm_mult:Mult1  ;
+;     -- LPM_WIDTHA                     ; 16                         ;
+;     -- LPM_WIDTHB                     ; 11                         ;
+;     -- LPM_WIDTHP                     ; 27                         ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                   ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                         ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                        ;
+;     -- USE_EAB                        ; OFF                        ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                       ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                         ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                         ;
++---------------------------------------+----------------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "segment_scan:u4"    ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; dat_en       ; Input ; Info     ; Stuck at VCC ;
+; dot_en[7..3] ; Input ; Info     ; Stuck at GND ;
+; dot_en[1..0] ; Input ; Info     ; Stuck at GND ;
+; dot_en[2]    ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 15                          ;
+; cycloneiii_ff         ; 243                         ;
+;     CLR               ; 63                          ;
+;     CLR SCLR          ; 10                          ;
+;     CLR SLD           ; 2                           ;
+;     ENA               ; 93                          ;
+;     ENA CLR           ; 5                           ;
+;     ENA CLR SCLR      ; 24                          ;
+;     ENA SCLR          ; 1                           ;
+;     ENA SLD           ; 2                           ;
+;     plain             ; 43                          ;
+; cycloneiii_io_obuf    ; 1                           ;
+; cycloneiii_lcell_comb ; 2086                        ;
+;     arith             ; 678                         ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 207                         ;
+;         3 data inputs ; 467                         ;
+;     normal            ; 1408                        ;
+;         0 data inputs ; 6                           ;
+;         1 data inputs ; 42                          ;
+;         2 data inputs ; 111                         ;
+;         3 data inputs ; 121                         ;
+;         4 data inputs ; 1128                        ;
+;                       ;                             ;
+; Max LUT depth         ; 40.10                       ;
+; Average LUT depth     ; 30.21                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:06     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+    Info: Processing started: Wed Dec 27 10:24:22 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off prox_detect -c prox_detect
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file source/bin_to_bcd.v
+    Info (12023): Found entity 1: bin_to_bcd File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/bin_to_bcd.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file source/segment_scan.v
+    Info (12023): Found entity 1: segment_scan File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/segment_scan.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file source/rpr0521rs_driver.v
+    Info (12023): Found entity 1: rpr0521rs_driver File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/rpr0521rs_driver.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file source/prox_detect.v
+    Info (12023): Found entity 1: prox_detect File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/prox_detect.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file source/decoder.v
+    Info (12023): Found entity 1: decoder File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 18
+Info (12127): Elaborating entity "prox_detect" for the top level hierarchy
+Info (12128): Elaborating entity "rpr0521rs_driver" for hierarchy "rpr0521rs_driver:u1" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/prox_detect.v Line: 44
+Info (12128): Elaborating entity "decoder" for hierarchy "decoder:u2" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/prox_detect.v Line: 54
+Info (12128): Elaborating entity "bin_to_bcd" for hierarchy "decoder:u2|bin_to_bcd:u1" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 78
+Info (12128): Elaborating entity "segment_scan" for hierarchy "segment_scan:u4" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/prox_detect.v Line: 72
+Info (278001): Inferred 11 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "decoder:u2|Mult3" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 61
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "decoder:u2|Mult0" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 59
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "decoder:u2|Mult8" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 65
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "decoder:u2|Mult5" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 63
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "decoder:u2|Mult9" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 66
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "decoder:u2|Mult10" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 66
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "decoder:u2|Mult7" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 64
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "decoder:u2|Mult6" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 64
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "decoder:u2|Mult4" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 62
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "decoder:u2|Mult2" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 60
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "decoder:u2|Mult1" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 60
+Info (12130): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult3" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 61
+Info (12133): Instantiated megafunction "decoder:u2|lpm_mult:Mult3" with the following parameter: File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 61
+    Info (12134): Parameter "LPM_WIDTHA" = "16"
+    Info (12134): Parameter "LPM_WIDTHB" = "10"
+    Info (12134): Parameter "LPM_WIDTHP" = "26"
+    Info (12134): Parameter "LPM_WIDTHR" = "26"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult3|multcore:mult_core", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult3" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult3" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/multcore.tdf Line: 228
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult3" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_drg.tdf
+    Info (12023): Found entity 1: add_sub_drg File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/db/add_sub_drg.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult3" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult3" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_hrg.tdf
+    Info (12023): Found entity 1: add_sub_hrg File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/db/add_sub_hrg.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult3|altshift:external_latency_ffs", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult3" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
+Info (12130): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult0" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 59
+Info (12133): Instantiated megafunction "decoder:u2|lpm_mult:Mult0" with the following parameter: File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 59
+    Info (12134): Parameter "LPM_WIDTHA" = "16"
+    Info (12134): Parameter "LPM_WIDTHB" = "10"
+    Info (12134): Parameter "LPM_WIDTHP" = "26"
+    Info (12134): Parameter "LPM_WIDTHR" = "26"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12130): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult8" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 65
+Info (12133): Instantiated megafunction "decoder:u2|lpm_mult:Mult8" with the following parameter: File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 65
+    Info (12134): Parameter "LPM_WIDTHA" = "16"
+    Info (12134): Parameter "LPM_WIDTHB" = "12"
+    Info (12134): Parameter "LPM_WIDTHP" = "28"
+    Info (12134): Parameter "LPM_WIDTHR" = "28"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult8|multcore:mult_core", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult8" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult8" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/multcore.tdf Line: 228
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult8" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_frg.tdf
+    Info (12023): Found entity 1: add_sub_frg File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/db/add_sub_frg.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult8" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult8" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_arg.tdf
+    Info (12023): Found entity 1: add_sub_arg File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/db/add_sub_arg.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult8|altshift:external_latency_ffs", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult8" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
+Info (12130): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult5" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 63
+Info (12133): Instantiated megafunction "decoder:u2|lpm_mult:Mult5" with the following parameter: File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 63
+    Info (12134): Parameter "LPM_WIDTHA" = "16"
+    Info (12134): Parameter "LPM_WIDTHB" = "11"
+    Info (12134): Parameter "LPM_WIDTHP" = "27"
+    Info (12134): Parameter "LPM_WIDTHR" = "27"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult5|multcore:mult_core", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult5" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult5" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/multcore.tdf Line: 228
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult5" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_erg.tdf
+    Info (12023): Found entity 1: add_sub_erg File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/db/add_sub_erg.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult5" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult5" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_irg.tdf
+    Info (12023): Found entity 1: add_sub_irg File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/db/add_sub_irg.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult5|altshift:external_latency_ffs", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult5" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
+Info (12130): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult9" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 66
+Info (12133): Instantiated megafunction "decoder:u2|lpm_mult:Mult9" with the following parameter: File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 66
+    Info (12134): Parameter "LPM_WIDTHA" = "16"
+    Info (12134): Parameter "LPM_WIDTHB" = "10"
+    Info (12134): Parameter "LPM_WIDTHP" = "26"
+    Info (12134): Parameter "LPM_WIDTHR" = "26"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12130): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult10" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 66
+Info (12133): Instantiated megafunction "decoder:u2|lpm_mult:Mult10" with the following parameter: File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 66
+    Info (12134): Parameter "LPM_WIDTHA" = "16"
+    Info (12134): Parameter "LPM_WIDTHB" = "5"
+    Info (12134): Parameter "LPM_WIDTHP" = "21"
+    Info (12134): Parameter "LPM_WIDTHR" = "21"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult10|multcore:mult_core", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult10" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult10" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/multcore.tdf Line: 228
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult10" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_1qg.tdf
+    Info (12023): Found entity 1: add_sub_1qg File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/db/add_sub_1qg.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult10" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult10" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_crg.tdf
+    Info (12023): Found entity 1: add_sub_crg File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/db/add_sub_crg.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult10|altshift:external_latency_ffs", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult10" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
+Info (12130): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult7" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 64
+Info (12133): Instantiated megafunction "decoder:u2|lpm_mult:Mult7" with the following parameter: File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 64
+    Info (12134): Parameter "LPM_WIDTHA" = "16"
+    Info (12134): Parameter "LPM_WIDTHB" = "8"
+    Info (12134): Parameter "LPM_WIDTHP" = "24"
+    Info (12134): Parameter "LPM_WIDTHR" = "24"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult7|multcore:mult_core", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult7" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult7" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/multcore.tdf Line: 228
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult7" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_brg.tdf
+    Info (12023): Found entity 1: add_sub_brg File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/db/add_sub_brg.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult7" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult7" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12131): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult7|altshift:external_latency_ffs", which is child of megafunction instantiation "decoder:u2|lpm_mult:Mult7" File: d:/intelfpga/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
+Info (12130): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult6" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 64
+Info (12133): Instantiated megafunction "decoder:u2|lpm_mult:Mult6" with the following parameter: File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 64
+    Info (12134): Parameter "LPM_WIDTHA" = "16"
+    Info (12134): Parameter "LPM_WIDTHB" = "10"
+    Info (12134): Parameter "LPM_WIDTHP" = "26"
+    Info (12134): Parameter "LPM_WIDTHR" = "26"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12130): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult4" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 62
+Info (12133): Instantiated megafunction "decoder:u2|lpm_mult:Mult4" with the following parameter: File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 62
+    Info (12134): Parameter "LPM_WIDTHA" = "16"
+    Info (12134): Parameter "LPM_WIDTHB" = "10"
+    Info (12134): Parameter "LPM_WIDTHP" = "26"
+    Info (12134): Parameter "LPM_WIDTHR" = "26"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12130): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult2" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 60
+Info (12133): Instantiated megafunction "decoder:u2|lpm_mult:Mult2" with the following parameter: File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 60
+    Info (12134): Parameter "LPM_WIDTHA" = "16"
+    Info (12134): Parameter "LPM_WIDTHB" = "11"
+    Info (12134): Parameter "LPM_WIDTHP" = "27"
+    Info (12134): Parameter "LPM_WIDTHR" = "27"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12130): Elaborated megafunction instantiation "decoder:u2|lpm_mult:Mult1" File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 60
+Info (12133): Instantiated megafunction "decoder:u2|lpm_mult:Mult1" with the following parameter: File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/decoder.v Line: 60
+    Info (12134): Parameter "LPM_WIDTHA" = "16"
+    Info (12134): Parameter "LPM_WIDTHB" = "11"
+    Info (12134): Parameter "LPM_WIDTHP" = "27"
+    Info (12134): Parameter "LPM_WIDTHR" = "27"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (13000): Registers with preset signals will power-up high File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/rpr0521rs_driver.v Line: 78
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "led[0]" is stuck at GND File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/prox_detect.v Line: 29
+Info (286030): Timing-Driven Synthesis is running
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register rpr0521rs_driver:u1|sda~en will power up to High File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/source/rpr0521rs_driver.v Line: 64
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/output_files/prox_detect.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 2200 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 12 output pins
+    Info (21060): Implemented 1 bidirectional pins
+    Info (21061): Implemented 2185 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4879 megabytes
+    Info: Processing ended: Wed Dec 27 10:24:40 2023
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:15
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab8_prox_detect/output_files/prox_detect.map.smsg.
+
+

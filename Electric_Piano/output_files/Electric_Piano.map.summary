@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Tue May 27 13:28:28 2025
+Analysis & Synthesis Status : Successful - Wed May 28 10:51:04 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Electric_Piano
 Top-level Entity Name : Advanced_Electric_Piano
 Family : MAX 10
-Total logic elements : 1,084
-    Total combinational functions : 1,045
-    Dedicated logic registers : 183
-Total registers : 183
+Total logic elements : 1,087
+    Total combinational functions : 1,048
+    Dedicated logic registers : 189
+Total registers : 189
 Total pins : 24
 Total virtual pins : 0
 Total memory bits : 0
