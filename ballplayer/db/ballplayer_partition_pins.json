@@ -28,7 +28,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "led[1]",
+					"name" : "led[2]",
 					"strict" : false
 				},
 				{
@@ -40,15 +40,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "led[7]",
+					"name" : "led[5]",
 					"strict" : false
 				},
 				{
-					"name" : "key_up",
+					"name" : "led[6]",
 					"strict" : false
 				},
 				{
 					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "key_up",
 					"strict" : false
 				},
 				{

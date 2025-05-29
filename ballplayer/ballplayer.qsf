@@ -144,6 +144,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[7]
 set_global_assignment -name VERILOG_FILE source/ballplayer_top.v
 set_global_assignment -name VERILOG_FILE source/ballplayer_top_test.v
 set_global_assignment -name VERILOG_FILE source/lcd_contrast_test.v
+set_global_assignment -name VERILOG_FILE source/lcd_cartoon_display.v
 set_global_assignment -name VERILOG_FILE source/ballplayer_pll.v
 set_global_assignment -name VERILOG_FILE source/adc081s101_driver.v
 set_global_assignment -name VERILOG_FILE source/rpr0521rs_driver_simple.v
@@ -164,6 +165,9 @@ set_global_assignment -name VERILOG_FILE source/lcd_simple_test.v
 set_global_assignment -name VERILOG_FILE source/lcd_simple_fill.v
 set_global_assignment -name VERILOG_FILE source/lcd_debug_test.v
 set_global_assignment -name VERILOG_FILE source/lcd_full_init_test.v
+set_global_assignment -name VERILOG_FILE source/lcd_simple_patterns.v
+set_global_assignment -name VERILOG_FILE source/lcd_cartoon_display_fixed.v
+set_global_assignment -name VERILOG_FILE source/lcd_emoji_display.v
 
 
 set_global_assignment -name DEVICE_FILTER_PACKAGE MBGA

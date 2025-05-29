@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ballplayer
-Thu May 29 00:02:14 2025
+Thu May 29 14:53:12 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,21 +13,23 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst|state
-  9. State Machine - |ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_init:lcd_init_inst|state
- 10. State Machine - |ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_write:lcd_write_inst|state
+  8. State Machine - |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|state
+  9. State Machine - |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|state
+ 10. State Machine - |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|state
  11. Registers Removed During Synthesis
  12. General Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
  14. Parameter Settings for User Entity Instance: ballplayer_pll:pll_inst|altpll:altpll_component
- 15. Parameter Settings for User Entity Instance: lcd_contrast_test:lcd_test_mode.lcd_test_inst
- 16. Parameter Settings for User Entity Instance: lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_write:lcd_write_inst
- 17. Parameter Settings for User Entity Instance: lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_init:lcd_init_inst
- 18. altpll Parameter Settings by Entity Instance
- 19. Port Connectivity Checks: "ballplayer_pll:pll_inst"
- 20. Post-Synthesis Netlist Statistics for Top Partition
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
+ 15. Parameter Settings for User Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst
+ 16. Parameter Settings for User Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst
+ 17. Parameter Settings for User Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst
+ 18. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0
+ 19. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0
+ 20. altpll Parameter Settings by Entity Instance
+ 21. Port Connectivity Checks: "ballplayer_pll:pll_inst"
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
@@ -53,15 +55,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 29 00:02:14 2025       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 29 14:53:12 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ballplayer                                  ;
 ; Top-level Entity Name              ; ballplayer_top_test                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 326                                         ;
-;     Total combinational functions  ; 324                                         ;
-;     Dedicated logic registers      ; 136                                         ;
-; Total registers                    ; 136                                         ;
+; Total logic elements               ; 890                                         ;
+;     Total combinational functions  ; 889                                         ;
+;     Dedicated logic registers      ; 165                                         ;
+; Total registers                    ; 165                                         ;
 ; Total pins                         ; 29                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -172,27 +174,38 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                 ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
-; source/ballplayer_top_test.v     ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v   ;         ;
-; source/lcd_contrast_test.v       ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/lcd_contrast_test.v     ;         ;
-; source/ballplayer_pll.v          ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/ballplayer_pll.v        ;         ;
-; source/lcd_init.v                ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/lcd_init.v              ;         ;
-; source/lcd_write.v               ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/lcd_write.v             ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/altpll.tdf        ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/aglobal181.inc    ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/stratix_pll.inc   ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/stratixii_pll.inc ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/cycloneii_pll.inc ;         ;
-; db/ballplayer_pll_altpll.v       ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/ballplayer_pll_altpll.v     ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                   ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
+; source/ballplayer_top_test.v     ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v     ;         ;
+; source/ballplayer_pll.v          ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/ballplayer_pll.v          ;         ;
+; source/lcd_init.v                ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/lcd_init.v                ;         ;
+; source/lcd_write.v               ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/lcd_write.v               ;         ;
+; source/lcd_emoji_display.v       ; yes             ; User Verilog HDL File        ; D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v       ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/altpll.tdf          ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/aglobal181.inc      ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/stratix_pll.inc     ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/stratixii_pll.inc   ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/cycloneii_pll.inc   ;         ;
+; db/ballplayer_pll_altpll.v       ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/ballplayer_pll_altpll.v       ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; db/lpm_divide_0ml.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/lpm_divide_0ml.tdf            ;         ;
+; db/sign_div_unsign_vlh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/sign_div_unsign_vlh.tdf       ;         ;
+; db/alt_u_div_8ie.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/alt_u_div_8ie.tdf             ;         ;
+; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/add_sub_t3c.tdf               ;         ;
+; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/add_sub_u3c.tdf               ;         ;
+; db/lpm_divide_ttl.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/lpm_divide_ttl.tdf            ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -200,20 +213,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 326         ;
+; Estimated Total logic elements              ; 890         ;
 ;                                             ;             ;
-; Total combinational functions               ; 324         ;
+; Total combinational functions               ; 889         ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 175         ;
-;     -- 3 input functions                    ; 29          ;
-;     -- <=2 input functions                  ; 120         ;
+;     -- 4 input functions                    ; 344         ;
+;     -- 3 input functions                    ; 158         ;
+;     -- <=2 input functions                  ; 387         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 235         ;
-;     -- arithmetic mode                      ; 89          ;
+;     -- normal mode                          ; 673         ;
+;     -- arithmetic mode                      ; 216         ;
 ;                                             ;             ;
-; Total registers                             ; 136         ;
-;     -- Dedicated logic registers            ; 136         ;
+; Total registers                             ; 165         ;
+;     -- Dedicated logic registers            ; 165         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 29          ;
@@ -224,42 +237,50 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; rst_n~input ;
-; Maximum fan-out                             ; 137         ;
-; Total fan-out                               ; 1588        ;
-; Average fan-out                             ; 3.05        ;
+; Maximum fan-out                             ; 166         ;
+; Total fan-out                               ; 3292        ;
+; Average fan-out                             ; 2.96        ;
 +---------------------------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                        ;
-+----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                       ; Entity Name           ; Library Name ;
-+----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |ballplayer_top_test                               ; 324 (69)            ; 136 (26)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 29   ; 0            ; 0          ; |ballplayer_top_test                                                                                      ; ballplayer_top_test   ; work         ;
-;    |ballplayer_pll:pll_inst|                       ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|ballplayer_pll:pll_inst                                                              ; ballplayer_pll        ; work         ;
-;       |altpll:altpll_component|                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|ballplayer_pll:pll_inst|altpll:altpll_component                                      ; altpll                ; work         ;
-;          |ballplayer_pll_altpll:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|ballplayer_pll:pll_inst|altpll:altpll_component|ballplayer_pll_altpll:auto_generated ; ballplayer_pll_altpll ; work         ;
-;    |lcd_contrast_test:lcd_test_mode.lcd_test_inst| ; 255 (37)            ; 110 (22)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst                                        ; lcd_contrast_test     ; work         ;
-;       |lcd_init:lcd_init_inst|                     ; 180 (180)           ; 67 (67)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_init:lcd_init_inst                 ; lcd_init              ; work         ;
-;       |lcd_write:lcd_write_inst|                   ; 38 (38)             ; 21 (21)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_write:lcd_write_inst               ; lcd_write             ; work         ;
-+----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------+-----------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                     ;
++------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                  ; Entity Name           ; Library Name ;
++------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; |ballplayer_top_test                                 ; 889 (69)            ; 165 (26)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 29   ; 0            ; 0          ; |ballplayer_top_test                                                                                                                                                 ; ballplayer_top_test   ; work         ;
+;    |ballplayer_pll:pll_inst|                         ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|ballplayer_pll:pll_inst                                                                                                                         ; ballplayer_pll        ; work         ;
+;       |altpll:altpll_component|                      ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|ballplayer_pll:pll_inst|altpll:altpll_component                                                                                                 ; altpll                ; work         ;
+;          |ballplayer_pll_altpll:auto_generated|      ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|ballplayer_pll:pll_inst|altpll:altpll_component|ballplayer_pll_altpll:auto_generated                                                            ; ballplayer_pll_altpll ; work         ;
+;    |lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst| ; 820 (176)           ; 139 (51)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst                                                                                                 ; lcd_emoji_display     ; work         ;
+;       |lcd_init:lcd_init_inst|                       ; 176 (176)           ; 67 (67)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst                                                                          ; lcd_init              ; work         ;
+;       |lcd_write:lcd_write_inst|                     ; 45 (45)             ; 21 (21)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst                                                                        ; lcd_write             ; work         ;
+;       |lpm_divide:Div0|                              ; 212 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0                                                                                 ; lpm_divide            ; work         ;
+;          |lpm_divide_ttl:auto_generated|             ; 212 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0|lpm_divide_ttl:auto_generated                                                   ; lpm_divide_ttl        ; work         ;
+;             |sign_div_unsign_vlh:divider|            ; 212 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0|lpm_divide_ttl:auto_generated|sign_div_unsign_vlh:divider                       ; sign_div_unsign_vlh   ; work         ;
+;                |alt_u_div_8ie:divider|               ; 212 (212)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0|lpm_divide_ttl:auto_generated|sign_div_unsign_vlh:divider|alt_u_div_8ie:divider ; alt_u_div_8ie         ; work         ;
+;       |lpm_divide:Mod0|                              ; 211 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0                                                                                 ; lpm_divide            ; work         ;
+;          |lpm_divide_0ml:auto_generated|             ; 211 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0|lpm_divide_0ml:auto_generated                                                   ; lpm_divide_0ml        ; work         ;
+;             |sign_div_unsign_vlh:divider|            ; 211 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0|lpm_divide_0ml:auto_generated|sign_div_unsign_vlh:divider                       ; sign_div_unsign_vlh   ; work         ;
+;                |alt_u_div_8ie:divider|               ; 211 (211)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0|lpm_divide_0ml:auto_generated|sign_div_unsign_vlh:divider|alt_u_div_8ie:divider ; alt_u_div_8ie         ; work         ;
++------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------+
-; State Machine - |ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst|state ;
-+------------+-----------------------------------------------------------------------------+
-; Name       ; state.FILL                                                                  ;
-+------------+-----------------------------------------------------------------------------+
-; state.INIT ; 0                                                                           ;
-; state.FILL ; 1                                                                           ;
-+------------+-----------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; State Machine - |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|state ;
++---------------+----------------------------------------------------------------------------+
+; Name          ; state.DISPLAY                                                              ;
++---------------+----------------------------------------------------------------------------+
+; state.INIT    ; 0                                                                          ;
+; state.DISPLAY ; 1                                                                          ;
++---------------+----------------------------------------------------------------------------+
 
 
 Encoding Type:  One-Hot
 +----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_init:lcd_init_inst|state                                          ;
+; State Machine - |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|state                                        ;
 +-----------------------------+------------+-----------------------------+---------------------+----------------+--------------------+---------------------+
 ; Name                        ; state.DONE ; state.S4_WR_DIRECTION_CLEAR ; state.S3_DELAY120MS ; state.S2_WR_90 ; state.S1_DELAY50MS ; state.S0_DELAY100MS ;
 +-----------------------------+------------+-----------------------------+---------------------+----------------+--------------------+---------------------+
@@ -273,31 +294,27 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------+
-; State Machine - |ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_write:lcd_write_inst|state ;
-+--------------+------------+--------------+--------------+---------------------------------------------------------+
-; Name         ; state.DONE ; state.STATE2 ; state.STATE1 ; state.STATE0                                            ;
-+--------------+------------+--------------+--------------+---------------------------------------------------------+
-; state.STATE0 ; 0          ; 0            ; 0            ; 0                                                       ;
-; state.STATE1 ; 0          ; 0            ; 1            ; 1                                                       ;
-; state.STATE2 ; 0          ; 1            ; 0            ; 1                                                       ;
-; state.DONE   ; 1          ; 0            ; 0            ; 1                                                       ;
-+--------------+------------+--------------+--------------+---------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; State Machine - |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|state ;
++--------------+------------+--------------+--------------+-----------------------------------------------------------+
+; Name         ; state.DONE ; state.STATE2 ; state.STATE1 ; state.STATE0                                              ;
++--------------+------------+--------------+--------------+-----------------------------------------------------------+
+; state.STATE0 ; 0          ; 0            ; 0            ; 0                                                         ;
+; state.STATE1 ; 0          ; 0            ; 1            ; 1                                                         ;
+; state.STATE2 ; 0          ; 1            ; 0            ; 1                                                         ;
+; state.DONE   ; 1          ; 0            ; 0            ; 1                                                         ;
++--------------+------------+--------------+--------------+-----------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                          ;
-+------------------------------------------------------------------------------------+------------------------------------------------------------------------+
-; Register name                                                                      ; Reason for Removal                                                     ;
-+------------------------------------------------------------------------------------+------------------------------------------------------------------------+
-; lcd_contrast_test:lcd_test_mode.lcd_test_inst|test_data[8]                         ; Merged with lcd_contrast_test:lcd_test_mode.lcd_test_inst|test_en      ;
-; lcd_contrast_test:lcd_test_mode.lcd_test_inst|test_data[5,6]                       ; Merged with lcd_contrast_test:lcd_test_mode.lcd_test_inst|test_data[7] ;
-; lcd_contrast_test:lcd_test_mode.lcd_test_inst|test_data[3]                         ; Merged with lcd_contrast_test:lcd_test_mode.lcd_test_inst|test_data[4] ;
-; lcd_contrast_test:lcd_test_mode.lcd_test_inst|test_data[0,1]                       ; Merged with lcd_contrast_test:lcd_test_mode.lcd_test_inst|test_data[2] ;
-; lcd_contrast_test:lcd_test_mode.lcd_test_inst|state~7                              ; Lost fanout                                                            ;
-; lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_write:lcd_write_inst|cnt_sclk[3] ; Stuck at GND due to stuck port data_in                                 ;
-; Total Number of Removed Registers = 8                                              ;                                                                        ;
-+------------------------------------------------------------------------------------+------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                            ;
++--------------------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                                        ; Reason for Removal                     ;
++--------------------------------------------------------------------------------------+----------------------------------------+
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|state~7                              ; Lost fanout                            ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|cnt_sclk[3] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2                                                ;                                        ;
++--------------------------------------------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -305,29 +322,30 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 136   ;
-; Number of registers using Synchronous Clear  ; 72    ;
+; Total registers                              ; 165   ;
+; Number of registers using Synchronous Clear  ; 100   ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 136   ;
+; Number of registers using Asynchronous Clear ; 165   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 46    ;
+; Number of registers using Clock Enable       ; 79    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_init:lcd_init_inst|init_data[0]   ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_write:lcd_write_inst|cnt_delay[2] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_write:lcd_write_inst|cnt1[0]      ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_write:lcd_write_inst|cnt_sclk[3]  ;
-; 4:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; Yes        ; |ballplayer_top_test|key_counter[4]                                                                      ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_init:lcd_init_inst|cnt_s2_num[6]  ;
-; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_init:lcd_init_inst|cnt_s4_num[0]  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|init_data[0]   ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|cnt_delay[4] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|cnt1[2]      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|cnt_sclk[3]  ;
+; 4:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; Yes        ; |ballplayer_top_test|key_counter[18]                                                                       ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|cnt_s2_num[5]  ;
+; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|cnt_s4_num[11] ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|pixel_counter[1]                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------+
@@ -704,46 +722,93 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lcd_contrast_test:lcd_test_mode.lcd_test_inst ;
-+----------------+-------+-------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                              ;
-+----------------+-------+-------------------------------------------------------------------+
-; IDLE           ; 00    ; Unsigned Binary                                                   ;
-; INIT           ; 01    ; Unsigned Binary                                                   ;
-; FILL           ; 10    ; Unsigned Binary                                                   ;
-+----------------+-------+-------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst ;
++---------------------+-------------------------------+----------------------------------------+
+; Parameter Name      ; Value                         ; Type                                   ;
++---------------------+-------------------------------+----------------------------------------+
+; IDLE                ; 00                            ; Unsigned Binary                        ;
+; INIT                ; 01                            ; Unsigned Binary                        ;
+; DISPLAY             ; 10                            ; Unsigned Binary                        ;
+; PATTERN_SWITCH_TIME ; 01110111001101011001010000000 ; Unsigned Binary                        ;
++---------------------+-------------------------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; CPOL           ; 0     ; Unsigned Binary                                                                              ;
+; CPHA           ; 0     ; Unsigned Binary                                                                              ;
+; DELAY_TIME     ; 100   ; Unsigned Binary                                                                              ;
+; CNT_SCLK_MAX   ; 0100  ; Unsigned Binary                                                                              ;
+; STATE0         ; 0001  ; Unsigned Binary                                                                              ;
+; STATE1         ; 0010  ; Unsigned Binary                                                                              ;
+; STATE2         ; 0100  ; Unsigned Binary                                                                              ;
+; DONE           ; 1000  ; Unsigned Binary                                                                              ;
++----------------+-------+----------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_write:lcd_write_inst ;
-+----------------+-------+--------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                       ;
-+----------------+-------+--------------------------------------------------------------------------------------------+
-; CPOL           ; 0     ; Unsigned Binary                                                                            ;
-; CPHA           ; 0     ; Unsigned Binary                                                                            ;
-; DELAY_TIME     ; 100   ; Unsigned Binary                                                                            ;
-; CNT_SCLK_MAX   ; 0100  ; Unsigned Binary                                                                            ;
-; STATE0         ; 0001  ; Unsigned Binary                                                                            ;
-; STATE1         ; 0010  ; Unsigned Binary                                                                            ;
-; STATE2         ; 0100  ; Unsigned Binary                                                                            ;
-; DONE           ; 1000  ; Unsigned Binary                                                                            ;
-+----------------+-------+--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst ;
++----------------+-------------------------+--------------------------------------------------------------------------+
+; Parameter Name ; Value                   ; Type                                                                     ;
++----------------+-------------------------+--------------------------------------------------------------------------+
+; TIME100MS      ; 10011000100101101000000 ; Unsigned Binary                                                          ;
+; TIME150MS      ; 11100100111000011100000 ; Unsigned Binary                                                          ;
+; TIME120MS      ; 10110111000110110000000 ; Unsigned Binary                                                          ;
+; TIMES4MAX      ; 100101100000001101      ; Unsigned Binary                                                          ;
+; DATA_IDLE      ; 000000000               ; Unsigned Binary                                                          ;
++----------------+-------------------------+--------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_init:lcd_init_inst ;
-+----------------+-------------------------+------------------------------------------------------------------------+
-; Parameter Name ; Value                   ; Type                                                                   ;
-+----------------+-------------------------+------------------------------------------------------------------------+
-; TIME100MS      ; 10011000100101101000000 ; Unsigned Binary                                                        ;
-; TIME150MS      ; 11100100111000011100000 ; Unsigned Binary                                                        ;
-; TIME120MS      ; 10110111000110110000000 ; Unsigned Binary                                                        ;
-; TIMES4MAX      ; 100101100000001101      ; Unsigned Binary                                                        ;
-; DATA_IDLE      ; 000000000               ; Unsigned Binary                                                        ;
-+----------------+-------------------------+------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0 ;
++------------------------+----------------+------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                   ;
++------------------------+----------------+------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 17             ; Untyped                                                                ;
+; LPM_WIDTHD             ; 8              ; Untyped                                                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                ;
+; CBXI_PARAMETER         ; lpm_divide_0ml ; Untyped                                                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                         ;
++------------------------+----------------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0 ;
++------------------------+----------------+------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                   ;
++------------------------+----------------+------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 17             ; Untyped                                                                ;
+; LPM_WIDTHD             ; 8              ; Untyped                                                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                ;
+; CBXI_PARAMETER         ; lpm_divide_ttl ; Untyped                                                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                         ;
++------------------------+----------------+------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -780,25 +845,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 29                          ;
-; cycloneiii_ff         ; 136                         ;
-;     CLR               ; 60                          ;
-;     CLR SCLR          ; 30                          ;
-;     ENA CLR           ; 4                           ;
-;     ENA CLR SCLR      ; 42                          ;
+; cycloneiii_ff         ; 165                         ;
+;     CLR               ; 58                          ;
+;     CLR SCLR          ; 28                          ;
+;     ENA CLR           ; 7                           ;
+;     ENA CLR SCLR      ; 72                          ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 329                         ;
-;     arith             ; 89                          ;
-;         2 data inputs ; 89                          ;
-;     normal            ; 240                         ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 10                          ;
-;         2 data inputs ; 24                          ;
-;         3 data inputs ; 29                          ;
-;         4 data inputs ; 175                         ;
+; cycloneiii_lcell_comb ; 896                         ;
+;     arith             ; 216                         ;
+;         2 data inputs ; 126                         ;
+;         3 data inputs ; 90                          ;
+;     normal            ; 680                         ;
+;         0 data inputs ; 22                          ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 232                         ;
+;         3 data inputs ; 68                          ;
+;         4 data inputs ; 344                         ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 3.88                        ;
+; Max LUT depth         ; 36.90                       ;
+; Average LUT depth     ; 20.25                       ;
 +-----------------------+-----------------------------+
 
 
@@ -817,7 +883,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 29 00:02:05 2025
+    Info: Processing started: Thu May 29 14:53:04 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ballplayer -c ballplayer
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 1 design units, including 1 entities, in source file source/ballplayer_top.v
@@ -828,6 +894,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file source/
     Info (12023): Found entity 1: ballplayer_top_test File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_contrast_test.v
     Info (12023): Found entity 1: lcd_contrast_test File: D:/Quartus_Project/ballplayer/source/lcd_contrast_test.v Line: 8
+Warning (10229): Verilog HDL Expression warning at lcd_cartoon_display.v(39): truncated literal to match 26 bits File: D:/Quartus_Project/ballplayer/source/lcd_cartoon_display.v Line: 39
+Warning (10229): Verilog HDL Expression warning at lcd_cartoon_display.v(101): truncated literal to match 17 bits File: D:/Quartus_Project/ballplayer/source/lcd_cartoon_display.v Line: 101
+Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_cartoon_display.v
+    Info (12023): Found entity 1: lcd_cartoon_display File: D:/Quartus_Project/ballplayer/source/lcd_cartoon_display.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file source/ballplayer_pll.v
     Info (12023): Found entity 1: ballplayer_pll File: D:/Quartus_Project/ballplayer/source/ballplayer_pll.v Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file source/adc081s101_driver.v
@@ -860,14 +930,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file source/
     Info (12023): Found entity 1: frequency_divider File: D:/Quartus_Project/ballplayer/source/frequency_divider.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file source/debounce.v
     Info (12023): Found entity 1: debounce File: D:/Quartus_Project/ballplayer/source/debounce.v Line: 8
-Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_simple_test.v
-    Info (12023): Found entity 1: lcd_simple_test File: D:/Quartus_Project/ballplayer/source/lcd_simple_test.v Line: 8
+Warning (12019): Can't analyze file -- file source/lcd_simple_test.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_simple_fill.v
     Info (12023): Found entity 1: lcd_simple_fill File: D:/Quartus_Project/ballplayer/source/lcd_simple_fill.v Line: 8
-Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_debug_test.v
-    Info (12023): Found entity 1: lcd_debug_test File: D:/Quartus_Project/ballplayer/source/lcd_debug_test.v Line: 8
-Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_full_init_test.v
-    Info (12023): Found entity 1: lcd_full_init_test File: D:/Quartus_Project/ballplayer/source/lcd_full_init_test.v Line: 8
+Warning (12019): Can't analyze file -- file source/lcd_debug_test.v is missing
+Warning (12019): Can't analyze file -- file source/lcd_full_init_test.v is missing
+Warning (10229): Verilog HDL Expression warning at lcd_simple_patterns.v(39): truncated literal to match 27 bits File: D:/Quartus_Project/ballplayer/source/lcd_simple_patterns.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_simple_patterns.v
+    Info (12023): Found entity 1: lcd_simple_patterns File: D:/Quartus_Project/ballplayer/source/lcd_simple_patterns.v Line: 8
+Warning (10229): Verilog HDL Expression warning at lcd_cartoon_display_fixed.v(39): truncated literal to match 27 bits File: D:/Quartus_Project/ballplayer/source/lcd_cartoon_display_fixed.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_cartoon_display_fixed.v
+    Info (12023): Found entity 1: lcd_cartoon_display_fixed File: D:/Quartus_Project/ballplayer/source/lcd_cartoon_display_fixed.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_emoji_display.v
+    Info (12023): Found entity 1: lcd_emoji_display File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 8
 Warning (10222): Verilog HDL Parameter Declaration warning at lcd_init.v(42): Parameter Declaration in module "lcd_init" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Quartus_Project/ballplayer/source/lcd_init.v Line: 42
 Warning (10222): Verilog HDL Parameter Declaration warning at lcd_init.v(51): Parameter Declaration in module "lcd_init" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Quartus_Project/ballplayer/source/lcd_init.v Line: 51
 Warning (10037): Verilog HDL or VHDL warning at ballplayer_top_test.v(82): conditional expression evaluates to a constant File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 82
@@ -938,15 +1013,43 @@ Info (12133): Instantiated megafunction "ballplayer_pll:pll_inst|altpll:altpll_c
 Info (12021): Found 1 design units, including 1 entities, in source file db/ballplayer_pll_altpll.v
     Info (12023): Found entity 1: ballplayer_pll_altpll File: D:/Quartus_Project/ballplayer/db/ballplayer_pll_altpll.v Line: 29
 Info (12128): Elaborating entity "ballplayer_pll_altpll" for hierarchy "ballplayer_pll:pll_inst|altpll:altpll_component|ballplayer_pll_altpll:auto_generated" File: d:/quartus/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "lcd_contrast_test" for hierarchy "lcd_contrast_test:lcd_test_mode.lcd_test_inst" File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 94
-Info (12128): Elaborating entity "lcd_write" for hierarchy "lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_write:lcd_write_inst" File: D:/Quartus_Project/ballplayer/source/lcd_contrast_test.v Line: 52
-Info (12128): Elaborating entity "lcd_init" for hierarchy "lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_init:lcd_init_inst" File: D:/Quartus_Project/ballplayer/source/lcd_contrast_test.v Line: 63
+Info (12128): Elaborating entity "lcd_emoji_display" for hierarchy "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst" File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 93
+Warning (10230): Verilog HDL assignment warning at lcd_emoji_display.v(152): truncated value with size 32 to match size of target (8) File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 152
+Warning (10230): Verilog HDL assignment warning at lcd_emoji_display.v(153): truncated value with size 32 to match size of target (8) File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 153
+Info (12128): Elaborating entity "lcd_write" for hierarchy "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 64
+Info (12128): Elaborating entity "lcd_init" for hierarchy "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 75
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mod0" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 152
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Div0" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 153
+Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 152
+Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 152
+    Info (12134): Parameter "LPM_WIDTHN" = "17"
+    Info (12134): Parameter "LPM_WIDTHD" = "8"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_0ml.tdf
+    Info (12023): Found entity 1: lpm_divide_0ml File: D:/Quartus_Project/ballplayer/db/lpm_divide_0ml.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_vlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_vlh File: D:/Quartus_Project/ballplayer/db/sign_div_unsign_vlh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_8ie.tdf
+    Info (12023): Found entity 1: alt_u_div_8ie File: D:/Quartus_Project/ballplayer/db/alt_u_div_8ie.tdf Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
+    Info (12023): Found entity 1: add_sub_t3c File: D:/Quartus_Project/ballplayer/db/add_sub_t3c.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
+    Info (12023): Found entity 1: add_sub_u3c File: D:/Quartus_Project/ballplayer/db/add_sub_u3c.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 153
+Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 153
+    Info (12134): Parameter "LPM_WIDTHN" = "17"
+    Info (12134): Parameter "LPM_WIDTHD" = "8"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ttl.tdf
+    Info (12023): Found entity 1: lpm_divide_ttl File: D:/Quartus_Project/ballplayer/db/lpm_divide_ttl.tdf Line: 24
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "lcd_blk" is stuck at VCC File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 15
-    Warning (13410): Pin "led[2]" is stuck at GND File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 22
-    Warning (13410): Pin "led[5]" is stuck at GND File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 22
-    Warning (13410): Pin "led[6]" is stuck at GND File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 22
+    Warning (13410): Pin "led[1]" is stuck at GND File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 22
+    Warning (13410): Pin "led[7]" is stuck at VCC File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 22
     Warning (13410): Pin "beeper" is stuck at GND File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 30
     Warning (13410): Pin "seg_led_1[0]" is stuck at GND File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 31
     Warning (13410): Pin "seg_led_1[1]" is stuck at GND File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 31
@@ -965,16 +1068,16 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "key_down" File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 26
     Warning (15610): No output dependent on input pin "ball_release_button" File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 27
     Warning (15610): No output dependent on input pin "adc_dat" File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 35
-Info (21057): Implemented 357 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 921 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 22 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 327 logic cells
+    Info (21061): Implemented 891 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
-    Info: Peak virtual memory: 4777 megabytes
-    Info: Processing ended: Thu May 29 00:02:15 2025
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:17
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 4786 megabytes
+    Info: Processing ended: Thu May 29 14:53:12 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:15
 
 

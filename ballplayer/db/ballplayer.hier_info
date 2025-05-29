@@ -1,20 +1,20 @@
 |ballplayer_top_test
 clk => clk.IN1
 rst_n => rst_n.IN1
-lcd_rst <= lcd_contrast_test:lcd_test_mode.lcd_test_inst.lcd_rst
-lcd_blk <= lcd_contrast_test:lcd_test_mode.lcd_test_inst.lcd_blk
-lcd_dc <= lcd_contrast_test:lcd_test_mode.lcd_test_inst.lcd_dc
-lcd_sclk <= lcd_contrast_test:lcd_test_mode.lcd_test_inst.lcd_sclk
-lcd_mosi <= lcd_contrast_test:lcd_test_mode.lcd_test_inst.lcd_mosi
-lcd_cs <= lcd_contrast_test:lcd_test_mode.lcd_test_inst.lcd_cs
-led[0] <= lcd_contrast_test:lcd_test_mode.lcd_test_inst.led1
-led[1] <= lcd_contrast_test:lcd_test_mode.lcd_test_inst.led2
-led[2] <= <GND>
-led[3] <= key_up.DB_MAX_OUTPUT_PORT_TYPE
-led[4] <= LessThan2.DB_MAX_OUTPUT_PORT_TYPE
-led[5] <= <GND>
-led[6] <= <GND>
-led[7] <= rst_n.DB_MAX_OUTPUT_PORT_TYPE
+lcd_rst << lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst.lcd_rst
+lcd_blk << lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst.lcd_blk
+lcd_dc << lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst.lcd_dc
+lcd_sclk << lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst.lcd_sclk
+lcd_mosi << lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst.lcd_mosi
+lcd_cs << lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst.lcd_cs
+led[0] << rst_n.DB_MAX_OUTPUT_PORT_TYPE
+led[1] << <GND>
+led[2] << lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst.pattern_id_inv
+led[3] << lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst.pattern_id_inv
+led[4] << lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst.pattern_id_inv
+led[5] << key_up.DB_MAX_OUTPUT_PORT_TYPE
+led[6] << LessThan2.DB_MAX_OUTPUT_PORT_TYPE
+led[7] << <VCC>
 key_up => key_counter.OUTPUTSELECT
 key_up => key_counter.OUTPUTSELECT
 key_up => key_counter.OUTPUTSELECT
@@ -43,19 +43,19 @@ key_up => key_counter.OUTPUTSELECT
 key_up => always0.IN1
 key_up => always0.IN1
 key_up => key_pressed_prev.DATAIN
-key_up => led[3].DATAIN
+key_up => led[5].DATAIN
 key_down => ~NO_FANOUT~
 ball_release_button => ~NO_FANOUT~
-beeper <= <GND>
-seg_led_1[0] <= <GND>
-seg_led_1[1] <= <GND>
-seg_led_2[0] <= <GND>
-seg_led_2[1] <= <GND>
-adc_cs <= <VCC>
-adc_clk <= <GND>
+beeper << <GND>
+seg_led_1[0] << <GND>
+seg_led_1[1] << <GND>
+seg_led_2[0] << <GND>
+seg_led_2[1] << <GND>
+adc_cs << <VCC>
+adc_clk << <GND>
 adc_dat => ~NO_FANOUT~
 i2c_sda <> i2c_sda
-i2c_scl <= <VCC>
+i2c_scl << <VCC>
 
 
 |ballplayer_top_test|ballplayer_pll:pll_inst
@@ -136,7 +136,7 @@ inclk[1] => pll1.CLK1
 locked <= pll1.LOCKED
 
 
-|ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst
+|ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst
 clk_50MHz => clk_50MHz.IN2
 rst_n => rst_n.IN2
 lcd_rst <= lcd_init:lcd_init_inst.lcd_rst
@@ -145,11 +145,12 @@ lcd_dc <= lcd_write:lcd_write_inst.dc
 lcd_sclk <= lcd_write:lcd_write_inst.sclk
 lcd_mosi <= lcd_write:lcd_write_inst.mosi
 lcd_cs <= lcd_write:lcd_write_inst.cs
-led1 <= led1.DB_MAX_OUTPUT_PORT_TYPE
-led2 <= lcd_init:lcd_init_inst.init_done
+pattern_id_inv[0] <= current_pattern[0].DB_MAX_OUTPUT_PORT_TYPE
+pattern_id_inv[1] <= current_pattern[1].DB_MAX_OUTPUT_PORT_TYPE
+pattern_id_inv[2] <= current_pattern[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_write:lcd_write_inst
+|ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst
 sys_clk_50MHz => wr_done~reg0.CLK
 sys_clk_50MHz => mosi~reg0.CLK
 sys_clk_50MHz => sclk~reg0.CLK
@@ -206,7 +207,7 @@ sclk <= sclk~reg0.DB_MAX_OUTPUT_PORT_TYPE
 mosi <= mosi~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_init:lcd_init_inst
+|ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst
 sys_clk_50MHz => cnt_s4_num_done.CLK
 sys_clk_50MHz => cnt_s4_num[0].CLK
 sys_clk_50MHz => cnt_s4_num[1].CLK

@@ -1,10 +1,10 @@
 
-State Machine - |ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst|state
-Name state.FILL 
+State Machine - |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|state
+Name state.DISPLAY 
 state.INIT 0 
-state.FILL 1 
+state.DISPLAY 1 
 
-State Machine - |ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_init:lcd_init_inst|state
+State Machine - |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|state
 Name state.DONE state.S4_WR_DIRECTION_CLEAR state.S3_DELAY120MS state.S2_WR_90 state.S1_DELAY50MS state.S0_DELAY100MS 
 state.S0_DELAY100MS 0 0 0 0 0 0 
 state.S1_DELAY50MS 0 0 0 0 1 1 
@@ -13,7 +13,7 @@ state.S3_DELAY120MS 0 0 1 0 0 1
 state.S4_WR_DIRECTION_CLEAR 0 1 0 0 0 1 
 state.DONE 1 0 0 0 0 1 
 
-State Machine - |ballplayer_top_test|lcd_contrast_test:lcd_test_mode.lcd_test_inst|lcd_write:lcd_write_inst|state
+State Machine - |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|state
 Name state.DONE state.STATE2 state.STATE1 state.STATE0 
 state.STATE0 0 0 0 0 
 state.STATE1 0 0 1 1 

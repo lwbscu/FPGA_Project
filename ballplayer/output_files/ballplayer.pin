@@ -183,7 +183,7 @@ GND                          : M2        : gnd    :                   :         
 i2c_scl                      : M4        : output : 3.3-V LVTTL       :         : 3         : Y              
 RESERVED_INPUT               : M5        :        :                   :         : 3         :                
 GND                          : M6        : gnd    :                   :         :           :                
-beeper                       : M7        : output : 3.3-V LVTTL       :         : 3         : N              
+RESERVED_INPUT               : M7        :        :                   :         : 3         :                
 RESERVED_INPUT               : M8        :        :                   :         : 3         :                
 RESERVED_INPUT               : M9        :        :                   :         : 3         :                
 GND                          : M10       : gnd    :                   :         :           :                
@@ -212,7 +212,7 @@ RESERVED_INPUT               : P14       :        :                   :         
 lcd_rst                      : P15       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND                          : R1        : gnd    :                   :         :           :                
 RESERVED_INPUT               : R2        :        :                   :         : 2         :                
-RESERVED_INPUT               : R3        :        :                   :         : 3         :                
+beeper                       : R3        : output : 3.3-V LVTTL       :         : 3         : N              
 RESERVED_INPUT               : R5        :        :                   :         : 3         :                
 RESERVED_INPUT               : R7        :        :                   :         : 3         :                
 lcd_cs                       : R9        : output : 3.3-V LVTTL       :         : 3         : Y              
