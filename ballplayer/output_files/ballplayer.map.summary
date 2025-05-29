@@ -1,16 +1,16 @@
-Analysis & Synthesis Status : Successful - Thu May 29 14:53:12 2025
+Analysis & Synthesis Status : Successful - Thu May 29 15:53:01 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : ballplayer
 Top-level Entity Name : ballplayer_top_test
 Family : MAX 10
-Total logic elements : 890
-    Total combinational functions : 889
-    Dedicated logic registers : 165
-Total registers : 165
+Total logic elements : 4,528
+    Total combinational functions : 4,527
+    Dedicated logic registers : 167
+Total registers : 167
 Total pins : 29
 Total virtual pins : 0
 Total memory bits : 0
-Embedded Multiplier 9-bit elements : 0
+Embedded Multiplier 9-bit elements : 26
 Total PLLs : 1
 UFM blocks : 0
 ADC blocks : 0
