@@ -197,25 +197,23 @@ always@(posedge sys_clk_50MHz or negedge sys_rst_n)
         
     else if(state == S4_WR_DIRECTION_CLEAR)
         case(cnt_s4_num)
-            'd0 :  init_data <= 9'h029;
-            //设置LCD显示方向
+            'd0 :  init_data <= 9'h029;            //设置LCD显示方向 - 横屏模式
             'd1 :  init_data <= 9'h036;
-            'd2 :  init_data <= 9'h100;
-            
-            //LCD显示窗口设置
-            'd3 :  init_data <= 9'h02a;
+            'd2 :  init_data <= 9'h160;  // 0x60 = 横屏显示
+              //LCD显示窗口设置 - 横屏 320x240
+            'd3 :  init_data <= 9'h02a;  // Column Address Set
                              
-            'd4 :  init_data <= 9'h100;
-            'd5 :  init_data <= 9'h100;
-            'd6 :  init_data <= 9'h100;
-            'd7 :  init_data <= 9'h1ef;
+            'd4 :  init_data <= 9'h100;  // X起始高8位
+            'd5 :  init_data <= 9'h100;  // X起始低8位
+            'd6 :  init_data <= 9'h101;  // X结束高8位  
+            'd7 :  init_data <= 9'h13f;  // X结束低8位 (319)
                              
-            'd8 :  init_data <= 9'h02b;
+            'd8 :  init_data <= 9'h02b;  // Row Address Set
                              
-            'd9 :  init_data <= 9'h100;
-            'd10:  init_data <= 9'h100;
-            'd11:  init_data <= 9'h101;
-            'd12:  init_data <= 9'h13f;
+            'd9 :  init_data <= 9'h100;  // Y起始高8位
+            'd10:  init_data <= 9'h100;  // Y起始低8位
+            'd11:  init_data <= 9'h100;  // Y结束高8位
+            'd12:  init_data <= 9'h1ef;  // Y结束低8位 (239)
                              
             'd13:  init_data <= 9'h02c;
             

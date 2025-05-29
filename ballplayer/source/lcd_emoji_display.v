@@ -105,11 +105,10 @@ always @(posedge clk_50MHz or negedge rst_n) begin
                     pixel_counter <= 18'd0;
                 end
             end
-            
-            DISPLAY: begin
+              DISPLAY: begin
                 if (wr_done && display_en) begin
                     pixel_counter <= pixel_counter + 18'd1;
-                    if (pixel_counter >= 18'd153599) begin // 240*320*2 - 1
+                    if (pixel_counter >= 18'd153599) begin // 320*240*2 - 1 (横屏)
                         pixel_counter <= 18'd0;
                     end
                 end
@@ -148,52 +147,49 @@ function [8:0] get_funny_emoji;
     reg [7:0] x, y;
     reg is_emoji; // 是否为表情像素
     
-    begin
-        // 坐标计算
-        x = (counter[17:1] % 240) & 8'hFF;
-        y = (counter[17:1] / 240) & 8'hFF;
+    begin        // 坐标计算 - 横屏模式 320x240
+        x = (counter[17:1] % 320) & 9'h1FF;  // X范围 0-319
+        y = (counter[17:1] / 320) & 8'hFF;   // Y范围 0-239
         
         // 默认黑色背景
         color_16bit = 16'h0000;
         is_emoji = 1'b0;
         
-        case (pattern)
-            // 1. ^_^ - 经典笑脸
+        case (pattern)            // 1. ^_^ - 经典笑脸 (横屏居中调整)
             5'd0: begin
-                // 脸部区域
-                if ((x >= 80 && x <= 160) && (y >= 100 && y <= 180)) begin
+                // 脸部区域 - 横屏居中 (X:120-200, Y:80-160)
+                if ((x >= 120 && x <= 200) && (y >= 80 && y <= 160)) begin
                     // 左眼 ^
-                    if ((x >= 100 && x <= 120) && (y >= 130 && y <= 140)) begin
-                        if ((x-110 + y-135) <= 5 && (x-110 + y-135) >= -5) is_emoji = 1'b1;
-                        if ((x-110 - y+135) <= 5 && (x-110 - y+135) >= -5) is_emoji = 1'b1;
+                    if ((x >= 140 && x <= 160) && (y >= 110 && y <= 120)) begin
+                        if ((x-150 + y-115) <= 5 && (x-150 + y-115) >= -5) is_emoji = 1'b1;
+                        if ((x-150 - y+115) <= 5 && (x-150 - y+115) >= -5) is_emoji = 1'b1;
                     end
                     // 右眼 ^  
-                    if ((x >= 130 && x <= 150) && (y >= 130 && y <= 140)) begin
-                        if ((x-140 + y-135) <= 5 && (x-140 + y-135) >= -5) is_emoji = 1'b1;
-                        if ((x-140 - y+135) <= 5 && (x-140 - y+135) >= -5) is_emoji = 1'b1;
+                    if ((x >= 170 && x <= 190) && (y >= 110 && y <= 120)) begin
+                        if ((x-180 + y-115) <= 5 && (x-180 + y-115) >= -5) is_emoji = 1'b1;
+                        if ((x-180 - y+115) <= 5 && (x-180 - y+115) >= -5) is_emoji = 1'b1;
                     end
                     // 嘴巴弧线 _
-                    if ((x >= 110 && x <= 140) && (y >= 155 && y <= 165)) begin
-                        if (((x-125)*(x-125))/100 + ((y-160)*(y-160))/25 <= 4) is_emoji = 1'b1;
+                    if ((x >= 150 && x <= 180) && (y >= 135 && y <= 145)) begin
+                        if (((x-165)*(x-165))/100 + ((y-140)*(y-140))/25 <= 4) is_emoji = 1'b1;
                     end
                     if (is_emoji) color_16bit = 16'hFFE0; // 黄色线条
                     else color_16bit = 16'h0000; // 黑色背景
                 end
             end
-            
-            // 2. T_T - 哭泣
+              // 2. T_T - 哭泣 (横屏调整)
             5'd1: begin
-                if ((x >= 80 && x <= 160) && (y >= 100 && y <= 180)) begin
+                if ((x >= 120 && x <= 200) && (y >= 80 && y <= 160)) begin
                     // 左眼 T
-                    if ((x >= 105 && x <= 115) && (y >= 125 && y <= 135)) is_emoji = 1'b1; // 横线
-                    if ((x >= 108 && x <= 112) && (y >= 135 && y <= 150)) is_emoji = 1'b1; // 竖线
-                    if ((x >= 108 && x <= 112) && (y >= 155 && y <= 170)) is_emoji = 1'b1; // 眼泪
+                    if ((x >= 140 && x <= 150) && (y >= 105 && y <= 115)) is_emoji = 1'b1; // 横线
+                    if ((x >= 143 && x <= 147) && (y >= 115 && y <= 130)) is_emoji = 1'b1; // 竖线
+                    if ((x >= 143 && x <= 147) && (y >= 135 && y <= 150)) is_emoji = 1'b1; // 眼泪
                     // 右眼 T
-                    if ((x >= 135 && x <= 145) && (y >= 125 && y <= 135)) is_emoji = 1'b1; // 横线
-                    if ((x >= 138 && x <= 142) && (y >= 135 && y <= 150)) is_emoji = 1'b1; // 竖线
-                    if ((x >= 138 && x <= 142) && (y >= 155 && y <= 170)) is_emoji = 1'b1; // 眼泪
+                    if ((x >= 170 && x <= 180) && (y >= 105 && y <= 115)) is_emoji = 1'b1; // 横线
+                    if ((x >= 173 && x <= 177) && (y >= 115 && y <= 130)) is_emoji = 1'b1; // 竖线
+                    if ((x >= 173 && x <= 177) && (y >= 135 && y <= 150)) is_emoji = 1'b1; // 眼泪
                     // 嘴巴 _
-                    if ((x >= 115 && x <= 135) && (y >= 160 && y <= 165)) is_emoji = 1'b1;
+                    if ((x >= 150 && x <= 170) && (y >= 140 && y <= 145)) is_emoji = 1'b1;
                     if (is_emoji) color_16bit = 16'h07FF; // 青色
                 end
             end

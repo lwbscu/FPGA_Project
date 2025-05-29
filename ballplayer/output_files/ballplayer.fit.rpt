@@ -1,5 +1,5 @@
 Fitter report for ballplayer
-Thu May 29 15:53:14 2025
+Thu May 29 17:14:20 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -74,21 +74,21 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu May 29 15:53:14 2025       ;
+; Fitter Status                      ; Successful - Thu May 29 17:14:20 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ballplayer                                  ;
 ; Top-level Entity Name              ; ballplayer_top_test                         ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M08SAM153C8G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 4,534 / 8,064 ( 56 % )                      ;
-;     Total combinational functions  ; 4,528 / 8,064 ( 56 % )                      ;
+; Total logic elements               ; 5,158 / 8,064 ( 64 % )                      ;
+;     Total combinational functions  ; 5,153 / 8,064 ( 64 % )                      ;
 ;     Dedicated logic registers      ; 167 / 8,064 ( 2 % )                         ;
 ; Total registers                    ; 167                                         ;
 ; Total pins                         ; 29 / 112 ( 26 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 387,072 ( 0 % )                         ;
-; Embedded Multiplier 9-bit elements ; 26 / 48 ( 54 % )                            ;
+; Embedded Multiplier 9-bit elements ; 27 / 48 ( 56 % )                            ;
 ; Total PLLs                         ; 1 / 1 ( 100 % )                             ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
 ; ADC blocks                         ; 0 / 1 ( 0 % )                               ;
@@ -167,9 +167,9 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  13.6%      ;
+;     Processor 2            ;  13.5%      ;
 ;     Processor 3            ;  13.2%      ;
-;     Processor 4            ;  12.9%      ;
+;     Processor 4            ;  13.0%      ;
 +----------------------------+-------------+
 
 
@@ -178,9 +178,14 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------+---------+------------------+---------------------+-----------+----------------+------------------+------------------+-----------------------+
 ; Node                                                      ; Action  ; Operation        ; Reason              ; Node Port ; Node Port Name ; Destination Node ; Destination Port ; Destination Port Name ;
 +-----------------------------------------------------------+---------+------------------+---------------------+-----------+----------------+------------------+------------------+-----------------------+
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add31~50  ; Deleted ; Register Packing ; Timing optimization ; COMBOUT   ;                ;                  ;                  ;                       ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add270~46 ; Deleted ; Register Packing ; Timing optimization ; COMBOUT   ;                ;                  ;                  ;                       ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add31~46  ; Deleted ; Register Packing ; Timing optimization ; COMBOUT   ;                ;                  ;                  ;                       ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add31~52  ; Deleted ; Register Packing ; Timing optimization ; COMBOUT   ;                ;                  ;                  ;                       ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add111~42 ; Deleted ; Register Packing ; Timing optimization ; COMBOUT   ;                ;                  ;                  ;                       ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add111~52 ; Deleted ; Register Packing ; Timing optimization ; COMBOUT   ;                ;                  ;                  ;                       ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add270~4  ; Deleted ; Register Packing ; Timing optimization ; COMBOUT   ;                ;                  ;                  ;                       ;
 ; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add270~52 ; Deleted ; Register Packing ; Timing optimization ; COMBOUT   ;                ;                  ;                  ;                       ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add285~42 ; Deleted ; Register Packing ; Timing optimization ; COMBOUT   ;                ;                  ;                  ;                       ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add285~52 ; Deleted ; Register Packing ; Timing optimization ; COMBOUT   ;                ;                  ;                  ;                       ;
 ; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add295~46 ; Deleted ; Register Packing ; Timing optimization ; COMBOUT   ;                ;                  ;                  ;                       ;
 ; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add295~52 ; Deleted ; Register Packing ; Timing optimization ; COMBOUT   ;                ;                  ;                  ;                       ;
 +-----------------------------------------------------------+---------+------------------+---------------------+-----------+----------------+------------------+------------------+-----------------------+
@@ -228,8 +233,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 4832 ) ; 0.00 % ( 0 / 4832 )        ; 0.00 % ( 0 / 4832 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 4832 ) ; 0.00 % ( 0 / 4832 )        ; 0.00 % ( 0 / 4832 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 5464 ) ; 0.00 % ( 0 / 5464 )        ; 0.00 % ( 0 / 5464 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 5464 ) ; 0.00 % ( 0 / 5464 )        ; 0.00 % ( 0 / 5464 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -252,7 +257,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 4814 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 5446 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 18 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -268,26 +273,26 @@ The pin-out file can be found in D:/Quartus_Project/ballplayer/output_files/ball
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 4,534 / 8,064 ( 56 % ) ;
-;     -- Combinational with no register       ; 4367                   ;
-;     -- Register only                        ; 6                      ;
-;     -- Combinational with a register        ; 161                    ;
+; Total logic elements                        ; 5,158 / 8,064 ( 64 % ) ;
+;     -- Combinational with no register       ; 4991                   ;
+;     -- Register only                        ; 5                      ;
+;     -- Combinational with a register        ; 162                    ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 1331                   ;
-;     -- 3 input functions                    ; 1423                   ;
-;     -- <=2 input functions                  ; 1774                   ;
-;     -- Register only                        ; 6                      ;
+;     -- 4 input functions                    ; 1449                   ;
+;     -- 3 input functions                    ; 1605                   ;
+;     -- <=2 input functions                  ; 2099                   ;
+;     -- Register only                        ; 5                      ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 2800                   ;
-;     -- arithmetic mode                      ; 1728                   ;
+;     -- normal mode                          ; 3209                   ;
+;     -- arithmetic mode                      ; 1944                   ;
 ;                                             ;                        ;
 ; Total registers*                            ; 167 / 8,597 ( 2 % )    ;
 ;     -- Dedicated logic registers            ; 167 / 8,064 ( 2 % )    ;
 ;     -- I/O registers                        ; 0 / 533 ( 0 % )        ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 341 / 504 ( 68 % )     ;
+; Total LABs:  partially or completely used   ; 372 / 504 ( 74 % )     ;
 ; Virtual pins                                ; 0                      ;
 ; I/O pins                                    ; 29 / 112 ( 26 % )      ;
 ;     -- Clock pins                           ; 1 / 4 ( 25 % )         ;
@@ -298,7 +303,7 @@ The pin-out file can be found in D:/Quartus_Project/ballplayer/output_files/ball
 ; ADC blocks                                  ; 0 / 1 ( 0 % )          ;
 ; Total block memory bits                     ; 0 / 387,072 ( 0 % )    ;
 ; Total block memory implementation bits      ; 0 / 387,072 ( 0 % )    ;
-; Embedded Multiplier 9-bit elements          ; 26 / 48 ( 54 % )       ;
+; Embedded Multiplier 9-bit elements          ; 27 / 48 ( 56 % )       ;
 ; PLLs                                        ; 1 / 1 ( 100 % )        ;
 ; Global signals                              ; 2                      ;
 ;     -- Global clocks                        ; 2 / 10 ( 20 % )        ;
@@ -306,12 +311,12 @@ The pin-out file can be found in D:/Quartus_Project/ballplayer/output_files/ball
 ; CRC blocks                                  ; 0 / 1 ( 0 % )          ;
 ; Remote update blocks                        ; 0 / 1 ( 0 % )          ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )          ;
-; Average interconnect usage (total/H/V)      ; 11.6% / 10.6% / 12.9%  ;
-; Peak interconnect usage (total/H/V)         ; 21.7% / 20.9% / 22.7%  ;
+; Average interconnect usage (total/H/V)      ; 13.6% / 12.5% / 15.2%  ;
+; Peak interconnect usage (total/H/V)         ; 27.1% / 25.5% / 29.4%  ;
 ; Maximum fan-out                             ; 168                    ;
 ; Highest non-global fan-out                  ; 168                    ;
-; Total fan-out                               ; 13737                  ;
-; Average fan-out                             ; 2.84                   ;
+; Total fan-out                               ; 15330                  ;
+; Average fan-out                             ; 2.81                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -324,30 +329,30 @@ The pin-out file can be found in D:/Quartus_Project/ballplayer/output_files/ball
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 4534 / 8064 ( 56 % ) ; 0 / 8064 ( 0 % )               ;
-;     -- Combinational with no register       ; 4367                 ; 0                              ;
-;     -- Register only                        ; 6                    ; 0                              ;
-;     -- Combinational with a register        ; 161                  ; 0                              ;
+; Total logic elements                        ; 5158 / 8064 ( 64 % ) ; 0 / 8064 ( 0 % )               ;
+;     -- Combinational with no register       ; 4991                 ; 0                              ;
+;     -- Register only                        ; 5                    ; 0                              ;
+;     -- Combinational with a register        ; 162                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 1331                 ; 0                              ;
-;     -- 3 input functions                    ; 1423                 ; 0                              ;
-;     -- <=2 input functions                  ; 1774                 ; 0                              ;
-;     -- Register only                        ; 6                    ; 0                              ;
+;     -- 4 input functions                    ; 1449                 ; 0                              ;
+;     -- 3 input functions                    ; 1605                 ; 0                              ;
+;     -- <=2 input functions                  ; 2099                 ; 0                              ;
+;     -- Register only                        ; 5                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 2800                 ; 0                              ;
-;     -- arithmetic mode                      ; 1728                 ; 0                              ;
+;     -- normal mode                          ; 3209                 ; 0                              ;
+;     -- arithmetic mode                      ; 1944                 ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Total registers                             ; 167                  ; 0                              ;
 ;     -- Dedicated logic registers            ; 167 / 8064 ( 2 % )   ; 0 / 8064 ( 0 % )               ;
 ;     -- I/O registers                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 341 / 504 ( 68 % )   ; 0 / 504 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 372 / 504 ( 74 % )   ; 0 / 504 ( 0 % )                ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 29                   ; 0                              ;
-; Embedded Multiplier 9-bit elements          ; 26 / 48 ( 54 % )     ; 0 / 48 ( 0 % )                 ;
+; Embedded Multiplier 9-bit elements          ; 27 / 48 ( 56 % )     ; 0 / 48 ( 0 % )                 ;
 ; Total memory bits                           ; 0                    ; 0                              ;
 ; Total RAM block bits                        ; 0                    ; 0                              ;
 ; PLL                                         ; 0 / 1 ( 0 % )        ; 1 / 1 ( 100 % )                ;
@@ -362,8 +367,8 @@ The pin-out file can be found in D:/Quartus_Project/ballplayer/output_files/ball
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 14411                ; 152                            ;
-;     -- Registered Connections               ; 1197                 ; 0                              ;
+;     -- Total Connections                    ; 16030                ; 152                            ;
+;     -- Registered Connections               ; 1213                 ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 2                    ; 142                            ;
@@ -724,17 +729,17 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                           ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                                                                                                                                                   ; Entity Name           ; Library Name ;
 +------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |ballplayer_top_test                                 ; 4534 (70)   ; 167 (26)                  ; 0 (0)         ; 0           ; 0    ; 1          ; 26           ; 26      ; 0         ; 29   ; 0            ; 4367 (44)    ; 6 (0)             ; 161 (26)         ; 0          ; |ballplayer_top_test                                                                                                                                                  ; ballplayer_top_test   ; work         ;
+; |ballplayer_top_test                                 ; 5158 (70)   ; 167 (26)                  ; 0 (0)         ; 0           ; 0    ; 1          ; 27           ; 27      ; 0         ; 29   ; 0            ; 4991 (44)    ; 5 (0)             ; 162 (26)         ; 0          ; |ballplayer_top_test                                                                                                                                                  ; ballplayer_top_test   ; work         ;
 ;    |ballplayer_pll:pll_inst|                         ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|ballplayer_pll:pll_inst                                                                                                                          ; ballplayer_pll        ; work         ;
 ;       |altpll:altpll_component|                      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|ballplayer_pll:pll_inst|altpll:altpll_component                                                                                                  ; altpll                ; work         ;
 ;          |ballplayer_pll_altpll:auto_generated|      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|ballplayer_pll:pll_inst|altpll:altpll_component|ballplayer_pll_altpll:auto_generated                                                             ; ballplayer_pll_altpll ; work         ;
-;    |lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst| ; 4464 (1702) ; 141 (53)                  ; 0 (0)         ; 0           ; 0    ; 0          ; 26           ; 26      ; 0         ; 0    ; 0            ; 4323 (1649)  ; 6 (5)             ; 135 (41)         ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst                                                                                                  ; lcd_emoji_display     ; work         ;
-;       |lcd_init:lcd_init_inst|                       ; 176 (176)   ; 67 (67)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 109 (109)    ; 0 (0)             ; 67 (67)          ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst                                                                           ; lcd_init              ; work         ;
-;       |lcd_write:lcd_write_inst|                     ; 50 (50)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (29)      ; 1 (1)             ; 20 (20)          ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst                                                                         ; lcd_write             ; work         ;
-;       |lpm_divide:Div0|                              ; 200 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 200 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0                                                                                  ; lpm_divide            ; work         ;
-;          |lpm_divide_ttl:auto_generated|             ; 200 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 200 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0|lpm_divide_ttl:auto_generated                                                    ; lpm_divide_ttl        ; work         ;
-;             |sign_div_unsign_vlh:divider|            ; 200 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 200 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0|lpm_divide_ttl:auto_generated|sign_div_unsign_vlh:divider                        ; sign_div_unsign_vlh   ; work         ;
-;                |alt_u_div_8ie:divider|               ; 200 (200)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 200 (200)    ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0|lpm_divide_ttl:auto_generated|sign_div_unsign_vlh:divider|alt_u_div_8ie:divider  ; alt_u_div_8ie         ; work         ;
+;    |lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst| ; 5088 (1770) ; 141 (53)                  ; 0 (0)         ; 0           ; 0    ; 0          ; 27           ; 27      ; 0         ; 0    ; 0            ; 4947 (1717)  ; 5 (4)             ; 136 (42)         ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst                                                                                                  ; lcd_emoji_display     ; work         ;
+;       |lcd_init:lcd_init_inst|                       ; 178 (178)   ; 67 (67)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 111 (111)    ; 0 (0)             ; 67 (67)          ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst                                                                           ; lcd_init              ; work         ;
+;       |lcd_write:lcd_write_inst|                     ; 44 (44)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 23 (23)      ; 1 (1)             ; 20 (20)          ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst                                                                         ; lcd_write             ; work         ;
+;       |lpm_divide:Div0|                              ; 179 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 179 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0                                                                                  ; lpm_divide            ; work         ;
+;          |lpm_divide_utl:auto_generated|             ; 179 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 179 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0|lpm_divide_utl:auto_generated                                                    ; lpm_divide_utl        ; work         ;
+;             |sign_div_unsign_0mh:divider|            ; 179 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 179 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0|lpm_divide_utl:auto_generated|sign_div_unsign_0mh:divider                        ; sign_div_unsign_0mh   ; work         ;
+;                |alt_u_div_aie:divider|               ; 179 (179)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 179 (179)    ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0|lpm_divide_utl:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_aie:divider  ; alt_u_div_aie         ; work         ;
 ;       |lpm_divide:Div12|                             ; 272 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 272 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div12                                                                                 ; lpm_divide            ; work         ;
 ;          |lpm_divide_ntl:auto_generated|             ; 272 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 272 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div12|lpm_divide_ntl:auto_generated                                                   ; lpm_divide_ntl        ; work         ;
 ;             |sign_div_unsign_plh:divider|            ; 272 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 272 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div12|lpm_divide_ntl:auto_generated|sign_div_unsign_plh:divider                       ; sign_div_unsign_plh   ; work         ;
@@ -743,10 +748,10 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;          |lpm_divide_ntl:auto_generated|             ; 269 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 269 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div13|lpm_divide_ntl:auto_generated                                                   ; lpm_divide_ntl        ; work         ;
 ;             |sign_div_unsign_plh:divider|            ; 269 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 269 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div13|lpm_divide_ntl:auto_generated|sign_div_unsign_plh:divider                       ; sign_div_unsign_plh   ; work         ;
 ;                |alt_u_div_she:divider|               ; 269 (269)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 269 (269)    ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div13|lpm_divide_ntl:auto_generated|sign_div_unsign_plh:divider|alt_u_div_she:divider ; alt_u_div_she         ; work         ;
-;       |lpm_divide:Div14|                             ; 319 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 319 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14                                                                                 ; lpm_divide            ; work         ;
-;          |lpm_divide_ptl:auto_generated|             ; 319 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 319 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14|lpm_divide_ptl:auto_generated                                                   ; lpm_divide_ptl        ; work         ;
-;             |sign_div_unsign_rlh:divider|            ; 319 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 319 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh   ; work         ;
-;                |alt_u_div_0ie:divider|               ; 319 (319)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 319 (319)    ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_0ie:divider ; alt_u_div_0ie         ; work         ;
+;       |lpm_divide:Div14|                             ; 328 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 328 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14                                                                                 ; lpm_divide            ; work         ;
+;          |lpm_divide_ptl:auto_generated|             ; 328 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 328 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14|lpm_divide_ptl:auto_generated                                                   ; lpm_divide_ptl        ; work         ;
+;             |sign_div_unsign_rlh:divider|            ; 328 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 328 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh   ; work         ;
+;                |alt_u_div_0ie:divider|               ; 328 (328)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 328 (328)    ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_0ie:divider ; alt_u_div_0ie         ; work         ;
 ;       |lpm_divide:Div15|                             ; 269 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 269 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div15                                                                                 ; lpm_divide            ; work         ;
 ;          |lpm_divide_ntl:auto_generated|             ; 269 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 269 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div15|lpm_divide_ntl:auto_generated                                                   ; lpm_divide_ntl        ; work         ;
 ;             |sign_div_unsign_plh:divider|            ; 269 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 269 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div15|lpm_divide_ntl:auto_generated|sign_div_unsign_plh:divider                       ; sign_div_unsign_plh   ; work         ;
@@ -759,18 +764,26 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;          |lpm_divide_ntl:auto_generated|             ; 272 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 272 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div2|lpm_divide_ntl:auto_generated                                                    ; lpm_divide_ntl        ; work         ;
 ;             |sign_div_unsign_plh:divider|            ; 272 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 272 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div2|lpm_divide_ntl:auto_generated|sign_div_unsign_plh:divider                        ; sign_div_unsign_plh   ; work         ;
 ;                |alt_u_div_she:divider|               ; 272 (272)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 272 (272)    ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div2|lpm_divide_ntl:auto_generated|sign_div_unsign_plh:divider|alt_u_div_she:divider  ; alt_u_div_she         ; work         ;
+;       |lpm_divide:Div3|                              ; 301 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 301 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div3                                                                                  ; lpm_divide            ; work         ;
+;          |lpm_divide_ptl:auto_generated|             ; 301 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 301 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div3|lpm_divide_ptl:auto_generated                                                    ; lpm_divide_ptl        ; work         ;
+;             |sign_div_unsign_rlh:divider|            ; 301 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 301 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div3|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider                        ; sign_div_unsign_rlh   ; work         ;
+;                |alt_u_div_0ie:divider|               ; 301 (301)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 301 (301)    ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div3|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_0ie:divider  ; alt_u_div_0ie         ; work         ;
+;       |lpm_divide:Div4|                              ; 272 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 272 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div4                                                                                  ; lpm_divide            ; work         ;
+;          |lpm_divide_ntl:auto_generated|             ; 272 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 272 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div4|lpm_divide_ntl:auto_generated                                                    ; lpm_divide_ntl        ; work         ;
+;             |sign_div_unsign_plh:divider|            ; 272 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 272 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div4|lpm_divide_ntl:auto_generated|sign_div_unsign_plh:divider                        ; sign_div_unsign_plh   ; work         ;
+;                |alt_u_div_she:divider|               ; 272 (272)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 272 (272)    ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div4|lpm_divide_ntl:auto_generated|sign_div_unsign_plh:divider|alt_u_div_she:divider  ; alt_u_div_she         ; work         ;
 ;       |lpm_divide:Div9|                              ; 346 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 346 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div9                                                                                  ; lpm_divide            ; work         ;
 ;          |lpm_divide_ptl:auto_generated|             ; 346 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 346 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div9|lpm_divide_ptl:auto_generated                                                    ; lpm_divide_ptl        ; work         ;
 ;             |sign_div_unsign_rlh:divider|            ; 346 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 346 (0)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div9|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider                        ; sign_div_unsign_rlh   ; work         ;
 ;                |alt_u_div_0ie:divider|               ; 346 (346)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 346 (346)    ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div9|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_0ie:divider  ; alt_u_div_0ie         ; work         ;
 ;       |lpm_divide:Mod0|                              ; 235 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 228 (0)      ; 0 (0)             ; 7 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0                                                                                  ; lpm_divide            ; work         ;
-;          |lpm_divide_0ml:auto_generated|             ; 235 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 228 (0)      ; 0 (0)             ; 7 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0|lpm_divide_0ml:auto_generated                                                    ; lpm_divide_0ml        ; work         ;
-;             |sign_div_unsign_vlh:divider|            ; 235 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 228 (0)      ; 0 (0)             ; 7 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0|lpm_divide_0ml:auto_generated|sign_div_unsign_vlh:divider                        ; sign_div_unsign_vlh   ; work         ;
-;                |alt_u_div_8ie:divider|               ; 235 (235)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 228 (228)    ; 0 (0)             ; 7 (7)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0|lpm_divide_0ml:auto_generated|sign_div_unsign_vlh:divider|alt_u_div_8ie:divider  ; alt_u_div_8ie         ; work         ;
-;       |lpm_divide:Mod1|                              ; 60 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 60 (0)       ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1                                                                                  ; lpm_divide            ; work         ;
-;          |lpm_divide_bkl:auto_generated|             ; 60 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 60 (0)       ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1|lpm_divide_bkl:auto_generated                                                    ; lpm_divide_bkl        ; work         ;
-;             |sign_div_unsign_akh:divider|            ; 60 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 60 (0)       ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1|lpm_divide_bkl:auto_generated|sign_div_unsign_akh:divider                        ; sign_div_unsign_akh   ; work         ;
-;                |alt_u_div_uee:divider|               ; 60 (60)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 60 (60)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1|lpm_divide_bkl:auto_generated|sign_div_unsign_akh:divider|alt_u_div_uee:divider  ; alt_u_div_uee         ; work         ;
+;          |lpm_divide_1ml:auto_generated|             ; 235 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 228 (0)      ; 0 (0)             ; 7 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0|lpm_divide_1ml:auto_generated                                                    ; lpm_divide_1ml        ; work         ;
+;             |sign_div_unsign_0mh:divider|            ; 235 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 228 (0)      ; 0 (0)             ; 7 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0|lpm_divide_1ml:auto_generated|sign_div_unsign_0mh:divider                        ; sign_div_unsign_0mh   ; work         ;
+;                |alt_u_div_aie:divider|               ; 235 (235)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 228 (228)    ; 0 (0)             ; 7 (7)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0|lpm_divide_1ml:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_aie:divider  ; alt_u_div_aie         ; work         ;
+;       |lpm_divide:Mod1|                              ; 59 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 59 (0)       ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1                                                                                  ; lpm_divide            ; work         ;
+;          |lpm_divide_bkl:auto_generated|             ; 59 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 59 (0)       ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1|lpm_divide_bkl:auto_generated                                                    ; lpm_divide_bkl        ; work         ;
+;             |sign_div_unsign_akh:divider|            ; 59 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 59 (0)       ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1|lpm_divide_bkl:auto_generated|sign_div_unsign_akh:divider                        ; sign_div_unsign_akh   ; work         ;
+;                |alt_u_div_uee:divider|               ; 59 (59)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 59 (59)      ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1|lpm_divide_bkl:auto_generated|sign_div_unsign_akh:divider|alt_u_div_uee:divider  ; alt_u_div_uee         ; work         ;
 ;       |lpm_mult:Mult0|                               ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult0                                                                                   ; lpm_mult              ; work         ;
 ;          |mult_1es:auto_generated|                   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult0|mult_1es:auto_generated                                                           ; mult_1es              ; work         ;
 ;       |lpm_mult:Mult110|                             ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult110                                                                                 ; lpm_mult              ; work         ;
@@ -795,6 +808,10 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;          |mult_1es:auto_generated|                   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult149|mult_1es:auto_generated                                                         ; mult_1es              ; work         ;
 ;       |lpm_mult:Mult1|                               ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult1                                                                                   ; lpm_mult              ; work         ;
 ;          |mult_1es:auto_generated|                   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult1|mult_1es:auto_generated                                                           ; mult_1es              ; work         ;
+;       |lpm_mult:Mult22|                              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult22                                                                                  ; lpm_mult              ; work         ;
+;          |mult_1es:auto_generated|                   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult22|mult_1es:auto_generated                                                          ; mult_1es              ; work         ;
+;       |lpm_mult:Mult23|                              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult23                                                                                  ; lpm_mult              ; work         ;
+;          |mult_1es:auto_generated|                   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult23|mult_1es:auto_generated                                                          ; mult_1es              ; work         ;
 ;       |lpm_mult:Mult26|                              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult26                                                                                  ; lpm_mult              ; work         ;
 ;          |mult_1es:auto_generated|                   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult26|mult_1es:auto_generated                                                          ; mult_1es              ; work         ;
 ;       |lpm_mult:Mult36|                              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult36                                                                                  ; lpm_mult              ; work         ;
@@ -811,8 +828,6 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;          |mult_1es:auto_generated|                   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult49|mult_1es:auto_generated                                                          ; mult_1es              ; work         ;
 ;       |lpm_mult:Mult51|                              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult51                                                                                  ; lpm_mult              ; work         ;
 ;          |mult_1es:auto_generated|                   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult51|mult_1es:auto_generated                                                          ; mult_1es              ; work         ;
-;       |lpm_mult:Mult53|                              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult53                                                                                  ; lpm_mult              ; work         ;
-;          |mult_1es:auto_generated|                   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult53|mult_1es:auto_generated                                                          ; mult_1es              ; work         ;
 ;       |lpm_mult:Mult57|                              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult57                                                                                  ; lpm_mult              ; work         ;
 ;          |mult_1es:auto_generated|                   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult57|mult_1es:auto_generated                                                          ; mult_1es              ; work         ;
 ;       |lpm_mult:Mult65|                              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult65                                                                                  ; lpm_mult              ; work         ;
@@ -859,7 +874,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; i2c_scl             ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; i2c_sda             ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; rst_n               ; Input    ; (6) 873 ps    ; --            ; --                    ; --  ; --   ;
-; key_up              ; Input    ; --            ; (6) 873 ps    ; --                    ; --  ; --   ;
+; key_up              ; Input    ; (6) 873 ps    ; --            ; --                    ; --  ; --   ;
 ; clk                 ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 +---------------------+----------+---------------+---------------+-----------------------+-----+------+
 
@@ -1006,14 +1021,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|state.DONE                  ; 0                 ; 6       ;
 ;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|state.STATE0              ; 0                 ; 6       ;
 ;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|sclk_flag                 ; 0                 ; 6       ;
-;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|init_data[7]                ; 0                 ; 6       ;
-;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|current_pattern[4]                                 ; 0                 ; 6       ;
-;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|current_pattern[3]                                 ; 0                 ; 6       ;
-;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|state.STATE1              ; 0                 ; 6       ;
 ;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|cnt1[0]                   ; 0                 ; 6       ;
+;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|state.STATE1              ; 0                 ; 6       ;
 ;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|init_data[3]                ; 0                 ; 6       ;
 ;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|init_data[4]                ; 0                 ; 6       ;
 ;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|cnt1[1]                   ; 0                 ; 6       ;
+;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|current_pattern[4]                                 ; 0                 ; 6       ;
+;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|current_pattern[3]                                 ; 0                 ; 6       ;
 ;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|init_data[0]                ; 0                 ; 6       ;
 ;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|cnt1[3]                   ; 0                 ; 6       ;
 ;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|init_data[2]                ; 0                 ; 6       ;
@@ -1021,6 +1035,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|init_data[6]                ; 0                 ; 6       ;
 ;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|init_data[1]                ; 0                 ; 6       ;
 ;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|cnt1[2]                   ; 0                 ; 6       ;
+;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|init_data[7]                ; 0                 ; 6       ;
 ;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|state2_finish_flag        ; 0                 ; 6       ;
 ;      - key_counter[7]                                                                                     ; 0                 ; 6       ;
 ;      - key_counter[6]                                                                                     ; 0                 ; 6       ;
@@ -1043,12 +1058,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|cnt_sclk[2]               ; 0                 ; 6       ;
 ;      - led[0]~output                                                                                      ; 0                 ; 6       ;
 ; key_up                                                                                                    ;                   ;         ;
-;      - key_counter[1]~1                                                                                   ; 1                 ; 6       ;
-;      - key_counter[24]~2                                                                                  ; 1                 ; 6       ;
-;      - key_counter[24]~18                                                                                 ; 1                 ; 6       ;
-;      - key_counter[0]~29                                                                                  ; 1                 ; 6       ;
-;      - key_pressed_prev~0                                                                                 ; 1                 ; 6       ;
-;      - led[5]~output                                                                                      ; 1                 ; 6       ;
+;      - key_counter[1]~1                                                                                   ; 0                 ; 6       ;
+;      - key_counter[24]~2                                                                                  ; 0                 ; 6       ;
+;      - key_counter[24]~18                                                                                 ; 0                 ; 6       ;
+;      - key_counter[0]~29                                                                                  ; 0                 ; 6       ;
+;      - key_pressed_prev~0                                                                                 ; 0                 ; 6       ;
+;      - led[5]~output                                                                                      ; 0                 ; 6       ;
 ; clk                                                                                                       ;                   ;         ;
 +-----------------------------------------------------------------------------------------------------------+-------------------+---------+
 
@@ -1061,18 +1076,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ballplayer_pll:pll_inst|altpll:altpll_component|ballplayer_pll_altpll:auto_generated|wire_pll1_clk[1] ; PLL_1              ; 141     ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
 ; clk                                                                                                   ; PIN_J5             ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
 ; clk                                                                                                   ; PIN_J5             ; 26      ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|LessThan0~6                                           ; LCCOMB_X28_Y17_N30 ; 30      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|current_pattern[0]~0                                  ; LCCOMB_X13_Y12_N0  ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|always1~0                      ; LCCOMB_X27_Y11_N14 ; 23      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|cnt_s2_num~21                  ; LCCOMB_X2_Y5_N6    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|cnt_s4_num~28                  ; LCCOMB_X6_Y6_N20   ; 18      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|state.S2_WR_90                 ; FF_X27_Y11_N9      ; 21      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|state.S4_WR_DIRECTION_CLEAR    ; FF_X27_Y11_N27     ; 31      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|always1~0                    ; LCCOMB_X17_Y6_N28  ; 5       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|cnt1[2]~1                    ; LCCOMB_X7_Y2_N30   ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|pixel_counter[1]~23                                   ; LCCOMB_X30_Y8_N26  ; 18      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|pixel_counter~24                                      ; LCCOMB_X27_Y11_N0  ; 18      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|state.DISPLAY                                         ; FF_X27_Y11_N23     ; 44      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|LessThan0~6                                           ; LCCOMB_X1_Y8_N0    ; 30      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|current_pattern[0]~0                                  ; LCCOMB_X2_Y9_N2    ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|always1~0                      ; LCCOMB_X6_Y4_N8    ; 23      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|cnt_s2_num~21                  ; LCCOMB_X3_Y4_N2    ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|cnt_s4_num~28                  ; LCCOMB_X10_Y4_N24  ; 18      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|state.S2_WR_90                 ; FF_X6_Y4_N25       ; 17      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|state.S4_WR_DIRECTION_CLEAR    ; FF_X9_Y4_N25       ; 32      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|always1~0                    ; LCCOMB_X11_Y12_N0  ; 5       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|cnt1[3]~1                    ; LCCOMB_X6_Y8_N22   ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|pixel_counter[0]~56                                   ; LCCOMB_X16_Y14_N18 ; 18      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|pixel_counter~57                                      ; LCCOMB_X9_Y4_N26   ; 18      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|state.DISPLAY                                         ; FF_X9_Y4_N9        ; 45      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; rst_n                                                                                                 ; PIN_J14            ; 168     ; Async. clear ; no     ; --                   ; --               ; --                        ;
 +-------------------------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
@@ -1092,11 +1107,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+-------------+---------------------+-------------------+
 ; Statistic                             ; Number Used ; Available per Block ; Maximum Available ;
 +---------------------------------------+-------------+---------------------+-------------------+
-; Simple Multipliers (9-bit)            ; 26          ; 2                   ; 48                ;
+; Simple Multipliers (9-bit)            ; 27          ; 2                   ; 48                ;
 ; Simple Multipliers (18-bit)           ; 0           ; 1                   ; 24                ;
 ; Embedded Multiplier Blocks            ; 17          ; --                  ; 24                ;
-; Embedded Multiplier 9-bit elements    ; 26          ; 2                   ; 48                ;
-; Signed Embedded Multipliers           ; 26          ; --                  ; --                ;
+; Embedded Multiplier 9-bit elements    ; 27          ; 2                   ; 48                ;
+; Signed Embedded Multipliers           ; 27          ; --                  ; --                ;
 ; Unsigned Embedded Multipliers         ; 0           ; --                  ; --                ;
 ; Mixed Sign Embedded Multipliers       ; 0           ; --                  ; --                ;
 ; Variable Sign Embedded Multipliers    ; 0           ; --                  ; --                ;
@@ -1109,58 +1124,60 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------+---------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
 ; Name                                                                                                  ; Mode                      ; Location           ; Sign Representation ; Has Input Shift Register Chain ; Data A Input Register ; Data B Input Register ; Pipeline Register ; Output Register ;
 +-------------------------------------------------------------------------------------------------------+---------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult53|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y22_N3  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult53|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y22_N1 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult110|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y23_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult110|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y23_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult114|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y18_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult114|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y18_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult44|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y9_N3   ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult44|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y9_N1  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult1|mult_1es:auto_generated|mac_out2       ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y13_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult1|mult_1es:auto_generated|mac_mult1   ;                           ; DSPMULT_X21_Y13_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult57|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y3_N3   ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult57|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y3_N1  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult40|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y2_N3   ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult40|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y2_N1  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult36|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y1_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult36|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y1_N0  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult140|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y5_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult140|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y5_N0  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult144|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y4_N3   ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult144|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y4_N1  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult149|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y17_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult149|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y17_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult0|mult_1es:auto_generated|mac_out2       ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y17_N3  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult0|mult_1es:auto_generated|mac_mult1   ;                           ; DSPMULT_X21_Y17_N1 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult37|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y2_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult37|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y2_N0  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult45|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y11_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult45|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y11_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult51|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y9_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult51|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y9_N0  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult118|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y21_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult118|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y21_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult120|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y22_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult120|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y22_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult65|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y14_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult65|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y14_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult26|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y3_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult26|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y3_N0  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult125|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y6_N3   ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult125|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y6_N1  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult124|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y4_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult124|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y4_N0  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult128|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y6_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult128|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y6_N0  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult93|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y11_N3  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult93|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y11_N1 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult49|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y10_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult49|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y10_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult87|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y5_N3   ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult87|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y5_N1  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult91|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y20_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult91|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y20_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult37|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y23_N3  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult37|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y23_N1 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult140|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y19_N3  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult140|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y19_N1 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult144|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y17_N3  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult144|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y17_N1 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult23|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y10_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult23|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y10_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult22|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y12_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult22|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y12_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult36|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y23_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult36|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y23_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult40|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y18_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult40|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y18_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult45|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y7_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult45|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y7_N0  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult44|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y2_N3   ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult44|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y2_N1  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult1|mult_1es:auto_generated|mac_out2       ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y15_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult1|mult_1es:auto_generated|mac_mult1   ;                           ; DSPMULT_X21_Y15_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult118|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y6_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult118|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y6_N0  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult120|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y15_N3  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult120|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y15_N1 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult114|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y5_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult114|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y5_N0  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult110|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y4_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult110|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y4_N0  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult0|mult_1es:auto_generated|mac_out2       ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y8_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult0|mult_1es:auto_generated|mac_mult1   ;                           ; DSPMULT_X21_Y8_N0  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult65|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y2_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult65|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y2_N0  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult57|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y21_N3  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult57|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y21_N1 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult49|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y3_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult49|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y3_N0  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult26|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y21_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult26|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y21_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult125|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y16_N3  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult125|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y16_N1 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult124|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y17_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult124|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y17_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult128|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y16_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult128|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y16_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult87|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y19_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult87|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y19_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult91|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y10_N3  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult91|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y10_N1 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult93|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y7_N3   ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult93|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y7_N1  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult149|mult_1es:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y12_N3  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult149|mult_1es:auto_generated|mac_mult1 ;                           ; DSPMULT_X21_Y12_N1 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult51|mult_1es:auto_generated|mac_out2      ; Simple Multiplier (9-bit) ; DSPOUT_X21_Y1_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult51|mult_1es:auto_generated|mac_mult1  ;                           ; DSPMULT_X21_Y1_N0  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
 +-------------------------------------------------------------------------------------------------------+---------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
 
 
@@ -1169,49 +1186,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 5,599 / 27,275 ( 21 % ) ;
-; C16 interconnects     ; 28 / 1,240 ( 2 % )      ;
-; C4 interconnects      ; 2,745 / 20,832 ( 13 % ) ;
-; Direct links          ; 1,152 / 27,275 ( 4 % )  ;
+; Block interconnects   ; 6,300 / 27,275 ( 23 % ) ;
+; C16 interconnects     ; 45 / 1,240 ( 4 % )      ;
+; C4 interconnects      ; 3,176 / 20,832 ( 15 % ) ;
+; Direct links          ; 1,346 / 27,275 ( 5 % )  ;
 ; Global clocks         ; 2 / 10 ( 20 % )         ;
-; Local interconnects   ; 2,537 / 8,064 ( 31 % )  ;
-; R24 interconnects     ; 38 / 1,320 ( 3 % )      ;
-; R4 interconnects      ; 3,069 / 28,560 ( 11 % ) ;
+; Local interconnects   ; 2,844 / 8,064 ( 35 % )  ;
+; R24 interconnects     ; 51 / 1,320 ( 4 % )      ;
+; R4 interconnects      ; 3,605 / 28,560 ( 13 % ) ;
 +-----------------------+-------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                          ;
 +---------------------------------------------+-------------------------------+
-; Number of Logic Elements  (Average = 13.30) ; Number of LABs  (Total = 341) ;
+; Number of Logic Elements  (Average = 13.87) ; Number of LABs  (Total = 372) ;
 +---------------------------------------------+-------------------------------+
-; 1                                           ; 8                             ;
-; 2                                           ; 3                             ;
-; 3                                           ; 7                             ;
-; 4                                           ; 6                             ;
-; 5                                           ; 7                             ;
-; 6                                           ; 4                             ;
-; 7                                           ; 5                             ;
-; 8                                           ; 3                             ;
-; 9                                           ; 15                            ;
-; 10                                          ; 6                             ;
-; 11                                          ; 14                            ;
-; 12                                          ; 12                            ;
-; 13                                          ; 33                            ;
-; 14                                          ; 17                            ;
-; 15                                          ; 19                            ;
-; 16                                          ; 182                           ;
+; 1                                           ; 10                            ;
+; 2                                           ; 6                             ;
+; 3                                           ; 5                             ;
+; 4                                           ; 1                             ;
+; 5                                           ; 4                             ;
+; 6                                           ; 2                             ;
+; 7                                           ; 4                             ;
+; 8                                           ; 1                             ;
+; 9                                           ; 13                            ;
+; 10                                          ; 8                             ;
+; 11                                          ; 12                            ;
+; 12                                          ; 9                             ;
+; 13                                          ; 20                            ;
+; 14                                          ; 26                            ;
+; 15                                          ; 28                            ;
+; 16                                          ; 223                           ;
 +---------------------------------------------+-------------------------------+
 
 
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
-; LAB-wide Signals  (Average = 0.22) ; Number of LABs  (Total = 341) ;
+; LAB-wide Signals  (Average = 0.19) ; Number of LABs  (Total = 372) ;
 +------------------------------------+-------------------------------+
-; 1 Async. clear                     ; 27                            ;
-; 1 Clock                            ; 27                            ;
-; 1 Clock enable                     ; 9                             ;
+; 1 Async. clear                     ; 25                            ;
+; 1 Clock                            ; 25                            ;
+; 1 Clock enable                     ; 10                            ;
 ; 1 Sync. clear                      ; 12                            ;
 +------------------------------------+-------------------------------+
 
@@ -1219,37 +1236,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Signals Sourced  (Average = 13.19) ; Number of LABs  (Total = 341) ;
+; Number of Signals Sourced  (Average = 13.66) ; Number of LABs  (Total = 372) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 8                             ;
-; 2                                            ; 3                             ;
-; 3                                            ; 7                             ;
-; 4                                            ; 6                             ;
-; 5                                            ; 7                             ;
-; 6                                            ; 4                             ;
-; 7                                            ; 5                             ;
-; 8                                            ; 3                             ;
-; 9                                            ; 20                            ;
-; 10                                           ; 11                            ;
-; 11                                           ; 11                            ;
+; 1                                            ; 10                            ;
+; 2                                            ; 6                             ;
+; 3                                            ; 5                             ;
+; 4                                            ; 1                             ;
+; 5                                            ; 4                             ;
+; 6                                            ; 2                             ;
+; 7                                            ; 6                             ;
+; 8                                            ; 1                             ;
+; 9                                            ; 15                            ;
+; 10                                           ; 15                            ;
+; 11                                           ; 10                            ;
 ; 12                                           ; 8                             ;
-; 13                                           ; 34                            ;
-; 14                                           ; 30                            ;
-; 15                                           ; 124                           ;
-; 16                                           ; 40                            ;
-; 17                                           ; 4                             ;
+; 13                                           ; 23                            ;
+; 14                                           ; 40                            ;
+; 15                                           ; 148                           ;
+; 16                                           ; 58                            ;
+; 17                                           ; 1                             ;
 ; 18                                           ; 2                             ;
-; 19                                           ; 1                             ;
+; 19                                           ; 3                             ;
 ; 20                                           ; 1                             ;
-; 21                                           ; 1                             ;
-; 22                                           ; 0                             ;
-; 23                                           ; 2                             ;
-; 24                                           ; 0                             ;
-; 25                                           ; 3                             ;
-; 26                                           ; 1                             ;
-; 27                                           ; 3                             ;
-; 28                                           ; 0                             ;
+; 21                                           ; 2                             ;
+; 22                                           ; 1                             ;
+; 23                                           ; 0                             ;
+; 24                                           ; 2                             ;
+; 25                                           ; 2                             ;
+; 26                                           ; 2                             ;
+; 27                                           ; 1                             ;
+; 28                                           ; 1                             ;
 ; 29                                           ; 0                             ;
 ; 30                                           ; 1                             ;
 ; 31                                           ; 1                             ;
@@ -1259,71 +1276,69 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                         ;
 +-------------------------------------------------+-------------------------------+
-; Number of Signals Sourced Out  (Average = 7.14) ; Number of LABs  (Total = 341) ;
+; Number of Signals Sourced Out  (Average = 7.60) ; Number of LABs  (Total = 372) ;
 +-------------------------------------------------+-------------------------------+
 ; 0                                               ; 0                             ;
-; 1                                               ; 39                            ;
-; 2                                               ; 24                            ;
-; 3                                               ; 21                            ;
-; 4                                               ; 21                            ;
-; 5                                               ; 20                            ;
-; 6                                               ; 18                            ;
-; 7                                               ; 17                            ;
-; 8                                               ; 19                            ;
-; 9                                               ; 41                            ;
-; 10                                              ; 49                            ;
-; 11                                              ; 32                            ;
-; 12                                              ; 23                            ;
-; 13                                              ; 11                            ;
-; 14                                              ; 1                             ;
-; 15                                              ; 3                             ;
-; 16                                              ; 1                             ;
-; 17                                              ; 0                             ;
-; 18                                              ; 1                             ;
+; 1                                               ; 41                            ;
+; 2                                               ; 16                            ;
+; 3                                               ; 31                            ;
+; 4                                               ; 12                            ;
+; 5                                               ; 14                            ;
+; 6                                               ; 16                            ;
+; 7                                               ; 21                            ;
+; 8                                               ; 23                            ;
+; 9                                               ; 45                            ;
+; 10                                              ; 56                            ;
+; 11                                              ; 51                            ;
+; 12                                              ; 25                            ;
+; 13                                              ; 12                            ;
+; 14                                              ; 3                             ;
+; 15                                              ; 4                             ;
+; 16                                              ; 2                             ;
 +-------------------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 14.74) ; Number of LABs  (Total = 341) ;
+; Number of Distinct Inputs  (Average = 15.21) ; Number of LABs  (Total = 372) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
 ; 1                                            ; 0                             ;
 ; 2                                            ; 8                             ;
-; 3                                            ; 4                             ;
-; 4                                            ; 8                             ;
-; 5                                            ; 10                            ;
-; 6                                            ; 14                            ;
-; 7                                            ; 7                             ;
-; 8                                            ; 15                            ;
-; 9                                            ; 16                            ;
-; 10                                           ; 9                             ;
-; 11                                           ; 7                             ;
-; 12                                           ; 14                            ;
-; 13                                           ; 7                             ;
-; 14                                           ; 16                            ;
-; 15                                           ; 22                            ;
-; 16                                           ; 25                            ;
-; 17                                           ; 45                            ;
-; 18                                           ; 28                            ;
-; 19                                           ; 28                            ;
-; 20                                           ; 14                            ;
-; 21                                           ; 11                            ;
+; 3                                            ; 10                            ;
+; 4                                            ; 5                             ;
+; 5                                            ; 8                             ;
+; 6                                            ; 12                            ;
+; 7                                            ; 4                             ;
+; 8                                            ; 18                            ;
+; 9                                            ; 12                            ;
+; 10                                           ; 8                             ;
+; 11                                           ; 4                             ;
+; 12                                           ; 15                            ;
+; 13                                           ; 10                            ;
+; 14                                           ; 15                            ;
+; 15                                           ; 32                            ;
+; 16                                           ; 37                            ;
+; 17                                           ; 49                            ;
+; 18                                           ; 36                            ;
+; 19                                           ; 26                            ;
+; 20                                           ; 15                            ;
+; 21                                           ; 8                             ;
 ; 22                                           ; 10                            ;
-; 23                                           ; 1                             ;
+; 23                                           ; 5                             ;
 ; 24                                           ; 4                             ;
 ; 25                                           ; 1                             ;
-; 26                                           ; 3                             ;
-; 27                                           ; 4                             ;
+; 26                                           ; 4                             ;
+; 27                                           ; 3                             ;
 ; 28                                           ; 2                             ;
-; 29                                           ; 2                             ;
+; 29                                           ; 4                             ;
 ; 30                                           ; 1                             ;
 ; 31                                           ; 1                             ;
-; 32                                           ; 1                             ;
+; 32                                           ; 2                             ;
 ; 33                                           ; 0                             ;
-; 34                                           ; 0                             ;
-; 35                                           ; 1                             ;
+; 34                                           ; 2                             ;
+; 35                                           ; 0                             ;
 ; 36                                           ; 1                             ;
 +----------------------------------------------+-------------------------------+
 
@@ -1471,7 +1486,7 @@ This will disable optimization of problematic paths and expose them for further 
 +----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+-------------------+
 ; Source Register                                                                  ; Destination Register                                                                        ; Delay Added in ns ;
 +----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+-------------------+
-; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|cnt1[3] ; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|state2_finish_flag ; 0.123             ;
+; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|cnt1[3] ; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|state2_finish_flag ; 0.125             ;
 +----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+-------------------+
 Note: This table only shows the top 1 path(s) that have the largest delay added for hold.
 
@@ -1557,17 +1572,17 @@ Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
-Info (170195): Router estimated average interconnect usage is 10% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 18% of the available device resources in the region that extends from location X10_Y0 to location X20_Y12
+Info (170195): Router estimated average interconnect usage is 12% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 24% of the available device resources in the region that extends from location X10_Y0 to location X20_Y12
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 1.03 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
+Info (11888): Total time spent on timing analysis during the Fitter is 1.04 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:03
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 7 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing MAX 10 Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin key_down uses I/O standard 3.3-V LVTTL at K14 File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 26
@@ -1581,10 +1596,10 @@ Warning (169064): Following 1 pins have no output enable or a GND or VCC output 
     Info (169065): Pin i2c_sda has a permanently disabled output enable File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 36
 Info (144001): Generated suppressed messages file D:/Quartus_Project/ballplayer/output_files/ballplayer.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 5597 megabytes
-    Info: Processing ended: Thu May 29 15:53:14 2025
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Peak virtual memory: 5603 megabytes
+    Info: Processing ended: Thu May 29 17:14:21 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +----------------------------+

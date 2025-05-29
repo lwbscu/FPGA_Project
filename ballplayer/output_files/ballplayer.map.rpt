@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ballplayer
-Thu May 29 15:53:01 2025
+Thu May 29 17:14:06 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -33,39 +33,42 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  25. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div1
  26. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult65
  27. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult44
- 28. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult53
- 29. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult57
- 30. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult36
- 31. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult40
- 32. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult110
- 33. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult114
- 34. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult118
- 35. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult120
- 36. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult45
- 37. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div9
- 38. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult144
- 39. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div15
- 40. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult93
- 41. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14
- 42. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult140
- 43. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div13
- 44. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult37
- 45. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult149
- 46. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult51
- 47. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult125
- 48. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult124
- 49. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult128
- 50. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult49
- 51. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult26
- 52. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult91
- 53. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div12
- 54. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult87
- 55. altpll Parameter Settings by Entity Instance
- 56. lpm_mult Parameter Settings by Entity Instance
- 57. Port Connectivity Checks: "ballplayer_pll:pll_inst"
- 58. Post-Synthesis Netlist Statistics for Top Partition
- 59. Elapsed Time Per Partition
- 60. Analysis & Synthesis Messages
+ 28. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult57
+ 29. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult36
+ 30. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult40
+ 31. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult23
+ 32. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div4
+ 33. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult22
+ 34. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div3
+ 35. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult110
+ 36. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult114
+ 37. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult118
+ 38. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult120
+ 39. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult45
+ 40. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div9
+ 41. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult144
+ 42. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div15
+ 43. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult93
+ 44. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14
+ 45. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult140
+ 46. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div13
+ 47. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult37
+ 48. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult149
+ 49. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult51
+ 50. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult125
+ 51. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult124
+ 52. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult128
+ 53. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult49
+ 54. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult26
+ 55. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult91
+ 56. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div12
+ 57. Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult87
+ 58. altpll Parameter Settings by Entity Instance
+ 59. lpm_mult Parameter Settings by Entity Instance
+ 60. Port Connectivity Checks: "ballplayer_pll:pll_inst"
+ 61. Post-Synthesis Netlist Statistics for Top Partition
+ 62. Elapsed Time Per Partition
+ 63. Analysis & Synthesis Messages
 
 
 
@@ -91,19 +94,19 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 29 15:53:01 2025       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 29 17:14:06 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ballplayer                                  ;
 ; Top-level Entity Name              ; ballplayer_top_test                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 4,528                                       ;
-;     Total combinational functions  ; 4,527                                       ;
+; Total logic elements               ; 5,153                                       ;
+;     Total combinational functions  ; 5,152                                       ;
 ;     Dedicated logic registers      ; 167                                         ;
 ; Total registers                    ; 167                                         ;
 ; Total pins                         ; 29                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 26                                          ;
+; Embedded Multiplier 9-bit elements ; 27                                          ;
 ; Total PLLs                         ; 1                                           ;
 ; UFM blocks                         ; 0                                           ;
 ; ADC blocks                         ; 0                                           ;
@@ -210,9 +213,9 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processor 2            ;   0.3%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -235,12 +238,12 @@ refer to the applicable agreement for further details.
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/quartus/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
-; db/lpm_divide_0ml.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/lpm_divide_0ml.tdf            ;         ;
-; db/sign_div_unsign_vlh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/sign_div_unsign_vlh.tdf       ;         ;
-; db/alt_u_div_8ie.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/alt_u_div_8ie.tdf             ;         ;
+; db/lpm_divide_1ml.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/lpm_divide_1ml.tdf            ;         ;
+; db/sign_div_unsign_0mh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/sign_div_unsign_0mh.tdf       ;         ;
+; db/alt_u_div_aie.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/alt_u_div_aie.tdf             ;         ;
 ; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/add_sub_t3c.tdf               ;         ;
 ; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/add_sub_u3c.tdf               ;         ;
-; db/lpm_divide_ttl.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/lpm_divide_ttl.tdf            ;         ;
+; db/lpm_divide_utl.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/lpm_divide_utl.tdf            ;         ;
 ; db/lpm_divide_bkl.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/lpm_divide_bkl.tdf            ;         ;
 ; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/sign_div_unsign_akh.tdf       ;         ;
 ; db/alt_u_div_uee.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Quartus_Project/ballplayer/db/alt_u_div_uee.tdf             ;         ;
@@ -264,17 +267,17 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 4,528       ;
+; Estimated Total logic elements              ; 5,153       ;
 ;                                             ;             ;
-; Total combinational functions               ; 4527        ;
+; Total combinational functions               ; 5152        ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 1331        ;
-;     -- 3 input functions                    ; 1423        ;
-;     -- <=2 input functions                  ; 1773        ;
+;     -- 4 input functions                    ; 1449        ;
+;     -- 3 input functions                    ; 1605        ;
+;     -- <=2 input functions                  ; 2098        ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 2799        ;
-;     -- arithmetic mode                      ; 1728        ;
+;     -- normal mode                          ; 3208        ;
+;     -- arithmetic mode                      ; 1944        ;
 ;                                             ;             ;
 ; Total registers                             ; 167         ;
 ;     -- Dedicated logic registers            ; 167         ;
@@ -282,15 +285,15 @@ refer to the applicable agreement for further details.
 ;                                             ;             ;
 ; I/O pins                                    ; 29          ;
 ;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 26          ;
+; Embedded Multiplier 9-bit elements          ; 27          ;
 ;                                             ;             ;
 ; Total PLLs                                  ; 1           ;
 ;     -- PLLs                                 ; 1           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; rst_n~input ;
 ; Maximum fan-out                             ; 168         ;
-; Total fan-out                               ; 13727       ;
-; Average fan-out                             ; 2.85        ;
+; Total fan-out                               ; 15326       ;
+; Average fan-out                             ; 2.82        ;
 +---------------------------------------------+-------------+
 
 
@@ -299,17 +302,17 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                   ; Entity Name           ; Library Name ;
 +------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |ballplayer_top_test                                 ; 4527 (69)           ; 167 (26)                  ; 0           ; 0          ; 26           ; 26      ; 0         ; 29   ; 0            ; 0          ; |ballplayer_top_test                                                                                                                                                  ; ballplayer_top_test   ; work         ;
+; |ballplayer_top_test                                 ; 5152 (69)           ; 167 (26)                  ; 0           ; 0          ; 27           ; 27      ; 0         ; 29   ; 0            ; 0          ; |ballplayer_top_test                                                                                                                                                  ; ballplayer_top_test   ; work         ;
 ;    |ballplayer_pll:pll_inst|                         ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|ballplayer_pll:pll_inst                                                                                                                          ; ballplayer_pll        ; work         ;
 ;       |altpll:altpll_component|                      ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|ballplayer_pll:pll_inst|altpll:altpll_component                                                                                                  ; altpll                ; work         ;
 ;          |ballplayer_pll_altpll:auto_generated|      ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|ballplayer_pll:pll_inst|altpll:altpll_component|ballplayer_pll_altpll:auto_generated                                                             ; ballplayer_pll_altpll ; work         ;
-;    |lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst| ; 4458 (1690)         ; 141 (53)                  ; 0           ; 0          ; 26           ; 26      ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst                                                                                                  ; lcd_emoji_display     ; work         ;
-;       |lcd_init:lcd_init_inst|                       ; 176 (176)           ; 67 (67)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst                                                                           ; lcd_init              ; work         ;
-;       |lcd_write:lcd_write_inst|                     ; 49 (49)             ; 21 (21)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst                                                                         ; lcd_write             ; work         ;
-;       |lpm_divide:Div0|                              ; 200 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0                                                                                  ; lpm_divide            ; work         ;
-;          |lpm_divide_ttl:auto_generated|             ; 200 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0|lpm_divide_ttl:auto_generated                                                    ; lpm_divide_ttl        ; work         ;
-;             |sign_div_unsign_vlh:divider|            ; 200 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0|lpm_divide_ttl:auto_generated|sign_div_unsign_vlh:divider                        ; sign_div_unsign_vlh   ; work         ;
-;                |alt_u_div_8ie:divider|               ; 200 (200)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0|lpm_divide_ttl:auto_generated|sign_div_unsign_vlh:divider|alt_u_div_8ie:divider  ; alt_u_div_8ie         ; work         ;
+;    |lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst| ; 5083 (1759)         ; 141 (53)                  ; 0           ; 0          ; 27           ; 27      ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst                                                                                                  ; lcd_emoji_display     ; work         ;
+;       |lcd_init:lcd_init_inst|                       ; 178 (178)           ; 67 (67)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst                                                                           ; lcd_init              ; work         ;
+;       |lcd_write:lcd_write_inst|                     ; 43 (43)             ; 21 (21)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst                                                                         ; lcd_write             ; work         ;
+;       |lpm_divide:Div0|                              ; 179 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0                                                                                  ; lpm_divide            ; work         ;
+;          |lpm_divide_utl:auto_generated|             ; 179 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0|lpm_divide_utl:auto_generated                                                    ; lpm_divide_utl        ; work         ;
+;             |sign_div_unsign_0mh:divider|            ; 179 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0|lpm_divide_utl:auto_generated|sign_div_unsign_0mh:divider                        ; sign_div_unsign_0mh   ; work         ;
+;                |alt_u_div_aie:divider|               ; 179 (179)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0|lpm_divide_utl:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_aie:divider  ; alt_u_div_aie         ; work         ;
 ;       |lpm_divide:Div12|                             ; 272 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div12                                                                                 ; lpm_divide            ; work         ;
 ;          |lpm_divide_ntl:auto_generated|             ; 272 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div12|lpm_divide_ntl:auto_generated                                                   ; lpm_divide_ntl        ; work         ;
 ;             |sign_div_unsign_plh:divider|            ; 272 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div12|lpm_divide_ntl:auto_generated|sign_div_unsign_plh:divider                       ; sign_div_unsign_plh   ; work         ;
@@ -318,10 +321,10 @@ refer to the applicable agreement for further details.
 ;          |lpm_divide_ntl:auto_generated|             ; 269 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div13|lpm_divide_ntl:auto_generated                                                   ; lpm_divide_ntl        ; work         ;
 ;             |sign_div_unsign_plh:divider|            ; 269 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div13|lpm_divide_ntl:auto_generated|sign_div_unsign_plh:divider                       ; sign_div_unsign_plh   ; work         ;
 ;                |alt_u_div_she:divider|               ; 269 (269)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div13|lpm_divide_ntl:auto_generated|sign_div_unsign_plh:divider|alt_u_div_she:divider ; alt_u_div_she         ; work         ;
-;       |lpm_divide:Div14|                             ; 319 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14                                                                                 ; lpm_divide            ; work         ;
-;          |lpm_divide_ptl:auto_generated|             ; 319 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14|lpm_divide_ptl:auto_generated                                                   ; lpm_divide_ptl        ; work         ;
-;             |sign_div_unsign_rlh:divider|            ; 319 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh   ; work         ;
-;                |alt_u_div_0ie:divider|               ; 319 (319)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_0ie:divider ; alt_u_div_0ie         ; work         ;
+;       |lpm_divide:Div14|                             ; 328 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14                                                                                 ; lpm_divide            ; work         ;
+;          |lpm_divide_ptl:auto_generated|             ; 328 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14|lpm_divide_ptl:auto_generated                                                   ; lpm_divide_ptl        ; work         ;
+;             |sign_div_unsign_rlh:divider|            ; 328 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh   ; work         ;
+;                |alt_u_div_0ie:divider|               ; 328 (328)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_0ie:divider ; alt_u_div_0ie         ; work         ;
 ;       |lpm_divide:Div15|                             ; 269 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div15                                                                                 ; lpm_divide            ; work         ;
 ;          |lpm_divide_ntl:auto_generated|             ; 269 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div15|lpm_divide_ntl:auto_generated                                                   ; lpm_divide_ntl        ; work         ;
 ;             |sign_div_unsign_plh:divider|            ; 269 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div15|lpm_divide_ntl:auto_generated|sign_div_unsign_plh:divider                       ; sign_div_unsign_plh   ; work         ;
@@ -334,18 +337,26 @@ refer to the applicable agreement for further details.
 ;          |lpm_divide_ntl:auto_generated|             ; 272 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div2|lpm_divide_ntl:auto_generated                                                    ; lpm_divide_ntl        ; work         ;
 ;             |sign_div_unsign_plh:divider|            ; 272 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div2|lpm_divide_ntl:auto_generated|sign_div_unsign_plh:divider                        ; sign_div_unsign_plh   ; work         ;
 ;                |alt_u_div_she:divider|               ; 272 (272)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div2|lpm_divide_ntl:auto_generated|sign_div_unsign_plh:divider|alt_u_div_she:divider  ; alt_u_div_she         ; work         ;
+;       |lpm_divide:Div3|                              ; 301 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div3                                                                                  ; lpm_divide            ; work         ;
+;          |lpm_divide_ptl:auto_generated|             ; 301 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div3|lpm_divide_ptl:auto_generated                                                    ; lpm_divide_ptl        ; work         ;
+;             |sign_div_unsign_rlh:divider|            ; 301 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div3|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider                        ; sign_div_unsign_rlh   ; work         ;
+;                |alt_u_div_0ie:divider|               ; 301 (301)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div3|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_0ie:divider  ; alt_u_div_0ie         ; work         ;
+;       |lpm_divide:Div4|                              ; 272 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div4                                                                                  ; lpm_divide            ; work         ;
+;          |lpm_divide_ntl:auto_generated|             ; 272 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div4|lpm_divide_ntl:auto_generated                                                    ; lpm_divide_ntl        ; work         ;
+;             |sign_div_unsign_plh:divider|            ; 272 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div4|lpm_divide_ntl:auto_generated|sign_div_unsign_plh:divider                        ; sign_div_unsign_plh   ; work         ;
+;                |alt_u_div_she:divider|               ; 272 (272)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div4|lpm_divide_ntl:auto_generated|sign_div_unsign_plh:divider|alt_u_div_she:divider  ; alt_u_div_she         ; work         ;
 ;       |lpm_divide:Div9|                              ; 346 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div9                                                                                  ; lpm_divide            ; work         ;
 ;          |lpm_divide_ptl:auto_generated|             ; 346 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div9|lpm_divide_ptl:auto_generated                                                    ; lpm_divide_ptl        ; work         ;
 ;             |sign_div_unsign_rlh:divider|            ; 346 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div9|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider                        ; sign_div_unsign_rlh   ; work         ;
 ;                |alt_u_div_0ie:divider|               ; 346 (346)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div9|lpm_divide_ptl:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_0ie:divider  ; alt_u_div_0ie         ; work         ;
 ;       |lpm_divide:Mod0|                              ; 235 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0                                                                                  ; lpm_divide            ; work         ;
-;          |lpm_divide_0ml:auto_generated|             ; 235 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0|lpm_divide_0ml:auto_generated                                                    ; lpm_divide_0ml        ; work         ;
-;             |sign_div_unsign_vlh:divider|            ; 235 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0|lpm_divide_0ml:auto_generated|sign_div_unsign_vlh:divider                        ; sign_div_unsign_vlh   ; work         ;
-;                |alt_u_div_8ie:divider|               ; 235 (235)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0|lpm_divide_0ml:auto_generated|sign_div_unsign_vlh:divider|alt_u_div_8ie:divider  ; alt_u_div_8ie         ; work         ;
-;       |lpm_divide:Mod1|                              ; 60 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1                                                                                  ; lpm_divide            ; work         ;
-;          |lpm_divide_bkl:auto_generated|             ; 60 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1|lpm_divide_bkl:auto_generated                                                    ; lpm_divide_bkl        ; work         ;
-;             |sign_div_unsign_akh:divider|            ; 60 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1|lpm_divide_bkl:auto_generated|sign_div_unsign_akh:divider                        ; sign_div_unsign_akh   ; work         ;
-;                |alt_u_div_uee:divider|               ; 60 (60)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1|lpm_divide_bkl:auto_generated|sign_div_unsign_akh:divider|alt_u_div_uee:divider  ; alt_u_div_uee         ; work         ;
+;          |lpm_divide_1ml:auto_generated|             ; 235 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0|lpm_divide_1ml:auto_generated                                                    ; lpm_divide_1ml        ; work         ;
+;             |sign_div_unsign_0mh:divider|            ; 235 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0|lpm_divide_1ml:auto_generated|sign_div_unsign_0mh:divider                        ; sign_div_unsign_0mh   ; work         ;
+;                |alt_u_div_aie:divider|               ; 235 (235)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0|lpm_divide_1ml:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_aie:divider  ; alt_u_div_aie         ; work         ;
+;       |lpm_divide:Mod1|                              ; 59 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1                                                                                  ; lpm_divide            ; work         ;
+;          |lpm_divide_bkl:auto_generated|             ; 59 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1|lpm_divide_bkl:auto_generated                                                    ; lpm_divide_bkl        ; work         ;
+;             |sign_div_unsign_akh:divider|            ; 59 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1|lpm_divide_bkl:auto_generated|sign_div_unsign_akh:divider                        ; sign_div_unsign_akh   ; work         ;
+;                |alt_u_div_uee:divider|               ; 59 (59)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1|lpm_divide_bkl:auto_generated|sign_div_unsign_akh:divider|alt_u_div_uee:divider  ; alt_u_div_uee         ; work         ;
 ;       |lpm_mult:Mult0|                               ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult0                                                                                   ; lpm_mult              ; work         ;
 ;          |mult_1es:auto_generated|                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult0|mult_1es:auto_generated                                                           ; mult_1es              ; work         ;
 ;       |lpm_mult:Mult110|                             ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult110                                                                                 ; lpm_mult              ; work         ;
@@ -370,6 +381,10 @@ refer to the applicable agreement for further details.
 ;          |mult_1es:auto_generated|                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult149|mult_1es:auto_generated                                                         ; mult_1es              ; work         ;
 ;       |lpm_mult:Mult1|                               ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult1                                                                                   ; lpm_mult              ; work         ;
 ;          |mult_1es:auto_generated|                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult1|mult_1es:auto_generated                                                           ; mult_1es              ; work         ;
+;       |lpm_mult:Mult22|                              ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult22                                                                                  ; lpm_mult              ; work         ;
+;          |mult_1es:auto_generated|                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult22|mult_1es:auto_generated                                                          ; mult_1es              ; work         ;
+;       |lpm_mult:Mult23|                              ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult23                                                                                  ; lpm_mult              ; work         ;
+;          |mult_1es:auto_generated|                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult23|mult_1es:auto_generated                                                          ; mult_1es              ; work         ;
 ;       |lpm_mult:Mult26|                              ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult26                                                                                  ; lpm_mult              ; work         ;
 ;          |mult_1es:auto_generated|                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult26|mult_1es:auto_generated                                                          ; mult_1es              ; work         ;
 ;       |lpm_mult:Mult36|                              ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult36                                                                                  ; lpm_mult              ; work         ;
@@ -386,8 +401,6 @@ refer to the applicable agreement for further details.
 ;          |mult_1es:auto_generated|                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult49|mult_1es:auto_generated                                                          ; mult_1es              ; work         ;
 ;       |lpm_mult:Mult51|                              ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult51                                                                                  ; lpm_mult              ; work         ;
 ;          |mult_1es:auto_generated|                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult51|mult_1es:auto_generated                                                          ; mult_1es              ; work         ;
-;       |lpm_mult:Mult53|                              ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult53                                                                                  ; lpm_mult              ; work         ;
-;          |mult_1es:auto_generated|                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult53|mult_1es:auto_generated                                                          ; mult_1es              ; work         ;
 ;       |lpm_mult:Mult57|                              ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult57                                                                                  ; lpm_mult              ; work         ;
 ;          |mult_1es:auto_generated|                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult57|mult_1es:auto_generated                                                          ; mult_1es              ; work         ;
 ;       |lpm_mult:Mult65|                              ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult65                                                                                  ; lpm_mult              ; work         ;
@@ -407,11 +420,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+-------------+
 ; Statistic                             ; Number Used ;
 +---------------------------------------+-------------+
-; Simple Multipliers (9-bit)            ; 26          ;
+; Simple Multipliers (9-bit)            ; 27          ;
 ; Simple Multipliers (18-bit)           ; 0           ;
 ; Embedded Multiplier Blocks            ; --          ;
-; Embedded Multiplier 9-bit elements    ; 26          ;
-; Signed Embedded Multipliers           ; 26          ;
+; Embedded Multiplier 9-bit elements    ; 27          ;
+; Signed Embedded Multipliers           ; 27          ;
 ; Unsigned Embedded Multipliers         ; 0           ;
 ; Mixed Sign Embedded Multipliers       ; 0           ;
 ; Variable Sign Embedded Multipliers    ; 0           ;
@@ -490,14 +503,14 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|init_data[8]   ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|init_data[8]   ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|cnt_delay[4] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|cnt1[2]      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|cnt1[3]      ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst|cnt_sclk[3]  ;
 ; 4:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; Yes        ; |ballplayer_top_test|key_counter[24]                                                                       ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|cnt_s2_num[6]  ;
 ; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst|cnt_s4_num[12] ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|pixel_counter[1]                      ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |ballplayer_top_test|lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|pixel_counter[0]                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------+
 
 
@@ -925,13 +938,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name         ; Value          ; Type                                                                   ;
 +------------------------+----------------+------------------------------------------------------------------------+
 ; LPM_WIDTHN             ; 17             ; Untyped                                                                ;
-; LPM_WIDTHD             ; 8              ; Untyped                                                                ;
+; LPM_WIDTHD             ; 9              ; Untyped                                                                ;
 ; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                ;
 ; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                ;
 ; LPM_PIPELINE           ; 0              ; Untyped                                                                ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                ;
-; CBXI_PARAMETER         ; lpm_divide_0ml ; Untyped                                                                ;
+; CBXI_PARAMETER         ; lpm_divide_1ml ; Untyped                                                                ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                             ;
@@ -948,13 +961,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name         ; Value          ; Type                                                                   ;
 +------------------------+----------------+------------------------------------------------------------------------+
 ; LPM_WIDTHN             ; 17             ; Untyped                                                                ;
-; LPM_WIDTHD             ; 8              ; Untyped                                                                ;
+; LPM_WIDTHD             ; 9              ; Untyped                                                                ;
 ; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                ;
 ; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                ;
 ; LPM_PIPELINE           ; 0              ; Untyped                                                                ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                ;
-; CBXI_PARAMETER         ; lpm_divide_ttl ; Untyped                                                                ;
+; CBXI_PARAMETER         ; lpm_divide_utl ; Untyped                                                                ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                             ;
@@ -1175,41 +1188,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult53 ;
-+------------------------------------------------+----------+------------------------------------------------------+
-; Parameter Name                                 ; Value    ; Type                                                 ;
-+------------------------------------------------+----------+------------------------------------------------------+
-; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY                                           ;
-; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY                                         ;
-; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE                                         ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE                                       ;
-; LPM_WIDTHA                                     ; 9        ; Untyped                                              ;
-; LPM_WIDTHB                                     ; 9        ; Untyped                                              ;
-; LPM_WIDTHP                                     ; 18       ; Untyped                                              ;
-; LPM_WIDTHR                                     ; 18       ; Untyped                                              ;
-; LPM_WIDTHS                                     ; 1        ; Untyped                                              ;
-; LPM_REPRESENTATION                             ; SIGNED   ; Untyped                                              ;
-; LPM_PIPELINE                                   ; 0        ; Untyped                                              ;
-; LATENCY                                        ; 0        ; Untyped                                              ;
-; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                                              ;
-; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped                                              ;
-; USE_EAB                                        ; OFF      ; Untyped                                              ;
-; MAXIMIZE_SPEED                                 ; 5        ; Untyped                                              ;
-; DEVICE_FAMILY                                  ; MAX 10   ; Untyped                                              ;
-; CARRY_CHAIN                                    ; MANUAL   ; Untyped                                              ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K                                  ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                                              ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                                              ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                                              ;
-; CBXI_PARAMETER                                 ; mult_1es ; Untyped                                              ;
-; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                                              ;
-; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                                              ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                                              ;
-+------------------------------------------------+----------+------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult57 ;
 +------------------------------------------------+----------+------------------------------------------------------+
 ; Parameter Name                                 ; Value    ; Type                                                 ;
@@ -1311,6 +1289,122 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                                              ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                                              ;
 +------------------------------------------------+----------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult23 ;
++------------------------------------------------+----------+------------------------------------------------------+
+; Parameter Name                                 ; Value    ; Type                                                 ;
++------------------------------------------------+----------+------------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE                                       ;
+; LPM_WIDTHA                                     ; 9        ; Untyped                                              ;
+; LPM_WIDTHB                                     ; 9        ; Untyped                                              ;
+; LPM_WIDTHP                                     ; 18       ; Untyped                                              ;
+; LPM_WIDTHR                                     ; 18       ; Untyped                                              ;
+; LPM_WIDTHS                                     ; 1        ; Untyped                                              ;
+; LPM_REPRESENTATION                             ; SIGNED   ; Untyped                                              ;
+; LPM_PIPELINE                                   ; 0        ; Untyped                                              ;
+; LATENCY                                        ; 0        ; Untyped                                              ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                                              ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped                                              ;
+; USE_EAB                                        ; OFF      ; Untyped                                              ;
+; MAXIMIZE_SPEED                                 ; 5        ; Untyped                                              ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped                                              ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped                                              ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K                                  ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                                              ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                                              ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                                              ;
+; CBXI_PARAMETER                                 ; mult_1es ; Untyped                                              ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                                              ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                                              ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                                              ;
++------------------------------------------------+----------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div4 ;
++------------------------+----------------+------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                   ;
++------------------------+----------------+------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                                ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                ;
+; CBXI_PARAMETER         ; lpm_divide_ntl ; Untyped                                                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                         ;
++------------------------+----------------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult22 ;
++------------------------------------------------+----------+------------------------------------------------------+
+; Parameter Name                                 ; Value    ; Type                                                 ;
++------------------------------------------------+----------+------------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE                                       ;
+; LPM_WIDTHA                                     ; 9        ; Untyped                                              ;
+; LPM_WIDTHB                                     ; 9        ; Untyped                                              ;
+; LPM_WIDTHP                                     ; 18       ; Untyped                                              ;
+; LPM_WIDTHR                                     ; 18       ; Untyped                                              ;
+; LPM_WIDTHS                                     ; 1        ; Untyped                                              ;
+; LPM_REPRESENTATION                             ; SIGNED   ; Untyped                                              ;
+; LPM_PIPELINE                                   ; 0        ; Untyped                                              ;
+; LATENCY                                        ; 0        ; Untyped                                              ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                                              ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped                                              ;
+; USE_EAB                                        ; OFF      ; Untyped                                              ;
+; MAXIMIZE_SPEED                                 ; 5        ; Untyped                                              ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped                                              ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped                                              ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K                                  ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                                              ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                                              ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                                              ;
+; CBXI_PARAMETER                                 ; mult_1es ; Untyped                                              ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                                              ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                                              ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                                              ;
++------------------------------------------------+----------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div3 ;
++------------------------+----------------+------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                   ;
++------------------------+----------------+------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                                ;
+; LPM_WIDTHD             ; 7              ; Untyped                                                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                ;
+; CBXI_PARAMETER         ; lpm_divide_ptl ; Untyped                                                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                         ;
++------------------------+----------------+------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -2081,7 +2175,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+------------------------------------------------------------------+
 ; Name                                  ; Value                                                            ;
 +---------------------------------------+------------------------------------------------------------------+
-; Number of entity instances            ; 26                                                               ;
+; Number of entity instances            ; 27                                                               ;
 ; Entity Instance                       ; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult1   ;
 ;     -- LPM_WIDTHA                     ; 9                                                                ;
 ;     -- LPM_WIDTHB                     ; 9                                                                ;
@@ -2126,17 +2220,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                             ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                               ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                               ;
-; Entity Instance                       ; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult53  ;
-;     -- LPM_WIDTHA                     ; 9                                                                ;
-;     -- LPM_WIDTHB                     ; 9                                                                ;
-;     -- LPM_WIDTHP                     ; 18                                                               ;
-;     -- LPM_REPRESENTATION             ; SIGNED                                                           ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                                               ;
-;     -- INPUT_B_IS_CONSTANT            ; NO                                                               ;
-;     -- USE_EAB                        ; OFF                                                              ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                             ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                                               ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                                               ;
 ; Entity Instance                       ; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult57  ;
 ;     -- LPM_WIDTHA                     ; 9                                                                ;
 ;     -- LPM_WIDTHB                     ; 9                                                                ;
@@ -2160,6 +2243,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                               ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                               ;
 ; Entity Instance                       ; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult40  ;
+;     -- LPM_WIDTHA                     ; 9                                                                ;
+;     -- LPM_WIDTHB                     ; 9                                                                ;
+;     -- LPM_WIDTHP                     ; 18                                                               ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                                           ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                               ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                               ;
+;     -- USE_EAB                        ; OFF                                                              ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                             ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                               ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                               ;
+; Entity Instance                       ; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult23  ;
+;     -- LPM_WIDTHA                     ; 9                                                                ;
+;     -- LPM_WIDTHB                     ; 9                                                                ;
+;     -- LPM_WIDTHP                     ; 18                                                               ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                                           ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                               ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                               ;
+;     -- USE_EAB                        ; OFF                                                              ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                             ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                               ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                               ;
+; Entity Instance                       ; lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult22  ;
 ;     -- LPM_WIDTHA                     ; 9                                                                ;
 ;     -- LPM_WIDTHB                     ; 9                                                                ;
 ;     -- LPM_WIDTHP                     ; 18                                                               ;
@@ -2393,23 +2498,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR           ; 9                           ;
 ;     ENA CLR SCLR      ; 72                          ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 4539                        ;
-;     arith             ; 1728                        ;
-;         1 data inputs ; 17                          ;
-;         2 data inputs ; 458                         ;
-;         3 data inputs ; 1253                        ;
-;     normal            ; 2811                        ;
-;         0 data inputs ; 187                         ;
-;         1 data inputs ; 25                          ;
-;         2 data inputs ; 1098                        ;
-;         3 data inputs ; 170                         ;
-;         4 data inputs ; 1331                        ;
-; cycloneiii_mac_mult   ; 26                          ;
-; cycloneiii_mac_out    ; 26                          ;
+; cycloneiii_lcell_comb ; 5169                        ;
+;     arith             ; 1944                        ;
+;         1 data inputs ; 22                          ;
+;         2 data inputs ; 503                         ;
+;         3 data inputs ; 1419                        ;
+;     normal            ; 3225                        ;
+;         0 data inputs ; 226                         ;
+;         1 data inputs ; 31                          ;
+;         2 data inputs ; 1333                        ;
+;         3 data inputs ; 186                         ;
+;         4 data inputs ; 1449                        ;
+; cycloneiii_mac_mult   ; 27                          ;
+; cycloneiii_mac_out    ; 27                          ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 59.60                       ;
-; Average LUT depth     ; 36.71                       ;
+; Max LUT depth         ; 59.80                       ;
+; Average LUT depth     ; 37.91                       ;
 +-----------------------+-----------------------------+
 
 
@@ -2418,7 +2523,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:21     ;
 +----------------+--------------+
 
 
@@ -2428,7 +2533,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 29 15:52:45 2025
+    Info: Processing started: Thu May 29 17:13:35 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ballplayer -c ballplayer
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 1 design units, including 1 entities, in source file source/ballplayer_top.v
@@ -2559,73 +2664,76 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/ball
     Info (12023): Found entity 1: ballplayer_pll_altpll File: D:/Quartus_Project/ballplayer/db/ballplayer_pll_altpll.v Line: 29
 Info (12128): Elaborating entity "ballplayer_pll_altpll" for hierarchy "ballplayer_pll:pll_inst|altpll:altpll_component|ballplayer_pll_altpll:auto_generated" File: d:/quartus/quartus/libraries/megafunctions/altpll.tdf Line: 897
 Info (12128): Elaborating entity "lcd_emoji_display" for hierarchy "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst" File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 93
-Warning (10230): Verilog HDL assignment warning at lcd_emoji_display.v(153): truncated value with size 32 to match size of target (8) File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 153
-Warning (10230): Verilog HDL assignment warning at lcd_emoji_display.v(154): truncated value with size 32 to match size of target (8) File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 154
+Warning (10230): Verilog HDL assignment warning at lcd_emoji_display.v(151): truncated value with size 32 to match size of target (8) File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 151
+Warning (10230): Verilog HDL assignment warning at lcd_emoji_display.v(152): truncated value with size 32 to match size of target (8) File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 152
 Info (12128): Elaborating entity "lcd_write" for hierarchy "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_write:lcd_write_inst" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 64
 Info (12128): Elaborating entity "lcd_init" for hierarchy "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lcd_init:lcd_init_inst" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 75
-Info (278001): Inferred 36 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mod0" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 153
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Div0" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 154
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mod1" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 243
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult1" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 177
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Div2" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 177
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult0" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 177
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Div1" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 177
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult65" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 487
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult44" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 421
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult53" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 477
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult57" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 480
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult36" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 416
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult40" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 418
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult110" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 655
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult114" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 657
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult118" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 709
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult120" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 710
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult45" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 421
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Div9" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 564
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult144" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 757
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Div15" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 606
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult93" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 603
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Div14" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 603
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult140" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 755
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Div13" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 603
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult37" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 416
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult149" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 760
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult51" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 467
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult125" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 732
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult124" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 732
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult128" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 735
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult49" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 442
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult26" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 382
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult91" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 592
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Div12" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 592
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult87" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 575
-Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 153
-Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 153
+Info (278001): Inferred 39 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mod0" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 151
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Div0" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 152
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mod1" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 239
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult1" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 174
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Div2" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 174
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult0" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 174
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Div1" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 174
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult65" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 483
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult44" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 417
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult57" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 476
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult36" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 412
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult40" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 414
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult23" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 302
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Div4" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 302
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult22" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 302
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Div3" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 302
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult110" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 651
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult114" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 653
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult118" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 705
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult120" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 706
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult45" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 417
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Div9" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 560
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult144" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 753
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Div15" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 602
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult93" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 599
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Div14" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 599
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult140" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 751
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Div13" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 599
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult37" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 412
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult149" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 756
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult51" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 463
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult125" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 728
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult124" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 728
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult128" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 731
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult49" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 438
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult26" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 378
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult91" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 588
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Div12" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 588
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Mult87" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 571
+Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 151
+Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod0" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 151
     Info (12134): Parameter "LPM_WIDTHN" = "17"
-    Info (12134): Parameter "LPM_WIDTHD" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "9"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_0ml.tdf
-    Info (12023): Found entity 1: lpm_divide_0ml File: D:/Quartus_Project/ballplayer/db/lpm_divide_0ml.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_vlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_vlh File: D:/Quartus_Project/ballplayer/db/sign_div_unsign_vlh.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_8ie.tdf
-    Info (12023): Found entity 1: alt_u_div_8ie File: D:/Quartus_Project/ballplayer/db/alt_u_div_8ie.tdf Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_1ml.tdf
+    Info (12023): Found entity 1: lpm_divide_1ml File: D:/Quartus_Project/ballplayer/db/lpm_divide_1ml.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_0mh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_0mh File: D:/Quartus_Project/ballplayer/db/sign_div_unsign_0mh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_aie.tdf
+    Info (12023): Found entity 1: alt_u_div_aie File: D:/Quartus_Project/ballplayer/db/alt_u_div_aie.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
     Info (12023): Found entity 1: add_sub_t3c File: D:/Quartus_Project/ballplayer/db/add_sub_t3c.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
     Info (12023): Found entity 1: add_sub_u3c File: D:/Quartus_Project/ballplayer/db/add_sub_u3c.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 154
-Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 154
+Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 152
+Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div0" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 152
     Info (12134): Parameter "LPM_WIDTHN" = "17"
-    Info (12134): Parameter "LPM_WIDTHD" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "9"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ttl.tdf
-    Info (12023): Found entity 1: lpm_divide_ttl File: D:/Quartus_Project/ballplayer/db/lpm_divide_ttl.tdf Line: 24
-Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 243
-Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 243
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_utl.tdf
+    Info (12023): Found entity 1: lpm_divide_utl File: D:/Quartus_Project/ballplayer/db/lpm_divide_utl.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 239
+Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Mod1" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 239
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "3"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -2636,8 +2744,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_akh File: D:/Quartus_Project/ballplayer/db/sign_div_unsign_akh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_uee.tdf
     Info (12023): Found entity 1: alt_u_div_uee File: D:/Quartus_Project/ballplayer/db/alt_u_div_uee.tdf Line: 26
-Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult1" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 177
-Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult1" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 177
+Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult1" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 174
+Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult1" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 174
     Info (12134): Parameter "LPM_WIDTHA" = "9"
     Info (12134): Parameter "LPM_WIDTHB" = "9"
     Info (12134): Parameter "LPM_WIDTHP" = "18"
@@ -2649,8 +2757,8 @@ Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_em
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_1es.tdf
     Info (12023): Found entity 1: mult_1es File: D:/Quartus_Project/ballplayer/db/mult_1es.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div2" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 177
-Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div2" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 177
+Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div2" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 174
+Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div2" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 174
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -2661,8 +2769,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_plh File: D:/Quartus_Project/ballplayer/db/sign_div_unsign_plh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_she.tdf
     Info (12023): Found entity 1: alt_u_div_she File: D:/Quartus_Project/ballplayer/db/alt_u_div_she.tdf Line: 26
-Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult0" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 177
-Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult0" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 177
+Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult0" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 174
+Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_mult:Mult0" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 174
     Info (12134): Parameter "LPM_WIDTHA" = "9"
     Info (12134): Parameter "LPM_WIDTHB" = "9"
     Info (12134): Parameter "LPM_WIDTHP" = "18"
@@ -2672,8 +2780,8 @@ Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_em
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div1" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 177
-Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div1" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 177
+Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div1" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 174
+Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div1" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 174
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -2684,14 +2792,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_rlh File: D:/Quartus_Project/ballplayer/db/sign_div_unsign_rlh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_0ie.tdf
     Info (12023): Found entity 1: alt_u_div_0ie File: D:/Quartus_Project/ballplayer/db/alt_u_div_0ie.tdf Line: 26
-Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div15" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 606
-Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div15" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 606
+Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div15" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 602
+Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div15" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 602
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 603
-Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 603
+Info (12130): Elaborated megafunction instantiation "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 599
+Info (12133): Instantiated megafunction "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|lpm_divide:Div14" with the following parameter: File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 599
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -2712,11 +2820,16 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add270~46" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 564
-    Info (17048): Logic cell "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add270~52" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 564
-    Info (17048): Logic cell "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add31~50" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 177
-    Info (17048): Logic cell "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add295~46" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 606
-    Info (17048): Logic cell "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add295~52" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 606
+    Info (17048): Logic cell "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add111~42" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 302
+    Info (17048): Logic cell "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add111~52" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 302
+    Info (17048): Logic cell "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add31~46" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 174
+    Info (17048): Logic cell "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add31~52" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 174
+    Info (17048): Logic cell "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add285~42" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 588
+    Info (17048): Logic cell "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add285~52" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 588
+    Info (17048): Logic cell "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add295~46" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 602
+    Info (17048): Logic cell "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add295~52" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 602
+    Info (17048): Logic cell "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add270~4" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 560
+    Info (17048): Logic cell "lcd_emoji_display:lcd_emoji_mode.lcd_emoji_inst|Add270~52" File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 560
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (15897): PLL "ballplayer_pll:pll_inst|altpll:altpll_component|ballplayer_pll_altpll:auto_generated|pll1" has parameter compensate_clock set to clock0 but port CLK[0] is not connected File: D:/Quartus_Project/ballplayer/db/ballplayer_pll_altpll.v Line: 45
@@ -2725,17 +2838,17 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "key_down" File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 26
     Warning (15610): No output dependent on input pin "ball_release_button" File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 27
     Warning (15610): No output dependent on input pin "adc_dat" File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 35
-Info (21057): Implemented 4590 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5221 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 22 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 4534 logic cells
+    Info (21061): Implemented 5164 logic cells
     Info (21065): Implemented 1 PLLs
-    Info (21062): Implemented 26 DSP elements
+    Info (21062): Implemented 27 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
-    Info: Peak virtual memory: 4822 megabytes
-    Info: Processing ended: Thu May 29 15:53:01 2025
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Peak virtual memory: 4902 megabytes
+    Info: Processing ended: Thu May 29 17:14:06 2025
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:36
 
 
