@@ -12,7 +12,7 @@
 module ballplayer_pll (
     input   inclk0,     // 12MHz输入时钟
     output  c0,         // 24MHz输出时钟
-    output  c1,         // 50MHz输出时钟  
+    output  c1,         // 25MHz输出时钟（修改为25MHz以改善时序）  
     output  locked      // PLL锁定信号
 );
 
@@ -73,10 +73,9 @@ defparam
     altpll_component.clk0_divide_by = 1,
     altpll_component.clk0_duty_cycle = 50,
     altpll_component.clk0_multiply_by = 2,      // 12MHz * 2 = 24MHz
-    altpll_component.clk0_phase_shift = "0",
-    altpll_component.clk1_divide_by = 6,
+    altpll_component.clk0_phase_shift = "0",    altpll_component.clk1_divide_by = 12,
     altpll_component.clk1_duty_cycle = 50,
-    altpll_component.clk1_multiply_by = 25,     // 12MHz * 25 / 6 = 50MHz
+    altpll_component.clk1_multiply_by = 25,     // 12MHz * 25 / 12 = 25MHz
     altpll_component.clk1_phase_shift = "0",
     altpll_component.compensate_clock = "CLK0",
     altpll_component.inclk0_input_frequency = 83333,    // 12MHz = 83.333ns

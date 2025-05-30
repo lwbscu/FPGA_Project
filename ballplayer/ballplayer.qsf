@@ -7,7 +7,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M08SAM153C8G
-set_global_assignment -name TOP_LEVEL_ENTITY ballplayer_top_test
+set_global_assignment -name TOP_LEVEL_ENTITY ballplayer_multi_image_test
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:00:00  DECEMBER 01, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -28,6 +28,9 @@ set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+
+# 时序约束文件
+set_global_assignment -name SDC_FILE ballplayer_multi_image.sdc
 
 # == == == == == == == == == == == == == == == == == == == == == == == == == ==
 # 引脚分配 - 根据MAX10开发板引脚定义
@@ -170,6 +173,14 @@ set_global_assignment -name VERILOG_FILE source/lcd_cartoon_display_fixed.v
 set_global_assignment -name VERILOG_FILE source/lcd_emoji_display.v
 set_global_assignment -name VERILOG_FILE source/lcd_custom_image_display.v
 set_global_assignment -name VERILOG_FILE source/Clever_rom.v
+set_global_assignment -name VERILOG_FILE source/multi_image_rom_240x160.v
+set_global_assignment -name VERILOG_FILE source/lcd_multi_image_display_240x160.v
+set_global_assignment -name VERILOG_FILE source/ballplayer_multi_image_test.v
+set_global_assignment -name VERILOG_FILE rom_data/image_0_240x160_rom.v
+set_global_assignment -name VERILOG_FILE rom_data/image_1_240x160_rom.v
+set_global_assignment -name VERILOG_FILE rom_data/image_2_240x160_rom.v
+set_global_assignment -name VERILOG_FILE rom_data/image_3_240x160_rom.v
+set_global_assignment -name VERILOG_FILE rom_data/image_4_240x160_rom.v
 
 
 set_global_assignment -name DEVICE_FILTER_PACKAGE MBGA

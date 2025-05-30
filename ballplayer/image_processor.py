@@ -22,8 +22,8 @@ from PIL import Image, ImageFilter, ImageEnhance
 import numpy as np
 
 # 配置参数
-TARGET_WIDTH = 240   # 目标宽度 (您要求的尺寸)
-TARGET_HEIGHT = 180  # 目标高度 (您要求的尺寸，从160改为180)
+TARGET_WIDTH = 240   # 目标宽度 
+TARGET_HEIGHT = 160  # 目标高度 
 COLOR_FORMAT = "BW"  # 颜色格式: "RGB332" 或 "BW" (黑白)
 
 # 输入输出路径
@@ -167,28 +167,30 @@ def process_single_image(input_path, output_path, image_name):
         print(f"✗ 处理失败 {image_name}: {str(e)}")
         return False
 
-def get_first_image(input_path):
+def get_first_five_images(input_path):
     """
-    获取文件夹中的第一张图片
+    获取文件夹中的前五张图片
     """
     if not os.path.exists(input_path):
         print(f"错误: 输入路径不存在: {input_path}")
-        return None
+        return []
     
     # 支持的图片格式
     image_extensions = ['*.jpg', '*.jpeg', '*.png', '*.bmp', '*.gif', '*.tiff']
     
+    all_files = []
     for ext in image_extensions:
         files = glob.glob(os.path.join(input_path, ext))
         files.extend(glob.glob(os.path.join(input_path, ext.upper())))
-        
-        if files:
-            # 按文件名排序，返回第一个
-            files.sort()
-            return files[0]
+        all_files.extend(files)
     
-    print(f"错误: 在 {input_path} 中未找到支持的图片文件")
-    return None
+    if not all_files:
+        print(f"错误: 在 {input_path} 中未找到支持的图片文件")
+        return []
+    
+    # 按文件名排序，返回前五个
+    all_files.sort()
+    return all_files[:5]
 
 def create_test_image():
     """
@@ -400,34 +402,41 @@ def main():
     if not os.path.exists(OUTPUT_PATH):
         os.makedirs(OUTPUT_PATH)
         print(f"创建输出目录: {OUTPUT_PATH}")
-    
-    # 获取第一张图片
-    first_image_path = get_first_image(INPUT_PATH)
-    if not first_image_path:
+      # 获取前五张图片
+    image_paths = get_first_five_images(INPUT_PATH)
+    if not image_paths:
         print("未找到图片，创建测试图片")
         create_test_image()
         return
     
-    image_name = os.path.basename(first_image_path)
-    print(f"找到第一张图片: {image_name}")
+    print(f"找到 {len(image_paths)} 张图片:")
+    for i, path in enumerate(image_paths):
+        print(f"  {i+1}. {os.path.basename(path)}")
+      # 处理每张图片
+    success_count = 0
+    for i, image_path in enumerate(image_paths):
+        image_name = os.path.basename(image_path)
+        # 使用索引重命名图片
+        renamed_image = f"image_{i}_{os.path.splitext(image_name)[1]}"
+        print(f"\n处理第 {i+1} 张图片: {image_name} -> image_{i}")
+        
+        success = process_single_image(image_path, OUTPUT_PATH, f"image_{i}.png")
+        if success:
+            success_count += 1
     
-    # 处理图片
-    success = process_single_image(first_image_path, OUTPUT_PATH, image_name)
-    
-    if success:
+    if success_count > 0:
         print("\n" + "=" * 60)
-        print("✓ 处理完成！")
+        print(f"✓ 处理完成！成功处理 {success_count} 张图片")
         print(f"输出位置: {OUTPUT_PATH}")
-        print("文件列表:")
+        print("生成的文件:")
         
         # 列出生成的文件
-        base_name = os.path.splitext(image_name)[0]
-        format_suffix = "bw" if COLOR_FORMAT == "BW" else "rgb332"
-        hex_file = f"{base_name}_{TARGET_WIDTH}x{TARGET_HEIGHT}_{format_suffix}.hex"
-        v_file = f"{base_name}_{TARGET_WIDTH}x{TARGET_HEIGHT}_rom.v"
-        
-        print(f"  - {hex_file}")
-        print(f"  - {v_file}")
+        for i in range(success_count):
+            format_suffix = "bw" if COLOR_FORMAT == "BW" else "rgb332"
+            hex_file = f"image_{i}_{TARGET_WIDTH}x{TARGET_HEIGHT}_{format_suffix}.hex"
+            v_file = f"image_{i}_{TARGET_WIDTH}x{TARGET_HEIGHT}_rom.v"
+            print(f"  - {hex_file}")
+            print(f"  - {v_file}")
         print("\n可以在Quartus中使用这些文件进行测试。")
     else:
         print("\n" + "=" * 60)
