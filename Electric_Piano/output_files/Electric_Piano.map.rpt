@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Electric_Piano
-Tue May 27 13:28:28 2025
+Wed May 28 10:51:04 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -54,15 +54,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 27 13:28:28 2025       ;
+; Analysis & Synthesis Status        ; Successful - Wed May 28 10:51:04 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Electric_Piano                              ;
 ; Top-level Entity Name              ; Advanced_Electric_Piano                     ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 1,084                                       ;
-;     Total combinational functions  ; 1,045                                       ;
-;     Dedicated logic registers      ; 183                                         ;
-; Total registers                    ; 183                                         ;
+; Total logic elements               ; 1,087                                       ;
+;     Total combinational functions  ; 1,048                                       ;
+;     Dedicated logic registers      ; 189                                         ;
+; Total registers                    ; 189                                         ;
 ; Total pins                         ; 24                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -203,20 +203,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------------------------------------+
 ; Resource                                    ; Usage                                     ;
 +---------------------------------------------+-------------------------------------------+
-; Estimated Total logic elements              ; 1,084                                     ;
+; Estimated Total logic elements              ; 1,087                                     ;
 ;                                             ;                                           ;
-; Total combinational functions               ; 1045                                      ;
+; Total combinational functions               ; 1048                                      ;
 ; Logic element usage by number of LUT inputs ;                                           ;
 ;     -- 4 input functions                    ; 770                                       ;
-;     -- 3 input functions                    ; 113                                       ;
-;     -- <=2 input functions                  ; 162                                       ;
+;     -- 3 input functions                    ; 115                                       ;
+;     -- <=2 input functions                  ; 163                                       ;
 ;                                             ;                                           ;
 ; Logic elements by mode                      ;                                           ;
-;     -- normal mode                          ; 934                                       ;
-;     -- arithmetic mode                      ; 111                                       ;
+;     -- normal mode                          ; 932                                       ;
+;     -- arithmetic mode                      ; 116                                       ;
 ;                                             ;                                           ;
-; Total registers                             ; 183                                       ;
-;     -- Dedicated logic registers            ; 183                                       ;
+; Total registers                             ; 189                                       ;
+;     -- Dedicated logic registers            ; 189                                       ;
 ;     -- I/O registers                        ; 0                                         ;
 ;                                             ;                                           ;
 ; I/O pins                                    ; 24                                        ;
@@ -224,8 +224,8 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0                                         ;
 ;                                             ;                                           ;
 ; Maximum fan-out node                        ; Music_Player:u_music_player|note_index[4] ;
-; Maximum fan-out                             ; 325                                       ;
-; Total fan-out                               ; 4397                                      ;
+; Maximum fan-out                             ; 322                                       ;
+; Total fan-out                               ; 4434                                      ;
 ; Average fan-out                             ; 3.45                                      ;
 +---------------------------------------------+-------------------------------------------+
 
@@ -235,13 +235,13 @@ refer to the applicable agreement for further details.
 +----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                           ; Entity Name             ; Library Name ;
 +----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------+-------------------------+--------------+
-; |Advanced_Electric_Piano         ; 1045 (0)            ; 183 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 24   ; 0            ; 0          ; |Advanced_Electric_Piano                                      ; Advanced_Electric_Piano ; work         ;
-;    |Advanced_Beeper:u_beeper|    ; 159 (43)            ; 17 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Advanced_Electric_Piano|Advanced_Beeper:u_beeper             ; Advanced_Beeper         ; work         ;
+; |Advanced_Electric_Piano         ; 1048 (0)            ; 189 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 24   ; 0            ; 0          ; |Advanced_Electric_Piano                                      ; Advanced_Electric_Piano ; work         ;
+;    |Advanced_Beeper:u_beeper|    ; 156 (42)            ; 17 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Advanced_Electric_Piano|Advanced_Beeper:u_beeper             ; Advanced_Beeper         ; work         ;
 ;       |PWM:u_pwm|                ; 72 (72)             ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Advanced_Electric_Piano|Advanced_Beeper:u_beeper|PWM:u_pwm   ; PWM                     ; work         ;
-;       |tone:u_tone|              ; 44 (44)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Advanced_Electric_Piano|Advanced_Beeper:u_beeper|tone:u_tone ; tone                    ; work         ;
-;    |Array_KeyBoard:u_keyboard|   ; 72 (72)             ; 74 (74)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Advanced_Electric_Piano|Array_KeyBoard:u_keyboard            ; Array_KeyBoard          ; work         ;
+;       |tone:u_tone|              ; 42 (42)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Advanced_Electric_Piano|Advanced_Beeper:u_beeper|tone:u_tone ; tone                    ; work         ;
+;    |Array_KeyBoard:u_keyboard|   ; 73 (73)             ; 74 (74)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Advanced_Electric_Piano|Array_KeyBoard:u_keyboard            ; Array_KeyBoard          ; work         ;
 ;    |Mode_Controller:u_mode_ctrl| ; 1 (1)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Advanced_Electric_Piano|Mode_Controller:u_mode_ctrl          ; Mode_Controller         ; work         ;
-;    |Music_Player:u_music_player| ; 813 (813)           ; 85 (85)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Advanced_Electric_Piano|Music_Player:u_music_player          ; Music_Player            ; work         ;
+;    |Music_Player:u_music_player| ; 818 (818)           ; 91 (91)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Advanced_Electric_Piano|Music_Player:u_music_player          ; Music_Player            ; work         ;
 +----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -271,27 +271,20 @@ Encoding Type:  One-Hot
 +--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                      ;
-+-------------------------------------------------+-------------------------------------------------------+
-; Register name                                   ; Reason for Removal                                    ;
-+-------------------------------------------------+-------------------------------------------------------+
-; Mode_Controller:u_mode_ctrl|led_display[2..7]   ; Stuck at VCC due to stuck port data_in                ;
-; Mode_Controller:u_mode_ctrl|mode_indicator[2,3] ; Stuck at VCC due to stuck port data_in                ;
-; Music_Player:u_music_player|play_duration[0]    ; Merged with Music_Player:u_music_player|note_index[0] ;
-; Music_Player:u_music_player|play_duration[1]    ; Merged with Music_Player:u_music_player|note_index[1] ;
-; Music_Player:u_music_player|play_duration[2]    ; Merged with Music_Player:u_music_player|note_index[2] ;
-; Music_Player:u_music_player|play_duration[3]    ; Merged with Music_Player:u_music_player|note_index[3] ;
-; Music_Player:u_music_player|play_duration[4]    ; Merged with Music_Player:u_music_player|note_index[4] ;
-; Music_Player:u_music_player|play_duration[5]    ; Merged with Music_Player:u_music_player|note_index[5] ;
-; Music_Player:u_music_player|play_duration[7]    ; Merged with Music_Player:u_music_player|note_index[7] ;
-; Music_Player:u_music_player|play_duration[6]    ; Merged with Music_Player:u_music_player|note_index[6] ;
-; Music_Player:u_music_player|selected_song~4     ; Lost fanout                                           ;
-; Music_Player:u_music_player|selected_song~5     ; Lost fanout                                           ;
-; Music_Player:u_music_player|selected_song~6     ; Lost fanout                                           ;
-; Music_Player:u_music_player|selected_song~7     ; Lost fanout                                           ;
-; Total Number of Removed Registers = 20          ;                                                       ;
-+-------------------------------------------------+-------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                       ;
++-------------------------------------------------+----------------------------------------+
+; Register name                                   ; Reason for Removal                     ;
++-------------------------------------------------+----------------------------------------+
+; Mode_Controller:u_mode_ctrl|led_display[2..7]   ; Stuck at VCC due to stuck port data_in ;
+; Mode_Controller:u_mode_ctrl|mode_indicator[2,3] ; Stuck at VCC due to stuck port data_in ;
+; Music_Player:u_music_player|selected_song~4     ; Lost fanout                            ;
+; Music_Player:u_music_player|selected_song~5     ; Lost fanout                            ;
+; Music_Player:u_music_player|selected_song~6     ; Lost fanout                            ;
+; Music_Player:u_music_player|selected_song~7     ; Lost fanout                            ;
+; Music_Player:u_music_player|note_index[6,7]     ; Lost fanout                            ;
+; Total Number of Removed Registers = 14          ;                                        ;
++-------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -299,12 +292,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 183   ;
-; Number of registers using Synchronous Clear  ; 50    ;
+; Total registers                              ; 189   ;
+; Number of registers using Synchronous Clear  ; 56    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 183   ;
+; Number of registers using Asynchronous Clear ; 189   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 45    ;
+; Number of registers using Clock Enable       ; 51    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -319,54 +312,54 @@ Encoding Type:  One-Hot
 ; Array_KeyBoard:u_keyboard|row_r[3]            ; 1       ;
 ; Mode_Controller:u_mode_ctrl|led_display[1]    ; 1       ;
 ; Mode_Controller:u_mode_ctrl|mode_indicator[1] ; 1       ;
-; Array_KeyBoard:u_keyboard|key_scan_rr[11]     ; 6       ;
-; Array_KeyBoard:u_keyboard|key_scan_rr[9]      ; 8       ;
-; Array_KeyBoard:u_keyboard|key_scan_rr[4]      ; 7       ;
-; Array_KeyBoard:u_keyboard|key_scan_rr[7]      ; 8       ;
-; Array_KeyBoard:u_keyboard|key_scan_rr[6]      ; 9       ;
-; Array_KeyBoard:u_keyboard|key_scan_rr[5]      ; 8       ;
-; Array_KeyBoard:u_keyboard|key_scan_rr[1]      ; 10      ;
-; Array_KeyBoard:u_keyboard|key_scan_rr[3]      ; 7       ;
 ; Array_KeyBoard:u_keyboard|key_scan_rr[2]      ; 11      ;
-; Array_KeyBoard:u_keyboard|key_scan_rr[8]      ; 11      ;
-; Array_KeyBoard:u_keyboard|key_scan_rr[0]      ; 7       ;
-; Array_KeyBoard:u_keyboard|key_scan_rr[14]     ; 8       ;
-; Array_KeyBoard:u_keyboard|key_scan_rr[13]     ; 8       ;
-; Array_KeyBoard:u_keyboard|key_scan_rr[12]     ; 9       ;
-; Array_KeyBoard:u_keyboard|key_scan_rr[10]     ; 15      ;
-; Array_KeyBoard:u_keyboard|key_scan_rr[15]     ; 14      ;
-; Array_KeyBoard:u_keyboard|key_scan_r[11]      ; 3       ;
-; Array_KeyBoard:u_keyboard|key_scan_r[9]       ; 2       ;
-; Array_KeyBoard:u_keyboard|key_scan_r[4]       ; 3       ;
-; Array_KeyBoard:u_keyboard|key_scan_r[7]       ; 2       ;
-; Array_KeyBoard:u_keyboard|key_scan_r[6]       ; 3       ;
-; Array_KeyBoard:u_keyboard|key_scan_r[5]       ; 2       ;
-; Array_KeyBoard:u_keyboard|key_scan_r[1]       ; 4       ;
-; Array_KeyBoard:u_keyboard|key_scan_r[3]       ; 3       ;
+; Array_KeyBoard:u_keyboard|key_scan_rr[8]      ; 12      ;
+; Array_KeyBoard:u_keyboard|key_scan_rr[0]      ; 6       ;
+; Array_KeyBoard:u_keyboard|key_scan_rr[14]     ; 7       ;
+; Array_KeyBoard:u_keyboard|key_scan_rr[13]     ; 7       ;
+; Array_KeyBoard:u_keyboard|key_scan_rr[12]     ; 8       ;
+; Array_KeyBoard:u_keyboard|key_scan_rr[15]     ; 13      ;
+; Array_KeyBoard:u_keyboard|key_scan_rr[10]     ; 13      ;
+; Array_KeyBoard:u_keyboard|key_scan_rr[11]     ; 6       ;
+; Array_KeyBoard:u_keyboard|key_scan_rr[4]      ; 7       ;
+; Array_KeyBoard:u_keyboard|key_scan_rr[9]      ; 9       ;
+; Array_KeyBoard:u_keyboard|key_scan_rr[1]      ; 11      ;
+; Array_KeyBoard:u_keyboard|key_scan_rr[3]      ; 7       ;
+; Array_KeyBoard:u_keyboard|key_scan_rr[7]      ; 7       ;
+; Array_KeyBoard:u_keyboard|key_scan_rr[6]      ; 8       ;
+; Array_KeyBoard:u_keyboard|key_scan_rr[5]      ; 7       ;
 ; Array_KeyBoard:u_keyboard|key_scan_r[2]       ; 3       ;
-; Array_KeyBoard:u_keyboard|key_scan_r[8]       ; 3       ;
+; Array_KeyBoard:u_keyboard|key_scan_r[8]       ; 4       ;
 ; Array_KeyBoard:u_keyboard|key_scan_r[0]       ; 2       ;
 ; Array_KeyBoard:u_keyboard|key_scan_r[14]      ; 2       ;
 ; Array_KeyBoard:u_keyboard|key_scan_r[13]      ; 2       ;
 ; Array_KeyBoard:u_keyboard|key_scan_r[12]      ; 3       ;
-; Array_KeyBoard:u_keyboard|key_scan_r[10]      ; 4       ;
 ; Array_KeyBoard:u_keyboard|key_scan_r[15]      ; 4       ;
-; Array_KeyBoard:u_keyboard|key_scan[11]        ; 1       ;
-; Array_KeyBoard:u_keyboard|key_scan[9]         ; 1       ;
-; Array_KeyBoard:u_keyboard|key_scan[4]         ; 1       ;
-; Array_KeyBoard:u_keyboard|key_scan[7]         ; 1       ;
-; Array_KeyBoard:u_keyboard|key_scan[6]         ; 1       ;
-; Array_KeyBoard:u_keyboard|key_scan[5]         ; 1       ;
-; Array_KeyBoard:u_keyboard|key_scan[1]         ; 1       ;
-; Array_KeyBoard:u_keyboard|key_scan[3]         ; 1       ;
+; Array_KeyBoard:u_keyboard|key_scan_r[10]      ; 3       ;
+; Array_KeyBoard:u_keyboard|key_scan_r[11]      ; 3       ;
+; Array_KeyBoard:u_keyboard|key_scan_r[4]       ; 3       ;
+; Array_KeyBoard:u_keyboard|key_scan_r[9]       ; 2       ;
+; Array_KeyBoard:u_keyboard|key_scan_r[1]       ; 3       ;
+; Array_KeyBoard:u_keyboard|key_scan_r[3]       ; 3       ;
+; Array_KeyBoard:u_keyboard|key_scan_r[7]       ; 2       ;
+; Array_KeyBoard:u_keyboard|key_scan_r[6]       ; 3       ;
+; Array_KeyBoard:u_keyboard|key_scan_r[5]       ; 2       ;
 ; Array_KeyBoard:u_keyboard|key_scan[2]         ; 1       ;
 ; Array_KeyBoard:u_keyboard|key_scan[8]         ; 1       ;
 ; Array_KeyBoard:u_keyboard|key_scan[0]         ; 1       ;
 ; Array_KeyBoard:u_keyboard|key_scan[14]        ; 1       ;
 ; Array_KeyBoard:u_keyboard|key_scan[13]        ; 1       ;
 ; Array_KeyBoard:u_keyboard|key_scan[12]        ; 1       ;
-; Array_KeyBoard:u_keyboard|key_scan[10]        ; 1       ;
 ; Array_KeyBoard:u_keyboard|key_scan[15]        ; 1       ;
+; Array_KeyBoard:u_keyboard|key_scan[10]        ; 1       ;
+; Array_KeyBoard:u_keyboard|key_scan[11]        ; 1       ;
+; Array_KeyBoard:u_keyboard|key_scan[4]         ; 1       ;
+; Array_KeyBoard:u_keyboard|key_scan[9]         ; 1       ;
+; Array_KeyBoard:u_keyboard|key_scan[1]         ; 1       ;
+; Array_KeyBoard:u_keyboard|key_scan[3]         ; 1       ;
+; Array_KeyBoard:u_keyboard|key_scan[7]         ; 1       ;
+; Array_KeyBoard:u_keyboard|key_scan[6]         ; 1       ;
+; Array_KeyBoard:u_keyboard|key_scan[5]         ; 1       ;
 ; Total number of inverted registers = 53       ;         ;
 +-----------------------------------------------+---------+
 
@@ -376,10 +369,10 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
-; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |Advanced_Electric_Piano|Music_Player:u_music_player|beat_counter[21] ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; Yes        ; |Advanced_Electric_Piano|Advanced_Beeper:u_beeper|PWM:u_pwm|cnt[12]   ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |Advanced_Electric_Piano|Music_Player:u_music_player|note_index[3]    ;
-; 17:1               ; 12 bits   ; 132 LEs       ; 132 LEs              ; 0 LEs                  ; Yes        ; |Advanced_Electric_Piano|Music_Player:u_music_player|auto_tone[5]     ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |Advanced_Electric_Piano|Music_Player:u_music_player|beat_counter[17] ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; Yes        ; |Advanced_Electric_Piano|Advanced_Beeper:u_beeper|PWM:u_pwm|pwm_out   ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |Advanced_Electric_Piano|Music_Player:u_music_player|play_duration[3] ;
+; 17:1               ; 12 bits   ; 132 LEs       ; 132 LEs              ; 0 LEs                  ; Yes        ; |Advanced_Electric_Piano|Music_Player:u_music_player|auto_tone[14]    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 
 
@@ -483,24 +476,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 24                          ;
-; cycloneiii_ff         ; 183                         ;
+; cycloneiii_ff         ; 189                         ;
 ;     CLR               ; 96                          ;
 ;     CLR SCLR          ; 42                          ;
 ;     ENA CLR           ; 37                          ;
-;     ENA CLR SCLR      ; 8                           ;
-; cycloneiii_lcell_comb ; 1051                        ;
-;     arith             ; 111                         ;
-;         2 data inputs ; 82                          ;
+;     ENA CLR SCLR      ; 14                          ;
+; cycloneiii_lcell_comb ; 1054                        ;
+;     arith             ; 116                         ;
+;         2 data inputs ; 87                          ;
 ;         3 data inputs ; 29                          ;
-;     normal            ; 940                         ;
+;     normal            ; 938                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 26                          ;
-;         2 data inputs ; 58                          ;
-;         3 data inputs ; 84                          ;
+;         1 data inputs ; 27                          ;
+;         2 data inputs ; 53                          ;
+;         3 data inputs ; 86                          ;
 ;         4 data inputs ; 770                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 11.80                       ;
-; Average LUT depth     ; 5.56                        ;
+; Average LUT depth     ; 5.48                        ;
 +-----------------------+-----------------------------+
 
 
@@ -509,7 +502,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -519,7 +512,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue May 27 13:28:16 2025
+    Info: Processing started: Wed May 28 10:50:54 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Electric_Piano -c Electric_Piano
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
@@ -581,19 +574,19 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "mode_indicator[2]" is stuck at VCC File: D:/Quartus_Project/Electric_Piano/Advanced_Electric_Piano.v Line: 14
     Warning (13410): Pin "mode_indicator[3]" is stuck at VCC File: D:/Quartus_Project/Electric_Piano/Advanced_Electric_Piano.v Line: 14
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/Quartus_Project/Electric_Piano/output_files/Electric_Piano.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1118 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1121 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 1094 logic cells
+    Info (21061): Implemented 1097 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 4845 megabytes
-    Info: Processing ended: Tue May 27 13:28:28 2025
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 4849 megabytes
+    Info: Processing ended: Wed May 28 10:51:04 2025
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +------------------------------------------+

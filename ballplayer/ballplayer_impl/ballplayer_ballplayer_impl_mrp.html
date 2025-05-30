@@ -1,0 +1,1917 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+           Lattice Mapping Report File for Design Module 'template'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a MachXO2 -p LCMXO2-4000HC -t CSBGA132 -s 4 -oc Commercial
+     ballplayer_ballplayer_impl.ngd -o ballplayer_ballplayer_impl_map.ncd -pr
+     ballplayer_ballplayer_impl.prf -mp ballplayer_ballplayer_impl.mrp -lpf
+     E:/code/FPGA/ballplayer/ballplayer_impl/ballplayer_ballplayer_impl.lpf -lpf
+     E:/code/FPGA/ballplayer/ballplayer.lpf -c 0 -gui -msgset
+     E:/code/FPGA/ballplayer/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-4000HCCSBGA132
+Target Performance:   4
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.14.0.75.2
+Mapped on:  03/09/25  08:03:42
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:    668 out of  4635 (14%)
+      PFU registers:          668 out of  4320 (15%)
+      PIO registers:            0 out of   315 (0%)
+   Number of SLICEs:       992 out of  2160 (46%)
+      SLICEs as Logic/ROM:    992 out of  2160 (46%)
+      SLICEs as RAM:            0 out of  1620 (0%)
+      SLICEs as Carry:        458 out of  2160 (21%)
+   Number of LUT4s:        1962 out of  4320 (45%)
+      Number used as logic LUTs:        1046
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      916
+      Number used as shift registers:     0
+   Number of PIO sites used: 35 + 4(JTAG) out of 105 (37%)
+   Number of block RAMs:  0 out of 10 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  2 out of 2 (100%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  16
+     Net clk_c: 114 loads, 114 rising, 0 falling (Driver: PIO clk )
+     Net lcd1/clk_50MHz: 171 loads, 171 rising, 0 falling (Driver:
+
+     lcd1/pll_u1/PLLInst_0 )
+     Net jump/clk_out: 75 loads, 75 rising, 0 falling (Driver:
+     jump/fre_500us/clk_out_13 )
+     Net pic_y_8__N_791: 1 loads, 1 rising, 0 falling (Driver:
+     adc_driver/reset_N_784_I_0_168_2_lut_3_lut )
+     Net pic_y_8__N_782: 1 loads, 1 rising, 0 falling (Driver:
+     adc_driver/pic_y_8__I_0_189_2_lut_3_lut )
+     Net pic_y_8__N_792: 1 loads, 1 rising, 0 falling (Driver:
+     adc_driver/reset_N_784_I_0_169_2_lut_3_lut )
+     Net pic_y_8__N_785: 1 loads, 1 rising, 0 falling (Driver:
+     adc_driver/reset_N_784_I_0_162_2_lut_3_lut )
+     Net pic_y_8__N_786: 1 loads, 1 rising, 0 falling (Driver:
+     adc_driver/reset_N_784_I_0_163_2_lut_3_lut )
+     Net pic_y_8__N_787: 1 loads, 1 rising, 0 falling (Driver:
+     adc_driver/reset_N_784_I_0_164_2_lut_3_lut )
+     Net pic_y_8__N_788: 1 loads, 1 rising, 0 falling (Driver:
+     adc_driver/reset_N_784_I_0_165_2_lut_3_lut )
+     Net pic_y_8__N_789: 1 loads, 1 rising, 0 falling (Driver:
+     adc_driver/reset_N_784_I_0_166_2_lut_3_lut )
+     Net pic_y_8__N_790: 1 loads, 1 rising, 0 falling (Driver:
+     adc_driver/reset_N_784_I_0_167_2_lut_3_lut )
+     Net clk_c_enable_20: 27 loads, 27 rising, 0 falling (Driver:
+     u7/dat_valid_276_rep_352 )
+     Net clk_24MHz: 20 loads, 20 rising, 0 falling (Driver: pll_u2/PLLInst_0 )
+     Net dat_valid: 14 loads, 14 rising, 0 falling (Driver: u7/dat_valid_276 )
+     Net u7/clk_400khz: 6 loads, 6 rising, 0 falling (Driver: u7/clk_400khz_254
+     )
+   Number of Clock Enables:  82
+     Net lcd1/lcd_write_inst/clk_50MHz_enable_46: 8 loads, 8 LSLICEs
+     Net clk_50MHz_enable_43: 2 loads, 2 LSLICEs
+     Net lcd1/lcd_write_inst/clk_50MHz_enable_168: 1 loads, 1 LSLICEs
+     Net lcd1/lcd_write_inst/clk_50MHz_enable_111: 1 loads, 1 LSLICEs
+     Net lcd1/lcd_show_pic_inst/clk_50MHz_enable_173: 5 loads, 5 LSLICEs
+     Net lcd1/lcd_show_pic_inst/clk_50MHz_enable_89: 6 loads, 6 LSLICEs
+     Net lcd1/lcd_show_pic_inst/clk_50MHz_enable_167: 6 loads, 6 LSLICEs
+     Net clk_50MHz_enable_30: 2 loads, 2 LSLICEs
+     Net lcd1/lcd_show_pic_inst/clk_50MHz_enable_35: 1 loads, 1 LSLICEs
+     Net lcd1/lcd_show_pic_inst/clk_50MHz_enable_151: 5 loads, 5 LSLICEs
+     Net lcd1/lcd_show_pic_inst/state_3_N_1666_1: 1 loads, 1 LSLICEs
+     Net lcd1/lcd_show_pic_inst/clk_50MHz_enable_165: 5 loads, 5 LSLICEs
+     Net lcd1/lcd_show_pic_inst/clk_50MHz_enable_156: 2 loads, 2 LSLICEs
+     Net clk_50MHz_enable_79: 10 loads, 10 LSLICEs
+     Net lcd1/lcd_init_inst/clk_50MHz_enable_48: 1 loads, 1 LSLICEs
+     Net lcd1/lcd_init_inst/lcd_rst_high_flag: 1 loads, 1 LSLICEs
+     Net lcd1/lcd_init_inst/clk_50MHz_enable_135: 3 loads, 3 LSLICEs
+     Net lcd1/lcd_draw_line_inst/clk_50MHz_enable_110: 5 loads, 5 LSLICEs
+     Net lcd1/lcd_draw_line_inst/clk_50MHz_enable_129: 5 loads, 5 LSLICEs
+     Net lcd1/lcd_draw_line_inst/clk_50MHz_enable_42: 1 loads, 1 LSLICEs
+     Net lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/clk_50MHz_enable_172:
+     2 loads, 2 LSLICEs
+     Net clk_50MHz_enable_100: 6 loads, 6 LSLICEs
+     Net lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/clk_50MHz_enable_153:
+     5 loads, 5 LSLICEs
+     Net lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/clk_50MHz_enable_152:
+     5 loads, 5 LSLICEs
+     Net clk_50MHz_enable_61: 6 loads, 6 LSLICEs
+
+     Net lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/clk_50MHz_enable_113:
+     2 loads, 2 LSLICEs
+     Net lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/clk_50MHz_enable_157:
+     6 loads, 6 LSLICEs
+     Net jump/clk_out_enable_25: 8 loads, 8 LSLICEs
+     Net jump/current_state_0: 8 loads, 8 LSLICEs
+     Net jump/n22446: 13 loads, 13 LSLICEs
+     Net jump/clk_out_enable_46: 4 loads, 4 LSLICEs
+     Net clk_c_enable_20: 1 loads, 1 LSLICEs
+     Net adc_driver/clk_24MHz_enable_9: 4 loads, 4 LSLICEs
+     Net adc_driver/clk_24MHz_enable_4: 1 loads, 1 LSLICEs
+     Net adc_driver/clk_24MHz_enable_14: 1 loads, 1 LSLICEs
+     Net adc_driver/clk_24MHz_enable_12: 1 loads, 1 LSLICEs
+     Net adc_driver/clk_24MHz_enable_13: 1 loads, 1 LSLICEs
+     Net adc_driver/clk_24MHz_enable_15: 1 loads, 1 LSLICEs
+     Net adc_driver/clk_24MHz_enable_11: 1 loads, 1 LSLICEs
+     Net adc_driver/clk_24MHz_enable_16: 1 loads, 1 LSLICEs
+     Net adc_driver/clk_24MHz_enable_10: 1 loads, 1 LSLICEs
+     Net clk_400khz_enable_5: 1 loads, 1 LSLICEs
+     Net u8/count: 19 loads, 19 LSLICEs
+     Net u8/clk_c_enable_20_enable_5: 4 loads, 4 LSLICEs
+     Net adj/clk_c_enable_84: 1 loads, 1 LSLICEs
+     Net adj/deb/clk_c_enable_8: 1 loads, 1 LSLICEs
+     Net u7/clk_c_enable_121: 13 loads, 13 LSLICEs
+     Net u7/clk_c_enable_61: 4 loads, 4 LSLICEs
+     Net u7/clk_c_enable_63: 4 loads, 4 LSLICEs
+     Net u7/clk_c_enable_13: 1 loads, 1 LSLICEs
+     Net u7/clk_c_enable_14: 1 loads, 1 LSLICEs
+     Net u7/clk_c_enable_15: 1 loads, 1 LSLICEs
+     Net u7/clk_c_enable_74: 2 loads, 2 LSLICEs
+     Net u7/clk_c_enable_77: 2 loads, 2 LSLICEs
+     Net u7/clk_c_enable_90: 2 loads, 2 LSLICEs
+     Net u7/clk_c_enable_78: 2 loads, 2 LSLICEs
+     Net u7/clk_c_enable_91: 3 loads, 3 LSLICEs
+     Net u7/clk_c_enable_81: 1 loads, 1 LSLICEs
+     Net u7/clk_c_enable_41: 1 loads, 1 LSLICEs
+     Net u7/clk_c_enable_105: 2 loads, 2 LSLICEs
+     Net u7/clk_c_enable_92: 3 loads, 3 LSLICEs
+     Net u7/clk_c_enable_85: 1 loads, 1 LSLICEs
+     Net u7/clk_c_enable_21: 1 loads, 1 LSLICEs
+     Net u7/clk_c_enable_19: 1 loads, 1 LSLICEs
+     Net u7/clk_c_enable_114: 2 loads, 2 LSLICEs
+     Net u7/clk_c_enable_18: 1 loads, 1 LSLICEs
+     Net u7/clk_c_enable_98: 3 loads, 3 LSLICEs
+     Net u7/clk_c_enable_106: 2 loads, 2 LSLICEs
+     Net u7/clk_c_enable_103: 3 loads, 3 LSLICEs
+     Net u7/clk_c_enable_39: 7 loads, 7 LSLICEs
+     Net u7/clk_c_enable_64: 3 loads, 3 LSLICEs
+     Net u7/clk_c_enable_65: 1 loads, 1 LSLICEs
+     Net u7/i2c_sda_N_652: 1 loads, 1 LSLICEs
+     Net u7/clk_c_enable_83: 2 loads, 2 LSLICEs
+     Net u7/clk_400khz_enable_4: 1 loads, 1 LSLICEs
+     Net u7/clk_c_enable_110: 1 loads, 1 LSLICEs
+     Net u7/clk_c_enable_86: 1 loads, 1 LSLICEs
+     Net u7/clk_c_enable_89: 1 loads, 1 LSLICEs
+     Net u7/clk_400khz_enable_2: 1 loads, 1 LSLICEs
+
+     Net u7/clk_c_enable_104: 1 loads, 1 LSLICEs
+     Net u7/clk_400khz_enable_3: 1 loads, 1 LSLICEs
+     Net u7/clk_c_enable_111: 1 loads, 1 LSLICEs
+   Number of LSRs:  62
+     Net lcd1/n21602: 1 loads, 1 LSLICEs
+     Net lcd1/lcd_write_inst/n21599: 3 loads, 3 LSLICEs
+     Net lcd1/lcd_write_inst/state_1: 9 loads, 9 LSLICEs
+     Net lcd1/lcd_write_inst/mosi_N_1143: 1 loads, 1 LSLICEs
+     Net lcd1/lcd_write_inst/state_3: 1 loads, 1 LSLICEs
+     Net wr_done: 2 loads, 2 LSLICEs
+     Net state_2_adj_2666: 1 loads, 1 LSLICEs
+     Net lcd1/lcd_write_inst/state_0: 1 loads, 1 LSLICEs
+     Net lcd1/lcd_write_inst/n10899: 3 loads, 3 LSLICEs
+     Net lcd1/state_1: 3 loads, 3 LSLICEs
+     Net lcd1/lcd_show_pic_inst/n10903: 5 loads, 5 LSLICEs
+     Net lcd1/lcd_show_pic_inst/cnt_wr_color_data_9__N_1975: 6 loads, 6 LSLICEs
+     Net length_num_flag: 3 loads, 3 LSLICEs
+     Net lcd1/lcd_show_pic_inst/n10860: 1 loads, 1 LSLICEs
+     Net lcd1/lcd_show_pic_inst/n16264: 5 loads, 5 LSLICEs
+     Net lcd1/lcd_show_pic_inst/n10897: 2 loads, 2 LSLICEs
+     Net the1_wr_done: 6 loads, 6 LSLICEs
+     Net lcd1/state_2_adj_2657: 4 loads, 4 LSLICEs
+     Net lcd1/lcd_init_inst/state_0: 1 loads, 1 LSLICEs
+     Net lcd1/lcd_init_inst/cnt_150ms_22__N_1318: 12 loads, 12 LSLICEs
+     Net state_4: 10 loads, 10 LSLICEs
+     Net lcd1/state_2_adj_2659: 4 loads, 4 LSLICEs
+     Net lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/n10893: 2 loads, 2
+     LSLICEs
+     Net state_3_adj_2669: 6 loads, 6 LSLICEs
+     Net lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/n10889: 5 loads, 5
+     LSLICEs
+     Net state_3_adj_2671: 6 loads, 6 LSLICEs
+     Net lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/n10882: 2 loads, 2
+     LSLICEs
+     Net lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/n10870: 2 loads, 2
+     LSLICEs
+     Net n21688: 39 loads, 39 LSLICEs
+     Net pic_y_8__N_814: 3 loads, 3 LSLICEs
+     Net pic_y_8__N_791: 2 loads, 2 LSLICEs
+     Net pic_y_8__N_782: 2 loads, 2 LSLICEs
+     Net pic_y_8__N_793: 3 loads, 3 LSLICEs
+     Net pic_y_8__N_792: 2 loads, 2 LSLICEs
+     Net pic_y_8__N_785: 2 loads, 2 LSLICEs
+     Net pic_y_8__N_786: 2 loads, 2 LSLICEs
+     Net pic_y_8__N_787: 2 loads, 2 LSLICEs
+     Net pic_y_8__N_788: 2 loads, 2 LSLICEs
+     Net pic_y_8__N_789: 2 loads, 2 LSLICEs
+     Net pic_y_8__N_790: 2 loads, 2 LSLICEs
+     Net pic_y_8__N_811: 3 loads, 3 LSLICEs
+     Net pic_y_8__N_796: 3 loads, 3 LSLICEs
+     Net pic_y_8__N_799: 3 loads, 3 LSLICEs
+     Net pic_y_8__N_802: 3 loads, 3 LSLICEs
+     Net pic_y_8__N_805: 3 loads, 3 LSLICEs
+     Net pic_y_8__N_808: 3 loads, 3 LSLICEs
+     Net pic_y_8__N_817: 3 loads, 3 LSLICEs
+     Net jump/fre_500us/n19858: 1 loads, 1 LSLICEs
+
+     Net jump/fre_500us/n10900: 13 loads, 13 LSLICEs
+     Net adc_driver/cnt_7__N_48: 5 loads, 5 LSLICEs
+     Net u8/n3945: 6 loads, 6 LSLICEs
+     Net u8/n10853: 4 loads, 4 LSLICEs
+     Net adj/deb/cnt_17__N_165: 10 loads, 10 LSLICEs
+     Net u7/n10930: 12 loads, 12 LSLICEs
+     Net u7/n10901: 6 loads, 6 LSLICEs
+     Net u7/n10876: 1 loads, 1 LSLICEs
+     Net u7/n74: 1 loads, 1 LSLICEs
+     Net u7/n10854: 3 loads, 3 LSLICEs
+     Net u7/n10927: 2 loads, 2 LSLICEs
+     Net u7/n16979: 3 loads, 3 LSLICEs
+     Net u7/n10921: 2 loads, 2 LSLICEs
+     Net u7/n11817: 2 loads, 2 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net state_0: 64 loads
+     Net jump/n22446: 52 loads
+     Net state_1: 48 loads
+     Net state_2: 43 loads
+     Net n21688: 39 loads
+     Net jump/stop_flag_N_1026: 38 loads
+     Net k_0: 38 loads
+     Net jump/n21537: 37 loads
+     Net jump/time_count_up_0: 37 loads
+     Net jump/time_count_up_1: 37 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+   No errors or warnings present.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| seg_led_1[3]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seg_led_1[4]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seg_led_1[5]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seg_led_1[6]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seg_led_1[7]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+| lcd_dc              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seg_led_1[8]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| lcd_sclk            | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| lcd_blk             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| lcd_rst             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| i2c_scl             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| key_down            | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| key_up              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| adc_dat             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ball_release_button | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| led                 | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| rst                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| lcd_cs              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| adc_clk             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| adc_cs              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| lcd_mosi            | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seg_led_2[0]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seg_led_2[1]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seg_led_2[2]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seg_led_2[3]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seg_led_2[4]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seg_led_2[5]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seg_led_2[6]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| i2c_sda             | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seg_led_2[7]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seg_led_2[8]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seg_led_1[0]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+| seg_led_1[1]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seg_led_1[2]        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Signal n5039 was merged into signal u7/i2c_sda_N_621
+Signal n20446 was merged into signal data_wr_5
+Signal jump/mult_32u_3u_0_pp_1_4_adj_2453 was merged into signal jump/n148
+Signal jump/mult_32u_3u_0_pp_1_3_adj_2452 was merged into signal jump/n149
+Signal jump/mult_32u_3u_0_pp_1_2_adj_2454 was merged into signal jump/n150
+Signal jump/mult_32u_3u_0_pp_1_6_adj_2425 was merged into signal jump/n146
+Signal jump/mult_32u_3u_0_pp_1_7_adj_2424 was merged into signal jump/n145
+Signal jump/mult_32u_3u_0_pp_1_8_adj_2423 was merged into signal jump/n144
+Signal jump/mult_32u_3u_0_pp_1_9_adj_2422 was merged into signal jump/n143
+Signal jump/mult_32u_3u_0_pp_1_10_adj_2421 was merged into signal jump/n142
+Signal jump/mult_32u_3u_0_pp_1_11_adj_2420 was merged into signal jump/n141
+Signal jump/mult_32u_3u_0_pp_1_12_adj_2419 was merged into signal jump/n140
+Signal jump/mult_32u_3u_0_pp_1_13_adj_2418 was merged into signal jump/n139
+Signal jump/mult_32u_3u_0_pp_1_14_adj_2417 was merged into signal jump/n138
+Signal jump/mult_32u_3u_0_pp_1_15 was merged into signal jump/n137
+Signal jump/mult_32u_3u_0_pp_1_16 was merged into signal jump/n136
+Signal jump/mult_32u_3u_0_pp_1_17 was merged into signal jump/n135
+Signal jump/mult_32u_3u_0_pp_1_18 was merged into signal jump/n135
+Signal jump/mult_32u_3u_0_pp_1_4 was merged into signal jump/n433
+Signal jump/mult_32u_3u_0_pp_1_3 was merged into signal jump/n434
+Signal jump/mult_32u_3u_0_pp_1_2 was merged into signal jump/n435
+Signal jump/mult_32u_3u_0_pp_1_6 was merged into signal jump/n431
+Signal jump/mult_32u_3u_0_pp_1_7 was merged into signal jump/n430
+Signal jump/mult_32u_3u_0_pp_1_8 was merged into signal jump/n429
+Signal jump/mult_32u_3u_0_pp_1_9 was merged into signal jump/n428
+Signal jump/mult_32u_3u_0_pp_1_10 was merged into signal jump/n427
+Signal jump/mult_32u_3u_0_pp_1_11 was merged into signal jump/n426
+Signal jump/mult_32u_3u_0_pp_1_12 was merged into signal jump/n425
+Signal jump/mult_32u_3u_0_pp_1_13 was merged into signal jump/n424
+Signal jump/mult_32u_3u_0_pp_1_14 was merged into signal jump/n423
+Signal jump/mult_32u_3u_0_pp_1_5_adj_2376 was merged into signal jump/n432
+Signal jump/mult_32u_3u_0_pp_1_5 was merged into signal jump/n147
+Signal jump/clk_out_enable_39 was merged into signal jump/n22446
+Signal lcd1/control_inst/n21672 was merged into signal lcd1/state_1
+Signal lcd1/control_inst/n5301 was merged into signal lcd1/state_2_adj_2659
+Signal lcd1/n3961 was merged into signal the1_wr_done
+Signal lcd1/lcd_init_inst/n3943 was merged into signal state_4
+Signal lcd1/lcd_init_inst/n21650 was merged into signal lcd1/state_2_adj_2657
+Signal lcd1/lcd_init_inst/n10874 was merged into signal
+     lcd1/lcd_init_inst/state_0
+Signal lcd1/n3956 was merged into signal wr_done
+Signal lcd1/lcd_write_inst/n1 was merged into signal
+     lcd1/lcd_write_inst/mosi_N_1143
+Signal n22432 undriven or does not drive anything - clipped.
+Signal u7/add_159_1/S0 undriven or does not drive anything - clipped.
+Signal u7/add_159_1/CI undriven or does not drive anything - clipped.
+Signal u7/cnt_400khz_2093_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+
+Signal u7/cnt_400khz_2093_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal u7/cnt_400khz_2093_add_4_11/S1 undriven or does not drive anything -
+     clipped.
+Signal u7/cnt_400khz_2093_add_4_11/CO undriven or does not drive anything -
+     clipped.
+Signal u7/sub_1764_add_2_2/S1 undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_2/S0 undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_2/CI undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_4/S1 undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_4/S0 undriven or does not drive anything - clipped.
+Signal u7/add_159_25/S1 undriven or does not drive anything - clipped.
+Signal u7/add_159_25/CO undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_6/S1 undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_6/S0 undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_8/S1 undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_8/S0 undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_10/S1 undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_10/S0 undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_12/S1 undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_12/S0 undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_14/S1 undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_14/S0 undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_16/S1 undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_16/S0 undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_18/S1 undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_18/S0 undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_cout/S1 undriven or does not drive anything - clipped.
+Signal u7/sub_1764_add_2_cout/CO undriven or does not drive anything - clipped.
+Signal adj/deb/cnt_2095_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal adj/deb/cnt_2095_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal adj/deb/cnt_2095_add_4_19/S1 undriven or does not drive anything -
+     clipped.
+Signal adj/deb/cnt_2095_add_4_19/CO undriven or does not drive anything -
+     clipped.
+Signal add_14_1/S0 undriven or does not drive anything - clipped.
+Signal add_14_1/CI undriven or does not drive anything - clipped.
+Signal u8/prox_dat1_15__I_0_add_2_17/CO undriven or does not drive anything -
+     clipped.
+Signal u8/add_16144_1/S1 undriven or does not drive anything - clipped.
+Signal u8/add_16144_1/S0 undriven or does not drive anything - clipped.
+Signal u8/add_16144_1/CI undriven or does not drive anything - clipped.
+Signal u8/sub_14_add_2_cout/S1 undriven or does not drive anything - clipped.
+Signal u8/sub_14_add_2_cout/CO undriven or does not drive anything - clipped.
+Signal u8/add_16144_cout/S1 undriven or does not drive anything - clipped.
+Signal u8/add_16144_cout/CO undriven or does not drive anything - clipped.
+Signal u8/sub_14_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal u8/sub_14_add_2_1/CI undriven or does not drive anything - clipped.
+Signal u8/mult_11_add_1_2/S0 undriven or does not drive anything - clipped.
+Signal u8/mult_11_add_1_2/CI undriven or does not drive anything - clipped.
+Signal u8/mult_11_add_1_cout/S1 undriven or does not drive anything - clipped.
+Signal u8/mult_11_add_1_cout/CO undriven or does not drive anything - clipped.
+Signal u8/add_16143_1/S1 undriven or does not drive anything - clipped.
+Signal u8/add_16143_1/S0 undriven or does not drive anything - clipped.
+
+Signal u8/add_16143_1/CI undriven or does not drive anything - clipped.
+Signal u8/add_16143_3/S1 undriven or does not drive anything - clipped.
+Signal u8/add_16143_3/S0 undriven or does not drive anything - clipped.
+Signal u8/add_16143_5/S1 undriven or does not drive anything - clipped.
+Signal u8/add_16143_5/S0 undriven or does not drive anything - clipped.
+Signal u8/add_16143_7/S1 undriven or does not drive anything - clipped.
+Signal u8/add_16143_7/S0 undriven or does not drive anything - clipped.
+Signal u8/add_16143_9/S1 undriven or does not drive anything - clipped.
+Signal u8/add_16143_9/S0 undriven or does not drive anything - clipped.
+Signal u8/add_16143_11/S0 undriven or does not drive anything - clipped.
+Signal u8/add_16143_cout/S1 undriven or does not drive anything - clipped.
+Signal u8/add_16143_cout/CO undriven or does not drive anything - clipped.
+Signal u8/prox_dat1_15__I_0_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal u8/prox_dat1_15__I_0_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal add_3398_2/S0 undriven or does not drive anything - clipped.
+Signal add_3398_2/CI undriven or does not drive anything - clipped.
+Signal add_3398_cout/S1 undriven or does not drive anything - clipped.
+Signal add_3398_cout/CO undriven or does not drive anything - clipped.
+Signal add_3435_2/S1 undriven or does not drive anything - clipped.
+Signal add_3435_2/S0 undriven or does not drive anything - clipped.
+Signal add_3435_2/CI undriven or does not drive anything - clipped.
+Signal add_3435_4/S0 undriven or does not drive anything - clipped.
+Signal add_3435_16/S1 undriven or does not drive anything - clipped.
+Signal add_3435_16/CO undriven or does not drive anything - clipped.
+Signal add_3438_2/S1 undriven or does not drive anything - clipped.
+Signal add_3438_2/S0 undriven or does not drive anything - clipped.
+Signal add_3438_2/CI undriven or does not drive anything - clipped.
+Signal add_3438_4/S0 undriven or does not drive anything - clipped.
+Signal add_3438_12/CO undriven or does not drive anything - clipped.
+Signal add_3296_add_1_2/S0 undriven or does not drive anything - clipped.
+Signal add_3296_add_1_2/CI undriven or does not drive anything - clipped.
+Signal add_3296_add_1_cout/S1 undriven or does not drive anything - clipped.
+Signal add_3296_add_1_cout/CO undriven or does not drive anything - clipped.
+Signal add_14_9/CO undriven or does not drive anything - clipped.
+Signal adc_driver/cnt_2092_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal adc_driver/cnt_2092_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal adc_driver/cnt_2092_add_4_9/S1 undriven or does not drive anything -
+     clipped.
+Signal adc_driver/cnt_2092_add_4_9/CO undriven or does not drive anything -
+     clipped.
+Signal jump/fre_500us/count_up_2096_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/fre_500us/count_up_2096_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal jump/fre_500us/count_up_2096_add_4_25/S1 undriven or does not drive
+     anything - clipped.
+Signal jump/fre_500us/count_up_2096_add_4_25/CO undriven or does not drive
+     anything - clipped.
+Signal jump/add_196_1/S0 undriven or does not drive anything - clipped.
+Signal jump/add_196_1/CI undriven or does not drive anything - clipped.
+Signal jump/add_196_15/CO undriven or does not drive anything - clipped.
+Signal jump/add_191_2/S0 undriven or does not drive anything - clipped.
+
+Signal jump/add_191_2/CI undriven or does not drive anything - clipped.
+Signal jump/add_1234_add_1_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/add_1234_add_1_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal jump/add_1234_add_1_add_2_9/CO undriven or does not drive anything -
+     clipped.
+Signal jump/add_191_10/S1 undriven or does not drive anything - clipped.
+Signal jump/add_191_10/CO undriven or does not drive anything - clipped.
+Signal jump/add_3339_1/S0 undriven or does not drive anything - clipped.
+Signal jump/add_3339_1/CI undriven or does not drive anything - clipped.
+Signal jump/add_1234_add_1_add_1_1/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/add_1234_add_1_add_1_1/CI undriven or does not drive anything -
+     clipped.
+Signal jump/add_1234_add_1_add_1_9/CO undriven or does not drive anything -
+     clipped.
+Signal jump/add_3339_15/CO undriven or does not drive anything - clipped.
+Signal jump/add_1233_2/S0 undriven or does not drive anything - clipped.
+Signal jump/add_1233_2/CI undriven or does not drive anything - clipped.
+Signal jump/add_1233_16/S1 undriven or does not drive anything - clipped.
+Signal jump/add_1233_16/CO undriven or does not drive anything - clipped.
+Signal jump/sub_15_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal jump/sub_15_add_2_1/CI undriven or does not drive anything - clipped.
+Signal jump/mult_11u_15u_0_cin_lr_add_0/S1 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_11u_15u_0_cin_lr_add_0/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_11u_15u_0_mult_6_0/CO undriven or does not drive anything -
+     clipped.
+Signal jump/mult_11u_15u_0_mult_4_1/CO undriven or does not drive anything -
+     clipped.
+Signal jump/mult_11u_15u_0_mult_2_2/CO undriven or does not drive anything -
+     clipped.
+Signal jump/mult_11u_15u_0_mult_0_3/CO undriven or does not drive anything -
+     clipped.
+Signal jump/Cadd_t_mult_11u_15u_0_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/Cadd_t_mult_11u_15u_0_4_1/COUT undriven or does not drive anything -
+     clipped.
+Signal jump/mult_11u_15u_0_add_3_3/COUT undriven or does not drive anything -
+     clipped.
+Signal jump/Cadd_mult_11u_15u_0_3_1/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_11u_15u_0_add_1_2/COUT undriven or does not drive anything -
+     clipped.
+Signal jump/Cadd_mult_11u_15u_0_1_1/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_11u_15u_0_add_0_4/COUT undriven or does not drive anything -
+     clipped.
+Signal jump/Cadd_mult_11u_15u_0_0_1/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_11u_15u_0_cin_lr_add_6/S1 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_11u_15u_0_cin_lr_add_6/S0 undriven or does not drive anything -
+     clipped.
+
+Signal jump/mult_11u_15u_0_cin_lr_add_4/S1 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_11u_15u_0_cin_lr_add_4/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_11u_15u_0_cin_lr_add_2/S1 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_11u_15u_0_cin_lr_add_2/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_0_adj_233/S1 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_0_adj_233/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_mult_10_0_adj_230/CO undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_mult_8_1_adj_229/CO undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_mult_6_2_adj_227/CO undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_mult_4_3_adj_224/CO undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_mult_2_4_adj_220/CO undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_mult_0_5_adj_215/CO undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_mult_0_0_adj_210/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/t_mult_15u_15u_0_add_6_3_adj_209/S1 undriven or does not drive
+     anything - clipped.
+Signal jump/t_mult_15u_15u_0_add_6_3_adj_209/COUT undriven or does not drive
+     anything - clipped.
+Signal jump/Cadd_t_mult_15u_15u_0_6_1_adj_207/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/Cadd_mult_15u_15u_0_5_1_adj_206/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/Cadd_mult_15u_15u_0_5_1_adj_206/COUT undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_add_4_5_adj_205/COUT undriven or does not drive
+     anything - clipped.
+Signal jump/Cadd_mult_15u_15u_0_4_1_adj_201/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_add_2_2_adj_200/COUT undriven or does not drive
+     anything - clipped.
+Signal jump/Cadd_mult_15u_15u_0_2_1_adj_199/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_add_1_4_adj_198/COUT undriven or does not drive
+     anything - clipped.
+Signal jump/Cadd_mult_15u_15u_0_1_1_adj_195/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_add_0_6_adj_194/COUT undriven or does not drive
+     anything - clipped.
+Signal jump/Cadd_mult_15u_15u_0_0_1_adj_189/S1 undriven or does not drive
+     anything - clipped.
+Signal jump/Cadd_mult_15u_15u_0_0_1_adj_189/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_10_adj_188/S1 undriven or does not drive
+     anything - clipped.
+
+Signal jump/mult_15u_15u_0_cin_lr_add_10_adj_188/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_8_adj_187/S1 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_8_adj_187/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_6_adj_186/S1 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_6_adj_186/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_4_adj_185/S1 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_4_adj_185/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_2_adj_184/S1 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_2_adj_184/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/sub_15_add_2_17/S1 undriven or does not drive anything - clipped.
+Signal jump/sub_15_add_2_17/CO undriven or does not drive anything - clipped.
+Signal jump/mult_15u_15u_0_mult_8_0_adj_179/CO undriven or does not drive
+     anything - clipped.
+Signal jump/add_8_1/S0 undriven or does not drive anything - clipped.
+Signal jump/add_8_1/CI undriven or does not drive anything - clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_0_adj_173/S1 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_0_adj_173/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/add_16192_2/S0 undriven or does not drive anything - clipped.
+Signal jump/add_16192_2/CI undriven or does not drive anything - clipped.
+Signal jump/add_8_9/CO undriven or does not drive anything - clipped.
+Signal jump/add_16192_10/S1 undriven or does not drive anything - clipped.
+Signal jump/add_16192_10/CO undriven or does not drive anything - clipped.
+Signal jump/add_14_1/S0 undriven or does not drive anything - clipped.
+Signal jump/add_14_1/CI undriven or does not drive anything - clipped.
+Signal jump/sub_1765_add_2_1/S1 undriven or does not drive anything - clipped.
+Signal jump/sub_1765_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal jump/sub_1765_add_2_1/CI undriven or does not drive anything - clipped.
+Signal jump/sub_1765_add_2_3/S1 undriven or does not drive anything - clipped.
+Signal jump/sub_1765_add_2_3/S0 undriven or does not drive anything - clipped.
+Signal jump/sub_1765_add_2_5/S1 undriven or does not drive anything - clipped.
+Signal jump/sub_1765_add_2_5/S0 undriven or does not drive anything - clipped.
+Signal jump/sub_1765_add_2_7/S1 undriven or does not drive anything - clipped.
+Signal jump/sub_1765_add_2_7/S0 undriven or does not drive anything - clipped.
+Signal jump/sub_1765_add_2_9/S1 undriven or does not drive anything - clipped.
+Signal jump/sub_1765_add_2_9/S0 undriven or does not drive anything - clipped.
+Signal jump/sub_1765_add_2_11/S1 undriven or does not drive anything - clipped.
+Signal jump/sub_1765_add_2_11/S0 undriven or does not drive anything - clipped.
+Signal jump/sub_1765_add_2_13/S1 undriven or does not drive anything - clipped.
+Signal jump/sub_1765_add_2_13/S0 undriven or does not drive anything - clipped.
+Signal jump/sub_1765_add_2_15/S1 undriven or does not drive anything - clipped.
+Signal jump/sub_1765_add_2_15/S0 undriven or does not drive anything - clipped.
+Signal jump/Cadd_t_mult_32u_3u_0_0_1_adj_159/S1 undriven or does not drive
+     anything - clipped.
+Signal jump/Cadd_t_mult_32u_3u_0_0_1_adj_159/S0 undriven or does not drive
+     anything - clipped.
+
+Signal jump/t_mult_32u_3u_0_add_0_9/S1 undriven or does not drive anything -
+     clipped.
+Signal jump/t_mult_32u_3u_0_add_0_9/COUT undriven or does not drive anything -
+     clipped.
+Signal jump/mult_32u_3u_0_mult_0_0_adj_152/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_32u_3u_0_mult_0_8/CO undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_0/S1 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_0/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_32u_3u_0_cin_lr_add_0_adj_134/S1 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_32u_3u_0_cin_lr_add_0_adj_134/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/Cadd_t_mult_32u_3u_0_0_1/S1 undriven or does not drive anything -
+     clipped.
+Signal jump/Cadd_t_mult_32u_3u_0_0_1/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/t_mult_32u_3u_0_add_0_7/S1 undriven or does not drive anything -
+     clipped.
+Signal jump/t_mult_32u_3u_0_add_0_7/COUT undriven or does not drive anything -
+     clipped.
+Signal jump/add_14_15/CO undriven or does not drive anything - clipped.
+Signal jump/mult_32u_3u_0_mult_0_0/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_2_adj_130/S1 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_2_adj_130/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_4_adj_129/S1 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_4_adj_129/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_32u_3u_0_mult_0_6/CO undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_6_adj_128/S1 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_6_adj_128/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_8_adj_127/S1 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_8_adj_127/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/sub_1765_add_2_cout/S1 undriven or does not drive anything -
+     clipped.
+Signal jump/sub_1765_add_2_cout/CO undriven or does not drive anything -
+     clipped.
+Signal jump/Cadd_mult_15u_15u_0_0_1_adj_126/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_add_0_5_adj_120/COUT undriven or does not drive
+     anything - clipped.
+Signal jump/Cadd_mult_15u_15u_0_1_1_adj_119/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_add_1_3_adj_117/COUT undriven or does not drive
+
+     anything - clipped.
+Signal jump/Cadd_mult_15u_15u_0_2_1_adj_116/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/Cadd_mult_15u_15u_0_2_1_adj_116/COUT undriven or does not drive
+     anything - clipped.
+Signal jump/mult_32u_3u_0_cin_lr_add_0/S1 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_32u_3u_0_cin_lr_add_0/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_2/S1 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_2/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_4/S1 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_4/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_6/S1 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_6/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_8/S1 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_8/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_10/S1 undriven or does not drive anything
+     - clipped.
+Signal jump/mult_15u_15u_0_cin_lr_add_10/S0 undriven or does not drive anything
+     - clipped.
+Signal jump/Cadd_mult_15u_15u_0_0_1/S1 undriven or does not drive anything -
+     clipped.
+Signal jump/Cadd_mult_15u_15u_0_0_1/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_add_0_6/COUT undriven or does not drive anything -
+     clipped.
+Signal jump/Cadd_mult_15u_15u_0_4_1_adj_115/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/Cadd_mult_15u_15u_0_1_1/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_add_1_4/COUT undriven or does not drive anything -
+     clipped.
+Signal jump/Cadd_mult_15u_15u_0_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_add_2_2/COUT undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_add_4_4_adj_112/COUT undriven or does not drive
+     anything - clipped.
+Signal jump/Cadd_mult_15u_15u_0_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_add_4_5/COUT undriven or does not drive anything -
+     clipped.
+Signal jump/Cadd_mult_15u_15u_0_5_1/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/Cadd_mult_15u_15u_0_5_1/COUT undriven or does not drive anything -
+     clipped.
+Signal jump/Cadd_t_mult_15u_15u_0_6_1_adj_111/S0 undriven or does not drive
+
+     anything - clipped.
+Signal jump/t_mult_15u_15u_0_add_6_2_adj_110/COUT undriven or does not drive
+     anything - clipped.
+Signal jump/Cadd_t_mult_15u_15u_0_6_1/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/t_mult_15u_15u_0_add_6_3/S1 undriven or does not drive anything -
+     clipped.
+Signal jump/t_mult_15u_15u_0_add_6_3/COUT undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_mult_0_0_adj_107/S0 undriven or does not drive
+     anything - clipped.
+Signal jump/mult_15u_15u_0_mult_0_0/S0 undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_mult_0_5/CO undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_mult_0_4/CO undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_mult_2_4/CO undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_mult_2_3/CO undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_mult_4_3/CO undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_mult_4_2/CO undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_mult_6_2/CO undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_mult_8_1/CO undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_mult_6_1/CO undriven or does not drive anything -
+     clipped.
+Signal jump/mult_15u_15u_0_mult_10_0/CO undriven or does not drive anything -
+     clipped.
+Signal lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/add_55_1/S0 undriven or
+     does not drive anything - clipped.
+Signal lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/add_55_1/CI undriven or
+     does not drive anything - clipped.
+Signal lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/add_55_11/S1 undriven or
+     does not drive anything - clipped.
+Signal lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/add_55_11/CO undriven or
+     does not drive anything - clipped.
+Signal lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/sub_66_add_2_1/S0
+     undriven or does not drive anything - clipped.
+Signal lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/sub_66_add_2_1/CI
+     undriven or does not drive anything - clipped.
+Signal lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/sub_66_add_2_9/S1
+     undriven or does not drive anything - clipped.
+Signal lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/sub_66_add_2_9/CO
+     undriven or does not drive anything - clipped.
+Signal lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_length_num_2112_add_
+     4_1/S0 undriven or does not drive anything - clipped.
+Signal lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_length_num_2112_add_
+     4_1/CI undriven or does not drive anything - clipped.
+Signal lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_length_num_2112_add_
+     4_9/CO undriven or does not drive anything - clipped.
+Signal lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/add_59_1/S0 undriven or
+
+     does not drive anything - clipped.
+Signal lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/add_59_1/CI undriven or
+     does not drive anything - clipped.
+Signal lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/add_59_11/S1 undriven or
+     does not drive anything - clipped.
+Signal lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/add_59_11/CO undriven or
+     does not drive anything - clipped.
+Signal lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/add_67_1/S0 undriven or
+     does not drive anything - clipped.
+Signal lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/add_67_1/CI undriven or
+     does not drive anything - clipped.
+Signal lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/add_67_9/S1 undriven or
+     does not drive anything - clipped.
+Signal lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/add_67_9/CO undriven or
+     does not drive anything - clipped.
+Signal lcd1/lcd_draw_line_inst/not_equal_8_0/S1 undriven or does not drive
+     anything - clipped.
+Signal lcd1/lcd_draw_line_inst/not_equal_8_0/S0 undriven or does not drive
+     anything - clipped.
+Signal lcd1/lcd_draw_line_inst/not_equal_8_0/CI undriven or does not drive
+     anything - clipped.
+Signal lcd1/lcd_draw_line_inst/not_equal_8_8/S1 undriven or does not drive
+     anything - clipped.
+Signal lcd1/lcd_draw_line_inst/not_equal_8_8/S0 undriven or does not drive
+     anything - clipped.
+Signal lcd1/lcd_draw_line_inst/not_equal_8_9/S0 undriven or does not drive
+     anything - clipped.
+Signal lcd1/lcd_draw_line_inst/not_equal_8_9/CO undriven or does not drive
+     anything - clipped.
+Signal lcd1/lcd_init_inst/add_153_1/S0 undriven or does not drive anything -
+     clipped.
+Signal lcd1/lcd_init_inst/add_153_1/CI undriven or does not drive anything -
+     clipped.
+Signal lcd1/lcd_init_inst/add_153_19/S1 undriven or does not drive anything -
+     clipped.
+Signal lcd1/lcd_init_inst/add_153_19/CO undriven or does not drive anything -
+     clipped.
+Signal lcd1/lcd_init_inst/cnt_150ms_2104_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal lcd1/lcd_init_inst/cnt_150ms_2104_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal lcd1/lcd_init_inst/cnt_150ms_2104_add_4_23/CO undriven or does not drive
+     anything - clipped.
+Signal lcd1/lcd_show_pic_inst/add_82_1/S0 undriven or does not drive anything -
+     clipped.
+Signal lcd1/lcd_show_pic_inst/add_82_1/CI undriven or does not drive anything -
+     clipped.
+Signal lcd1/lcd_show_pic_inst/add_82_11/S1 undriven or does not drive anything -
+     clipped.
+Signal lcd1/lcd_show_pic_inst/add_82_11/CO undriven or does not drive anything -
+     clipped.
+Signal lcd1/lcd_show_pic_inst/cnt_length_num_2108_add_4_1/S0 undriven or does
+     not drive anything - clipped.
+Signal lcd1/lcd_show_pic_inst/cnt_length_num_2108_add_4_1/CI undriven or does
+     not drive anything - clipped.
+Signal lcd1/lcd_show_pic_inst/cnt_length_num_2108_add_4_9/CO undriven or does
+
+     not drive anything - clipped.
+Signal lcd1/pic_ram_u0/address_8__I_0_rep_6_add_2_11/S1 undriven or does not
+     drive anything - clipped.
+Signal lcd1/pic_ram_u0/address_8__I_0_rep_6_add_2_11/CO undriven or does not
+     drive anything - clipped.
+Signal lcd1/pic_ram_u0/address_8__I_0_rep_5_add_2_1/S0 undriven or does not
+     drive anything - clipped.
+Signal lcd1/pic_ram_u0/address_8__I_0_rep_5_add_2_1/CI undriven or does not
+     drive anything - clipped.
+Signal lcd1/pic_ram_u0/address_8__I_0_rep_5_add_2_9/CO undriven or does not
+     drive anything - clipped.
+Signal lcd1/pic_ram_u0/address_8__I_0_rep_6_add_2_1/S1 undriven or does not
+     drive anything - clipped.
+Signal lcd1/pic_ram_u0/address_8__I_0_rep_6_add_2_1/S0 undriven or does not
+     drive anything - clipped.
+Signal lcd1/pic_ram_u0/address_8__I_0_rep_6_add_2_1/CI undriven or does not
+     drive anything - clipped.
+Block u7/i3324_1_lut was optimized away.
+Block i18358_2_lut was optimized away.
+Block jump/AND2_t29_adj_162 was optimized away.
+Block jump/AND2_t30_adj_161 was optimized away.
+Block jump/AND2_t31_adj_160 was optimized away.
+Block jump/AND2_t27_adj_145 was optimized away.
+Block jump/AND2_t26_adj_144 was optimized away.
+Block jump/AND2_t25_adj_143 was optimized away.
+Block jump/AND2_t24_adj_142 was optimized away.
+Block jump/AND2_t23_adj_141 was optimized away.
+Block jump/AND2_t22_adj_140 was optimized away.
+Block jump/AND2_t21_adj_139 was optimized away.
+Block jump/AND2_t20_adj_138 was optimized away.
+Block jump/AND2_t19_adj_137 was optimized away.
+Block jump/AND2_t18_adj_136 was optimized away.
+Block jump/AND2_t17_adj_135 was optimized away.
+Block jump/AND2_t16 was optimized away.
+Block jump/AND2_t15 was optimized away.
+Block jump/AND2_t29 was optimized away.
+Block jump/AND2_t30 was optimized away.
+Block jump/AND2_t31 was optimized away.
+Block jump/AND2_t27 was optimized away.
+Block jump/AND2_t26 was optimized away.
+Block jump/AND2_t25 was optimized away.
+Block jump/AND2_t24 was optimized away.
+Block jump/AND2_t23 was optimized away.
+Block jump/AND2_t22 was optimized away.
+Block jump/AND2_t21 was optimized away.
+Block jump/AND2_t20_adj_122 was optimized away.
+Block jump/AND2_t19_adj_121 was optimized away.
+Block jump/AND2_t28_adj_108 was optimized away.
+Block jump/AND2_t28 was optimized away.
+Block jump/i3200_1_lut_rep_345 was optimized away.
+Block lcd1/control_inst/i3521_1_lut_rep_326 was optimized away.
+Block lcd1/control_inst/i3524_1_lut was optimized away.
+Block lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/i2412_1_lut was optimized
+     away.
+Block lcd1/lcd_init_inst/i2376_1_lut was optimized away.
+Block lcd1/lcd_init_inst/i2373_1_lut_rep_304 was optimized away.
+
+Block lcd1/lcd_init_inst/i9057_1_lut was optimized away.
+Block lcd1/lcd_write_inst/i2406_1_lut was optimized away.
+Block lcd1/lcd_write_inst/i1_1_lut was optimized away.
+Block m0_lut was optimized away.
+
+     
+
+
+
+<A name="mrp_pll"></A><B><U><big>PLL/DLL Summary</big></U></B>
+---------------
+
+PLL 1:                                     Pin/Node Value
+  PLL Instance Name:                                lcd1/pll_u1/PLLInst_0
+  PLL Type:                                         EHXPLLJ
+  Input Clock:                             PIN      clk_c
+  Output Clock(P):                         NODE     lcd1/clk_50MHz
+  Output Clock(S):                                  NONE
+  Output Clock(S2):                                 NONE
+  Output Clock(S3):                                 NONE
+  Feedback Signal:                         NODE     lcd1/clk_50MHz
+  Reset Signal:                                     NONE
+  M Divider Reset Signal:                           NONE
+  C Divider Reset Signal:                           NONE
+  D Divider Reset Signal:                           NONE
+  Standby Signal:                                   NONE
+  PLL LOCK signal:                                  NONE
+  PLL Data bus CLK Signal:                          NONE
+  PLL Data bus Strobe Signal:                       NONE
+  PLL Data bus Reset Signal:                        NONE
+  PLL Data bus Write Enable Signal:                 NONE
+  PLL Data bus Address0:                            NONE
+  PLL Data bus Address1:                            NONE
+  PLL Data bus Address2:                            NONE
+  PLL Data bus Address3:                            NONE
+  PLL Data bus Address4:                            NONE
+  PLL Data In bus Data0:                            NONE
+  PLL Data In bus Data1:                            NONE
+  PLL Data In bus Data2:                            NONE
+  PLL Data In bus Data3:                            NONE
+  PLL Data In bus Data4:                            NONE
+  PLL Data In bus Data5:                            NONE
+  PLL Data In bus Data6:                            NONE
+  PLL Data In bus Data7:                            NONE
+  PLL Data bus Acknowledge:                         NONE
+  PLL Data Out bus Data0:                           NONE
+  PLL Data Out bus Data1:                           NONE
+  PLL Data Out bus Data2:                           NONE
+  PLL Data Out bus Data3:                           NONE
+  PLL Data Out bus Data4:                           NONE
+  PLL Data Out bus Data5:                           NONE
+  PLL Data Out bus Data6:                           NONE
+  PLL Data Out bus Data7:                           NONE
+  Input Clock Frequency (MHz):                      12.0000
+  Output Clock(P) Frequency (MHz):                  96.0000
+  Output Clock(S) Frequency (MHz):                  NA
+  Output Clock(S2) Frequency (MHz):                 NA
+  Output Clock(S3) Frequency (MHz):                 NA
+
+  CLKOP Post Divider A Input:                       DIVA
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      DIVC
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              VCO_PHASE
+  Pre Divider B Input:                              VCO_PHASE
+  Pre Divider C Input:                              VCO_PHASE
+  Pre Divider D Input:                              VCO_PHASE
+  VCO Bypass A Input:                               VCO_PHASE
+  VCO Bypass B Input:                               VCO_PHASE
+  VCO Bypass C Input:                               VCO_PHASE
+  VCO Bypass D Input:                               VCO_PHASE
+  FB_MODE:                                          CLKOP
+  CLKI Divider:                                     1
+  CLKFB Divider:                                    8
+  CLKOP Divider:                                    5
+  CLKOS Divider:                                    1
+  CLKOS2 Divider:                                   1
+  CLKOS3 Divider:                                   1
+  Fractional N Divider:                             0
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 RISING
+  CLKOP Trim Option Delay:                          0
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 FALLING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS3 Desired Phase Shift(degree):               0
+PLL 2:                                     Pin/Node Value
+  PLL Instance Name:                                pll_u2/PLLInst_0
+  PLL Type:                                         EHXPLLJ
+  Input Clock:                             PIN      clk_c
+  Output Clock(P):                         NODE     clk_24MHz
+  Output Clock(S):                                  NONE
+  Output Clock(S2):                                 NONE
+  Output Clock(S3):                                 NONE
+  Feedback Signal:                         NODE     clk_24MHz
+  Reset Signal:                                     NONE
+  M Divider Reset Signal:                           NONE
+  C Divider Reset Signal:                           NONE
+  D Divider Reset Signal:                           NONE
+  Standby Signal:                                   NONE
+  PLL LOCK signal:                                  NONE
+  PLL Data bus CLK Signal:                          NONE
+  PLL Data bus Strobe Signal:                       NONE
+  PLL Data bus Reset Signal:                        NONE
+  PLL Data bus Write Enable Signal:                 NONE
+  PLL Data bus Address0:                            NONE
+  PLL Data bus Address1:                            NONE
+  PLL Data bus Address2:                            NONE
+  PLL Data bus Address3:                            NONE
+  PLL Data bus Address4:                            NONE
+  PLL Data In bus Data0:                            NONE
+  PLL Data In bus Data1:                            NONE
+  PLL Data In bus Data2:                            NONE
+  PLL Data In bus Data3:                            NONE
+
+  PLL Data In bus Data4:                            NONE
+  PLL Data In bus Data5:                            NONE
+  PLL Data In bus Data6:                            NONE
+  PLL Data In bus Data7:                            NONE
+  PLL Data bus Acknowledge:                         NONE
+  PLL Data Out bus Data0:                           NONE
+  PLL Data Out bus Data1:                           NONE
+  PLL Data Out bus Data2:                           NONE
+  PLL Data Out bus Data3:                           NONE
+  PLL Data Out bus Data4:                           NONE
+  PLL Data Out bus Data5:                           NONE
+  PLL Data Out bus Data6:                           NONE
+  PLL Data Out bus Data7:                           NONE
+  Input Clock Frequency (MHz):                      12.0000
+  Output Clock(P) Frequency (MHz):                  24.0000
+  Output Clock(S) Frequency (MHz):                  NA
+  Output Clock(S2) Frequency (MHz):                 NA
+  Output Clock(S3) Frequency (MHz):                 NA
+  CLKOP Post Divider A Input:                       DIVA
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      DIVC
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              VCO_PHASE
+  Pre Divider B Input:                              VCO_PHASE
+  Pre Divider C Input:                              VCO_PHASE
+  Pre Divider D Input:                              VCO_PHASE
+  VCO Bypass A Input:                               VCO_PHASE
+  VCO Bypass B Input:                               VCO_PHASE
+  VCO Bypass C Input:                               VCO_PHASE
+  VCO Bypass D Input:                               VCO_PHASE
+  FB_MODE:                                          CLKOP
+  CLKI Divider:                                     1
+  CLKFB Divider:                                    2
+  CLKOP Divider:                                    22
+  CLKOS Divider:                                    1
+  CLKOS2 Divider:                                   1
+  CLKOS3 Divider:                                   1
+  Fractional N Divider:                             0
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 RISING
+  CLKOP Trim Option Delay:                          0
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 FALLING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS3 Desired Phase Shift(degree):               0
+
+
+
+<A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
+---------------
+
+Instance Name: lcd1/pll_u1/PLLInst_0
+         Type: EHXPLLJ
+Instance Name: pll_u2/PLLInst_0
+         Type: EHXPLLJ
+
+
+
+
+
+<A name="mrp_gsr"></A><B><U><big>GSR Usage</big></U></B>
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'rst_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'rst_c' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 266 
+
+     Type and instance name of component: 
+   Register : lcd1/lcd_draw_line_inst/past_y_i0_i3
+   Register : lcd1/lcd_draw_line_inst/past_y_i0_i2
+   Register : lcd1/lcd_draw_line_inst/past_y_i0_i1
+   Register : lcd1/lcd_draw_line_inst/past_y_i0_i0
+   Register : lcd1/lcd_draw_line_inst/past_y_i0_i8
+   Register : lcd1/lcd_draw_line_inst/past_y_i0_i7
+   Register : lcd1/lcd_draw_line_inst/past_y_i0_i6
+   Register : lcd1/lcd_draw_line_inst/past_y_i0_i5
+   Register : lcd1/lcd_draw_line_inst/past_y_i0_i4
+   Register : jump/position_i8
+   Register : jump/position_i7
+   Register : jump/position_i6
+   Register : jump/pic_y_i1_9005_9006_reset
+   Register : jump/pic_y_i1_9005_9006_set
+   Register : jump/time_count_r_i0_i0
+   Register : jump/position_i5
+   Register : jump/position_i4
+   Register : jump/time_count_up_i0
+   Register : jump/position_i3
+   Register : jump/position_i0
+   Register : jump/current_state_i0
+   Register : jump/time_count_down_i0
+   Register : jump/i8955
+   Register : jump/init_position_i0_8952_8953_set
+   Register : jump/position_i2
+   Register : jump/position_i1
+   Register : jump/current_state_i0_rep_350
+   Register : jump/time_count_up_i14
+   Register : jump/time_count_up_i13
+   Register : jump/time_count_up_i12
+   Register : jump/time_count_up_i11
+   Register : jump/time_count_up_i10
+   Register : jump/time_count_up_i9
+   Register : jump/time_count_up_i8
+
+   Register : jump/time_count_up_i7
+   Register : jump/init_position_i8_8959_8960_set
+   Register : jump/time_count_up_i6
+   Register : jump/init_position_i7_8966_8967_set
+   Register : jump/init_position_i6_8973_8974_set
+   Register : jump/time_count_up_i5
+   Register : jump/time_count_up_i4
+   Register : jump/time_count_up_i3
+   Register : jump/init_position_i5_8980_8981_set
+   Register : jump/init_position_i4_8987_8988_set
+   Register : jump/time_count_up_i2
+   Register : jump/time_count_up_i1
+   Register : jump/init_position_i3_8994_8995_set
+   Register : jump/init_position_i2_9001_9002_set
+   Register : jump/init_position_i2_9001_9002_reset
+   Register : jump/init_position_i1_9008_9009_set
+   Register : jump/time_count_r_i0_i14
+   Register : jump/time_count_r_i0_i13
+   Register : jump/time_count_r_i0_i12
+   Register : jump/time_count_r_i0_i11
+   Register : jump/time_count_r_i0_i10
+   Register : jump/time_count_r_i0_i9
+   Register : jump/time_count_r_i0_i8
+   Register : jump/time_count_r_i0_i7
+   Register : jump/i8962
+   Register : jump/time_count_r_i0_i6
+   Register : jump/i8969
+   Register : jump/i8976
+   Register : jump/i8983
+   Register : jump/i8990
+   Register : jump/i8997
+   Register : jump/time_count_r_i0_i5
+   Register : jump/time_count_r_i0_i4
+   Register : jump/i9004
+   Register : jump/time_count_r_i0_i3
+   Register : jump/time_count_r_i0_i2
+   Register : jump/time_count_r_i0_i1
+   Register : jump/time_count_down_i14
+   Register : jump/time_count_down_i13
+   Register : jump/time_count_down_i12
+   Register : jump/time_count_down_i11
+   Register : jump/time_count_down_i10
+   Register : jump/time_count_down_i9
+   Register : jump/time_count_down_i8
+   Register : jump/time_count_down_i7
+   Register : jump/time_count_down_i6
+   Register : jump/time_count_down_i5
+   Register : jump/time_count_down_i4
+   Register : jump/time_count_down_i3
+   Register : jump/time_count_down_i2
+   Register : jump/time_count_down_i1
+   Register : jump/init_velocity_i10
+   Register : jump/init_velocity_i9
+   Register : jump/init_velocity_i8
+   Register : jump/init_velocity_i7
+   Register : jump/pic_y_i2_8998_8999_reset
+
+   Register : jump/pic_y_i2_8998_8999_set
+   Register : jump/init_position_i3_8994_8995_reset
+   Register : jump/pic_y_i3_8991_8992_reset
+   Register : jump/pic_y_i3_8991_8992_set
+   Register : jump/init_position_i4_8987_8988_reset
+   Register : jump/pic_y_i4_8984_8985_reset
+   Register : jump/pic_y_i4_8984_8985_set
+   Register : jump/init_position_i5_8980_8981_reset
+   Register : jump/pic_y_i5_8977_8978_reset
+   Register : jump/pic_y_i5_8977_8978_set
+   Register : jump/init_position_i6_8973_8974_reset
+   Register : jump/pic_y_i6_8970_8971_reset
+   Register : jump/init_velocity_i2
+   Register : jump/pic_y_i6_8970_8971_set
+   Register : jump/pic_y_i0_8949_8950_reset
+   Register : jump/init_velocity_i3
+   Register : jump/init_position_i7_8966_8967_reset
+   Register : jump/init_velocity_i0
+   Register : jump/pic_y_i7_8963_8964_reset
+   Register : jump/pic_y_i7_8963_8964_set
+   Register : jump/init_position_i8_8959_8960_reset
+   Register : jump/pic_y_i8_8956_8957_reset
+   Register : jump/init_velocity_i4
+   Register : jump/init_velocity_i5
+   Register : jump/pic_y_i8_8956_8957_set
+   Register : jump/init_position_i0_8952_8953_reset
+   Register : jump/init_velocity_i1
+   Register : jump/pic_y_i0_8949_8950_set
+   Register : jump/init_velocity_i6
+   Register : jump/init_position_i1_9008_9009_reset
+   Register : jump/i8948
+   Register : adc_driver/adc_data_i0_i2
+   Register : adc_driver/adc_data_i0_i3
+   Register : adc_driver/adc_data_i0_i1
+   Register : adc_driver/data_i0_i0
+   Register : adc_driver/adc_data_i0_i0
+   Register : adc_driver/adc_data_i0_i7
+   Register : adc_driver/adc_data_i0_i6
+   Register : adc_driver/adc_data_i0_i5
+   Register : adc_driver/adc_data_i0_i4
+   Register : adc_driver/data_i0_i7
+   Register : adc_driver/data_i0_i5
+   Register : adc_driver/data_i0_i3
+   Register : adc_driver/data_i0_i1
+   Register : adc_driver/data_i0_i2
+   Register : adc_driver/data_i0_i4
+   Register : adc_driver/data_i0_i6
+   Register : u8/prox_dat0_i9
+   Register : u8/handline_pre_i0_i1
+   Register : u8/prox_dat0_i8
+   Register : u8/prox_dat0_i7
+   Register : u8/prox_dat0_i6
+   Register : u8/prox_dat0_i5
+   Register : u8/prox_dat0_i4
+   Register : u8/prox_dat0_i3
+   Register : u8/prox_dat0_i2
+
+   Register : u8/prox_dat0_i1
+   Register : u8/prox_dat2__i1
+   Register : u8/handline_pre_i0_i0
+   Register : u8/prox_dat1_i0
+   Register : u8/velocity_temp__i1
+   Register : u8/prox_dat0_i0
+   Register : u8/handline__i0
+   Register : u8/velocity_temp__i8
+   Register : u8/velocity_temp__i7
+   Register : u8/velocity_temp__i6
+   Register : u8/velocity_temp__i5
+   Register : u8/velocity_temp__i4
+   Register : u8/velocity_temp__i3
+   Register : u8/velocity_temp__i2
+   Register : u8/prox_dat1_i15
+   Register : u8/prox_dat2__i6
+   Register : u8/prox_dat2__i5
+   Register : u8/prox_dat2__i4
+   Register : u8/prox_dat2__i3
+   Register : u8/prox_dat2__i2
+   Register : u8/count_35_2094__i0
+   Register : u8/prox_dat1_i14
+   Register : u8/prox_dat1_i13
+   Register : u8/prox_dat1_i12
+   Register : u8/prox_dat1_i11
+   Register : u8/prox_dat1_i10
+   Register : u8/prox_dat1_i9
+   Register : u8/prox_dat1_i8
+   Register : u8/prox_dat1_i7
+   Register : u8/prox_dat1_i6
+   Register : u8/prox_dat1_i5
+   Register : u8/handline__i8
+   Register : u8/prox_dat1_i4
+   Register : u8/handline__i7
+   Register : u8/prox_dat1_i3
+   Register : u8/prox_dat1_i2
+   Register : u8/handline__i6
+   Register : u8/handline__i5
+   Register : u8/prox_dat1_i1
+   Register : u8/handline__i4
+   Register : u8/handline_pre_i0_i8
+   Register : u8/handline__i3
+   Register : u8/handline__i2
+   Register : u8/handline__i1
+   Register : u8/handline_pre_i0_i7
+   Register : u8/handline_pre_i0_i6
+   Register : u8/prox_dat0_i15
+   Register : u8/handline_pre_i0_i5
+   Register : u8/prox_dat0_i14
+   Register : u8/handline_pre_i0_i4
+   Register : u8/prox_dat0_i13
+   Register : u8/handline_pre_i0_i3
+   Register : u8/prox_dat0_i12
+   Register : u8/handline_pre_i0_i2
+   Register : u8/prox_dat0_i11
+   Register : u8/prox_dat0_i10
+
+   Register : u8/hand_velocity__i2
+   Register : u8/hand_velocity__i3
+   Register : u8/hand_velocity__i4
+   Register : u8/hand_velocity__i5
+   Register : u8/hand_velocity__i6
+   Register : u8/hand_velocity__i7
+   Register : u8/hand_velocity__i1
+   Register : u7/dat_h_i0_i0
+   Register : u7/dat_l_i0_i0
+   Register : u7/data_r_i0_i3
+   Register : u7/data_r_i0_i4
+   Register : u7/data_r_i0_i5
+   Register : u7/dat_valid_276
+   Register : u7/data_r_i0_i6
+   Register : u7/reg_data_i0_i2
+   Register : u7/prox_dat_i0_i15
+   Register : u7/prox_dat_i0_i14
+   Register : u7/prox_dat_i0_i13
+   Register : u7/prox_dat_i0_i12
+   Register : u7/prox_dat_i0_i11
+   Register : u7/prox_dat_i0_i10
+   Register : u7/prox_dat_i0_i9
+   Register : u7/prox_dat_i0_i8
+   Register : u7/prox_dat_i0_i6
+   Register : u7/prox_dat_i0_i5
+   Register : u7/prox_dat_i0_i4
+   Register : u7/prox_dat_i0_i3
+   Register : u7/prox_dat_i0_i2
+   Register : u7/prox_dat_i0_i1
+   Register : u7/reg_addr_i0_i3
+   Register : u7/data_r_i0_i7
+   Register : u7/reg_addr_i0_i2
+   Register : u7/reg_addr_i0_i1
+   Register : u7/data_wr_i0_i6
+   Register : u7/data_wr_i0_i5
+   Register : u7/data_wr_i0_i3
+   Register : u7/data_wr_i0_i2
+   Register : u7/data_wr_i0_i1
+   Register : u7/dat_l_i0_i6
+   Register : u7/dat_l_i0_i5
+   Register : u7/dat_l_i0_i4
+   Register : u7/dat_l_i0_i3
+   Register : u7/dat_l_i0_i2
+   Register : u7/dat_l_i0_i1
+   Register : u7/dat_h_i0_i7
+   Register : u7/dat_h_i0_i6
+   Register : u7/dat_h_i0_i5
+   Register : u7/dat_h_i0_i4
+   Register : u7/dat_h_i0_i3
+   Register : u7/dat_h_i0_i2
+   Register : u7/dat_h_i0_i1
+   Register : u7/dat_l_i0_i7
+   Register : u7/data_wr_i0_i7
+   Register : u7/prox_dat_i0_i7
+   Register : u7/reg_data_i0_i1
+   Register : u7/reg_data_i0_i3
+
+   Register : u7/data_r_i0_i1
+   Register : u7/data_r_i0_i2
+   Register : u7/reg_data_i0_i0
+   Register : u7/prox_dat_i0_i0
+   Register : u7/reg_addr_i0_i0
+   Register : u7/data_wr_i0_i0
+   Register : u7/data_r_i0_i0
+   Register : u7/dat_valid_276_rep_352
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'rst_c' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 273 
+
+     Type and instance name of component: 
+   Register : lcd1/lcd_write_inst/cnt_sclk__i0
+   Register : lcd1/lcd_write_inst/cnt1_FSM_i15
+   Register : lcd1/lcd_write_inst/cnt1_FSM_i14
+   Register : lcd1/lcd_write_inst/cnt1_FSM_i13
+   Register : lcd1/lcd_write_inst/cnt1_FSM_i12
+   Register : lcd1/lcd_write_inst/cnt1_FSM_i11
+   Register : lcd1/lcd_write_inst/cnt1_FSM_i10
+   Register : lcd1/lcd_write_inst/cnt1_FSM_i9
+   Register : lcd1/lcd_write_inst/cnt1_FSM_i8
+   Register : lcd1/lcd_write_inst/cnt1_FSM_i7
+   Register : lcd1/lcd_write_inst/cnt1_FSM_i6
+   Register : lcd1/lcd_write_inst/cnt_sclk__i3
+   Register : lcd1/lcd_write_inst/cnt1_FSM_i5
+   Register : lcd1/lcd_write_inst/cnt1_FSM_i4
+   Register : lcd1/lcd_write_inst/cnt_sclk__i2
+   Register : lcd1/lcd_write_inst/cnt1_FSM_i3
+   Register : lcd1/lcd_write_inst/cnt_sclk__i1
+   Register : lcd1/lcd_write_inst/cnt1_FSM_i2
+   Register : lcd1/lcd_write_inst/cnt1_FSM_i1
+   Register : lcd1/lcd_write_inst/state_FSM_i0
+   Register : lcd1/lcd_write_inst/sclk_99
+   Register : lcd1/lcd_write_inst/state2_finish_flag_98
+   Register : lcd1/lcd_write_inst/cnt_delay_2098__i0
+   Register : lcd1/lcd_write_inst/state_FSM_i3
+   Register : lcd1/lcd_write_inst/cnt1_FSM_i0
+   Register : lcd1/lcd_write_inst/cnt_delay_2098__i1
+   Register : lcd1/lcd_write_inst/cnt_delay_2098__i2
+   Register : lcd1/lcd_write_inst/cnt_delay_2098__i3
+   Register : lcd1/lcd_write_inst/cnt_delay_2098__i4
+   Register : lcd1/lcd_show_pic_inst/rom_addr_i5
+   Register : lcd1/lcd_show_pic_inst/cnt_wr_color_data__i0
+   Register : lcd1/lcd_show_pic_inst/cnt_rom_prepare__i0
+   Register : lcd1/lcd_show_pic_inst/rom_addr_i6
+   Register : lcd1/lcd_show_pic_inst/cnt_rom_prepare__i2
+   Register : lcd1/lcd_show_pic_inst/cnt_rom_prepare__i1
+
+   Register : lcd1/lcd_show_pic_inst/temp_i0
+   Register : lcd1/lcd_show_pic_inst/rom_addr_i7
+   Register : lcd1/lcd_show_pic_inst/rom_addr_i8
+   Register : lcd1/lcd_show_pic_inst/length_num_flag_120
+   Register : lcd1/lcd_show_pic_inst/state1_finish_flag_116
+   Register : lcd1/lcd_show_pic_inst/cnt_wr_color_data__i9
+   Register : lcd1/lcd_show_pic_inst/cnt_wr_color_data__i8
+   Register : lcd1/lcd_show_pic_inst/cnt_wr_color_data__i7
+   Register : lcd1/lcd_show_pic_inst/cnt_wr_color_data__i6
+   Register : lcd1/lcd_show_pic_inst/cnt_wr_color_data__i5
+   Register : lcd1/lcd_show_pic_inst/cnt_wr_color_data__i4
+   Register : lcd1/lcd_show_pic_inst/cnt_wr_color_data__i3
+   Register : lcd1/lcd_show_pic_inst/cnt_wr_color_data__i2
+   Register : lcd1/lcd_show_pic_inst/cnt_wr_color_data__i1
+   Register : lcd1/lcd_show_pic_inst/cnt_set_windows_2106__i0
+   Register : lcd1/lcd_show_pic_inst/cnt_length_num_2108__i0
+   Register : lcd1/lcd_show_pic_inst/cnt_set_windows_2106__i3
+   Register : lcd1/lcd_show_pic_inst/cnt_set_windows_2106__i2
+   Register : lcd1/lcd_show_pic_inst/cnt_set_windows_2106__i1
+   Register : lcd1/lcd_show_pic_inst/cnt_length_num_2108__i8
+   Register : lcd1/lcd_show_pic_inst/cnt_length_num_2108__i7
+   Register : lcd1/lcd_show_pic_inst/cnt_length_num_2108__i6
+   Register : lcd1/lcd_show_pic_inst/cnt_length_num_2108__i5
+   Register : lcd1/lcd_show_pic_inst/cnt_length_num_2108__i4
+   Register : lcd1/lcd_show_pic_inst/cnt_length_num_2108__i3
+   Register : lcd1/lcd_show_pic_inst/cnt_length_num_2108__i2
+   Register : lcd1/lcd_show_pic_inst/cnt_length_num_2108__i1
+   Register : lcd1/lcd_show_pic_inst/rom_addr_i0
+   Register : lcd1/lcd_show_pic_inst/temp_i10
+   Register : lcd1/lcd_show_pic_inst/rom_addr_i1
+   Register : lcd1/lcd_show_pic_inst/rom_addr_i2
+   Register : lcd1/lcd_show_pic_inst/rom_addr_i3
+   Register : lcd1/lcd_show_pic_inst/rom_addr_i4
+   Register : lcd1/lcd_init_inst/cnt_s4_num__i0
+   Register : lcd1/lcd_init_inst/cnt_s2_num__i0
+   Register : lcd1/lcd_init_inst/cnt_s4_num__i17
+   Register : lcd1/lcd_init_inst/cnt_s4_num__i16
+   Register : lcd1/lcd_init_inst/cnt_s4_num__i15
+   Register : lcd1/lcd_init_inst/cnt_s4_num__i14
+   Register : lcd1/lcd_init_inst/cnt_s4_num__i13
+   Register : lcd1/lcd_init_inst/cnt_s4_num__i12
+   Register : lcd1/lcd_init_inst/cnt_s4_num__i11
+   Register : lcd1/lcd_init_inst/cnt_s4_num__i10
+   Register : lcd1/lcd_init_inst/cnt_s4_num__i9
+   Register : lcd1/lcd_init_inst/cnt_s4_num__i8
+   Register : lcd1/lcd_init_inst/cnt_s4_num__i7
+   Register : lcd1/lcd_init_inst/cnt_s4_num__i6
+   Register : lcd1/lcd_init_inst/cnt_s4_num__i5
+   Register : lcd1/lcd_init_inst/cnt_s4_num__i4
+   Register : lcd1/lcd_init_inst/cnt_s4_num__i3
+   Register : lcd1/lcd_init_inst/cnt_s4_num__i2
+   Register : lcd1/lcd_init_inst/cnt_s4_num__i1
+   Register : lcd1/lcd_init_inst/cnt_s2_num_done_174
+   Register : lcd1/lcd_init_inst/cnt_s4_num_done_177
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i0
+   Register : lcd1/lcd_init_inst/lcd_rst_high_flag_171
+
+   Register : lcd1/lcd_init_inst/cnt_s2_num__i1
+   Register : lcd1/lcd_init_inst/cnt_s2_num__i2
+   Register : lcd1/lcd_init_inst/cnt_s2_num__i3
+   Register : lcd1/lcd_init_inst/cnt_s2_num__i4
+   Register : lcd1/lcd_init_inst/cnt_s2_num__i5
+   Register : lcd1/lcd_init_inst/cnt_s2_num__i6
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i1
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i2
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i3
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i4
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i5
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i6
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i7
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i8
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i9
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i10
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i11
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i12
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i13
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i14
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i15
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i16
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i17
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i18
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i19
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i20
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i21
+   Register : lcd1/lcd_init_inst/cnt_150ms_2104__i22
+   Register : lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_set_windows_2
+        110__i2
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_wr_color_data__i0
+   Register : lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_set_windows_2
+        110__i1
+   Register : lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_length_num_21
+        12__i8
+   Register : lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_length_num_21
+        12__i7
+   Register : lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_length_num_21
+        12__i6
+   Register : lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_length_num_21
+        12__i5
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/length_num_flag_90
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/state1_finish_flag_89
+   Register : lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_length_num_21
+        12__i4
+   Register : lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_length_num_21
+        12__i3
+   Register : lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_length_num_21
+        12__i2
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_wr_color_data__i9
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_wr_color_data__i8
+
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_wr_color_data__i7
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_wr_color_data__i6
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_wr_color_data__i5
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_wr_color_data__i4
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_wr_color_data__i3
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_wr_color_data__i2
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_wr_color_data__i1
+   Register : lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_length_num_21
+        12__i1
+   Register : lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_set_windows_2
+        110__i0
+   Register : lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_length_num_21
+        12__i0
+   Register : lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_set_windows_2
+        110__i3
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/cnt_wr_color_data__i0
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/cnt_wr_color_data__i9
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/cnt_wr_color_data__i8
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/cnt_wr_color_data__i7
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/cnt_wr_color_data__i6
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/cnt_wr_color_data__i5
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/cnt_wr_color_data__i4
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/state1_finish_flag_86
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/cnt_wr_color_data__i3
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/length_num_flag_87
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/cnt_wr_color_data__i2
+   Register :
+        lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/cnt_wr_color_data__i1
+   Register : lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/cnt_set_windows_2
+        114__i3
+   Register : lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/cnt_set_windows_2
+        114__i0
+   Register : lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/cnt_set_windows_2
+        114__i2
+   Register : lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/cnt_set_windows_2
+        114__i1
+   Register : lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/data_i0
+   Register : lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/data_i1
+
+   Register : lcd1/control_inst/show_pic_counter_2102__i0
+   Register : lcd1/control_inst/draw_line_counter_2100__i0
+   Register : lcd1/control_inst/state_FSM_i4
+   Register : lcd1/control_inst/show_pic_counter_2102__i1
+   Register : lcd1/control_inst/show_pic_counter_2102__i2
+   Register : lcd1/control_inst/show_pic_counter_2102__i3
+   Register : lcd1/control_inst/draw_line_counter_2100__i1
+   Register : lcd1/control_inst/draw_line_counter_2100__i2
+   Register : lcd1/control_inst/draw_line_counter_2100__i3
+   Register : jump/fre_500us/clk_out_13
+   Register : jump/fre_500us/count_up_2096__i0
+   Register : jump/fre_500us/count_up_2096__i1
+   Register : jump/fre_500us/count_up_2096__i2
+   Register : jump/fre_500us/count_up_2096__i3
+   Register : jump/fre_500us/count_up_2096__i4
+   Register : jump/fre_500us/count_up_2096__i5
+   Register : jump/fre_500us/count_up_2096__i6
+   Register : jump/fre_500us/count_up_2096__i7
+   Register : jump/fre_500us/count_up_2096__i8
+   Register : jump/fre_500us/count_up_2096__i9
+   Register : jump/fre_500us/count_up_2096__i10
+   Register : jump/fre_500us/count_up_2096__i11
+   Register : jump/fre_500us/count_up_2096__i12
+   Register : jump/fre_500us/count_up_2096__i13
+   Register : jump/fre_500us/count_up_2096__i14
+   Register : jump/fre_500us/count_up_2096__i15
+   Register : jump/fre_500us/count_up_2096__i16
+   Register : jump/fre_500us/count_up_2096__i17
+   Register : jump/fre_500us/count_up_2096__i18
+   Register : jump/fre_500us/count_up_2096__i19
+   Register : jump/fre_500us/count_up_2096__i20
+   Register : jump/fre_500us/count_up_2096__i21
+   Register : jump/fre_500us/count_up_2096__i22
+   Register : jump/fre_500us/count_up_2096__i23
+   Register : adc_driver/cnt_2092__i0
+   Register : adc_driver/cnt_2092__i1
+   Register : adc_driver/cnt_2092__i2
+   Register : adc_driver/cnt_2092__i3
+   Register : adc_driver/cnt_2092__i4
+   Register : adc_driver/cnt_2092__i5
+   Register : adc_driver/cnt_2092__i6
+   Register : adc_driver/cnt_2092__i7
+   Register : adj/deb/cnt_2095__i0
+   Register : adj/deb/cnt_2095__i1
+   Register : adj/deb/cnt_2095__i2
+   Register : adj/deb/cnt_2095__i3
+   Register : adj/deb/cnt_2095__i4
+   Register : adj/deb/cnt_2095__i5
+   Register : adj/deb/cnt_2095__i6
+   Register : adj/deb/cnt_2095__i7
+   Register : adj/deb/cnt_2095__i8
+   Register : adj/deb/cnt_2095__i9
+   Register : adj/deb/cnt_2095__i10
+   Register : adj/deb/cnt_2095__i11
+   Register : adj/deb/cnt_2095__i12
+   Register : adj/deb/cnt_2095__i13
+
+   Register : adj/deb/cnt_2095__i14
+   Register : adj/deb/cnt_2095__i15
+   Register : adj/deb/cnt_2095__i16
+   Register : adj/deb/cnt_2095__i17
+   Register : u7/cnt_delay_i0_i8
+   Register : u7/cnt_delay_i0_i7
+   Register : u7/cnt_delay_i0_i6
+   Register : u7/cnt_delay_i0_i5
+   Register : u7/cnt_delay_i0_i4
+   Register : u7/cnt_delay_i0_i3
+   Register : u7/cnt_delay_i0_i2
+   Register : u7/cnt_delay_i0_i1
+   Register : u7/cnt_400khz_2093__i0
+   Register : u7/cnt_main_i0_i3
+   Register : u7/cnt_main_i0_i1
+   Register : u7/cnt_mode1_i0_i3
+   Register : u7/cnt_mode1_i0_i2
+   Register : u7/cnt_mode1_i0_i1
+   Register : u7/cnt_write_i0_i3
+   Register : u7/cnt_write_i0_i2
+   Register : u7/cnt_write_i0_i1
+   Register : u7/cnt_main_i0_i0
+   Register : u7/cnt_mode1_i0_i0
+   Register : u7/cnt_delay_i0_i23
+   Register : u7/cnt_delay_i0_i22
+   Register : u7/cnt_mode2_i0_i1
+   Register : u7/cnt_mode2_i0_i2
+   Register : u7/cnt_mode2_i0_i3
+   Register : u7/cnt_mode2_i0_i0
+   Register : u7/cnt_delay_i0_i21
+   Register : u7/cnt_delay_i0_i20
+   Register : u7/cnt_delay_i0_i19
+   Register : u7/cnt_start_i0_i0
+   Register : u7/cnt_delay_i0_i18
+   Register : u7/cnt_delay_i0_i17
+   Register : u7/cnt_delay_i0_i16
+   Register : u7/cnt_start_i0_i1
+   Register : u7/cnt_start_i0_i2
+   Register : u7/cnt_start_i0_i3
+   Register : u7/cnt_delay_i0_i15
+   Register : u7/cnt_delay_i0_i14
+   Register : u7/cnt_delay_i0_i13
+   Register : u7/cnt_delay_i0_i12
+   Register : u7/cnt_delay_i0_i11
+   Register : u7/cnt_400khz_2093__i1
+   Register : u7/cnt_400khz_2093__i2
+   Register : u7/cnt_400khz_2093__i3
+   Register : u7/cnt_400khz_2093__i4
+   Register : u7/cnt_400khz_2093__i5
+   Register : u7/cnt_400khz_2093__i6
+   Register : u7/cnt_400khz_2093__i7
+   Register : u7/cnt_400khz_2093__i8
+   Register : u7/cnt_400khz_2093__i9
+   Register : u7/cnt_delay_i0_i10
+   Register : u7/cnt_delay_i0_i9
+
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 66 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

@@ -1,5 +1,5 @@
 Timing Analyzer report for Electric_Piano
-Tue May 27 13:28:44 2025
+Wed May 28 10:51:17 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -9,44 +9,43 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   1. Legal Notice
   2. Timing Analyzer Summary
   3. Parallel Compilation
-  4. Clocks
-  5. Slow 1200mV 85C Model Fmax Summary
-  6. Slow 1200mV 85C Model Setup Summary
-  7. Slow 1200mV 85C Model Hold Summary
-  8. Slow 1200mV 85C Model Recovery Summary
-  9. Slow 1200mV 85C Model Removal Summary
- 10. Slow 1200mV 85C Model Minimum Pulse Width Summary
- 11. Slow 1200mV 85C Model Metastability Summary
- 12. Slow 1200mV 0C Model Fmax Summary
- 13. Slow 1200mV 0C Model Setup Summary
- 14. Slow 1200mV 0C Model Hold Summary
- 15. Slow 1200mV 0C Model Recovery Summary
- 16. Slow 1200mV 0C Model Removal Summary
- 17. Slow 1200mV 0C Model Minimum Pulse Width Summary
- 18. Slow 1200mV 0C Model Metastability Summary
- 19. Fast 1200mV 0C Model Setup Summary
- 20. Fast 1200mV 0C Model Hold Summary
- 21. Fast 1200mV 0C Model Recovery Summary
- 22. Fast 1200mV 0C Model Removal Summary
- 23. Fast 1200mV 0C Model Minimum Pulse Width Summary
- 24. Fast 1200mV 0C Model Metastability Summary
- 25. Multicorner Timing Analysis Summary
- 26. Board Trace Model Assignments
- 27. Input Transition Times
- 28. Signal Integrity Metrics (Slow 1200mv 0c Model)
- 29. Signal Integrity Metrics (Slow 1200mv 85c Model)
- 30. Signal Integrity Metrics (Fast 1200mv 0c Model)
- 31. Setup Transfers
- 32. Hold Transfers
- 33. Report TCCS
- 34. Report RSKM
- 35. Unconstrained Paths Summary
- 36. Clock Status Summary
- 37. Unconstrained Input Ports
- 38. Unconstrained Output Ports
- 39. Unconstrained Input Ports
- 40. Unconstrained Output Ports
- 41. Timing Analyzer Messages
+  4. SDC File List
+  5. Clocks
+  6. Slow 1200mV 85C Model Fmax Summary
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Metastability Summary
+ 13. Slow 1200mV 0C Model Fmax Summary
+ 14. Slow 1200mV 0C Model Setup Summary
+ 15. Slow 1200mV 0C Model Hold Summary
+ 16. Slow 1200mV 0C Model Recovery Summary
+ 17. Slow 1200mV 0C Model Removal Summary
+ 18. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 19. Slow 1200mV 0C Model Metastability Summary
+ 20. Fast 1200mV 0C Model Setup Summary
+ 21. Fast 1200mV 0C Model Hold Summary
+ 22. Fast 1200mV 0C Model Recovery Summary
+ 23. Fast 1200mV 0C Model Removal Summary
+ 24. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 25. Fast 1200mV 0C Model Metastability Summary
+ 26. Multicorner Timing Analysis Summary
+ 27. Board Trace Model Assignments
+ 28. Input Transition Times
+ 29. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 30. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 31. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 32. Setup Transfers
+ 33. Hold Transfers
+ 34. Recovery Transfers
+ 35. Removal Transfers
+ 36. Report TCCS
+ 37. Report RSKM
+ 38. Unconstrained Paths Summary
+ 39. Clock Status Summary
+ 40. Timing Analyzer Messages
 
 
 
@@ -91,23 +90,33 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 14          ;
 ;                            ;             ;
-; Average used               ; 1.79        ;
+; Average used               ; 1.71        ;
 ; Maximum used               ; 14          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   7.1%      ;
-;     Processors 3-14        ;   6.0%      ;
+;     Processor 2            ;   5.8%      ;
+;     Processor 3            ;   5.5%      ;
+;     Processors 4-14        ;   5.5%      ;
 +----------------------------+-------------+
+
+
++--------------------------------------------------------+
+; SDC File List                                          ;
++--------------------+--------+--------------------------+
+; SDC File Path      ; Status ; Read at                  ;
++--------------------+--------+--------------------------+
+; Electric_Piano.sdc ; OK     ; Wed May 28 10:51:16 2025 ;
++--------------------+--------+--------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Clocks                                                                                                                                                                          ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
-; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
-; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 
 
 +-------------------------------------------------+
@@ -115,18 +124,18 @@ refer to the applicable agreement for further details.
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 84.45 MHz ; 84.45 MHz       ; clk        ;      ;
+; 66.97 MHz ; 66.97 MHz       ; clk        ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
 +-------------------------------------+
 ; Slow 1200mV 85C Model Setup Summary ;
-+-------+---------+-------------------+
-; Clock ; Slack   ; End Point TNS     ;
-+-------+---------+-------------------+
-; clk   ; -10.842 ; -803.269          ;
-+-------+---------+-------------------+
++-------+-------+---------------------+
+; Clock ; Slack ; End Point TNS       ;
++-------+-------+---------------------+
+; clk   ; 5.068 ; 0.000               ;
++-------+-------+---------------------+
 
 
 +------------------------------------+
@@ -152,18 +161,17 @@ No paths to report.
 
 +---------------------------------------------------+
 ; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
-+-------+--------+----------------------------------+
-; Clock ; Slack  ; End Point TNS                    ;
-+-------+--------+----------------------------------+
-; clk   ; -3.000 ; -275.121                         ;
-+-------+--------+----------------------------------+
++-------+-------+-----------------------------------+
+; Clock ; Slack ; End Point TNS                     ;
++-------+-------+-----------------------------------+
+; clk   ; 9.733 ; 0.000                             ;
++-------+-------+-----------------------------------+
 
 
 -----------------------------------------------
 ; Slow 1200mV 85C Model Metastability Summary ;
 -----------------------------------------------
-Design MTBF is not calculated because the design doesn't meet its timing requirements.
-
+No synchronizer chains to report.
 
 
 +-------------------------------------------------+
@@ -171,18 +179,18 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 90.04 MHz ; 90.04 MHz       ; clk        ;      ;
+; 71.48 MHz ; 71.48 MHz       ; clk        ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
 +------------------------------------+
 ; Slow 1200mV 0C Model Setup Summary ;
-+-------+---------+------------------+
-; Clock ; Slack   ; End Point TNS    ;
-+-------+---------+------------------+
-; clk   ; -10.106 ; -753.374         ;
-+-------+---------+------------------+
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 6.010 ; 0.000              ;
++-------+-------+--------------------+
 
 
 +-----------------------------------+
@@ -208,18 +216,17 @@ No paths to report.
 
 +--------------------------------------------------+
 ; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
-+-------+--------+---------------------------------+
-; Clock ; Slack  ; End Point TNS                   ;
-+-------+--------+---------------------------------+
-; clk   ; -3.000 ; -275.121                        ;
-+-------+--------+---------------------------------+
++-------+-------+----------------------------------+
+; Clock ; Slack ; End Point TNS                    ;
++-------+-------+----------------------------------+
+; clk   ; 9.745 ; 0.000                            ;
++-------+-------+----------------------------------+
 
 
 ----------------------------------------------
 ; Slow 1200mV 0C Model Metastability Summary ;
 ----------------------------------------------
-Design MTBF is not calculated because the design doesn't meet its timing requirements.
-
+No synchronizer chains to report.
 
 
 +------------------------------------+
@@ -227,7 +234,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; clk   ; -3.407 ; -215.801          ;
+; clk   ; 14.354 ; 0.000             ;
 +-------+--------+-------------------+
 
 
@@ -236,7 +243,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; clk   ; 0.152 ; 0.000             ;
+; clk   ; 0.151 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -254,30 +261,29 @@ No paths to report.
 
 +--------------------------------------------------+
 ; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
-+-------+--------+---------------------------------+
-; Clock ; Slack  ; End Point TNS                   ;
-+-------+--------+---------------------------------+
-; clk   ; -3.000 ; -217.108                        ;
-+-------+--------+---------------------------------+
++-------+-------+----------------------------------+
+; Clock ; Slack ; End Point TNS                    ;
++-------+-------+----------------------------------+
+; clk   ; 9.330 ; 0.000                            ;
++-------+-------+----------------------------------+
 
 
 ----------------------------------------------
 ; Fast 1200mV 0C Model Metastability Summary ;
 ----------------------------------------------
-Design MTBF is not calculated because the design doesn't meet its timing requirements.
+No synchronizer chains to report.
 
 
-
-+--------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                            ;
-+------------------+----------+-------+----------+---------+---------------------+
-; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -10.842  ; 0.152 ; N/A      ; N/A     ; -3.000              ;
-;  clk             ; -10.842  ; 0.152 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -803.269 ; 0.0   ; 0.0      ; 0.0     ; -275.121            ;
-;  clk             ; -803.269 ; 0.000 ; N/A      ; N/A     ; -275.121            ;
-+------------------+----------+-------+----------+---------+---------------------+
++-----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                         ;
++------------------+-------+-------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 5.068 ; 0.151 ; N/A      ; N/A     ; 9.330               ;
+;  clk             ; 5.068 ; 0.151 ; N/A      ; N/A     ; 9.330               ;
+; Design-wide TNS  ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  clk             ; 0.000 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+-------+-------+----------+---------+---------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -314,10 +320,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; clk                 ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
 ; rst_n               ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
 ; key1                ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
-; col[3]              ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
-; col[1]              ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
-; col[0]              ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
 ; col[2]              ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
+; col[0]              ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
+; col[1]              ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
+; col[3]              ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_TMS~        ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_TCK~        ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_TDI~        ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
@@ -411,7 +417,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 484633   ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 501163   ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -421,7 +427,27 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 484633   ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 501163   ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 189      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 189      ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -445,10 +471,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 6     ; 6    ;
-; Unconstrained Input Port Paths  ; 200   ; 200  ;
-; Unconstrained Output Ports      ; 9     ; 9    ;
-; Unconstrained Output Port Paths ; 9     ; 9    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 0     ; 0    ;
+; Unconstrained Output Port Paths ; 0     ; 0    ;
 +---------------------------------+-------+------+
 
 
@@ -461,153 +487,119 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------+-------+------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                         ;
-+------------+--------------------------------------------------------------------------------------+
-; Input Port ; Comment                                                                              ;
-+------------+--------------------------------------------------------------------------------------+
-; col[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; col[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; col[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; col[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; key1       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+------------+--------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                                ;
-+-------------------+---------------------------------------------------------------------------------------+
-; Output Port       ; Comment                                                                               ;
-+-------------------+---------------------------------------------------------------------------------------+
-; beeper            ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; led_display[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; led_display[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; mode_indicator[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; mode_indicator[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; row[0]            ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; row[1]            ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; row[2]            ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; row[3]            ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------------+---------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                         ;
-+------------+--------------------------------------------------------------------------------------+
-; Input Port ; Comment                                                                              ;
-+------------+--------------------------------------------------------------------------------------+
-; col[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; col[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; col[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; col[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; key1       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+------------+--------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                                ;
-+-------------------+---------------------------------------------------------------------------------------+
-; Output Port       ; Comment                                                                               ;
-+-------------------+---------------------------------------------------------------------------------------+
-; beeper            ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; led_display[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; led_display[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; mode_indicator[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; mode_indicator[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; row[0]            ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; row[1]            ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; row[2]            ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; row[3]            ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------------+---------------------------------------------------------------------------------------+
-
-
 +--------------------------+
 ; Timing Analyzer Messages ;
 +--------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue May 27 13:28:41 2025
+    Info: Processing started: Wed May 28 10:51:15 2025
 Info: Command: quartus_sta Electric_Piano -c Electric_Piano
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'Electric_Piano.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name clk clk
-Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332104): Reading SDC File: 'Electric_Piano.sdc'
+Warning (332174): Ignored filter at Electric_Piano.sdc(8): lcd_sclk could not be matched with a port File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 8
+Critical Warning (332049): Ignored create_generated_clock at Electric_Piano.sdc(8): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 8
+    Info (332050): create_generated_clock -name "lcd_sclk" -source [get_ports {clk}] -divide_by 25 [get_ports {lcd_sclk}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 8
+Warning (332174): Ignored filter at Electric_Piano.sdc(11): lcd_sclk could not be matched with a clock File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 11
+Warning (332054): Assignment set_clock_groups is accepted but has some problems at Electric_Piano.sdc(11): Argument -group with value [get_clocks {lcd_sclk}] contains zero elements File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 11
+    Info (332050): set_clock_groups -asynchronous -group [get_clocks {clk}] -group [get_clocks {lcd_sclk}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 11
+Warning (332174): Ignored filter at Electric_Piano.sdc(37): lcd_mosi could not be matched with a port File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 37
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(37): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 37
+    Info (332050): set_output_delay -clock [get_clocks {lcd_sclk}] -max 1.0 [get_ports {lcd_mosi}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 37
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(37): Argument -clock is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 37
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(38): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 38
+    Info (332050): set_output_delay -clock [get_clocks {lcd_sclk}] -min 0.2 [get_ports {lcd_mosi}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 38
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(38): Argument -clock is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 38
+Warning (332174): Ignored filter at Electric_Piano.sdc(40): lcd_cs could not be matched with a port File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 40
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(40): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 40
+    Info (332050): set_output_delay -clock [get_clocks {clk}] -max 2.0 [get_ports {lcd_cs}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 40
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(41): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 41
+    Info (332050): set_output_delay -clock [get_clocks {clk}] -min 0.5 [get_ports {lcd_cs}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 41
+Warning (332174): Ignored filter at Electric_Piano.sdc(43): lcd_rst could not be matched with a port File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 43
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(43): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 43
+    Info (332050): set_output_delay -clock [get_clocks {clk}] -max 2.0 [get_ports {lcd_rst}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 43
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(44): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 44
+    Info (332050): set_output_delay -clock [get_clocks {clk}] -min 0.5 [get_ports {lcd_rst}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 44
+Warning (332174): Ignored filter at Electric_Piano.sdc(46): lcd_dc could not be matched with a port File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 46
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(46): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 46
+    Info (332050): set_output_delay -clock [get_clocks {clk}] -max 2.0 [get_ports {lcd_dc}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 46
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(47): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 47
+    Info (332050): set_output_delay -clock [get_clocks {clk}] -min 0.5 [get_ports {lcd_dc}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 47
+Warning (332174): Ignored filter at Electric_Piano.sdc(49): lcd_blk could not be matched with a port File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 49
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(49): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 49
+    Info (332050): set_output_delay -clock [get_clocks {clk}] -max 2.0 [get_ports {lcd_blk}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 49
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(50): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 50
+    Info (332050): set_output_delay -clock [get_clocks {clk}] -min 0.5 [get_ports {lcd_blk}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 50
+Warning (332174): Ignored filter at Electric_Piano.sdc(56): lcd_* could not be matched with a port File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 56
+Warning (332049): Ignored set_multicycle_path at Electric_Piano.sdc(56): Argument <to> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 56
+    Info (332050): set_multicycle_path -setup -to [get_ports {lcd_*}] 2 File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 56
+Warning (332049): Ignored set_multicycle_path at Electric_Piano.sdc(57): Argument <to> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 57
+    Info (332050): set_multicycle_path -hold -to [get_ports {lcd_*}] 1 File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 57
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From clk (Rise) to clk (Rise) (setup and hold)
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
-Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -10.842
+Info (332146): Worst-case setup slack is 5.068
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -10.842            -803.269 clk 
+    Info (332119):     5.068               0.000 clk 
 Info (332146): Worst-case hold slack is 0.362
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.362               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -3.000
+Info (332146): Worst-case minimum pulse width slack is 9.733
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -275.121 clk 
-Info (332114): Report Metastability: Found 16 synchronizer chains.
-    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+    Info (332119):     9.733               0.000 clk 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -10.106
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From clk (Rise) to clk (Rise) (setup and hold)
+Info (332146): Worst-case setup slack is 6.010
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -10.106            -753.374 clk 
+    Info (332119):     6.010               0.000 clk 
 Info (332146): Worst-case hold slack is 0.324
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.324               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -3.000
+Info (332146): Worst-case minimum pulse width slack is 9.745
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -275.121 clk 
-Info (332114): Report Metastability: Found 16 synchronizer chains.
-    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+    Info (332119):     9.745               0.000 clk 
 Info: Analyzing Fast 1200mV 0C Model
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.407
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From clk (Rise) to clk (Rise) (setup and hold)
+Info (332146): Worst-case setup slack is 14.354
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.407            -215.801 clk 
-Info (332146): Worst-case hold slack is 0.152
+    Info (332119):    14.354               0.000 clk 
+Info (332146): Worst-case hold slack is 0.151
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.152               0.000 clk 
+    Info (332119):     0.151               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -3.000
+Info (332146): Worst-case minimum pulse width slack is 9.330
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -217.108 clk 
-Info (332114): Report Metastability: Found 16 synchronizer chains.
-    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
-Info (332102): Design is not fully constrained for setup requirements
-Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4917 megabytes
-    Info: Processing ended: Tue May 27 13:28:44 2025
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info (332119):     9.330               0.000 clk 
+Info (332101): Design is fully constrained for setup requirements
+Info (332101): Design is fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 31 warnings
+    Info: Peak virtual memory: 4919 megabytes
+    Info: Processing ended: Wed May 28 10:51:17 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

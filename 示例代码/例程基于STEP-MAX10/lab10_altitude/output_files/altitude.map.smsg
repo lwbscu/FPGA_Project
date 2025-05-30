@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at calculate.v(49): always construct contains both blocking and non-blocking assignments File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab10_altitude/source/calculate.v Line: 49
+Info (10281): Verilog HDL Declaration information at bmp280_driver.v(56): object "ACK" differs only in case from object "ack" in the same scope File: E:/fpgaproject/stepbaseboard/STEP-MAX10-08SAM 4/lab10_altitude/source/bmp280_driver.v Line: 56

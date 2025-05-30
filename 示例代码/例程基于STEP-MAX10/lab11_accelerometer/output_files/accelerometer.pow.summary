@@ -1,0 +1,12 @@
+Power Analyzer Status : Successful - Sat Dec 23 15:05:46 2023
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Revision Name : accelerometer
+Top-level Entity Name : accelerometer
+Family : MAX 10
+Device : 10M08SAM153C8G
+Power Models : Final
+Total Thermal Power Dissipation : 125.47 mW
+Core Dynamic Thermal Power Dissipation : 10.11 mW
+Core Static Thermal Power Dissipation : 110.78 mW
+I/O Thermal Power Dissipation : 4.59 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

@@ -1,0 +1,12 @@
+Power Analyzer Status : Successful - Thu Dec 21 18:36:07 2023
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Revision Name : digital_thm
+Top-level Entity Name : digital_thm
+Family : MAX 10
+Device : 10M08SAM153C8G
+Power Models : Final
+Total Thermal Power Dissipation : 123.78 mW
+Core Dynamic Thermal Power Dissipation : 8.42 mW
+Core Static Thermal Power Dissipation : 110.77 mW
+I/O Thermal Power Dissipation : 4.59 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

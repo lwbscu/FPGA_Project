@@ -1,0 +1,191 @@
+# == == == == == == == == == == == == == == == == == == == == == == == == == ==
+# 
+# Quartus Prime项目设置文件 - ballplayer项目
+# 移植到MAX10 FPGA开发板
+# 
+# == == == == == == == == == == == == == == == == == == == == == == == == == ==
+
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M08SAM153C8G
+set_global_assignment -name TOP_LEVEL_ENTITY ballplayer_multi_image_test
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:00:00  DECEMBER 01, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 4
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name EXTERNAL_FLASH_FALLBACK_ADDRESS 00000000
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name INTERNAL_FLASH_UPDATE_MODE "SINGLE IMAGE WITH ERAM"
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+
+# 时序约束文件
+set_global_assignment -name SDC_FILE ballplayer_multi_image.sdc
+
+# == == == == == == == == == == == == == == == == == == == == == == == == == ==
+# 引脚分配 - 根据MAX10开发板引脚定义
+# == == == == == == == == == == == == == == == == == == == == == == == == == ==
+
+# 时钟和复位
+set_location_assignment PIN_J5 -to clk
+set_location_assignment PIN_J14 -to rst_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rst_n
+
+# ADC接口 - 模拟信号输入
+set_location_assignment PIN_B7 -to adc_cs
+set_location_assignment PIN_B8 -to adc_clk
+set_location_assignment PIN_C8 -to adc_dat
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_cs
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to adc_dat
+
+# 按键输入 - 根据引脚文档配置
+set_location_assignment PIN_J9 -to key_up
+set_location_assignment PIN_K14 -to key_down
+set_location_assignment PIN_J11 -to ball_release_button
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to key_up
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to key_down
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ball_release_button
+
+# I2C接口 - 手势传感器
+set_location_assignment PIN_M4 -to i2c_scl
+set_location_assignment PIN_P3 -to i2c_sda
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to i2c_scl
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to i2c_sda
+
+# LCD显示接口 - SPI接口
+set_location_assignment PIN_P15 -to lcd_rst
+set_location_assignment PIN_D7 -to lcd_blk
+set_location_assignment PIN_R14 -to lcd_dc
+set_location_assignment PIN_R11 -to lcd_sclk
+set_location_assignment PIN_P12 -to lcd_mosi
+set_location_assignment PIN_R9 -to lcd_cs
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lcd_rst
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lcd_blk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lcd_dc
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lcd_sclk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lcd_mosi
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lcd_cs
+
+# 双七段数码管显示
+# 第一个数码管 seg_led_1[8:0]
+set_location_assignment PIN_E1 -to seg_led_1[0]
+set_location_assignment PIN_D2 -to seg_led_1[1]
+set_location_assignment PIN_K2 -to seg_led_1[2]
+set_location_assignment PIN_J2 -to seg_led_1[3]
+set_location_assignment PIN_G2 -to seg_led_1[4]
+set_location_assignment PIN_F5 -to seg_led_1[5]
+set_location_assignment PIN_G5 -to seg_led_1[6]
+set_location_assignment PIN_L1 -to seg_led_1[7]
+set_location_assignment PIN_E2 -to seg_led_1[8]
+
+# 第二个数码管 seg_led_2[8:0]
+set_location_assignment PIN_A3 -to seg_led_2[0]
+set_location_assignment PIN_A2 -to seg_led_2[1]
+set_location_assignment PIN_P2 -to seg_led_2[2]
+set_location_assignment PIN_P1 -to seg_led_2[3]
+set_location_assignment PIN_N1 -to seg_led_2[4]
+set_location_assignment PIN_C1 -to seg_led_2[5]
+set_location_assignment PIN_C2 -to seg_led_2[6]
+set_location_assignment PIN_R2 -to seg_led_2[7]
+set_location_assignment PIN_B1 -to seg_led_2[8]
+
+# 数码管IO标准设置
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_1[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_1[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_1[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_1[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_1[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_1[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_1[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_1[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_1[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_2[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_2[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_2[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_2[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_2[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_2[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_2[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_2[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_led_2[8]
+
+
+# LED指示灯 - 根据引脚文档配置
+set_location_assignment PIN_N15 -to led[0]
+set_location_assignment PIN_N14 -to led[1]
+set_location_assignment PIN_M14 -to led[2]
+set_location_assignment PIN_M12 -to led[3]
+set_location_assignment PIN_L15 -to led[4]
+set_location_assignment PIN_K12 -to led[5]
+set_location_assignment PIN_L11 -to led[6]
+set_location_assignment PIN_K11 -to led[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[7]
+
+# == == == == == == == == == == == == == == == == == == == == == == == == == ==
+# 源文件添加
+# == == == == == == == == == == == == == == == == == == == == == == == == == ==
+
+set_global_assignment -name VERILOG_FILE source/ballplayer_top.v
+set_global_assignment -name VERILOG_FILE source/ballplayer_top_test.v
+set_global_assignment -name VERILOG_FILE source/lcd_contrast_test.v
+set_global_assignment -name VERILOG_FILE source/lcd_cartoon_display.v
+set_global_assignment -name VERILOG_FILE source/ballplayer_pll.v
+set_global_assignment -name VERILOG_FILE source/adc081s101_driver.v
+set_global_assignment -name VERILOG_FILE source/rpr0521rs_driver_simple.v
+set_global_assignment -name VERILOG_FILE source/hand_control.v
+set_global_assignment -name VERILOG_FILE source/adjuster.v
+set_global_assignment -name VERILOG_FILE source/jumping.v
+set_global_assignment -name VERILOG_FILE source/lcd.v
+set_global_assignment -name VERILOG_FILE source/control.v
+set_global_assignment -name VERILOG_FILE source/lcd_show_pic.v
+set_global_assignment -name VERILOG_FILE source/draw_line.v
+set_global_assignment -name VERILOG_FILE source/pic_ram.v
+set_global_assignment -name VERILOG_FILE source/lcd_init.v
+set_global_assignment -name VERILOG_FILE source/lcd_write.v
+set_global_assignment -name VERILOG_FILE source/segment_display.v
+set_global_assignment -name VERILOG_FILE source/frequency_divider.v
+set_global_assignment -name VERILOG_FILE source/debounce.v
+set_global_assignment -name VERILOG_FILE source/lcd_simple_test.v
+set_global_assignment -name VERILOG_FILE source/lcd_simple_fill.v
+set_global_assignment -name VERILOG_FILE source/lcd_debug_test.v
+set_global_assignment -name VERILOG_FILE source/lcd_full_init_test.v
+set_global_assignment -name VERILOG_FILE source/lcd_simple_patterns.v
+set_global_assignment -name VERILOG_FILE source/lcd_cartoon_display_fixed.v
+set_global_assignment -name VERILOG_FILE source/lcd_emoji_display.v
+set_global_assignment -name VERILOG_FILE source/lcd_custom_image_display.v
+set_global_assignment -name VERILOG_FILE source/Clever_rom.v
+set_global_assignment -name VERILOG_FILE source/multi_image_rom_240x160.v
+set_global_assignment -name VERILOG_FILE source/lcd_multi_image_display_240x160.v
+set_global_assignment -name VERILOG_FILE source/ballplayer_multi_image_test.v
+set_global_assignment -name VERILOG_FILE rom_data/image_0_240x160_rom.v
+set_global_assignment -name VERILOG_FILE rom_data/image_1_240x160_rom.v
+set_global_assignment -name VERILOG_FILE rom_data/image_2_240x160_rom.v
+set_global_assignment -name VERILOG_FILE rom_data/image_3_240x160_rom.v
+set_global_assignment -name VERILOG_FILE rom_data/image_4_240x160_rom.v
+
+
+set_global_assignment -name DEVICE_FILTER_PACKAGE MBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 153
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

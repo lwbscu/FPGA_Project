@@ -1,0 +1,413 @@
+[ START MERGED ]
+lcd1/lcd_write_inst/n1 lcd1/lcd_write_inst/mosi_N_1143
+lcd1/n3956 wr_done
+jump/clk_out_enable_39 jump/n22446
+lcd1/n3961 the1_wr_done
+lcd1/lcd_init_inst/n3943 state_4
+lcd1/lcd_init_inst/n21650 lcd1/state_2_adj_2657
+lcd1/lcd_init_inst/n10874 lcd1/lcd_init_inst/state_0
+lcd1/control_inst/n5301 lcd1/state_2_adj_2659
+lcd1/control_inst/n21672 lcd1/state_1
+jump/mult_32u_3u_0_pp_1_13 jump/n424
+jump/mult_32u_3u_0_pp_1_14 jump/n423
+jump/mult_32u_3u_0_pp_1_11 jump/n426
+jump/mult_32u_3u_0_pp_1_12 jump/n425
+jump/mult_32u_3u_0_pp_1_9 jump/n428
+jump/mult_32u_3u_0_pp_1_10 jump/n427
+jump/mult_32u_3u_0_pp_1_7 jump/n430
+jump/mult_32u_3u_0_pp_1_8 jump/n429
+jump/mult_32u_3u_0_pp_1_5_adj_2376 jump/n432
+jump/mult_32u_3u_0_pp_1_6 jump/n431
+jump/mult_32u_3u_0_pp_1_3 jump/n434
+jump/mult_32u_3u_0_pp_1_4 jump/n433
+jump/mult_32u_3u_0_pp_1_2 jump/n435
+jump/mult_32u_3u_0_pp_1_17 jump/n135
+jump/mult_32u_3u_0_pp_1_18 jump/n135
+jump/mult_32u_3u_0_pp_1_15 jump/n137
+jump/mult_32u_3u_0_pp_1_16 jump/n136
+jump/mult_32u_3u_0_pp_1_13_adj_2418 jump/n139
+jump/mult_32u_3u_0_pp_1_14_adj_2417 jump/n138
+jump/mult_32u_3u_0_pp_1_11_adj_2420 jump/n141
+jump/mult_32u_3u_0_pp_1_12_adj_2419 jump/n140
+jump/mult_32u_3u_0_pp_1_9_adj_2422 jump/n143
+jump/mult_32u_3u_0_pp_1_10_adj_2421 jump/n142
+jump/mult_32u_3u_0_pp_1_7_adj_2424 jump/n145
+jump/mult_32u_3u_0_pp_1_8_adj_2423 jump/n144
+jump/mult_32u_3u_0_pp_1_5 jump/n147
+jump/mult_32u_3u_0_pp_1_6_adj_2425 jump/n146
+jump/mult_32u_3u_0_pp_1_3_adj_2452 jump/n149
+jump/mult_32u_3u_0_pp_1_4_adj_2453 jump/n148
+jump/mult_32u_3u_0_pp_1_2_adj_2454 jump/n150
+n20446 data_wr_5
+n5039 u7/i2c_sda_N_621
+[ END MERGED ]
+[ START CLIPPED ]
+n22432
+u7/add_159_1/S0
+u7/add_159_1/CI
+u7/cnt_400khz_2093_add_4_1/S0
+u7/cnt_400khz_2093_add_4_1/CI
+u7/cnt_400khz_2093_add_4_11/S1
+u7/cnt_400khz_2093_add_4_11/CO
+u7/sub_1764_add_2_2/S1
+u7/sub_1764_add_2_2/S0
+u7/sub_1764_add_2_2/CI
+u7/sub_1764_add_2_4/S1
+u7/sub_1764_add_2_4/S0
+u7/add_159_25/S1
+u7/add_159_25/CO
+u7/sub_1764_add_2_6/S1
+u7/sub_1764_add_2_6/S0
+u7/sub_1764_add_2_8/S1
+u7/sub_1764_add_2_8/S0
+u7/sub_1764_add_2_10/S1
+u7/sub_1764_add_2_10/S0
+u7/sub_1764_add_2_12/S1
+u7/sub_1764_add_2_12/S0
+u7/sub_1764_add_2_14/S1
+u7/sub_1764_add_2_14/S0
+u7/sub_1764_add_2_16/S1
+u7/sub_1764_add_2_16/S0
+u7/sub_1764_add_2_18/S1
+u7/sub_1764_add_2_18/S0
+u7/sub_1764_add_2_cout/S1
+u7/sub_1764_add_2_cout/CO
+adj/deb/cnt_2095_add_4_1/S0
+adj/deb/cnt_2095_add_4_1/CI
+adj/deb/cnt_2095_add_4_19/S1
+adj/deb/cnt_2095_add_4_19/CO
+add_14_1/S0
+add_14_1/CI
+u8/prox_dat1_15__I_0_add_2_17/CO
+u8/add_16144_1/S1
+u8/add_16144_1/S0
+u8/add_16144_1/CI
+u8/sub_14_add_2_cout/S1
+u8/sub_14_add_2_cout/CO
+u8/add_16144_cout/S1
+u8/add_16144_cout/CO
+u8/sub_14_add_2_1/S0
+u8/sub_14_add_2_1/CI
+u8/mult_11_add_1_2/S0
+u8/mult_11_add_1_2/CI
+u8/mult_11_add_1_cout/S1
+u8/mult_11_add_1_cout/CO
+u8/add_16143_1/S1
+u8/add_16143_1/S0
+u8/add_16143_1/CI
+u8/add_16143_3/S1
+u8/add_16143_3/S0
+u8/add_16143_5/S1
+u8/add_16143_5/S0
+u8/add_16143_7/S1
+u8/add_16143_7/S0
+u8/add_16143_9/S1
+u8/add_16143_9/S0
+u8/add_16143_11/S0
+u8/add_16143_cout/S1
+u8/add_16143_cout/CO
+u8/prox_dat1_15__I_0_add_2_1/S0
+u8/prox_dat1_15__I_0_add_2_1/CI
+add_3398_2/S0
+add_3398_2/CI
+add_3398_cout/S1
+add_3398_cout/CO
+add_3435_2/S1
+add_3435_2/S0
+add_3435_2/CI
+add_3435_4/S0
+add_3435_16/S1
+add_3435_16/CO
+add_3438_2/S1
+add_3438_2/S0
+add_3438_2/CI
+add_3438_4/S0
+add_3438_12/CO
+add_3296_add_1_2/S0
+add_3296_add_1_2/CI
+add_3296_add_1_cout/S1
+add_3296_add_1_cout/CO
+add_14_9/CO
+adc_driver/cnt_2092_add_4_1/S0
+adc_driver/cnt_2092_add_4_1/CI
+adc_driver/cnt_2092_add_4_9/S1
+adc_driver/cnt_2092_add_4_9/CO
+jump/fre_500us/count_up_2096_add_4_1/S0
+jump/fre_500us/count_up_2096_add_4_1/CI
+jump/fre_500us/count_up_2096_add_4_25/S1
+jump/fre_500us/count_up_2096_add_4_25/CO
+jump/add_196_1/S0
+jump/add_196_1/CI
+jump/add_196_15/CO
+jump/add_191_2/S0
+jump/add_191_2/CI
+jump/add_1234_add_1_add_2_1/S0
+jump/add_1234_add_1_add_2_1/CI
+jump/add_1234_add_1_add_2_9/CO
+jump/add_191_10/S1
+jump/add_191_10/CO
+jump/add_3339_1/S0
+jump/add_3339_1/CI
+jump/add_1234_add_1_add_1_1/S0
+jump/add_1234_add_1_add_1_1/CI
+jump/add_1234_add_1_add_1_9/CO
+jump/add_3339_15/CO
+jump/add_1233_2/S0
+jump/add_1233_2/CI
+jump/add_1233_16/S1
+jump/add_1233_16/CO
+jump/sub_15_add_2_1/S0
+jump/sub_15_add_2_1/CI
+jump/mult_11u_15u_0_cin_lr_add_0/S1
+jump/mult_11u_15u_0_cin_lr_add_0/S0
+jump/mult_11u_15u_0_mult_6_0/CO
+jump/mult_11u_15u_0_mult_4_1/CO
+jump/mult_11u_15u_0_mult_2_2/CO
+jump/mult_11u_15u_0_mult_0_3/CO
+jump/Cadd_t_mult_11u_15u_0_4_1/S0
+jump/Cadd_t_mult_11u_15u_0_4_1/COUT
+jump/mult_11u_15u_0_add_3_3/COUT
+jump/Cadd_mult_11u_15u_0_3_1/S0
+jump/mult_11u_15u_0_add_1_2/COUT
+jump/Cadd_mult_11u_15u_0_1_1/S0
+jump/mult_11u_15u_0_add_0_4/COUT
+jump/Cadd_mult_11u_15u_0_0_1/S0
+jump/mult_11u_15u_0_cin_lr_add_6/S1
+jump/mult_11u_15u_0_cin_lr_add_6/S0
+jump/mult_11u_15u_0_cin_lr_add_4/S1
+jump/mult_11u_15u_0_cin_lr_add_4/S0
+jump/mult_11u_15u_0_cin_lr_add_2/S1
+jump/mult_11u_15u_0_cin_lr_add_2/S0
+jump/mult_15u_15u_0_cin_lr_add_0_adj_233/S1
+jump/mult_15u_15u_0_cin_lr_add_0_adj_233/S0
+jump/mult_15u_15u_0_mult_10_0_adj_230/CO
+jump/mult_15u_15u_0_mult_8_1_adj_229/CO
+jump/mult_15u_15u_0_mult_6_2_adj_227/CO
+jump/mult_15u_15u_0_mult_4_3_adj_224/CO
+jump/mult_15u_15u_0_mult_2_4_adj_220/CO
+jump/mult_15u_15u_0_mult_0_5_adj_215/CO
+jump/mult_15u_15u_0_mult_0_0_adj_210/S0
+jump/t_mult_15u_15u_0_add_6_3_adj_209/S1
+jump/t_mult_15u_15u_0_add_6_3_adj_209/COUT
+jump/Cadd_t_mult_15u_15u_0_6_1_adj_207/S0
+jump/Cadd_mult_15u_15u_0_5_1_adj_206/S0
+jump/Cadd_mult_15u_15u_0_5_1_adj_206/COUT
+jump/mult_15u_15u_0_add_4_5_adj_205/COUT
+jump/Cadd_mult_15u_15u_0_4_1_adj_201/S0
+jump/mult_15u_15u_0_add_2_2_adj_200/COUT
+jump/Cadd_mult_15u_15u_0_2_1_adj_199/S0
+jump/mult_15u_15u_0_add_1_4_adj_198/COUT
+jump/Cadd_mult_15u_15u_0_1_1_adj_195/S0
+jump/mult_15u_15u_0_add_0_6_adj_194/COUT
+jump/Cadd_mult_15u_15u_0_0_1_adj_189/S1
+jump/Cadd_mult_15u_15u_0_0_1_adj_189/S0
+jump/mult_15u_15u_0_cin_lr_add_10_adj_188/S1
+jump/mult_15u_15u_0_cin_lr_add_10_adj_188/S0
+jump/mult_15u_15u_0_cin_lr_add_8_adj_187/S1
+jump/mult_15u_15u_0_cin_lr_add_8_adj_187/S0
+jump/mult_15u_15u_0_cin_lr_add_6_adj_186/S1
+jump/mult_15u_15u_0_cin_lr_add_6_adj_186/S0
+jump/mult_15u_15u_0_cin_lr_add_4_adj_185/S1
+jump/mult_15u_15u_0_cin_lr_add_4_adj_185/S0
+jump/mult_15u_15u_0_cin_lr_add_2_adj_184/S1
+jump/mult_15u_15u_0_cin_lr_add_2_adj_184/S0
+jump/sub_15_add_2_17/S1
+jump/sub_15_add_2_17/CO
+jump/mult_15u_15u_0_mult_8_0_adj_179/CO
+jump/add_8_1/S0
+jump/add_8_1/CI
+jump/mult_15u_15u_0_cin_lr_add_0_adj_173/S1
+jump/mult_15u_15u_0_cin_lr_add_0_adj_173/S0
+jump/add_16192_2/S0
+jump/add_16192_2/CI
+jump/add_8_9/CO
+jump/add_16192_10/S1
+jump/add_16192_10/CO
+jump/add_14_1/S0
+jump/add_14_1/CI
+jump/sub_1765_add_2_1/S1
+jump/sub_1765_add_2_1/S0
+jump/sub_1765_add_2_1/CI
+jump/sub_1765_add_2_3/S1
+jump/sub_1765_add_2_3/S0
+jump/sub_1765_add_2_5/S1
+jump/sub_1765_add_2_5/S0
+jump/sub_1765_add_2_7/S1
+jump/sub_1765_add_2_7/S0
+jump/sub_1765_add_2_9/S1
+jump/sub_1765_add_2_9/S0
+jump/sub_1765_add_2_11/S1
+jump/sub_1765_add_2_11/S0
+jump/sub_1765_add_2_13/S1
+jump/sub_1765_add_2_13/S0
+jump/sub_1765_add_2_15/S1
+jump/sub_1765_add_2_15/S0
+jump/Cadd_t_mult_32u_3u_0_0_1_adj_159/S1
+jump/Cadd_t_mult_32u_3u_0_0_1_adj_159/S0
+jump/t_mult_32u_3u_0_add_0_9/S1
+jump/t_mult_32u_3u_0_add_0_9/COUT
+jump/mult_32u_3u_0_mult_0_0_adj_152/S0
+jump/mult_32u_3u_0_mult_0_8/CO
+jump/mult_15u_15u_0_cin_lr_add_0/S1
+jump/mult_15u_15u_0_cin_lr_add_0/S0
+jump/mult_32u_3u_0_cin_lr_add_0_adj_134/S1
+jump/mult_32u_3u_0_cin_lr_add_0_adj_134/S0
+jump/Cadd_t_mult_32u_3u_0_0_1/S1
+jump/Cadd_t_mult_32u_3u_0_0_1/S0
+jump/t_mult_32u_3u_0_add_0_7/S1
+jump/t_mult_32u_3u_0_add_0_7/COUT
+jump/add_14_15/CO
+jump/mult_32u_3u_0_mult_0_0/S0
+jump/mult_15u_15u_0_cin_lr_add_2_adj_130/S1
+jump/mult_15u_15u_0_cin_lr_add_2_adj_130/S0
+jump/mult_15u_15u_0_cin_lr_add_4_adj_129/S1
+jump/mult_15u_15u_0_cin_lr_add_4_adj_129/S0
+jump/mult_32u_3u_0_mult_0_6/CO
+jump/mult_15u_15u_0_cin_lr_add_6_adj_128/S1
+jump/mult_15u_15u_0_cin_lr_add_6_adj_128/S0
+jump/mult_15u_15u_0_cin_lr_add_8_adj_127/S1
+jump/mult_15u_15u_0_cin_lr_add_8_adj_127/S0
+jump/sub_1765_add_2_cout/S1
+jump/sub_1765_add_2_cout/CO
+jump/Cadd_mult_15u_15u_0_0_1_adj_126/S0
+jump/mult_15u_15u_0_add_0_5_adj_120/COUT
+jump/Cadd_mult_15u_15u_0_1_1_adj_119/S0
+jump/mult_15u_15u_0_add_1_3_adj_117/COUT
+jump/Cadd_mult_15u_15u_0_2_1_adj_116/S0
+jump/Cadd_mult_15u_15u_0_2_1_adj_116/COUT
+jump/mult_32u_3u_0_cin_lr_add_0/S1
+jump/mult_32u_3u_0_cin_lr_add_0/S0
+jump/mult_15u_15u_0_cin_lr_add_2/S1
+jump/mult_15u_15u_0_cin_lr_add_2/S0
+jump/mult_15u_15u_0_cin_lr_add_4/S1
+jump/mult_15u_15u_0_cin_lr_add_4/S0
+jump/mult_15u_15u_0_cin_lr_add_6/S1
+jump/mult_15u_15u_0_cin_lr_add_6/S0
+jump/mult_15u_15u_0_cin_lr_add_8/S1
+jump/mult_15u_15u_0_cin_lr_add_8/S0
+jump/mult_15u_15u_0_cin_lr_add_10/S1
+jump/mult_15u_15u_0_cin_lr_add_10/S0
+jump/Cadd_mult_15u_15u_0_0_1/S1
+jump/Cadd_mult_15u_15u_0_0_1/S0
+jump/mult_15u_15u_0_add_0_6/COUT
+jump/Cadd_mult_15u_15u_0_4_1_adj_115/S0
+jump/Cadd_mult_15u_15u_0_1_1/S0
+jump/mult_15u_15u_0_add_1_4/COUT
+jump/Cadd_mult_15u_15u_0_2_1/S0
+jump/mult_15u_15u_0_add_2_2/COUT
+jump/mult_15u_15u_0_add_4_4_adj_112/COUT
+jump/Cadd_mult_15u_15u_0_4_1/S0
+jump/mult_15u_15u_0_add_4_5/COUT
+jump/Cadd_mult_15u_15u_0_5_1/S0
+jump/Cadd_mult_15u_15u_0_5_1/COUT
+jump/Cadd_t_mult_15u_15u_0_6_1_adj_111/S0
+jump/t_mult_15u_15u_0_add_6_2_adj_110/COUT
+jump/Cadd_t_mult_15u_15u_0_6_1/S0
+jump/t_mult_15u_15u_0_add_6_3/S1
+jump/t_mult_15u_15u_0_add_6_3/COUT
+jump/mult_15u_15u_0_mult_0_0_adj_107/S0
+jump/mult_15u_15u_0_mult_0_0/S0
+jump/mult_15u_15u_0_mult_0_5/CO
+jump/mult_15u_15u_0_mult_0_4/CO
+jump/mult_15u_15u_0_mult_2_4/CO
+jump/mult_15u_15u_0_mult_2_3/CO
+jump/mult_15u_15u_0_mult_4_3/CO
+jump/mult_15u_15u_0_mult_4_2/CO
+jump/mult_15u_15u_0_mult_6_2/CO
+jump/mult_15u_15u_0_mult_8_1/CO
+jump/mult_15u_15u_0_mult_6_1/CO
+jump/mult_15u_15u_0_mult_10_0/CO
+lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/add_55_1/S0
+lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/add_55_1/CI
+lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/add_55_11/S1
+lcd1/lcd_draw_line_inst/lcd_draw_brown_line_inst/add_55_11/CO
+lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/sub_66_add_2_1/S0
+lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/sub_66_add_2_1/CI
+lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/sub_66_add_2_9/S1
+lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/sub_66_add_2_9/CO
+lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_length_num_2112_add_4_1/S0
+lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_length_num_2112_add_4_1/CI
+lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/cnt_length_num_2112_add_4_9/CO
+lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/add_59_1/S0
+lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/add_59_1/CI
+lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/add_59_11/S1
+lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/add_59_11/CO
+lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/add_67_1/S0
+lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/add_67_1/CI
+lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/add_67_9/S1
+lcd1/lcd_draw_line_inst/lcd_draw_white_line_inst/add_67_9/CO
+lcd1/lcd_draw_line_inst/not_equal_8_0/S1
+lcd1/lcd_draw_line_inst/not_equal_8_0/S0
+lcd1/lcd_draw_line_inst/not_equal_8_0/CI
+lcd1/lcd_draw_line_inst/not_equal_8_8/S1
+lcd1/lcd_draw_line_inst/not_equal_8_8/S0
+lcd1/lcd_draw_line_inst/not_equal_8_9/S0
+lcd1/lcd_draw_line_inst/not_equal_8_9/CO
+lcd1/lcd_init_inst/add_153_1/S0
+lcd1/lcd_init_inst/add_153_1/CI
+lcd1/lcd_init_inst/add_153_19/S1
+lcd1/lcd_init_inst/add_153_19/CO
+lcd1/lcd_init_inst/cnt_150ms_2104_add_4_1/S0
+lcd1/lcd_init_inst/cnt_150ms_2104_add_4_1/CI
+lcd1/lcd_init_inst/cnt_150ms_2104_add_4_23/CO
+lcd1/lcd_show_pic_inst/add_82_1/S0
+lcd1/lcd_show_pic_inst/add_82_1/CI
+lcd1/lcd_show_pic_inst/add_82_11/S1
+lcd1/lcd_show_pic_inst/add_82_11/CO
+lcd1/lcd_show_pic_inst/cnt_length_num_2108_add_4_1/S0
+lcd1/lcd_show_pic_inst/cnt_length_num_2108_add_4_1/CI
+lcd1/lcd_show_pic_inst/cnt_length_num_2108_add_4_9/CO
+lcd1/pic_ram_u0/address_8__I_0_rep_6_add_2_11/S1
+lcd1/pic_ram_u0/address_8__I_0_rep_6_add_2_11/CO
+lcd1/pic_ram_u0/address_8__I_0_rep_5_add_2_1/S0
+lcd1/pic_ram_u0/address_8__I_0_rep_5_add_2_1/CI
+lcd1/pic_ram_u0/address_8__I_0_rep_5_add_2_9/CO
+lcd1/pic_ram_u0/address_8__I_0_rep_6_add_2_1/S1
+lcd1/pic_ram_u0/address_8__I_0_rep_6_add_2_1/S0
+lcd1/pic_ram_u0/address_8__I_0_rep_6_add_2_1/CI
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Sun Mar 09 08:03:42 2025
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF INBUF=ON ;
+LOCATE COMP "seg_led_1[3]" SITE "E1" ;
+LOCATE COMP "seg_led_1[4]" SITE "E2" ;
+LOCATE COMP "seg_led_1[5]" SITE "A9" ;
+LOCATE COMP "seg_led_1[6]" SITE "B9" ;
+LOCATE COMP "seg_led_1[7]" SITE "F1" ;
+LOCATE COMP "lcd_dc" SITE "P8" ;
+LOCATE COMP "seg_led_1[8]" SITE "C9" ;
+LOCATE COMP "lcd_sclk" SITE "P7" ;
+LOCATE COMP "lcd_blk" SITE "G13" ;
+LOCATE COMP "lcd_rst" SITE "N8" ;
+LOCATE COMP "i2c_scl" SITE "C8" ;
+LOCATE COMP "key_down" SITE "N14" ;
+LOCATE COMP "key_up" SITE "M14" ;
+LOCATE COMP "adc_dat" SITE "H12" ;
+LOCATE COMP "ball_release_button" SITE "M13" ;
+LOCATE COMP "led" SITE "N13" ;
+LOCATE COMP "rst" SITE "L14" ;
+LOCATE COMP "lcd_cs" SITE "N6" ;
+LOCATE COMP "adc_clk" SITE "J13" ;
+LOCATE COMP "adc_cs" SITE "G14" ;
+LOCATE COMP "lcd_mosi" SITE "N7" ;
+LOCATE COMP "clk" SITE "C1" ;
+LOCATE COMP "seg_led_2[0]" SITE "C12" ;
+LOCATE COMP "seg_led_2[1]" SITE "B14" ;
+LOCATE COMP "seg_led_2[2]" SITE "J1" ;
+LOCATE COMP "seg_led_2[3]" SITE "H1" ;
+LOCATE COMP "seg_led_2[4]" SITE "H2" ;
+LOCATE COMP "seg_led_2[5]" SITE "B12" ;
+LOCATE COMP "seg_led_2[6]" SITE "A11" ;
+LOCATE COMP "i2c_sda" SITE "B8" ;
+LOCATE COMP "seg_led_2[7]" SITE "K1" ;
+LOCATE COMP "seg_led_2[8]" SITE "A12" ;
+LOCATE COMP "seg_led_1[0]" SITE "A10" ;
+LOCATE COMP "seg_led_1[1]" SITE "C11" ;
+LOCATE COMP "seg_led_1[2]" SITE "F2" ;
+FREQUENCY NET "clk_c" 12.000000 MHz ;
+FREQUENCY NET "lcd1/clk_50MHz" 96.000000 MHz ;
+FREQUENCY NET "clk_24MHz" 24.000000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

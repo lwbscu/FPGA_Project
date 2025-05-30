@@ -1,0 +1,350 @@
+PAR: Place And Route Diamond (64-bit) 3.14.0.75.2.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+Sun Mar 09 08:03:47 2025
+
+E:/software/Diamond/ispfpga\bin\nt64\par -f ballplayer_ballplayer_impl.p2t
+ballplayer_ballplayer_impl_map.ncd ballplayer_ballplayer_impl.dir
+ballplayer_ballplayer_impl.prf -gui -msgset E:/code/FPGA/ballplayer/promote.xml
+
+
+Preference file: ballplayer_ballplayer_impl.prf.
+
+Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
+Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
+----------   --------     -----        ------       -----------  -----------  ----         ------
+5_1   *      0            -22.094      75106248     0.304        0            01:18        Completed
+
+* : Design saved.
+
+Total (real) run time for 1-seed: 1 mins 18 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Lattice Place and Route Report for Design "ballplayer_ballplayer_impl_map.ncd"
+Sun Mar 09 08:03:47 2025
+
+PAR: Place And Route Diamond (64-bit) 3.14.0.75.2.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset E:/code/FPGA/ballplayer/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 ballplayer_ballplayer_impl_map.ncd ballplayer_ballplayer_impl.dir/5_1.ncd ballplayer_ballplayer_impl.prf
+Preference file: ballplayer_ballplayer_impl.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file ballplayer_ballplayer_impl_map.ncd.
+Design name: template
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 4
+Loading device for application par from file 'xo2c4000.nph' in environment: E:/software/Diamond/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 36.4.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)   35+4(JTAG)/280     14% used
+                  35+4(JTAG)/105     37% bonded
+
+   SLICE            992/2160         45% used
+
+   GSR                1/1           100% used
+   PLL                2/2           100% used
+
+
+17 potential circuit loops found in timing analysis.
+Number of Signals: 2745
+Number of Connections: 7139
+WARNING - par: Placement timing preferences are hard to meet. However, placement will continue. Use static timing analysis to identify errors.
+
+Pin Constraint Summary:
+   35 out of 35 pins locked (100% locked).
+
+WARNING - par: According to the connectivity, it is better to place PLL comp "pll_u2/PLLInst_0" on site "LPLL"; however, this site has been occupied or prohibited.
+WARNING - par: According to the connectivity, it is better to place PLL comp "pll_u2/PLLInst_0" on site "LPLL"; however, this site has been occupied or prohibited.
+WARNING - par: According to the connectivity, it is better to place PLL comp "pll_u2/PLLInst_0" on site "LPLL"; however, this site has been occupied or prohibited.
+WARNING - par: RPLL must be put in reset state during background Flash programming. System design must take this into consideration when PLL is used during background Flash programming. Please see TN1204 MachXO2 Programming and Configuration Usage Guide for detailed information.
+WARNING - par: PIO driver comp "clk" of PLL "pll_u2/PLLInst_0" CLKI input will be placed on a non-dedicated PIO site "C1/PL4A"; therefore, general routing has to be used.
+The following 5 signals are selected to use the primary clock routing resources:
+    lcd1/clk_50MHz (driver: lcd1/pll_u1/PLLInst_0, clk load #: 170)
+    clk_24MHz (driver: pll_u2/PLLInst_0, clk load #: 19)
+    clk_c (driver: clk, clk load #: 114)
+    jump/clk_out (driver: jump/fre_500us/SLICE_507, clk load #: 75)
+    dat_valid (driver: u7/SLICE_1045, clk load #: 14)
+
+WARNING - par: Signal "clk_c" is selected to use Primary clock resources. However, its driver comp "clk" is located at "C1", which is not a dedicated pin for connecting to Primary clock resources. General routing has to be used to route this signal, and it might suffer from excessive delay or skew.
+
+The following 8 signals are selected to use the secondary clock routing resources:
+    clk_c_enable_20 (driver: u7/SLICE_1045, clk load #: 27, sr load #: 0, ce load #: 1)
+    n21688 (driver: adc_driver/SLICE_458, clk load #: 0, sr load #: 39, ce load #: 0)
+    u8/count (driver: u8/SLICE_765, clk load #: 0, sr load #: 0, ce load #: 19)
+    jump/n22446 (driver: jump/SLICE_955, clk load #: 0, sr load #: 0, ce load #: 13)
+    jump/fre_500us/n10900 (driver: jump/SLICE_955, clk load #: 0, sr load #: 13, ce load #: 0)
+    u7/clk_c_enable_121 (driver: u7/SLICE_985, clk load #: 0, sr load #: 0, ce load #: 13)
+    lcd1/lcd_init_inst/cnt_150ms_22__N_1318 (driver: lcd1/lcd_init_inst/SLICE_656, clk load #: 0, sr load #: 12, ce load #: 0)
+    u7/n10930 (driver: u7/SLICE_985, clk load #: 0, sr load #: 12, ce load #: 0)
+
+Signal rst_c is selected as Global Set/Reset.
+Starting Placer Phase 0.
+............
+Finished Placer Phase 0.  REAL time: 30 secs 
+
+Starting Placer Phase 1.
+..................
+Placer score = 1974950.
+Finished Placer Phase 1.  REAL time: 36 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  2021479
+Finished Placer Phase 2.  REAL time: 37 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 0 out of 8 (0%)
+  General PIO: 1 out of 280 (0%)
+  PLL        : 2 out of 2 (100%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY "lcd1/clk_50MHz" from CLKOP on comp "lcd1/pll_u1/PLLInst_0" on PLL site "LPLL", clk load = 170
+  PRIMARY "clk_24MHz" from CLKOP on comp "pll_u2/PLLInst_0" on PLL site "RPLL", clk load = 19
+  PRIMARY "clk_c" from comp "clk" on PIO site "C1 (PL4A)", clk load = 114
+  PRIMARY "jump/clk_out" from Q0 on comp "jump/fre_500us/SLICE_507" on site "R2C16A", clk load = 75
+  PRIMARY "dat_valid" from Q0 on comp "u7/SLICE_1045" on site "R13C2B", clk load = 14
+  SECONDARY "clk_c_enable_20" from Q1 on comp "u7/SLICE_1045" on site "R13C2B", clk load = 27, ce load = 1, sr load = 0
+  SECONDARY "n21688" from F1 on comp "adc_driver/SLICE_458" on site "R12C15C", clk load = 0, ce load = 0, sr load = 39
+  SECONDARY "u8/count" from Q0 on comp "u8/SLICE_765" on site "R20C21D", clk load = 0, ce load = 19, sr load = 0
+  SECONDARY "jump/n22446" from Q0 on comp "jump/SLICE_955" on site "R2C14A", clk load = 0, ce load = 13, sr load = 0
+  SECONDARY "jump/fre_500us/n10900" from F0 on comp "jump/SLICE_955" on site "R2C14A", clk load = 0, ce load = 0, sr load = 13
+  SECONDARY "u7/clk_c_enable_121" from F0 on comp "u7/SLICE_985" on site "R13C17A", clk load = 0, ce load = 13, sr load = 0
+  SECONDARY "lcd1/lcd_init_inst/cnt_150ms_22__N_1318" from F1 on comp "lcd1/lcd_init_inst/SLICE_656" on site "R12C15A", clk load = 0, ce load = 0, sr load = 12
+  SECONDARY "u7/n10930" from F1 on comp "u7/SLICE_985" on site "R13C17A", clk load = 0, ce load = 0, sr load = 12
+
+  PRIMARY  : 5 out of 8 (62%)
+  SECONDARY: 8 out of 8 (100%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   35 + 4(JTAG) out of 280 (13.9%) PIO sites used.
+   35 + 4(JTAG) out of 105 (37.1%) bonded PIO sites used.
+   Number of PIO comps: 35; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+----------------+------------+-----------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref |
++----------+----------------+------------+-----------+
+| 0        | 11 / 26 ( 42%) | 2.5V       | -         |
+| 1        | 10 / 26 ( 38%) | 2.5V       | -         |
+| 2        | 5 / 28 ( 17%)  | 2.5V       | -         |
+| 3        | 1 / 7 ( 14%)   | 2.5V       | -         |
+| 4        | 4 / 8 ( 50%)   | 2.5V       | -         |
+| 5        | 4 / 10 ( 40%)  | 2.5V       | -         |
++----------+----------------+------------+-----------+
+
+Total placer CPU time: 28 secs 
+
+Dumping design to file ballplayer_ballplayer_impl.dir/5_1.ncd.
+
+17 potential circuit loops found in timing analysis.
+0 connections routed; 7139 unrouted.
+Starting router resource preassignment
+
+WARNING - par: The following clock signals will be routed by using generic routing resource and may suffer from excessive delay and/or skew.
+   Signal=pic_y_8__N_791 loads=3 clock_loads=1
+   Signal=pic_y_8__N_782 loads=3 clock_loads=1
+   Signal=pic_y_8__N_792 loads=3 clock_loads=1
+   Signal=pic_y_8__N_785 loads=3 clock_loads=1
+   Signal=pic_y_8__N_786 loads=3 clock_loads=1
+   Signal=pic_y_8__N_787 loads=3 clock_loads=1
+   Signal=pic_y_8__N_788 loads=3 clock_loads=1
+   Signal=pic_y_8__N_789 loads=3 clock_loads=1
+   Signal=pic_y_8__N_790 loads=3 clock_loads=1
+   Signal=u7/clk_400khz loads=25 clock_loads=6
+
+Completed router resource preassignment. Real time: 54 secs 
+
+Start NBR router at 08:04:41 03/09/25
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+17 potential circuit loops found in timing analysis.
+Start NBR special constraint process at 08:04:41 03/09/25
+
+Start NBR section for initial routing at 08:04:43 03/09/25
+Level 1, iteration 1
+68(0.03%) conflicts; 5539(77.59%) untouched conns; 4393612 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -21.752ns/-4393.613ns; real time: 57 secs 
+Level 2, iteration 1
+27(0.01%) conflicts; 5480(76.76%) untouched conns; 4499483 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -22.031ns/-4499.484ns; real time: 58 secs 
+Level 3, iteration 1
+16(0.01%) conflicts; 5480(76.76%) untouched conns; 4506728 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -22.068ns/-4506.729ns; real time: 1 mins 
+Level 4, iteration 1
+162(0.07%) conflicts; 0(0.00%) untouched conn; 4554473 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -21.788ns/-4554.473ns; real time: 1 mins 1 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 08:04:48 03/09/25
+Level 4, iteration 1
+75(0.03%) conflicts; 0(0.00%) untouched conn; 4559274 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -21.785ns/-4559.274ns; real time: 1 mins 2 secs 
+Level 4, iteration 2
+54(0.02%) conflicts; 0(0.00%) untouched conn; 4601241 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -21.785ns/-4601.241ns; real time: 1 mins 3 secs 
+Level 4, iteration 3
+32(0.01%) conflicts; 0(0.00%) untouched conn; 4600110 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -21.785ns/-4600.110ns; real time: 1 mins 4 secs 
+Level 4, iteration 4
+23(0.01%) conflicts; 0(0.00%) untouched conn; 4600110 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -21.785ns/-4600.110ns; real time: 1 mins 4 secs 
+Level 4, iteration 5
+21(0.01%) conflicts; 0(0.00%) untouched conn; 4601167 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -21.785ns/-4601.167ns; real time: 1 mins 5 secs 
+Level 4, iteration 6
+18(0.01%) conflicts; 0(0.00%) untouched conn; 4601167 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -21.785ns/-4601.167ns; real time: 1 mins 5 secs 
+Level 4, iteration 7
+12(0.00%) conflicts; 0(0.00%) untouched conn; 4641745 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -22.051ns/-4641.745ns; real time: 1 mins 6 secs 
+Level 4, iteration 8
+8(0.00%) conflicts; 0(0.00%) untouched conn; 4641745 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -22.051ns/-4641.745ns; real time: 1 mins 6 secs 
+Level 4, iteration 9
+8(0.00%) conflicts; 0(0.00%) untouched conn; 4654688 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -22.051ns/-4654.688ns; real time: 1 mins 7 secs 
+Level 4, iteration 10
+9(0.00%) conflicts; 0(0.00%) untouched conn; 4654688 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -22.051ns/-4654.688ns; real time: 1 mins 7 secs 
+Level 4, iteration 11
+8(0.00%) conflicts; 0(0.00%) untouched conn; 4652916 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -22.051ns/-4652.916ns; real time: 1 mins 8 secs 
+Level 4, iteration 12
+5(0.00%) conflicts; 0(0.00%) untouched conn; 4652916 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -22.051ns/-4652.916ns; real time: 1 mins 8 secs 
+Level 4, iteration 13
+5(0.00%) conflicts; 0(0.00%) untouched conn; 4653262 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -22.051ns/-4653.262ns; real time: 1 mins 9 secs 
+Level 4, iteration 14
+3(0.00%) conflicts; 0(0.00%) untouched conn; 4653262 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -22.051ns/-4653.262ns; real time: 1 mins 10 secs 
+Level 4, iteration 15
+3(0.00%) conflicts; 0(0.00%) untouched conn; 4674353 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -22.160ns/-4674.354ns; real time: 1 mins 10 secs 
+Level 4, iteration 16
+2(0.00%) conflicts; 0(0.00%) untouched conn; 4674353 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -22.160ns/-4674.354ns; real time: 1 mins 10 secs 
+Level 4, iteration 17
+0(0.00%) conflict; 0(0.00%) untouched conn; 4677785 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -22.160ns/-4677.785ns; real time: 1 mins 11 secs 
+
+Start NBR section for performance tuning (iteration 1) at 08:04:58 03/09/25
+Level 4, iteration 1
+1(0.00%) conflict; 0(0.00%) untouched conn; 4663990 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -22.094ns/-4663.991ns; real time: 1 mins 12 secs 
+Level 4, iteration 2
+0(0.00%) conflict; 0(0.00%) untouched conn; 4667394 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -22.094ns/-4667.395ns; real time: 1 mins 12 secs 
+
+Start NBR section for re-routing at 08:04:59 03/09/25
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 4667394 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -22.094ns/-4667.395ns; real time: 1 mins 12 secs 
+
+Start NBR section for post-routing at 08:04:59 03/09/25
+17 potential circuit loops found in timing analysis.
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 460 (6.44%)
+  Estimated worst slack<setup> : -22.094ns
+  Timing score<setup> : 75106248
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+WARNING - par: The following clock signals will be routed by using generic routing resource and may suffer from excessive delay and/or skew.
+   Signal=pic_y_8__N_791 loads=3 clock_loads=1
+   Signal=pic_y_8__N_782 loads=3 clock_loads=1
+   Signal=pic_y_8__N_792 loads=3 clock_loads=1
+   Signal=pic_y_8__N_785 loads=3 clock_loads=1
+   Signal=pic_y_8__N_786 loads=3 clock_loads=1
+   Signal=pic_y_8__N_787 loads=3 clock_loads=1
+   Signal=pic_y_8__N_788 loads=3 clock_loads=1
+   Signal=pic_y_8__N_789 loads=3 clock_loads=1
+   Signal=pic_y_8__N_790 loads=3 clock_loads=1
+   Signal=u7/clk_400khz loads=25 clock_loads=6
+
+17 potential circuit loops found in timing analysis.
+17 potential circuit loops found in timing analysis.
+17 potential circuit loops found in timing analysis.
+Total CPU time 1 mins 1 secs 
+Total REAL time: 1 mins 18 secs 
+Completely routed.
+End of route.  7139 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 75106248 
+
+Dumping design to file ballplayer_ballplayer_impl.dir/5_1.ncd.
+
+
+All signals are completely routed.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = -22.094
+PAR_SUMMARY::Timing score<setup/<ns>> = 75106.248
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.304
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 1 mins 1 secs 
+Total REAL time to completion: 1 mins 18 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.

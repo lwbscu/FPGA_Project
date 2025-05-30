@@ -1,5 +1,5 @@
 Power Analyzer report for Electric_Piano
-Tue May 27 13:28:41 2025
+Wed May 28 10:51:14 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -52,29 +52,29 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 14          ;
 ;                            ;             ;
-; Average used               ; 1.59        ;
+; Average used               ; 1.67        ;
 ; Maximum used               ; 14          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-14        ;   4.5%      ;
+;     Processors 2-14        ;   5.1%      ;
 +----------------------------+-------------+
 
 
 +-------------------------------------------------------------------------------------------+
 ; Power Analyzer Summary                                                                    ;
 +----------------------------------------+--------------------------------------------------+
-; Power Analyzer Status                  ; Successful - Tue May 27 13:28:41 2025            ;
+; Power Analyzer Status                  ; Successful - Wed May 28 10:51:14 2025            ;
 ; Quartus Prime Version                  ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition      ;
 ; Revision Name                          ; Electric_Piano                                   ;
 ; Top-level Entity Name                  ; Advanced_Electric_Piano                          ;
 ; Family                                 ; MAX 10                                           ;
 ; Device                                 ; 10M08SAM153C8G                                   ;
 ; Power Models                           ; Final                                            ;
-; Total Thermal Power Dissipation        ; 149.27 mW                                        ;
-; Core Dynamic Thermal Power Dissipation ; 0.00 mW                                          ;
-; Core Static Thermal Power Dissipation  ; 110.87 mW                                        ;
-; I/O Thermal Power Dissipation          ; 38.40 mW                                         ;
+; Total Thermal Power Dissipation        ; 164.75 mW                                        ;
+; Core Dynamic Thermal Power Dissipation ; 12.73 mW                                         ;
+; Core Static Thermal Power Dissipation  ; 110.94 mW                                        ;
+; I/O Thermal Power Dissipation          ; 41.09 mW                                         ;
 ; Power Estimation Confidence            ; Low: user provided insufficient toggle rate data ;
 +----------------------------------------+--------------------------------------------------+
 
@@ -103,20 +103,13 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------+---------+---------------+
 
 
-+------------------------------------------------+
-; Indeterminate Toggle Rates                     ;
-+------------------+-----------------------------+
-; Node             ; Reason                      ;
-+------------------+-----------------------------+
-; clk              ; No valid clock domain found ;
-; rst_n            ; No valid clock domain found ;
-; key1             ; No valid clock domain found ;
-; col[3]           ; No valid clock domain found ;
-; col[1]           ; No valid clock domain found ;
-; col[0]           ; No valid clock domain found ;
-; col[2]           ; No valid clock domain found ;
-; clk~inputclkctrl ; No valid clock domain found ;
-+------------------+-----------------------------+
++-------------------------------------+
+; Indeterminate Toggle Rates          ;
++-------+-----------------------------+
+; Node  ; Reason                      ;
++-------+-----------------------------+
+; rst_n ; No valid clock domain found ;
++-------+-----------------------------+
 
 
 +--------------------------------------------------------------------------+
@@ -132,7 +125,7 @@ refer to the applicable agreement for further details.
 ;     3.3-V LVCMOS I/O Standard               ; 3.3 V                      ;
 ;     3.3 V Schmitt Trigger I/O Standard      ; 3.3 V                      ;
 ;                                             ;                            ;
-; Auto computed junction temperature          ; 28.8 degrees Celsius       ;
+; Auto computed junction temperature          ; 29.2 degrees Celsius       ;
 ;     Ambient temperature                     ; 25.0 degrees Celsius       ;
 ;     Junction-to-Case thermal resistance     ; 11.00 degrees Celsius/Watt ;
 ;     Case-to-Heat Sink thermal resistance    ; 0.10 degrees Celsius/Watt  ;
@@ -150,16 +143,17 @@ refer to the applicable agreement for further details.
 (1) The "Thermal Power Dissipation by Block" Table has been hidden. To show this table, please select the "Write power dissipation by block to report file" option under "PowerPlay Power Analyzer Settings".
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Thermal Power Dissipation by Block Type                                                                                                                                                                           ;
-+--------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
-; Block Type         ; Total Thermal Power by Block Type ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ; Block Average Toggle Rate (millions of transitions / sec) ;
-+--------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
-; Combinational cell ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
-; Register cell      ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
-; I/O                ; 1.44 mW                           ; 0.00 mW                     ; 1.44 mW                        ; 0.00 mW                       ;    0.000                                                  ;
-; Voltage Regulator  ; 0.00 mW                           ; 0.00 mW                     ; 0.00 mW                        ; --                            ; --                                                        ;
-+--------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Block Type                                                                                                                                                                            ;
++---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; Block Type          ; Total Thermal Power by Block Type ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ; Block Average Toggle Rate (millions of transitions / sec) ;
++---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; Combinational cell  ; 1.78 mW                           ; 1.14 mW                     ; --                             ; 0.64 mW                       ;    5.408                                                  ;
+; Clock control block ; 1.58 mW                           ; 0.00 mW                     ; --                             ; 1.58 mW                       ;  100.000                                                  ;
+; Register cell       ; 1.65 mW                           ; 0.88 mW                     ; --                             ; 0.77 mW                       ;    6.250                                                  ;
+; I/O                 ; 4.18 mW                           ; 2.69 mW                     ; 1.44 mW                        ; 0.05 mW                       ;    5.859                                                  ;
+; Voltage Regulator   ; 7.67 mW                           ; 7.67 mW                     ; 0.00 mW                        ; --                            ; --                                                        ;
++---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
 (1) The "Block Thermal Static Power" for all block types except Pins and the Voltage Regulator, if one exists, is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
 
 
@@ -168,14 +162,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+---------------------------------------------------------------+
 ; Compilation Hierarchy Node          ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                           ;
 +-------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+---------------------------------------------------------------+
-; |Advanced_Electric_Piano            ; 1.44 mW (1.44 mW)                    ; 0.00 mW (0.00 mW)               ; 1.44 mW (1.44 mW)                 ; 0.00 mW (0.00 mW)                 ; |Advanced_Electric_Piano                                      ;
+; |Advanced_Electric_Piano            ; 16.86 mW (13.43 mW)                  ; 12.38 mW (10.36 mW)             ; 1.44 mW (1.44 mW)                 ; 3.04 mW (1.63 mW)                 ; |Advanced_Electric_Piano                                      ;
 ;     |hard_block:auto_generated_inst ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Advanced_Electric_Piano|hard_block:auto_generated_inst       ;
-;     |Advanced_Beeper:u_beeper       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Advanced_Electric_Piano|Advanced_Beeper:u_beeper             ;
-;         |PWM:u_pwm                  ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Advanced_Electric_Piano|Advanced_Beeper:u_beeper|PWM:u_pwm   ;
-;         |tone:u_tone                ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Advanced_Electric_Piano|Advanced_Beeper:u_beeper|tone:u_tone ;
-;     |Array_KeyBoard:u_keyboard      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Advanced_Electric_Piano|Array_KeyBoard:u_keyboard            ;
-;     |Mode_Controller:u_mode_ctrl    ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Advanced_Electric_Piano|Mode_Controller:u_mode_ctrl          ;
-;     |Music_Player:u_music_player    ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Advanced_Electric_Piano|Music_Player:u_music_player          ;
+;     |Advanced_Beeper:u_beeper       ; 0.57 mW (0.15 mW)                    ; 0.28 mW (0.02 mW)               ; --                                ; 0.29 mW (0.13 mW)                 ; |Advanced_Electric_Piano|Advanced_Beeper:u_beeper             ;
+;         |PWM:u_pwm                  ; 0.40 mW (0.40 mW)                    ; 0.24 mW (0.24 mW)               ; --                                ; 0.16 mW (0.16 mW)                 ; |Advanced_Electric_Piano|Advanced_Beeper:u_beeper|PWM:u_pwm   ;
+;         |tone:u_tone                ; 0.03 mW (0.03 mW)                    ; 0.02 mW (0.02 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Advanced_Electric_Piano|Advanced_Beeper:u_beeper|tone:u_tone ;
+;     |Array_KeyBoard:u_keyboard      ; 0.47 mW (0.47 mW)                    ; 0.32 mW (0.32 mW)               ; --                                ; 0.15 mW (0.15 mW)                 ; |Advanced_Electric_Piano|Array_KeyBoard:u_keyboard            ;
+;     |Mode_Controller:u_mode_ctrl    ; 0.10 mW (0.10 mW)                    ; 0.07 mW (0.07 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |Advanced_Electric_Piano|Mode_Controller:u_mode_ctrl          ;
+;     |Music_Player:u_music_player    ; 2.28 mW (2.28 mW)                    ; 1.35 mW (1.35 mW)               ; --                                ; 0.94 mW (0.94 mW)                 ; |Advanced_Electric_Piano|Music_Player:u_music_player          ;
 +-------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+---------------------------------------------------------------+
 (1) Value in parentheses is the power consumed at that level of hierarchy. Value not in parentheses is the power consumed at that level of hierarchy plus the power consumed by all levels of hierarchy below it.
 
@@ -187,6 +181,7 @@ refer to the applicable agreement for further details.
 +-----------------+-----------------------+--------------------------+
 ; Clock Domain    ; Clock Frequency (MHz) ; Total Core Dynamic Power ;
 +-----------------+-----------------------+--------------------------+
+; clk             ; 50.00                 ; 5.06                     ;
 ; No clock domain ; 0.00                  ; 0.00                     ;
 +-----------------+-----------------------+--------------------------+
 
@@ -196,9 +191,9 @@ refer to the applicable agreement for further details.
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 ; Voltage Supply ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
-; VCCIO          ; 11.73 mA                ; 0.00 mA                   ; 11.73 mA                 ; 11.73 mA                         ;
+; VCCIO          ; 12.51 mA                ; 0.79 mA                   ; 11.73 mA                 ; 12.51 mA                         ;
 ; VCCA           ; 0.00 mA                 ; 0.00 mA                   ; 0.00 mA                  ; 0.00 mA                          ;
-; VCC_ONE        ; 36.96 mA                ; 0.00 mA                   ; 36.96 mA                 ; 36.96 mA                         ;
+; VCC_ONE        ; 41.24 mA                ; 4.26 mA                   ; 36.98 mA                 ; 41.24 mA                         ;
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 (1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
 (2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
@@ -211,13 +206,13 @@ refer to the applicable agreement for further details.
 +----------+---------------+---------------------+-----------------------+----------------------+
 ; 1A       ; 3.3V          ; 1.60 mA             ; 0.00 mA               ; 1.60 mA              ;
 ; 1B       ; 3.3V          ; 1.67 mA             ; 0.00 mA               ; 1.67 mA              ;
-; 2        ; 3.3V          ; 1.62 mA             ; 0.00 mA               ; 1.62 mA              ;
-; 3        ; 3.3V          ; 1.73 mA             ; 0.00 mA               ; 1.73 mA              ;
+; 2        ; 3.3V          ; 1.76 mA             ; 0.14 mA               ; 1.62 mA              ;
+; 3        ; 3.3V          ; 2.04 mA             ; 0.30 mA               ; 1.73 mA              ;
 ; 4        ; --            ; --                  ; --                    ; --                   ;
-; 5        ; 3.3V          ; 1.76 mA             ; 0.00 mA               ; 1.76 mA              ;
-; 6        ; 3.3V          ; 1.67 mA             ; 0.00 mA               ; 1.67 mA              ;
+; 5        ; 3.3V          ; 1.91 mA             ; 0.14 mA               ; 1.76 mA              ;
+; 6        ; 3.3V          ; 1.80 mA             ; 0.13 mA               ; 1.67 mA              ;
 ; 7        ; --            ; --                  ; --                    ; --                   ;
-; 8        ; 3.3V          ; 1.68 mA             ; 0.00 mA               ; 1.68 mA              ;
+; 8        ; 3.3V          ; 1.75 mA             ; 0.07 mA               ; 1.68 mA              ;
 +----------+---------------+---------------------+-----------------------+----------------------+
 
 
@@ -226,7 +221,7 @@ refer to the applicable agreement for further details.
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 ; VCCIO Voltage ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
-; 3.3V          ; 11.73 mA                ; 0.00 mA                   ; 11.73 mA                 ; 11.73 mA                         ;
+; 3.3V          ; 12.51 mA                ; 0.79 mA                   ; 11.73 mA                 ; 12.51 mA                         ;
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 (1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
 (2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
@@ -242,20 +237,20 @@ refer to the applicable agreement for further details.
 ;     -- Number of signals with Static Probability from Simulation                       ; 0 (0.0%)     ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
 ;                                                                                        ;              ;            ;              ;               ;
 ; Node, entity or clock assignment                                                       ;              ;            ;              ;               ;
-;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 0 (0.0%)     ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 1 (0.1%)     ; 0 (0.0%)   ; 0 (0.0%)     ; 1 (0.1%)      ;
+;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 2 (0.1%)     ; 1 (3.1%)   ; 0 (0.0%)     ; 1 (0.1%)      ;
+;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 2 (0.1%)     ; 1 (3.1%)   ; 0 (0.0%)     ; 1 (0.1%)      ;
 ;                                                                                        ;              ;            ;              ;               ;
 ; Vectorless estimation                                                                  ;              ;            ;              ;               ;
-;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 1370 (99.1%) ; 19 (59.4%) ; 183 (100.0%) ; 1168 (100.0%) ;
-;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 45 (3.3%)    ; 9 (28.1%)  ; 2 (1.1%)     ; 34 (2.9%)     ;
-;     -- Number of signals with Static Probability from Vectorless estimation            ; 1369 (99.0%) ; 19 (59.4%) ; 183 (100.0%) ; 1167 (99.9%)  ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 1381 (99.0%) ; 19 (59.4%) ; 189 (100.0%) ; 1173 (99.9%)  ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 19 (1.4%)    ; 9 (28.1%)  ; 0 (0.0%)     ; 10 (0.9%)     ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 1381 (99.0%) ; 19 (59.4%) ; 189 (100.0%) ; 1173 (99.9%)  ;
 ;                                                                                        ;              ;            ;              ;               ;
 ; Default assignment                                                                     ;              ;            ;              ;               ;
-;     -- Number of signals with Toggle Rate from Default assignment                      ; 0 (0.0%)     ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Default assignment               ; 13 (0.9%)    ; 13 (40.6%) ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Toggle Rate from Default assignment                      ; 5 (0.4%)     ; 5 (15.6%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Default assignment               ; 12 (0.9%)    ; 12 (37.5%) ; 0 (0.0%)     ; 0 (0.0%)      ;
 ;                                                                                        ;              ;            ;              ;               ;
 ; Assumed 0                                                                              ;              ;            ;              ;               ;
-;     -- Number of signals with Toggle Rate assumed 0                                    ; 13 (0.9%)    ; 13 (40.6%) ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Toggle Rate assumed 0                                    ; 7 (0.5%)     ; 7 (21.9%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
 +----------------------------------------------------------------------------------------+--------------+------------+--------------+---------------+
 
 
@@ -273,15 +268,52 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Power Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue May 27 13:28:39 2025
+    Info: Processing started: Wed May 28 10:51:13 2025
 Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off Electric_Piano -c Electric_Piano
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'Electric_Piano.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
-Warning (332060): Node: clk was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register Advanced_Beeper:u_beeper|PWM:u_pwm|cnt[14] is being clocked by clk
-Warning (332068): No clocks defined in design.
+Info (332104): Reading SDC File: 'Electric_Piano.sdc'
+Warning (332174): Ignored filter at Electric_Piano.sdc(8): lcd_sclk could not be matched with a port File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 8
+Critical Warning (332049): Ignored create_generated_clock at Electric_Piano.sdc(8): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 8
+    Info (332050): create_generated_clock -name "lcd_sclk" -source [get_ports {clk}] -divide_by 25 [get_ports {lcd_sclk}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 8
+Warning (332174): Ignored filter at Electric_Piano.sdc(11): lcd_sclk could not be matched with a clock File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 11
+Warning (332054): Assignment set_clock_groups is accepted but has some problems at Electric_Piano.sdc(11): Argument -group with value [get_clocks {lcd_sclk}] contains zero elements File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 11
+    Info (332050): set_clock_groups -asynchronous -group [get_clocks {clk}] -group [get_clocks {lcd_sclk}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 11
+Warning (332174): Ignored filter at Electric_Piano.sdc(37): lcd_mosi could not be matched with a port File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 37
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(37): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 37
+    Info (332050): set_output_delay -clock [get_clocks {lcd_sclk}] -max 1.0 [get_ports {lcd_mosi}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 37
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(37): Argument -clock is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 37
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(38): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 38
+    Info (332050): set_output_delay -clock [get_clocks {lcd_sclk}] -min 0.2 [get_ports {lcd_mosi}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 38
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(38): Argument -clock is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 38
+Warning (332174): Ignored filter at Electric_Piano.sdc(40): lcd_cs could not be matched with a port File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 40
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(40): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 40
+    Info (332050): set_output_delay -clock [get_clocks {clk}] -max 2.0 [get_ports {lcd_cs}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 40
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(41): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 41
+    Info (332050): set_output_delay -clock [get_clocks {clk}] -min 0.5 [get_ports {lcd_cs}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 41
+Warning (332174): Ignored filter at Electric_Piano.sdc(43): lcd_rst could not be matched with a port File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 43
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(43): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 43
+    Info (332050): set_output_delay -clock [get_clocks {clk}] -max 2.0 [get_ports {lcd_rst}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 43
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(44): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 44
+    Info (332050): set_output_delay -clock [get_clocks {clk}] -min 0.5 [get_ports {lcd_rst}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 44
+Warning (332174): Ignored filter at Electric_Piano.sdc(46): lcd_dc could not be matched with a port File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 46
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(46): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 46
+    Info (332050): set_output_delay -clock [get_clocks {clk}] -max 2.0 [get_ports {lcd_dc}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 46
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(47): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 47
+    Info (332050): set_output_delay -clock [get_clocks {clk}] -min 0.5 [get_ports {lcd_dc}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 47
+Warning (332174): Ignored filter at Electric_Piano.sdc(49): lcd_blk could not be matched with a port File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 49
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(49): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 49
+    Info (332050): set_output_delay -clock [get_clocks {clk}] -max 2.0 [get_ports {lcd_blk}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 49
+Warning (332049): Ignored set_output_delay at Electric_Piano.sdc(50): Argument <targets> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 50
+    Info (332050): set_output_delay -clock [get_clocks {clk}] -min 0.5 [get_ports {lcd_blk}] File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 50
+Warning (332174): Ignored filter at Electric_Piano.sdc(56): lcd_* could not be matched with a port File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 56
+Warning (332049): Ignored set_multicycle_path at Electric_Piano.sdc(56): Argument <to> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 56
+    Info (332050): set_multicycle_path -setup -to [get_ports {lcd_*}] 2 File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 56
+Warning (332049): Ignored set_multicycle_path at Electric_Piano.sdc(57): Argument <to> is an empty collection File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 57
+    Info (332050): set_multicycle_path -hold -to [get_ports {lcd_*}] 1 File: D:/Quartus_Project/Electric_Piano/Electric_Piano.sdc Line: 57
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From clk (Rise) to clk (Rise) (setup and hold)
 Info (223000): Starting Vectorless Power Activity Estimation
 Warning (222013): Relative toggle rates could not be calculated because no clock domain could be identified for some nodes
 Info (223001): Completed Vectorless Power Activity Estimation
@@ -289,12 +321,12 @@ Info (218000): Using Advanced I/O Power to simulate I/O buffers with the specifi
 Warning (215044): No board thermal model was selected.  Analyzing without board thermal modeling.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (215049): Average toggle rate for this design is 0.000 millions of transitions / sec
-Info (215031): Total thermal power estimate for the design is 149.27 mW
-Info: Quartus Prime Power Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4971 megabytes
-    Info: Processing ended: Tue May 27 13:28:41 2025
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:03
+Info (215049): Average toggle rate for this design is 5.604 millions of transitions / sec
+Info (215031): Total thermal power estimate for the design is 164.75 mW
+Info: Quartus Prime Power Analyzer was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 4973 megabytes
+    Info: Processing ended: Wed May 28 10:51:14 2025
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 
