@@ -1,6 +1,6 @@
 // ============================================================================
 // Module: lcd_custom_image_display
-// Description: 自定义图片显示模块 - 2-3秒自动切换，支持黑白(1位)格式
+// Description: 自定义图片显示模块 - 160×120图片居中显示，支持黑白(1位)格式
 // Author: GitHub Copilot
 // Date: 2025-05-30
 // ============================================================================
@@ -50,8 +50,8 @@ reg display_en;
 // 背光控制 - 始终打开
 assign lcd_blk = 1'b1;
 
-// ROM地址信号（黑白格式：600字节，10位地址）
-wire [9:0] rom_addr;
+// ROM地址信号（黑白格式：2400字节，12位地址）
+wire [11:0] rom_addr;
 wire [7:0] rom_data;
 
 // 实例化图片ROM
@@ -62,7 +62,7 @@ Clever_rom clever_rom_inst (
 );
 
 // 计算ROM地址 - 黑白格式：8个像素打包成1字节
-assign rom_addr = in_image_area ? (image_addr >> 3) : 10'h0;
+assign rom_addr = in_image_area ? (image_addr >> 3) : 12'h0;
 
 // 主状态机
 always @(posedge clk_50MHz or negedge rst_n) begin
@@ -116,7 +116,7 @@ end
 
 // 像素数据处理和坐标映射
 reg [8:0] x_pos, y_pos;
-reg [12:0] image_addr;
+reg [16:0] image_addr; // 17位地址，支持160×120=19200像素
 wire in_image_area;
 wire pixel_bit; // 单个像素位
 
@@ -125,20 +125,20 @@ always @(*) begin
     x_pos = pixel_counter % 9'd320;
     y_pos = pixel_counter / 9'd320;
     
-    // 将屏幕坐标映射到80x60图片 - 居中显示
-    // 计算居中偏移：(320-80)/2 = 120, (240-60)/2 = 90
-    image_addr = 13'h0;
+    // 将屏幕坐标映射到160×120图片 - 居中显示
+    // 计算居中偏移：(320-160)/2 = 80, (240-120)/2 = 60
+    image_addr = 17'h0;
     
-    if (x_pos >= 9'd120 && x_pos < 9'd200 && y_pos >= 8'd90 && y_pos < 8'd150) begin
-        // 在图片显示区域内 (80x60像素区域)
-        image_addr = (y_pos - 8'd90) * 13'd80 + (x_pos - 9'd120);
+    if (x_pos >= 9'd80 && x_pos < 9'd240 && y_pos >= 8'd60 && y_pos < 8'd180) begin
+        // 在图片显示区域内 (160×120像素区域)
+        image_addr = (y_pos - 8'd60) * 17'd160 + (x_pos - 9'd80);
     end else begin
-        image_addr = 13'h0;
+        image_addr = 17'h0;
     end
 end
 
 // 判断是否在图片显示区域
-assign in_image_area = (x_pos >= 9'd120 && x_pos < 9'd200 && y_pos >= 8'd90 && y_pos < 8'd150);
+assign in_image_area = (x_pos >= 9'd80 && x_pos < 9'd240 && y_pos >= 8'd60 && y_pos < 8'd180);
 
 // 从ROM数据中提取单个像素位（黑白格式）
 assign pixel_bit = rom_data[7 - (image_addr[2:0])];
