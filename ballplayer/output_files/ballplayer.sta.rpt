@@ -1,5 +1,9 @@
 Timing Analyzer report for ballplayer
+<<<<<<< HEAD
 Fri May 30 19:56:41 2025
+=======
+Fri May 30 17:42:25 2025
+>>>>>>> 6b28b45a61759ce77558bd97fecf8558ff25d14d
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -96,8 +100,13 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+<<<<<<< HEAD
 ;     Processor 2            ;   7.3%      ;
 ;     Processors 3-4         ;   7.0%      ;
+=======
+;     Processor 2            ;  38.4%      ;
+;     Processors 3-4         ;  37.0%      ;
+>>>>>>> 6b28b45a61759ce77558bd97fecf8558ff25d14d
 +----------------------------+-------------+
 
 
@@ -557,7 +566,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+<<<<<<< HEAD
     Info: Processing started: Fri May 30 19:56:39 2025
+=======
+    Info: Processing started: Fri May 30 17:42:22 2025
+>>>>>>> 6b28b45a61759ce77558bd97fecf8558ff25d14d
 Info: Command: quartus_sta ballplayer -c ballplayer
 Info: qsta_default_script.tcl version: #1
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
@@ -637,9 +650,16 @@ Info (332146): Worst-case minimum pulse width slack is 9.721
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
+<<<<<<< HEAD
     Info: Peak virtual memory: 4795 megabytes
     Info: Processing ended: Fri May 30 19:56:41 2025
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
+=======
+    Info: Peak virtual memory: 4808 megabytes
+    Info: Processing ended: Fri May 30 17:42:25 2025
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:05
+>>>>>>> 6b28b45a61759ce77558bd97fecf8558ff25d14d
 
 

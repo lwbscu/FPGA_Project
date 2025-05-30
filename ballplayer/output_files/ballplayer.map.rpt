@@ -1,5 +1,9 @@
 Analysis & Synthesis report for ballplayer
+<<<<<<< HEAD
 Fri May 30 19:56:28 2025
+=======
+Fri May 30 17:41:29 2025
+>>>>>>> 6b28b45a61759ce77558bd97fecf8558ff25d14d
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -60,7 +64,11 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis Status        ; Successful - Fri May 30 19:56:28 2025       ;
+=======
+; Analysis & Synthesis Status        ; Successful - Fri May 30 17:41:29 2025       ;
+>>>>>>> 6b28b45a61759ce77558bd97fecf8558ff25d14d
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ballplayer                                  ;
 ; Top-level Entity Name              ; ballplayer_top_test                         ;
@@ -1003,7 +1011,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
+<<<<<<< HEAD
 ; Top            ; 00:00:04     ;
+=======
+; Top            ; 00:00:36     ;
+>>>>>>> 6b28b45a61759ce77558bd97fecf8558ff25d14d
 +----------------+--------------+
 
 
@@ -1013,7 +1025,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+<<<<<<< HEAD
     Info: Processing started: Fri May 30 19:56:17 2025
+=======
+    Info: Processing started: Fri May 30 17:40:46 2025
+>>>>>>> 6b28b45a61759ce77558bd97fecf8558ff25d14d
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ballplayer -c ballplayer
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 1 design units, including 1 entities, in source file source/ballplayer_top.v
@@ -1022,12 +1038,8 @@ Warning (10229): Verilog HDL Expression warning at ballplayer_top_test.v(67): tr
 Warning (10229): Verilog HDL Expression warning at ballplayer_top_test.v(78): truncated literal to match 25 bits File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 78
 Info (12021): Found 1 design units, including 1 entities, in source file source/ballplayer_top_test.v
     Info (12023): Found entity 1: ballplayer_top_test File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 8
-Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_contrast_test.v
-    Info (12023): Found entity 1: lcd_contrast_test File: D:/Quartus_Project/ballplayer/source/lcd_contrast_test.v Line: 8
-Warning (10229): Verilog HDL Expression warning at lcd_cartoon_display.v(39): truncated literal to match 26 bits File: D:/Quartus_Project/ballplayer/source/lcd_cartoon_display.v Line: 39
-Warning (10229): Verilog HDL Expression warning at lcd_cartoon_display.v(101): truncated literal to match 17 bits File: D:/Quartus_Project/ballplayer/source/lcd_cartoon_display.v Line: 101
-Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_cartoon_display.v
-    Info (12023): Found entity 1: lcd_cartoon_display File: D:/Quartus_Project/ballplayer/source/lcd_cartoon_display.v Line: 8
+Warning (12019): Can't analyze file -- file source/lcd_contrast_test.v is missing
+Warning (12019): Can't analyze file -- file source/lcd_cartoon_display.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file source/ballplayer_pll.v
     Info (12023): Found entity 1: ballplayer_pll File: D:/Quartus_Project/ballplayer/source/ballplayer_pll.v Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file source/adc081s101_driver.v
@@ -1061,16 +1073,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file source/
 Info (12021): Found 1 design units, including 1 entities, in source file source/debounce.v
     Info (12023): Found entity 1: debounce File: D:/Quartus_Project/ballplayer/source/debounce.v Line: 8
 Warning (12019): Can't analyze file -- file source/lcd_simple_test.v is missing
-Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_simple_fill.v
-    Info (12023): Found entity 1: lcd_simple_fill File: D:/Quartus_Project/ballplayer/source/lcd_simple_fill.v Line: 8
+Warning (12019): Can't analyze file -- file source/lcd_simple_fill.v is missing
 Warning (12019): Can't analyze file -- file source/lcd_debug_test.v is missing
 Warning (12019): Can't analyze file -- file source/lcd_full_init_test.v is missing
-Warning (10229): Verilog HDL Expression warning at lcd_simple_patterns.v(39): truncated literal to match 27 bits File: D:/Quartus_Project/ballplayer/source/lcd_simple_patterns.v Line: 39
-Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_simple_patterns.v
-    Info (12023): Found entity 1: lcd_simple_patterns File: D:/Quartus_Project/ballplayer/source/lcd_simple_patterns.v Line: 8
-Warning (10229): Verilog HDL Expression warning at lcd_cartoon_display_fixed.v(39): truncated literal to match 27 bits File: D:/Quartus_Project/ballplayer/source/lcd_cartoon_display_fixed.v Line: 39
-Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_cartoon_display_fixed.v
-    Info (12023): Found entity 1: lcd_cartoon_display_fixed File: D:/Quartus_Project/ballplayer/source/lcd_cartoon_display_fixed.v Line: 8
+Warning (12019): Can't analyze file -- file source/lcd_simple_patterns.v is missing
+Warning (12019): Can't analyze file -- file source/lcd_cartoon_display_fixed.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_emoji_display.v
     Info (12023): Found entity 1: lcd_emoji_display File: D:/Quartus_Project/ballplayer/source/lcd_emoji_display.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_custom_image_display.v
@@ -1237,10 +1244,18 @@ Info (21057): Implemented 845 device resources after synthesis - the final resou
     Info (21061): Implemented 807 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
+<<<<<<< HEAD
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
     Info: Peak virtual memory: 4806 megabytes
     Info: Processing ended: Fri May 30 19:56:28 2025
     Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:18
+=======
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
+    Info: Peak virtual memory: 4839 megabytes
+    Info: Processing ended: Fri May 30 17:41:29 2025
+    Info: Elapsed time: 00:00:43
+    Info: Total CPU time (on all processors): 00:00:50
+>>>>>>> 6b28b45a61759ce77558bd97fecf8558ff25d14d
 
 
