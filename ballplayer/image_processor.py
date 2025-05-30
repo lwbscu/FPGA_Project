@@ -22,8 +22,8 @@ from PIL import Image, ImageFilter, ImageEnhance
 import numpy as np
 
 # 配置参数
-TARGET_WIDTH = 160   # 目标宽度 (液晶屏一半)
-TARGET_HEIGHT = 120  # 目标高度 (液晶屏一半)
+TARGET_WIDTH = 240   # 目标宽度 (您要求的尺寸)
+TARGET_HEIGHT = 180  # 目标高度 (您要求的尺寸，从160改为180)
 COLOR_FORMAT = "BW"  # 颜色格式: "RGB332" 或 "BW" (黑白)
 
 # 输入输出路径

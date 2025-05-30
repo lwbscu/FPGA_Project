@@ -208,11 +208,11 @@ VCCIO3                       : P10       : power  :                   : 3.3V    
 VCCIO3                       : P11       : power  :                   : 3.3V    : 3         :                
 lcd_mosi                     : P12       : output : 3.3-V LVTTL       :         : 3         : Y              
 VCCA4                        : P13       : power  :                   : 3.0V/3.3V :           :                
-beeper                       : P14       : output : 3.3-V LVTTL       :         : 3         : N              
+RESERVED_INPUT               : P14       :        :                   :         : 3         :                
 lcd_rst                      : P15       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND                          : R1        : gnd    :                   :         :           :                
 RESERVED_INPUT               : R2        :        :                   :         : 2         :                
-RESERVED_INPUT               : R3        :        :                   :         : 3         :                
+beeper                       : R3        : output : 3.3-V LVTTL       :         : 3         : N              
 RESERVED_INPUT               : R5        :        :                   :         : 3         :                
 RESERVED_INPUT               : R7        :        :                   :         : 3         :                
 lcd_cs                       : R9        : output : 3.3-V LVTTL       :         : 3         : Y              
