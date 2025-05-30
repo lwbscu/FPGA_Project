@@ -1,5 +1,13 @@
 Power Analyzer report for ballplayer
+<<<<<<< HEAD
 Sat May 31 00:14:44 2025
+=======
+<<<<<<< HEAD
+Fri May 30 19:56:38 2025
+=======
+Fri May 30 17:42:21 2025
+>>>>>>> 6b28b45a61759ce77558bd97fecf8558ff25d14d
+>>>>>>> 189f981f78451014fa3c4d5720550765f304b9ef
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -52,19 +60,43 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
+<<<<<<< HEAD
 ; Average used               ; 2.24        ;
+=======
+<<<<<<< HEAD
+; Average used               ; 1.22        ;
+=======
+; Average used               ; 2.01        ;
+>>>>>>> 6b28b45a61759ce77558bd97fecf8558ff25d14d
+>>>>>>> 189f981f78451014fa3c4d5720550765f304b9ef
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+<<<<<<< HEAD
 ;     Processors 2-4         ;  41.3%      ;
+=======
+<<<<<<< HEAD
+;     Processors 2-4         ;   7.3%      ;
+=======
+;     Processors 2-4         ;  33.8%      ;
+>>>>>>> 6b28b45a61759ce77558bd97fecf8558ff25d14d
+>>>>>>> 189f981f78451014fa3c4d5720550765f304b9ef
 +----------------------------+-------------+
 
 
 +-------------------------------------------------------------------------------------------+
 ; Power Analyzer Summary                                                                    ;
 +----------------------------------------+--------------------------------------------------+
+<<<<<<< HEAD
 ; Power Analyzer Status                  ; Successful - Sat May 31 00:14:44 2025            ;
+=======
+<<<<<<< HEAD
+; Power Analyzer Status                  ; Successful - Fri May 30 19:56:38 2025            ;
+=======
+; Power Analyzer Status                  ; Successful - Fri May 30 17:42:21 2025            ;
+>>>>>>> 6b28b45a61759ce77558bd97fecf8558ff25d14d
+>>>>>>> 189f981f78451014fa3c4d5720550765f304b9ef
 ; Quartus Prime Version                  ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition      ;
 ; Revision Name                          ; ballplayer                                       ;
 ; Top-level Entity Name                  ; ballplayer_multi_image_test                      ;
@@ -283,7 +315,15 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Power Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+<<<<<<< HEAD
     Info: Processing started: Sat May 31 00:14:40 2025
+=======
+<<<<<<< HEAD
+    Info: Processing started: Fri May 30 19:56:37 2025
+=======
+    Info: Processing started: Fri May 30 17:42:19 2025
+>>>>>>> 6b28b45a61759ce77558bd97fecf8558ff25d14d
+>>>>>>> 189f981f78451014fa3c4d5720550765f304b9ef
 Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off ballplayer -c ballplayer
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -321,6 +361,7 @@ Info (218000): Using Advanced I/O Power to simulate I/O buffers with the specifi
 Warning (215044): No board thermal model was selected.  Analyzing without board thermal modeling.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
+<<<<<<< HEAD
 Info (215049): Average toggle rate for this design is 19.940 millions of transitions / sec
 Info (215031): Total thermal power estimate for the design is 307.35 mW
 Info: Quartus Prime Power Analyzer was successful. 0 errors, 20 warnings
@@ -328,5 +369,21 @@ Info: Quartus Prime Power Analyzer was successful. 0 errors, 20 warnings
     Info: Processing ended: Sat May 31 00:14:45 2025
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:08
+=======
+Info (215049): Average toggle rate for this design is 0.000 millions of transitions / sec
+Info (215031): Total thermal power estimate for the design is 159.95 mW
+Info: Quartus Prime Power Analyzer was successful. 0 errors, 7 warnings
+<<<<<<< HEAD
+    Info: Peak virtual memory: 4827 megabytes
+    Info: Processing ended: Fri May 30 19:56:38 2025
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
+=======
+    Info: Peak virtual memory: 4845 megabytes
+    Info: Processing ended: Fri May 30 17:42:21 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:05
+>>>>>>> 6b28b45a61759ce77558bd97fecf8558ff25d14d
+>>>>>>> 189f981f78451014fa3c4d5720550765f304b9ef
 
 
