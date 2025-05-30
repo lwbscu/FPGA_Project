@@ -168,6 +168,8 @@ set_global_assignment -name VERILOG_FILE source/lcd_full_init_test.v
 set_global_assignment -name VERILOG_FILE source/lcd_simple_patterns.v
 set_global_assignment -name VERILOG_FILE source/lcd_cartoon_display_fixed.v
 set_global_assignment -name VERILOG_FILE source/lcd_emoji_display.v
+set_global_assignment -name VERILOG_FILE source/lcd_custom_image_display.v
+set_global_assignment -name VERILOG_FILE source/Clever_rom.v
 
 
 set_global_assignment -name DEVICE_FILTER_PACKAGE MBGA

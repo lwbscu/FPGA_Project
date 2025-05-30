@@ -74,7 +74,7 @@ RESERVED_INPUT               : A5        :        :                   :         
 RESERVED_INPUT               : A7        :        :                   :         : 8         :                
 RESERVED_INPUT               : A9        :        :                   :         : 8         :                
 RESERVED_INPUT               : A11       :        :                   :         : 8         :                
-beeper                       : A13       : output : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT               : A13       :        :                   :         : 8         :                
 RESERVED_INPUT               : A14       :        :                   :         : 8         :                
 GND                          : A15       : gnd    :                   :         :           :                
 RESERVED_INPUT               : B1        :        :                   :         : 1A        :                
@@ -212,7 +212,7 @@ RESERVED_INPUT               : P14       :        :                   :         
 lcd_rst                      : P15       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND                          : R1        : gnd    :                   :         :           :                
 RESERVED_INPUT               : R2        :        :                   :         : 2         :                
-RESERVED_INPUT               : R3        :        :                   :         : 3         :                
+beeper                       : R3        : output : 3.3-V LVTTL       :         : 3         : N              
 RESERVED_INPUT               : R5        :        :                   :         : 3         :                
 RESERVED_INPUT               : R7        :        :                   :         : 3         :                
 lcd_cs                       : R9        : output : 3.3-V LVTTL       :         : 3         : Y              

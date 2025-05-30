@@ -77,10 +77,10 @@ end
 
 assign switch_to_game = (key_counter >= 25'd36000000);
 
-// LCD模块选择：显示简单颜文字表情
+// LCD模块选择：显示自定义图片
 generate
-    if (1) begin : lcd_emoji_mode  
-        lcd_emoji_display lcd_emoji_inst(
+    if (1) begin : lcd_image_mode  
+        lcd_custom_image_display lcd_image_inst(
             .clk_50MHz(clk_50mhz),
             .rst_n(rst_n),
             .lcd_rst(lcd_rst),
@@ -89,23 +89,23 @@ generate
             .lcd_sclk(lcd_sclk),
             .lcd_mosi(lcd_mosi),
             .lcd_cs(lcd_cs),
-            .pattern_id_inv(pattern_id_inv)
+            .image_id_inv(image_id_inv)
         );
         
         // LED指示（适配低电平点亮）
         assign led[0] = ~rst_n;                   // 系统状态（反向）
-        assign led[1] = 1'b0;                     // 颜文字模式指示（点亮）
-        assign led[2] = pattern_id_inv[0];        // 图案ID位0（反向）
-        assign led[3] = pattern_id_inv[1];        // 图案ID位1（反向）
-        assign led[4] = pattern_id_inv[2];        // 图案ID位2（反向）
+        assign led[1] = 1'b1;                     // 图片模式指示（熄灭，表示图片模式）
+        assign led[2] = image_id_inv[0];          // 图片ID位0（反向）
+        assign led[3] = image_id_inv[1];          // 图片ID位1（反向）
+        assign led[4] = image_id_inv[2];          // 图片ID位2（反向）
         assign led[5] = ~key_pressed;             // 按键状态（反向）
         assign led[6] = ~switch_to_game;          // 切换指示（反向）
         assign led[7] = 1'b1;                     // 保留（熄灭）
     end
 endgenerate
 
-// 图案ID信号（反向逻辑）
-wire [2:0] pattern_id_inv;
+// 图片ID信号（反向逻辑）
+wire [2:0] image_id_inv;
 
 // 未使用的输出赋值
 assign beeper = 1'b0;

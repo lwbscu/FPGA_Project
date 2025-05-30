@@ -28,18 +28,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "led[2]",
-					"strict" : false
-				},
-				{
-					"name" : "led[3]",
-					"strict" : false
-				},
-				{
-					"name" : "led[4]",
-					"strict" : false
-				},
-				{
 					"name" : "led[5]",
 					"strict" : false
 				},
