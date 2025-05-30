@@ -1,5 +1,5 @@
 Fitter report for ballplayer
-Thu May 29 17:14:20 2025
+Fri May 30 14:12:50 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -74,7 +74,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu May 29 17:14:20 2025       ;
+; Fitter Status                      ; Successful - Fri May 30 14:12:50 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ballplayer                                  ;
 ; Top-level Entity Name              ; ballplayer_top_test                         ;
@@ -162,14 +162,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.40        ;
+; Average used               ; 1.45        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  13.5%      ;
-;     Processor 3            ;  13.2%      ;
-;     Processor 4            ;  13.0%      ;
+;     Processor 2            ;  15.3%      ;
+;     Processor 3            ;  15.0%      ;
+;     Processor 4            ;  14.9%      ;
 +----------------------------+-------------+
 
 
@@ -1577,7 +1577,7 @@ Info (170195): Router estimated average interconnect usage is 12% of the availab
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
-Info (11888): Total time spent on timing analysis during the Fitter is 1.04 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 1.00 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1596,8 +1596,8 @@ Warning (169064): Following 1 pins have no output enable or a GND or VCC output 
     Info (169065): Pin i2c_sda has a permanently disabled output enable File: D:/Quartus_Project/ballplayer/source/ballplayer_top_test.v Line: 36
 Info (144001): Generated suppressed messages file D:/Quartus_Project/ballplayer/output_files/ballplayer.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 5603 megabytes
-    Info: Processing ended: Thu May 29 17:14:21 2025
+    Info: Peak virtual memory: 5609 megabytes
+    Info: Processing ended: Fri May 30 14:12:51 2025
     Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:26
 

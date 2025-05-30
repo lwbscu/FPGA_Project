@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ballplayer
-Thu May 29 17:14:06 2025
+Fri May 30 14:12:37 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -94,7 +94,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 29 17:14:06 2025       ;
+; Analysis & Synthesis Status        ; Successful - Fri May 30 14:12:36 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ballplayer                                  ;
 ; Top-level Entity Name              ; ballplayer_top_test                         ;
@@ -213,7 +213,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
@@ -2523,7 +2523,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:21     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -2533,7 +2533,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 29 17:13:35 2025
+    Info: Processing started: Fri May 30 14:12:21 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ballplayer -c ballplayer
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 1 design units, including 1 entities, in source file source/ballplayer_top.v
@@ -2846,9 +2846,9 @@ Info (21057): Implemented 5221 device resources after synthesis - the final reso
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 27 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
-    Info: Peak virtual memory: 4902 megabytes
-    Info: Processing ended: Thu May 29 17:14:06 2025
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:00:36
+    Info: Peak virtual memory: 4843 megabytes
+    Info: Processing ended: Fri May 30 14:12:37 2025
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:22
 
 

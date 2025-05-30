@@ -1,5 +1,5 @@
 Power Analyzer report for ballplayer
-Thu May 29 17:14:27 2025
+Fri May 30 14:12:56 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -52,19 +52,19 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.64        ;
+; Average used               ; 1.79        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  21.4%      ;
+;     Processors 2-4         ;  26.4%      ;
 +----------------------------+-------------+
 
 
 +-------------------------------------------------------------------------------------------+
 ; Power Analyzer Summary                                                                    ;
 +----------------------------------------+--------------------------------------------------+
-; Power Analyzer Status                  ; Successful - Thu May 29 17:14:27 2025            ;
+; Power Analyzer Status                  ; Successful - Fri May 30 14:12:56 2025            ;
 ; Quartus Prime Version                  ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition      ;
 ; Revision Name                          ; ballplayer                                       ;
 ; Top-level Entity Name                  ; ballplayer_top_test                              ;
@@ -380,7 +380,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Power Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 29 17:14:24 2025
+    Info: Processing started: Fri May 30 14:12:53 2025
 Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off ballplayer -c ballplayer
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -400,8 +400,8 @@ Info (334004): Delay annotation completed successfully
 Info (215049): Average toggle rate for this design is 0.000 millions of transitions / sec
 Info (215031): Total thermal power estimate for the design is 159.95 mW
 Info: Quartus Prime Power Analyzer was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4852 megabytes
-    Info: Processing ended: Thu May 29 17:14:27 2025
+    Info: Peak virtual memory: 4859 megabytes
+    Info: Processing ended: Fri May 30 14:12:56 2025
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:05
 
