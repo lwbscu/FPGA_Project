@@ -20,7 +20,7 @@
 FUNCTION sign_div_unsign_1mh (denominator[8..0], numerator[17..0])
 RETURNS ( quotient[17..0], remainder[8..0]);
 
---synthesis_resources = lut 148 
+--synthesis_resources = 
 SUBDESIGN lpm_divide_2ml
 ( 
 	denom[8..0]	:	input;

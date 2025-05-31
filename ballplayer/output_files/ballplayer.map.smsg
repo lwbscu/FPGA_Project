@@ -1,1 +1,0 @@
-Info (10281): Verilog HDL Declaration information at lcd.v(9): object "clk_50mhz" differs only in case from object "clk_50MHz" in the same scope File: D:/Quartus_Project/ballplayer/source/lcd.v Line: 9
