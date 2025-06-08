@@ -7,7 +7,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M08SAM153C8G
-set_global_assignment -name TOP_LEVEL_ENTITY ballplayer_multi_image_test
+set_global_assignment -name TOP_LEVEL_ENTITY ballplayer_key_switch_test_fixed
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:00:00  DECEMBER 01, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -57,6 +57,26 @@ set_location_assignment PIN_J11 -to ball_release_button
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to key_up
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to key_down
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ball_release_button
+
+# 矩阵键盘接口 (4x4) - 根据引脚文档配置
+# 行扫描输出 ROW[3:0] (低电平有效)
+set_location_assignment PIN_R7 -to row[3]
+set_location_assignment PIN_P7 -to row[2]
+set_location_assignment PIN_P8 -to row[1]
+set_location_assignment PIN_P9 -to row[0]
+# 列检测输入 COL[3:0]
+set_location_assignment PIN_P6 -to col[3]
+set_location_assignment PIN_R5 -to col[2]
+set_location_assignment PIN_L7 -to col[1]
+set_location_assignment PIN_P4 -to col[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to row[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to row[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to row[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to row[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to col[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to col[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to col[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to col[3]
 
 # I2C接口 - 手势传感器
 set_location_assignment PIN_M4 -to i2c_scl
@@ -176,6 +196,9 @@ set_global_assignment -name VERILOG_FILE source/Clever_rom.v
 set_global_assignment -name VERILOG_FILE source/multi_image_rom_240x160.v
 set_global_assignment -name VERILOG_FILE source/lcd_multi_image_display_240x160.v
 set_global_assignment -name VERILOG_FILE source/ballplayer_multi_image_test.v
+set_global_assignment -name VERILOG_FILE source/ballplayer_key_switch_test_fixed.v
+set_global_assignment -name VERILOG_FILE source/lcd_key_switch_display_240x160_fixed.v
+set_global_assignment -name VERILOG_FILE source/array_keyboard_fixed.v
 set_global_assignment -name VERILOG_FILE rom_data/image_0_240x160_rom.v
 set_global_assignment -name VERILOG_FILE rom_data/image_1_240x160_rom.v
 set_global_assignment -name VERILOG_FILE rom_data/image_2_240x160_rom.v

@@ -1,5 +1,5 @@
 Power Analyzer report for ballplayer
-Sat May 31 00:14:44 2025
+Sun Jun 08 11:28:01 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -52,29 +52,29 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 2.24        ;
+; Average used               ; 2.30        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  41.3%      ;
+;     Processors 2-4         ;  43.4%      ;
 +----------------------------+-------------+
 
 
 +-------------------------------------------------------------------------------------------+
 ; Power Analyzer Summary                                                                    ;
 +----------------------------------------+--------------------------------------------------+
-; Power Analyzer Status                  ; Successful - Sat May 31 00:14:44 2025            ;
+; Power Analyzer Status                  ; Successful - Sun Jun 08 11:28:01 2025            ;
 ; Quartus Prime Version                  ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition      ;
 ; Revision Name                          ; ballplayer                                       ;
-; Top-level Entity Name                  ; ballplayer_multi_image_test                      ;
+; Top-level Entity Name                  ; ballplayer_key_switch_test_fixed                 ;
 ; Family                                 ; MAX 10                                           ;
 ; Device                                 ; 10M08SAM153C8G                                   ;
 ; Power Models                           ; Final                                            ;
-; Total Thermal Power Dissipation        ; 307.35 mW                                        ;
-; Core Dynamic Thermal Power Dissipation ; 144.88 mW                                        ;
-; Core Static Thermal Power Dissipation  ; 121.94 mW                                        ;
-; I/O Thermal Power Dissipation          ; 40.52 mW                                         ;
+; Total Thermal Power Dissipation        ; 1113.29 mW                                       ;
+; Core Dynamic Thermal Power Dissipation ; 944.56 mW                                        ;
+; Core Static Thermal Power Dissipation  ; 127.31 mW                                        ;
+; I/O Thermal Power Dissipation          ; 41.43 mW                                         ;
 ; Power Estimation Confidence            ; Low: user provided insufficient toggle rate data ;
 +----------------------------------------+--------------------------------------------------+
 
@@ -126,7 +126,7 @@ refer to the applicable agreement for further details.
 ;     3.3-V LVTTL I/O Standard                ; 3.3 V                      ;
 ;     3.3 V Schmitt Trigger I/O Standard      ; 3.3 V                      ;
 ;                                             ;                            ;
-; Auto computed junction temperature          ; 32.8 degrees Celsius       ;
+; Auto computed junction temperature          ; 53.3 degrees Celsius       ;
 ;     Ambient temperature                     ; 25.0 degrees Celsius       ;
 ;     Junction-to-Case thermal resistance     ; 11.00 degrees Celsius/Watt ;
 ;     Case-to-Heat Sink thermal resistance    ; 0.10 degrees Celsius/Watt  ;
@@ -150,41 +150,42 @@ refer to the applicable agreement for further details.
 ; Block Type          ; Total Thermal Power by Block Type ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ; Block Average Toggle Rate (millions of transitions / sec) ;
 +---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
 ; PLL                 ; 14.67 mW                          ; 14.67 mW                    ; --                             ; 0.00 mW                       ;   52.083                                                  ;
-; Combinational cell  ; 45.46 mW                          ; 11.28 mW                    ; --                             ; 34.19 mW                      ;   20.324                                                  ;
-; Clock control block ; 1.62 mW                           ; 0.00 mW                     ; --                             ; 1.62 mW                       ;  104.167                                                  ;
-; Register cell       ; 1.11 mW                           ; 0.73 mW                     ; --                             ; 0.38 mW                       ;    6.472                                                  ;
-; I/O                 ; 3.56 mW                           ; 2.47 mW                     ; 1.09 mW                        ; 0.00 mW                       ;    4.457                                                  ;
-; Voltage Regulator   ; 82.79 mW                          ; 82.02 mW                    ; 0.77 mW                        ; --                            ; --                                                        ;
+; Combinational cell  ; 364.17 mW                         ; 76.78 mW                    ; --                             ; 287.39 mW                     ;   88.376                                                  ;
+; Clock control block ; 2.43 mW                           ; 0.00 mW                     ; --                             ; 2.43 mW                       ;   68.056                                                  ;
+; Register cell       ; 1.42 mW                           ; 0.90 mW                     ; --                             ; 0.52 mW                       ;    5.201                                                  ;
+; I/O                 ; 4.50 mW                           ; 3.02 mW                     ; 1.44 mW                        ; 0.03 mW                       ;    4.124                                                  ;
+; Voltage Regulator   ; 562.67 mW                         ; 561.83 mW                   ; 0.84 mW                        ; --                            ; --                                                        ;
 +---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
 (1) The "Block Thermal Static Power" for all block types except Pins and the Voltage Regulator, if one exists, is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                                                                                                                                                                                             ;
-+-------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Compilation Hierarchy Node                                  ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                                                                                                                                                 ;
-+-------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; |ballplayer_multi_image_test                                ; 149.22 mW (86.35 mW)                 ; 111.17 mW (84.50 mW)            ; 1.86 mW (1.86 mW)                 ; 36.19 mW (0.00 mW)                ; |ballplayer_multi_image_test                                                                                                                                                        ;
-;     |hard_block:auto_generated_inst                         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |ballplayer_multi_image_test|hard_block:auto_generated_inst                                                                                                                         ;
-;     |lcd_multi_image_display_240x160:lcd_multi_display_inst ; 46.57 mW (3.99 mW)                   ; 12.00 mW (0.32 mW)              ; --                                ; 34.57 mW (3.67 mW)                ; |ballplayer_multi_image_test|lcd_multi_image_display_240x160:lcd_multi_display_inst                                                                                                 ;
-;         |lpm_divide:Div0                                    ; 0.35 mW (0.00 mW)                    ; 0.15 mW (0.00 mW)               ; --                                ; 0.20 mW (0.00 mW)                 ; |ballplayer_multi_image_test|lcd_multi_image_display_240x160:lcd_multi_display_inst|lpm_divide:Div0                                                                                 ;
-;             |lpm_divide_vtl:auto_generated                  ; 0.35 mW (0.00 mW)                    ; 0.15 mW (0.00 mW)               ; --                                ; 0.20 mW (0.00 mW)                 ; |ballplayer_multi_image_test|lcd_multi_image_display_240x160:lcd_multi_display_inst|lpm_divide:Div0|lpm_divide_vtl:auto_generated                                                   ;
-;                 |sign_div_unsign_1mh:divider                ; 0.35 mW (0.00 mW)                    ; 0.15 mW (0.00 mW)               ; --                                ; 0.20 mW (0.00 mW)                 ; |ballplayer_multi_image_test|lcd_multi_image_display_240x160:lcd_multi_display_inst|lpm_divide:Div0|lpm_divide_vtl:auto_generated|sign_div_unsign_1mh:divider                       ;
-;                     |alt_u_div_cie:divider                  ; 0.35 mW (0.35 mW)                    ; 0.15 mW (0.15 mW)               ; --                                ; 0.20 mW (0.20 mW)                 ; |ballplayer_multi_image_test|lcd_multi_image_display_240x160:lcd_multi_display_inst|lpm_divide:Div0|lpm_divide_vtl:auto_generated|sign_div_unsign_1mh:divider|alt_u_div_cie:divider ;
-;         |lpm_divide:Mod0                                    ; 0.37 mW (0.00 mW)                    ; 0.17 mW (0.00 mW)               ; --                                ; 0.21 mW (0.00 mW)                 ; |ballplayer_multi_image_test|lcd_multi_image_display_240x160:lcd_multi_display_inst|lpm_divide:Mod0                                                                                 ;
-;             |lpm_divide_2ml:auto_generated                  ; 0.37 mW (0.00 mW)                    ; 0.17 mW (0.00 mW)               ; --                                ; 0.21 mW (0.00 mW)                 ; |ballplayer_multi_image_test|lcd_multi_image_display_240x160:lcd_multi_display_inst|lpm_divide:Mod0|lpm_divide_2ml:auto_generated                                                   ;
-;                 |sign_div_unsign_1mh:divider                ; 0.37 mW (0.00 mW)                    ; 0.17 mW (0.00 mW)               ; --                                ; 0.21 mW (0.00 mW)                 ; |ballplayer_multi_image_test|lcd_multi_image_display_240x160:lcd_multi_display_inst|lpm_divide:Mod0|lpm_divide_2ml:auto_generated|sign_div_unsign_1mh:divider                       ;
-;                     |alt_u_div_cie:divider                  ; 0.37 mW (0.37 mW)                    ; 0.17 mW (0.17 mW)               ; --                                ; 0.21 mW (0.21 mW)                 ; |ballplayer_multi_image_test|lcd_multi_image_display_240x160:lcd_multi_display_inst|lpm_divide:Mod0|lpm_divide_2ml:auto_generated|sign_div_unsign_1mh:divider|alt_u_div_cie:divider ;
-;         |lcd_init:lcd_init_inst                             ; 0.60 mW (0.60 mW)                    ; 0.45 mW (0.45 mW)               ; --                                ; 0.15 mW (0.15 mW)                 ; |ballplayer_multi_image_test|lcd_multi_image_display_240x160:lcd_multi_display_inst|lcd_init:lcd_init_inst                                                                          ;
-;         |lcd_write:lcd_write_inst                           ; 0.19 mW (0.19 mW)                    ; 0.11 mW (0.11 mW)               ; --                                ; 0.07 mW (0.07 mW)                 ; |ballplayer_multi_image_test|lcd_multi_image_display_240x160:lcd_multi_display_inst|lcd_write:lcd_write_inst                                                                        ;
-;         |multi_image_rom_240x160:multi_rom_inst             ; 41.07 mW (0.05 mW)                   ; 10.81 mW (0.04 mW)              ; --                                ; 30.26 mW (0.00 mW)                ; |ballplayer_multi_image_test|lcd_multi_image_display_240x160:lcd_multi_display_inst|multi_image_rom_240x160:multi_rom_inst                                                          ;
-;             |image_0_rom:image_0_inst                       ; 13.96 mW (13.96 mW)                  ; 3.87 mW (3.87 mW)               ; --                                ; 10.09 mW (10.09 mW)               ; |ballplayer_multi_image_test|lcd_multi_image_display_240x160:lcd_multi_display_inst|multi_image_rom_240x160:multi_rom_inst|image_0_rom:image_0_inst                                 ;
-;             |image_2_rom:image_2_inst                       ; 18.15 mW (18.15 mW)                  ; 4.69 mW (4.69 mW)               ; --                                ; 13.46 mW (13.46 mW)               ; |ballplayer_multi_image_test|lcd_multi_image_display_240x160:lcd_multi_display_inst|multi_image_rom_240x160:multi_rom_inst|image_2_rom:image_2_inst                                 ;
-;             |image_4_rom:image_4_inst                       ; 8.92 mW (8.92 mW)                    ; 2.20 mW (2.20 mW)               ; --                                ; 6.71 mW (6.71 mW)                 ; |ballplayer_multi_image_test|lcd_multi_image_display_240x160:lcd_multi_display_inst|multi_image_rom_240x160:multi_rom_inst|image_4_rom:image_4_inst                                 ;
-;     |ballplayer_pll:pll_inst                                ; 16.29 mW (0.00 mW)                   ; 14.67 mW (0.00 mW)              ; --                                ; 1.62 mW (0.00 mW)                 ; |ballplayer_multi_image_test|ballplayer_pll:pll_inst                                                                                                                                ;
-;         |altpll:altpll_component                            ; 16.29 mW (0.00 mW)                   ; 14.67 mW (0.00 mW)              ; --                                ; 1.62 mW (0.00 mW)                 ; |ballplayer_multi_image_test|ballplayer_pll:pll_inst|altpll:altpll_component                                                                                                        ;
-;             |ballplayer_pll_altpll1:auto_generated          ; 16.29 mW (16.29 mW)                  ; 14.67 mW (14.67 mW)             ; --                                ; 1.62 mW (1.62 mW)                 ; |ballplayer_multi_image_test|ballplayer_pll:pll_inst|altpll:altpll_component|ballplayer_pll_altpll1:auto_generated                                                                  ;
-+-------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                                                                                                                                                                                                ;
++------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Compilation Hierarchy Node                                 ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                                                                                                                                                     ;
++------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |ballplayer_key_switch_test_fixed                          ; 949.86 mW (567.54 mW)                ; 657.21 mW (564.86 mW)           ; 2.28 mW (2.28 mW)                 ; 290.37 mW (0.40 mW)               ; |ballplayer_key_switch_test_fixed                                                                                                                                                       ;
+;     |hard_block:auto_generated_inst                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |ballplayer_key_switch_test_fixed|hard_block:auto_generated_inst                                                                                                                        ;
+;     |array_keyboard_fixed:keyboard_inst                    ; 0.59 mW (0.59 mW)                    ; 0.19 mW (0.19 mW)               ; --                                ; 0.40 mW (0.40 mW)                 ; |ballplayer_key_switch_test_fixed|array_keyboard_fixed:keyboard_inst                                                                                                                    ;
+;     |lcd_key_switch_display_240x160_fixed:lcd_display_inst ; 365.36 mW (62.39 mW)                 ; 77.48 mW (1.07 mW)              ; --                                ; 287.88 mW (61.32 mW)              ; |ballplayer_key_switch_test_fixed|lcd_key_switch_display_240x160_fixed:lcd_display_inst                                                                                                 ;
+;         |lpm_divide:Div0                                   ; 3.57 mW (0.00 mW)                    ; 1.41 mW (0.00 mW)               ; --                                ; 2.16 mW (0.00 mW)                 ; |ballplayer_key_switch_test_fixed|lcd_key_switch_display_240x160_fixed:lcd_display_inst|lpm_divide:Div0                                                                                 ;
+;             |lpm_divide_0ul:auto_generated                 ; 3.57 mW (0.00 mW)                    ; 1.41 mW (0.00 mW)               ; --                                ; 2.16 mW (0.00 mW)                 ; |ballplayer_key_switch_test_fixed|lcd_key_switch_display_240x160_fixed:lcd_display_inst|lpm_divide:Div0|lpm_divide_0ul:auto_generated                                                   ;
+;                 |sign_div_unsign_2mh:divider               ; 3.57 mW (0.00 mW)                    ; 1.41 mW (0.00 mW)               ; --                                ; 2.16 mW (0.00 mW)                 ; |ballplayer_key_switch_test_fixed|lcd_key_switch_display_240x160_fixed:lcd_display_inst|lpm_divide:Div0|lpm_divide_0ul:auto_generated|sign_div_unsign_2mh:divider                       ;
+;                     |alt_u_div_bie:divider                 ; 3.57 mW (3.57 mW)                    ; 1.41 mW (1.41 mW)               ; --                                ; 2.16 mW (2.16 mW)                 ; |ballplayer_key_switch_test_fixed|lcd_key_switch_display_240x160_fixed:lcd_display_inst|lpm_divide:Div0|lpm_divide_0ul:auto_generated|sign_div_unsign_2mh:divider|alt_u_div_bie:divider ;
+;         |lpm_divide:Mod0                                   ; 4.11 mW (0.00 mW)                    ; 1.72 mW (0.00 mW)               ; --                                ; 2.39 mW (0.00 mW)                 ; |ballplayer_key_switch_test_fixed|lcd_key_switch_display_240x160_fixed:lcd_display_inst|lpm_divide:Mod0                                                                                 ;
+;             |lpm_divide_3ml:auto_generated                 ; 4.11 mW (0.00 mW)                    ; 1.72 mW (0.00 mW)               ; --                                ; 2.39 mW (0.00 mW)                 ; |ballplayer_key_switch_test_fixed|lcd_key_switch_display_240x160_fixed:lcd_display_inst|lpm_divide:Mod0|lpm_divide_3ml:auto_generated                                                   ;
+;                 |sign_div_unsign_2mh:divider               ; 4.11 mW (0.00 mW)                    ; 1.72 mW (0.00 mW)               ; --                                ; 2.39 mW (0.00 mW)                 ; |ballplayer_key_switch_test_fixed|lcd_key_switch_display_240x160_fixed:lcd_display_inst|lpm_divide:Mod0|lpm_divide_3ml:auto_generated|sign_div_unsign_2mh:divider                       ;
+;                     |alt_u_div_bie:divider                 ; 4.11 mW (4.11 mW)                    ; 1.72 mW (1.72 mW)               ; --                                ; 2.39 mW (2.39 mW)                 ; |ballplayer_key_switch_test_fixed|lcd_key_switch_display_240x160_fixed:lcd_display_inst|lpm_divide:Mod0|lpm_divide_3ml:auto_generated|sign_div_unsign_2mh:divider|alt_u_div_bie:divider ;
+;         |lcd_init:lcd_init_inst                            ; 0.60 mW (0.60 mW)                    ; 0.45 mW (0.45 mW)               ; --                                ; 0.15 mW (0.15 mW)                 ; |ballplayer_key_switch_test_fixed|lcd_key_switch_display_240x160_fixed:lcd_display_inst|lcd_init:lcd_init_inst                                                                          ;
+;         |lcd_write:lcd_write_inst                          ; 0.22 mW (0.22 mW)                    ; 0.14 mW (0.14 mW)               ; --                                ; 0.08 mW (0.08 mW)                 ; |ballplayer_key_switch_test_fixed|lcd_key_switch_display_240x160_fixed:lcd_display_inst|lcd_write:lcd_write_inst                                                                        ;
+;         |multi_image_rom_240x160:multi_rom_inst            ; 294.47 mW (0.05 mW)                  ; 72.70 mW (0.04 mW)              ; --                                ; 221.77 mW (0.01 mW)               ; |ballplayer_key_switch_test_fixed|lcd_key_switch_display_240x160_fixed:lcd_display_inst|multi_image_rom_240x160:multi_rom_inst                                                          ;
+;             |image_0_rom:image_0_inst                      ; 74.48 mW (74.48 mW)                  ; 23.51 mW (23.51 mW)             ; --                                ; 50.97 mW (50.97 mW)               ; |ballplayer_key_switch_test_fixed|lcd_key_switch_display_240x160_fixed:lcd_display_inst|multi_image_rom_240x160:multi_rom_inst|image_0_rom:image_0_inst                                 ;
+;             |image_2_rom:image_2_inst                      ; 104.56 mW (104.56 mW)                ; 29.85 mW (29.85 mW)             ; --                                ; 74.71 mW (74.71 mW)               ; |ballplayer_key_switch_test_fixed|lcd_key_switch_display_240x160_fixed:lcd_display_inst|multi_image_rom_240x160:multi_rom_inst|image_2_rom:image_2_inst                                 ;
+;             |image_4_rom:image_4_inst                      ; 115.38 mW (115.38 mW)                ; 19.29 mW (19.29 mW)             ; --                                ; 96.08 mW (96.08 mW)               ; |ballplayer_key_switch_test_fixed|lcd_key_switch_display_240x160_fixed:lcd_display_inst|multi_image_rom_240x160:multi_rom_inst|image_4_rom:image_4_inst                                 ;
+;     |ballplayer_pll:pll_inst                               ; 16.37 mW (0.00 mW)                   ; 14.67 mW (0.00 mW)              ; --                                ; 1.69 mW (0.00 mW)                 ; |ballplayer_key_switch_test_fixed|ballplayer_pll:pll_inst                                                                                                                               ;
+;         |altpll:altpll_component                           ; 16.37 mW (0.00 mW)                   ; 14.67 mW (0.00 mW)              ; --                                ; 1.69 mW (0.00 mW)                 ; |ballplayer_key_switch_test_fixed|ballplayer_pll:pll_inst|altpll:altpll_component                                                                                                       ;
+;             |ballplayer_pll_altpll1:auto_generated         ; 16.37 mW (16.37 mW)                  ; 14.67 mW (14.67 mW)             ; --                                ; 1.69 mW (1.69 mW)                 ; |ballplayer_key_switch_test_fixed|ballplayer_pll:pll_inst|altpll:altpll_component|ballplayer_pll_altpll1:auto_generated                                                                 ;
++------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 (1) Value in parentheses is the power consumed at that level of hierarchy. Value not in parentheses is the power consumed at that level of hierarchy plus the power consumed by all levels of hierarchy below it.
 
 (2) The "Block Thermal Static Power" for all levels of hierarchy except the top-level hierarchy is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
@@ -195,8 +196,8 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------------------------+-----------------------+--------------------------+
 ; Clock Domain                                                                                           ; Clock Frequency (MHz) ; Total Core Dynamic Power ;
 +--------------------------------------------------------------------------------------------------------+-----------------------+--------------------------+
-; ballplayer_pll:pll_inst|altpll:altpll_component|ballplayer_pll_altpll1:auto_generated|wire_pll1_clk[1] ; 52.08                 ; 48.19                    ;
-; clk                                                                                                    ; 25.00                 ; 0.00                     ;
+; ballplayer_pll:pll_inst|altpll:altpll_component|ballplayer_pll_altpll1:auto_generated|wire_pll1_clk[1] ; 52.08                 ; 367.05                   ;
+; clk                                                                                                    ; 25.00                 ; 1.00                     ;
 ; No clock domain                                                                                        ; 0.00                  ; 14.67                    ;
 +--------------------------------------------------------------------------------------------------------+-----------------------+--------------------------+
 
@@ -206,9 +207,9 @@ refer to the applicable agreement for further details.
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 ; Voltage Supply ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
-; VCCIO          ; 12.33 mA                ; 0.73 mA                   ; 11.60 mA                 ; 12.33 mA                         ;
-; VCCA           ; 5.77 mA                 ; 2.74 mA                   ; 3.03 mA                  ; 5.77 mA                          ;
-; VCC_ONE        ; 83.18 mA                ; 45.57 mA                  ; 37.62 mA                 ; 83.18 mA                         ;
+; VCCIO          ; 12.63 mA                ; 0.90 mA                   ; 11.73 mA                 ; 12.63 mA                         ;
+; VCCA           ; 5.80 mA                 ; 2.74 mA                   ; 3.06 mA                  ; 5.80 mA                          ;
+; VCC_ONE        ; 351.50 mA               ; 312.13 mA                 ; 39.38 mA                 ; 351.50 mA                        ;
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 (1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
 (2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
@@ -222,7 +223,7 @@ refer to the applicable agreement for further details.
 ; 1A       ; 3.3V          ; 1.60 mA             ; 0.00 mA               ; 1.60 mA              ;
 ; 1B       ; 3.3V          ; 1.67 mA             ; 0.00 mA               ; 1.67 mA              ;
 ; 2        ; 3.3V          ; 1.69 mA             ; 0.07 mA               ; 1.62 mA              ;
-; 3        ; 3.3V          ; 2.04 mA             ; 0.36 mA               ; 1.68 mA              ;
+; 3        ; 3.3V          ; 2.34 mA             ; 0.52 mA               ; 1.82 mA              ;
 ; 4        ; --            ; --                  ; --                    ; --                   ;
 ; 5        ; 3.3V          ; 2.05 mA             ; 0.30 mA               ; 1.75 mA              ;
 ; 6        ; 3.3V          ; 1.60 mA             ; 0.00 mA               ; 1.60 mA              ;
@@ -236,7 +237,7 @@ refer to the applicable agreement for further details.
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 ; VCCIO Voltage ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
-; 3.3V          ; 12.33 mA                ; 0.73 mA                   ; 11.60 mA                 ; 12.33 mA                         ;
+; 3.3V          ; 12.63 mA                ; 0.90 mA                   ; 11.73 mA                 ; 12.63 mA                         ;
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 (1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
 (2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
@@ -252,20 +253,20 @@ refer to the applicable agreement for further details.
 ;     -- Number of signals with Static Probability from Simulation                       ; 0 (0.0%)     ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
 ;                                                                                        ;              ;            ;              ;               ;
 ; Node, entity or clock assignment                                                       ;              ;            ;              ;               ;
-;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 3 (0.0%)     ; 1 (4.2%)   ; 0 (0.0%)     ; 2 (0.0%)      ;
-;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 3 (0.0%)     ; 1 (4.2%)   ; 0 (0.0%)     ; 2 (0.0%)      ;
+;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 5 (0.1%)     ; 1 (3.1%)   ; 0 (0.0%)     ; 4 (0.1%)      ;
+;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 5 (0.1%)     ; 1 (3.1%)   ; 0 (0.0%)     ; 4 (0.1%)      ;
 ;                                                                                        ;              ;            ;              ;               ;
 ; Vectorless estimation                                                                  ;              ;            ;              ;               ;
-;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 6705 (99.9%) ; 16 (66.7%) ; 169 (100.0%) ; 6520 (100.0%) ;
-;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 19 (0.3%)    ; 5 (20.8%)  ; 1 (0.6%)     ; 13 (0.2%)     ;
-;     -- Number of signals with Static Probability from Vectorless estimation            ; 6705 (99.9%) ; 16 (66.7%) ; 169 (100.0%) ; 6520 (100.0%) ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 7112 (99.8%) ; 20 (62.5%) ; 235 (100.0%) ; 6857 (99.9%)  ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 8 (0.1%)     ; 2 (6.3%)   ; 1 (0.4%)     ; 5 (0.1%)      ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 7112 (99.8%) ; 20 (62.5%) ; 235 (100.0%) ; 6857 (99.9%)  ;
 ;                                                                                        ;              ;            ;              ;               ;
 ; Default assignment                                                                     ;              ;            ;              ;               ;
-;     -- Number of signals with Toggle Rate from Default assignment                      ; 0 (0.0%)     ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Default assignment               ; 7 (0.1%)     ; 7 (29.2%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Toggle Rate from Default assignment                      ; 4 (0.1%)     ; 4 (12.5%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Default assignment               ; 11 (0.2%)    ; 11 (34.4%) ; 0 (0.0%)     ; 0 (0.0%)      ;
 ;                                                                                        ;              ;            ;              ;               ;
 ; Assumed 0                                                                              ;              ;            ;              ;               ;
-;     -- Number of signals with Toggle Rate assumed 0                                    ; 7 (0.1%)     ; 7 (29.2%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Toggle Rate assumed 0                                    ; 7 (0.1%)     ; 7 (21.9%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
 +----------------------------------------------------------------------------------------+--------------+------------+--------------+---------------+
 
 
@@ -283,7 +284,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Power Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat May 31 00:14:40 2025
+    Info: Processing started: Sun Jun 08 11:27:56 2025
 Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off ballplayer -c ballplayer
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -310,9 +311,12 @@ Warning (332049): Ignored set_multicycle_path at ballplayer_multi_image.sdc(36):
     Info (332050): set_multicycle_path -setup -end 3 -from [get_cells {*rom*}] -to [get_cells {*lcd*}] File: D:/Quartus_Project/ballplayer/ballplayer_multi_image.sdc Line: 36
 Warning (332049): Ignored set_multicycle_path at ballplayer_multi_image.sdc(37): Argument <from> is an empty collection File: D:/Quartus_Project/ballplayer/ballplayer_multi_image.sdc Line: 37
     Info (332050): set_multicycle_path -hold -end 2 -from [get_cells {*rom*}] -to [get_cells {*lcd*}] File: D:/Quartus_Project/ballplayer/ballplayer_multi_image.sdc Line: 37
+Warning (332060): Node: array_keyboard_fixed:keyboard_inst|clk_200hz was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register array_keyboard_fixed:keyboard_inst|key_out[12] is being clocked by array_keyboard_fixed:keyboard_inst|clk_200hz
 Warning (332056): PLL cross checking found inconsistent PLL clock settings:
     Warning (332056): Clock: clk_25mhz with master clock period: 40.000 found on PLL node: pll_inst|altpll_component|auto_generated|pll1|clk[1] does not match the master clock period requirement: 83.333
 Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From clk (Rise) to clk (Rise) (setup and hold)
     Critical Warning (332169): From clk_25mhz (Rise) to clk_25mhz (Rise) (setup and hold)
 Info (223000): Starting Vectorless Power Activity Estimation
 Warning (222013): Relative toggle rates could not be calculated because no clock domain could be identified for some nodes
@@ -321,12 +325,12 @@ Info (218000): Using Advanced I/O Power to simulate I/O buffers with the specifi
 Warning (215044): No board thermal model was selected.  Analyzing without board thermal modeling.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (215049): Average toggle rate for this design is 19.940 millions of transitions / sec
-Info (215031): Total thermal power estimate for the design is 307.35 mW
-Info: Quartus Prime Power Analyzer was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4862 megabytes
-    Info: Processing ended: Sat May 31 00:14:45 2025
+Info (215049): Average toggle rate for this design is 85.226 millions of transitions / sec
+Info (215031): Total thermal power estimate for the design is 1113.29 mW
+Info: Quartus Prime Power Analyzer was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 4867 megabytes
+    Info: Processing ended: Sun Jun 08 11:28:01 2025
     Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Total CPU time (on all processors): 00:00:09
 
 

@@ -1,18 +1,18 @@
 
-State Machine - |ballplayer_multi_image_test|lcd_multi_image_display_240x160:lcd_multi_display_inst|state
+State Machine - |ballplayer_key_switch_test_fixed|lcd_key_switch_display_240x160_fixed:lcd_display_inst|state
 Name state.IDLE state.DISPLAY state.INIT 
 state.IDLE 0 0 0 
 state.INIT 1 0 1 
 state.DISPLAY 1 1 0 
 
-State Machine - |ballplayer_multi_image_test|lcd_multi_image_display_240x160:lcd_multi_display_inst|lcd_write:lcd_write_inst|state
+State Machine - |ballplayer_key_switch_test_fixed|lcd_key_switch_display_240x160_fixed:lcd_display_inst|lcd_write:lcd_write_inst|state
 Name state.DONE state.STATE2 state.STATE1 state.STATE0 
 state.STATE0 0 0 0 0 
 state.STATE1 0 0 1 1 
 state.STATE2 0 1 0 1 
 state.DONE 1 0 0 1 
 
-State Machine - |ballplayer_multi_image_test|lcd_multi_image_display_240x160:lcd_multi_display_inst|lcd_init:lcd_init_inst|state
+State Machine - |ballplayer_key_switch_test_fixed|lcd_key_switch_display_240x160_fixed:lcd_display_inst|lcd_init:lcd_init_inst|state
 Name state.DONE state.S4_WR_DIRECTION_CLEAR state.S3_DELAY120MS state.S2_WR_90 state.S1_DELAY50MS state.S0_DELAY100MS 
 state.S0_DELAY100MS 0 0 0 0 0 0 
 state.S1_DELAY50MS 0 0 0 0 1 1 
@@ -20,3 +20,10 @@ state.S2_WR_90 0 0 0 1 0 1
 state.S3_DELAY120MS 0 0 1 0 0 1 
 state.S4_WR_DIRECTION_CLEAR 0 1 0 0 0 1 
 state.DONE 1 0 0 0 0 1 
+
+State Machine - |ballplayer_key_switch_test_fixed|array_keyboard_fixed:keyboard_inst|c_state
+Name c_state.STATE3 c_state.STATE2 c_state.STATE1 c_state.STATE0 
+c_state.STATE0 0 0 0 0 
+c_state.STATE1 0 0 1 1 
+c_state.STATE2 0 1 0 1 
+c_state.STATE3 1 0 0 1 
