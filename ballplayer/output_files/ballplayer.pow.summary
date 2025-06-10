@@ -1,12 +1,12 @@
-Power Analyzer Status : Successful - Sun Jun 08 11:28:01 2025
+Power Analyzer Status : Successful - Tue Jun 10 15:55:32 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : ballplayer
-Top-level Entity Name : ballplayer_key_switch_test_fixed
+Top-level Entity Name : ballplayer_multi_image_portrait
 Family : MAX 10
 Device : 10M08SAM153C8G
 Power Models : Final
-Total Thermal Power Dissipation : 1113.29 mW
-Core Dynamic Thermal Power Dissipation : 944.56 mW
-Core Static Thermal Power Dissipation : 127.31 mW
-I/O Thermal Power Dissipation : 41.43 mW
+Total Thermal Power Dissipation : 214.92 mW
+Core Dynamic Thermal Power Dissipation : 52.94 mW
+Core Static Thermal Power Dissipation : 121.51 mW
+I/O Thermal Power Dissipation : 40.47 mW
 Power Estimation Confidence : Low: user provided insufficient toggle rate data

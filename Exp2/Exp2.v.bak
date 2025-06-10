@@ -1,0 +1,94 @@
+// Exp2.v
+// Top-level module for the stopwatch project on MAX10 10M08SAM153C8G
+module Exp2 (
+    // Inputs
+    input  wire       clk_12mhz,     // System Clock 12MHz
+    input  wire       key_reset_n,   // KEY1, active-low
+    input  wire       key_pause_n,   // KEY2, active-low
+
+    // Outputs
+    output wire       led1,          // On-board LED for status
+    output wire [7:0] seg1,          // Segments for digit 1 (ones)
+    output wire [7:0] seg2,          // Segments for digit 2 (tens)
+    output wire       seg_dig1_n,    // Digit 1 select (active-low)
+    output wire       seg_dig2_n     // Digit 2 select (active-low)
+);
+
+    // --- Internal Wires ---
+    wire rst_n = 1'b1; // No global hardware reset used, logic handles reset
+    
+    wire sec_pulse;
+    wire reset_pulse;
+    wire pause_pulse;
+    
+    wire [3:0] bcd_tens;
+    wire [3:0] bcd_ones;
+
+    // --- Module Instantiations ---
+
+    // 1. Clock Divider to get 1-second pulse
+    clk_divider u_clk_divider (
+        .clk       (clk_12mhz),
+        .rst_n     (rst_n),
+        .sec_pulse (sec_pulse)
+    );
+
+    // 2. Debounce for Reset Key (KEY1)
+    key_debounce u_debounce_reset (
+        .clk       (clk_12mhz),
+        .rst_n     (rst_n),
+        .key_in    (key_reset_n),
+        .key_pulse (reset_pulse)
+    );
+
+    // 3. Debounce for Pause Key (KEY2)
+    key_debounce u_debounce_pause (
+        .clk       (clk_12mhz),
+        .rst_n     (rst_n),
+        .key_in    (key_pause_n),
+        .key_pulse (pause_pulse)
+    );
+
+    // 4. Core BCD Counter Logic
+    bcd_counter u_bcd_counter (
+        .clk         (clk_12mhz),
+        .rst_n       (rst_n),
+        .clear_pulse (reset_pulse),
+        .pause_pulse (pause_pulse),
+        .count_en    (sec_pulse),
+        .tens        (bcd_tens),
+        .ones        (bcd_ones)
+    );
+
+    // 5. Decoder for the Ones Digit (Digit 1)
+    seg_decoder u_decoder_ones (
+        .bcd_in  (bcd_ones),
+        .seg_out (seg1)
+    );
+
+    // 6. Decoder for the Tens Digit (Digit 2)
+    seg_decoder u_decoder_tens (
+        .bcd_in  (bcd_tens),
+        .seg_out (seg2)
+    );
+
+    // --- Output Assignments ---
+    
+    // Enable both digits (assuming active-low enable)
+    assign seg_dig1_n = 1'b0;
+    assign seg_dig2_n = 1'b0;
+
+    // Use LED1 to indicate if the counter is running (not paused)
+    // We need the internal pause state from the counter module.
+    // Let's create it here for simplicity or expose it from the counter.
+    // Simpler: Just make LED blink when counter is running.
+    reg led_state;
+    always @(posedge clk_12mhz) begin
+        if (reset_pulse)
+            led_state <= 1'b1; // Turn LED off when reset
+        else if(pause_pulse)
+            led_state <= ~led_state; // Toggle LED on pause/resume
+    end
+    assign led1 = led_state;
+    
+endmodule

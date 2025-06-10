@@ -171,7 +171,7 @@ VCCIO2                       : L2        : power  :                   : 3.3V    
 RESERVED_INPUT               : L4        :        :                   :         : 2         :                
 RESERVED_INPUT               : L5        :        :                   :         : 2         :                
 RESERVED_INPUT               : L6        :        :                   :         : 3         :                
-col[1]                       : L7        : input  : 3.3-V LVTTL       :         : 3         : Y              
+RESERVED_INPUT               : L7        :        :                   :         : 3         :                
 RESERVED_INPUT               : L8        :        :                   :         : 3         :                
 RESERVED_INPUT               : L9        :        :                   :         : 3         :                
 RESERVED_INPUT               : L10       :        :                   :         : 3         :                
@@ -198,12 +198,12 @@ led[0]                       : N15       : output : 3.3-V LVTTL       :         
 RESERVED_INPUT               : P1        :        :                   :         : 2         :                
 RESERVED_INPUT               : P2        :        :                   :         : 2         :                
 RESERVED_INPUT               : P3        :        :                   :         : 3         :                
-col[0]                       : P4        : input  : 3.3-V LVTTL       :         : 3         : Y              
+RESERVED_INPUT               : P4        :        :                   :         : 3         :                
 VCCIO3                       : P5        : power  :                   : 3.3V    : 3         :                
-col[3]                       : P6        : input  : 3.3-V LVTTL       :         : 3         : Y              
-row[2]                       : P7        : output : 3.3-V LVTTL       :         : 3         : Y              
-row[1]                       : P8        : output : 3.3-V LVTTL       :         : 3         : Y              
-row[0]                       : P9        : output : 3.3-V LVTTL       :         : 3         : Y              
+RESERVED_INPUT               : P6        :        :                   :         : 3         :                
+RESERVED_INPUT               : P7        :        :                   :         : 3         :                
+RESERVED_INPUT               : P8        :        :                   :         : 3         :                
+RESERVED_INPUT               : P9        :        :                   :         : 3         :                
 VCCIO3                       : P10       : power  :                   : 3.3V    : 3         :                
 VCCIO3                       : P11       : power  :                   : 3.3V    : 3         :                
 lcd_mosi                     : P12       : output : 3.3-V LVTTL       :         : 3         : Y              
@@ -213,8 +213,8 @@ lcd_rst                      : P15       : output : 3.3-V LVTTL       :         
 GND                          : R1        : gnd    :                   :         :           :                
 RESERVED_INPUT               : R2        :        :                   :         : 2         :                
 RESERVED_INPUT               : R3        :        :                   :         : 3         :                
-col[2]                       : R5        : input  : 3.3-V LVTTL       :         : 3         : Y              
-row[3]                       : R7        : output : 3.3-V LVTTL       :         : 3         : Y              
+RESERVED_INPUT               : R5        :        :                   :         : 3         :                
+RESERVED_INPUT               : R7        :        :                   :         : 3         :                
 lcd_cs                       : R9        : output : 3.3-V LVTTL       :         : 3         : Y              
 lcd_sclk                     : R11       : output : 3.3-V LVTTL       :         : 3         : Y              
 RESERVED_INPUT               : R13       :        :                   :         : 3         :                

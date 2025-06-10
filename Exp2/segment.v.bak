@@ -1,0 +1,8 @@
+module segment
+ (
+ input wire [3:0] seg_data_1, //四位输入数据信号
+input wire [3:0] seg_data_2, //四位输入数据信号
+output wire [8:0] segment_led_1, //数码管 1，MSB~LSB = SEG,DP,G,F,E,D,C,B,A
+ output wire [8:0] segment_led_2
+ //数码管2，MSB~LSB=SEG,DP,G,F,E,D,C,B,A
+ );
