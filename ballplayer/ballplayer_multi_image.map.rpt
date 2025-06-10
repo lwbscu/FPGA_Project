@@ -1,0 +1,207 @@
+Analysis & Synthesis report for ballplayer_multi_image
+Sat May 31 13:15:01 2025
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Sat May 31 13:15:01 2025           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; ballplayer_multi_image                      ;
+; Top-level Entity Name              ; ballplayer_multi_image_test                 ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                           ;
++------------------------------------------------------------------+-----------------------------+------------------------+
+; Option                                                           ; Setting                     ; Default Value          ;
++------------------------------------------------------------------+-----------------------------+------------------------+
+; Device                                                           ; 10M08SAM153C8G              ;                        ;
+; Top-level entity name                                            ; ballplayer_multi_image_test ; ballplayer_multi_image ;
+; Family name                                                      ; MAX 10                      ; Cyclone V              ;
+; Use smart compilation                                            ; On                          ; Off                    ;
+; Maximum processors allowed for parallel compilation              ; All                         ;                        ;
+; Optimization Technique                                           ; Speed                       ; Balanced               ;
+; Allow Any RAM Size For Recognition                               ; On                          ; Off                    ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                          ; On                     ;
+; Enable compact report table                                      ; Off                         ; Off                    ;
+; Restructure Multiplexers                                         ; Auto                        ; Auto                   ;
+; Create Debugging Nodes for IP Cores                              ; Off                         ; Off                    ;
+; Preserve fewer node names                                        ; On                          ; On                     ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable                      ; Enable                 ;
+; Verilog Version                                                  ; Verilog_2001                ; Verilog_2001           ;
+; VHDL Version                                                     ; VHDL_1993                   ; VHDL_1993              ;
+; State Machine Processing                                         ; Auto                        ; Auto                   ;
+; Safe State Machine                                               ; Off                         ; Off                    ;
+; Extract Verilog State Machines                                   ; On                          ; On                     ;
+; Extract VHDL State Machines                                      ; On                          ; On                     ;
+; Ignore Verilog initial constructs                                ; Off                         ; Off                    ;
+; Iteration limit for constant Verilog loops                       ; 5000                        ; 5000                   ;
+; Iteration limit for non-constant Verilog loops                   ; 250                         ; 250                    ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                          ; On                     ;
+; Infer RAMs from Raw Logic                                        ; On                          ; On                     ;
+; Parallel Synthesis                                               ; On                          ; On                     ;
+; DSP Block Balancing                                              ; Auto                        ; Auto                   ;
+; NOT Gate Push-Back                                               ; On                          ; On                     ;
+; Power-Up Don't Care                                              ; On                          ; On                     ;
+; Remove Redundant Logic Cells                                     ; Off                         ; Off                    ;
+; Remove Duplicate Registers                                       ; On                          ; On                     ;
+; Ignore CARRY Buffers                                             ; Off                         ; Off                    ;
+; Ignore CASCADE Buffers                                           ; Off                         ; Off                    ;
+; Ignore GLOBAL Buffers                                            ; Off                         ; Off                    ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                         ; Off                    ;
+; Ignore LCELL Buffers                                             ; Off                         ; Off                    ;
+; Ignore SOFT Buffers                                              ; On                          ; On                     ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                         ; Off                    ;
+; Carry Chain Length                                               ; 70                          ; 70                     ;
+; Auto Carry Chains                                                ; On                          ; On                     ;
+; Auto Open-Drain Pins                                             ; On                          ; On                     ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                         ; Off                    ;
+; Auto ROM Replacement                                             ; On                          ; On                     ;
+; Auto RAM Replacement                                             ; On                          ; On                     ;
+; Auto DSP Block Replacement                                       ; On                          ; On                     ;
+; Auto Shift Register Replacement                                  ; Auto                        ; Auto                   ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto                        ; Auto                   ;
+; Auto Clock Enable Replacement                                    ; On                          ; On                     ;
+; Strict RAM Replacement                                           ; Off                         ; Off                    ;
+; Allow Synchronous Control Signals                                ; On                          ; On                     ;
+; Force Use of Synchronous Clear Signals                           ; Off                         ; Off                    ;
+; Auto RAM Block Balancing                                         ; On                          ; On                     ;
+; Auto RAM to Logic Cell Conversion                                ; Off                         ; Off                    ;
+; Auto Resource Sharing                                            ; Off                         ; Off                    ;
+; Allow Any ROM Size For Recognition                               ; Off                         ; Off                    ;
+; Allow Any Shift Register Size For Recognition                    ; Off                         ; Off                    ;
+; Use LogicLock Constraints during Resource Balancing              ; On                          ; On                     ;
+; Ignore translate_off and synthesis_off directives                ; Off                         ; Off                    ;
+; Timing-Driven Synthesis                                          ; On                          ; On                     ;
+; Report Parameter Settings                                        ; On                          ; On                     ;
+; Report Source Assignments                                        ; On                          ; On                     ;
+; Report Connectivity Checks                                       ; On                          ; On                     ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                         ; Off                    ;
+; Synchronization Register Chain Length                            ; 2                           ; 2                      ;
+; Power Optimization During Synthesis                              ; Normal compilation          ; Normal compilation     ;
+; HDL message level                                                ; Level2                      ; Level2                 ;
+; Suppress Register Optimization Related Messages                  ; Off                         ; Off                    ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000                        ; 5000                   ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000                        ; 5000                   ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                         ; 100                    ;
+; Clock MUX Protection                                             ; On                          ; On                     ;
+; Auto Gated Clock Conversion                                      ; Off                         ; Off                    ;
+; Block Design Naming                                              ; Auto                        ; Auto                   ;
+; SDC constraint protection                                        ; Off                         ; Off                    ;
+; Synthesis Effort                                                 ; Auto                        ; Auto                   ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                          ; On                     ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                         ; Off                    ;
+; Analysis & Synthesis Message Level                               ; Medium                      ; Medium                 ;
+; Disable Register Merging Across Hierarchies                      ; Auto                        ; Auto                   ;
+; Resource Aware Inference For Block RAM                           ; On                          ; On                     ;
++------------------------------------------------------------------+-----------------------------+------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 14          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sat May 31 13:14:54 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ballplayer_multi_image -c ballplayer_multi_image
+Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file source/ballplayer_multi_image_test.v
+    Info (12023): Found entity 1: ballplayer_multi_image_test File: D:/Quartus_Project/ballplayer/source/ballplayer_multi_image_test.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file source/lcd_multi_image_display_240x160.v
+    Info (12023): Found entity 1: lcd_multi_image_display_240x160 File: D:/Quartus_Project/ballplayer/source/lcd_multi_image_display_240x160.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file source/multi_image_rom_240x160.v
+    Info (12023): Found entity 1: multi_image_rom_240x160 File: D:/Quartus_Project/ballplayer/source/multi_image_rom_240x160.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file rom_data/image_0_240x160_rom.v
+    Info (12023): Found entity 1: image_0_rom File: D:/Quartus_Project/ballplayer/rom_data/image_0_240x160_rom.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file rom_data/image_1_240x160_rom.v
+    Info (12023): Found entity 1: image_1_rom File: D:/Quartus_Project/ballplayer/rom_data/image_1_240x160_rom.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file rom_data/image_2_240x160_rom.v
+    Info (12023): Found entity 1: image_2_rom File: D:/Quartus_Project/ballplayer/rom_data/image_2_240x160_rom.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file rom_data/image_3_240x160_rom.v
+    Info (12023): Found entity 1: image_3_rom File: D:/Quartus_Project/ballplayer/rom_data/image_3_240x160_rom.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file rom_data/image_4_240x160_rom.v
+    Info (12023): Found entity 1: image_4_rom File: D:/Quartus_Project/ballplayer/rom_data/image_4_240x160_rom.v Line: 7
+Info (12127): Elaborating entity "ballplayer_multi_image_test" for the top level hierarchy
+Info (12128): Elaborating entity "lcd_multi_image_display_240x160" for hierarchy "lcd_multi_image_display_240x160:lcd_multi_display_inst" File: D:/Quartus_Project/ballplayer/source/ballplayer_multi_image_test.v Line: 49
+Warning (10230): Verilog HDL assignment warning at lcd_multi_image_display_240x160.v(64): truncated value with size 17 to match size of target (13) File: D:/Quartus_Project/ballplayer/source/lcd_multi_image_display_240x160.v Line: 64
+Warning (10230): Verilog HDL assignment warning at lcd_multi_image_display_240x160.v(75): truncated value with size 3 to match size of target (2) File: D:/Quartus_Project/ballplayer/source/lcd_multi_image_display_240x160.v Line: 75
+Warning (10230): Verilog HDL assignment warning at lcd_multi_image_display_240x160.v(132): truncated value with size 18 to match size of target (9) File: D:/Quartus_Project/ballplayer/source/lcd_multi_image_display_240x160.v Line: 132
+Warning (10230): Verilog HDL assignment warning at lcd_multi_image_display_240x160.v(133): truncated value with size 18 to match size of target (9) File: D:/Quartus_Project/ballplayer/source/lcd_multi_image_display_240x160.v Line: 133
+Info (12128): Elaborating entity "multi_image_rom_240x160" for hierarchy "lcd_multi_image_display_240x160:lcd_multi_display_inst|multi_image_rom_240x160:multi_rom_inst" File: D:/Quartus_Project/ballplayer/source/lcd_multi_image_display_240x160.v Line: 61
+Info (12128): Elaborating entity "image_0_rom" for hierarchy "lcd_multi_image_display_240x160:lcd_multi_display_inst|multi_image_rom_240x160:multi_rom_inst|image_0_rom:image_0_inst" File: D:/Quartus_Project/ballplayer/source/multi_image_rom_240x160.v Line: 23
+Info (12128): Elaborating entity "image_1_rom" for hierarchy "lcd_multi_image_display_240x160:lcd_multi_display_inst|multi_image_rom_240x160:multi_rom_inst|image_1_rom:image_1_inst" File: D:/Quartus_Project/ballplayer/source/multi_image_rom_240x160.v Line: 29
+Info (12128): Elaborating entity "image_2_rom" for hierarchy "lcd_multi_image_display_240x160:lcd_multi_display_inst|multi_image_rom_240x160:multi_rom_inst|image_2_rom:image_2_inst" File: D:/Quartus_Project/ballplayer/source/multi_image_rom_240x160.v Line: 35
+Info (12128): Elaborating entity "image_3_rom" for hierarchy "lcd_multi_image_display_240x160:lcd_multi_display_inst|multi_image_rom_240x160:multi_rom_inst|image_3_rom:image_3_inst" File: D:/Quartus_Project/ballplayer/source/multi_image_rom_240x160.v Line: 41
+Info (12128): Elaborating entity "image_4_rom" for hierarchy "lcd_multi_image_display_240x160:lcd_multi_display_inst|multi_image_rom_240x160:multi_rom_inst|image_4_rom:image_4_inst" File: D:/Quartus_Project/ballplayer/source/multi_image_rom_240x160.v Line: 47
+Error (12006): Node instance "pll_inst" instantiates undefined entity "ballplayer_pll". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: D:/Quartus_Project/ballplayer/source/ballplayer_multi_image_test.v Line: 35
+Error (12006): Node instance "lcd_init_inst" instantiates undefined entity "lcd_init". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: D:/Quartus_Project/ballplayer/source/lcd_multi_image_display_240x160.v Line: 183
+Error (12006): Node instance "lcd_write_inst" instantiates undefined entity "lcd_write". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: D:/Quartus_Project/ballplayer/source/lcd_multi_image_display_240x160.v Line: 196
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 4 warnings
+    Error: Peak virtual memory: 4845 megabytes
+    Error: Processing ended: Sat May 31 13:15:01 2025
+    Error: Elapsed time: 00:00:07
+    Error: Total CPU time (on all processors): 00:00:14
+
+

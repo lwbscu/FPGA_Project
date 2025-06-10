@@ -1,5 +1,9 @@
 Timing Analyzer report for ballplayer
+<<<<<<< HEAD
 Tue Jun 10 15:55:38 2025
+=======
+Sat May 31 22:44:15 2025
+>>>>>>> c3fbae9fd3fc06595eebe143e494726885096efe
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -92,13 +96,22 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
+<<<<<<< HEAD
 ; Average used               ; 2.61        ;
+=======
+; Average used               ; 1.69        ;
+>>>>>>> c3fbae9fd3fc06595eebe143e494726885096efe
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+<<<<<<< HEAD
 ;     Processor 2            ;  55.0%      ;
 ;     Processors 3-4         ;  53.2%      ;
+=======
+;     Processor 2            ;  23.3%      ;
+;     Processors 3-4         ;  23.0%      ;
+>>>>>>> c3fbae9fd3fc06595eebe143e494726885096efe
 +----------------------------+-------------+
 
 
@@ -107,7 +120,11 @@ refer to the applicable agreement for further details.
 +----------------------------+--------+--------------------------+
 ; SDC File Path              ; Status ; Read at                  ;
 +----------------------------+--------+--------------------------+
+<<<<<<< HEAD
 ; ballplayer_multi_image.sdc ; OK     ; Tue Jun 10 15:55:34 2025 ;
+=======
+; ballplayer_multi_image.sdc ; OK     ; Sat May 31 22:44:08 2025 ;
+>>>>>>> c3fbae9fd3fc06595eebe143e494726885096efe
 +----------------------------+--------+--------------------------+
 
 
@@ -513,7 +530,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+<<<<<<< HEAD
     Info: Processing started: Tue Jun 10 15:55:33 2025
+=======
+    Info: Processing started: Sat May 31 22:44:07 2025
+>>>>>>> c3fbae9fd3fc06595eebe143e494726885096efe
 Info: Command: quartus_sta ballplayer -c ballplayer
 Info: qsta_default_script.tcl version: #1
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
@@ -618,10 +639,18 @@ Info (332146): Worst-case minimum pulse width slack is 9.355
     Info (332119):    19.512               0.000 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
+<<<<<<< HEAD
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 33 warnings
     Info: Peak virtual memory: 4837 megabytes
     Info: Processing ended: Tue Jun 10 15:55:38 2025
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:10
+=======
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 4830 megabytes
+    Info: Processing ended: Sat May 31 22:44:15 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:12
+>>>>>>> c3fbae9fd3fc06595eebe143e494726885096efe
 
 
